@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>More on Sorting and Analyzing Run Time Complexity - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="More on Sorting and Analyzing Run Time Complexity" />
+<meta property="og:description" content="In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced quick_sort, gave a version of it in C&#43;&#43; and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/more-on-sorting-and-analyzing-run-time-complexity/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-07-08T13:46:52-04:00" />
+<meta property="article:modified_time" content="2021-07-08T13:46:52-04:00" />
+
+
+		<meta itemprop="name" content="More on Sorting and Analyzing Run Time Complexity">
+<meta itemprop="description" content="In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced quick_sort, gave a version of it in C&#43;&#43; and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms."><meta itemprop="datePublished" content="2021-07-08T13:46:52-04:00" />
+<meta itemprop="dateModified" content="2021-07-08T13:46:52-04:00" />
+<meta itemprop="wordCount" content="2058">
+<meta itemprop="keywords" content="Probability,Permutations,Complexity," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="More on Sorting and Analyzing Run Time Complexity"/>
+<meta name="twitter:description" content="In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced quick_sort, gave a version of it in C&#43;&#43; and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">More on Sorting and Analyzing Run Time Complexity</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-08T13:46:52-04:00">2021-07-08</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/algorithms/" rel="category">Algorithms</a>, <a class="meta__link" href="/categories/sorting/" rel="category">Sorting</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/many_dice.jpg" alt="More on Sorting and Analyzing Run Time Complexity">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-big-o-notation">Definition (big O notation)</a></li>
+    <li><a href="#definition--i_log_bn-">Definition ( i_log_b(n) )</a></li>
+    <li><a href="#lemma-1">Lemma (1)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-2">Lemma (2)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+        <li><a href="#lemma-3">Lemma (3)</a></li>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-almost-the-master-theorem">Corollary (Almost the Master Theorem)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-3-1">Lemma (3)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n the previous entry (<a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>), we introduced <code>quick_sort</code>, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</p>
+<p>In what follows, we&rsquo;re going to reference the C++ version of <code>quick_sort</code> given in (<a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>). It might be useful to keep that page open in a side tab. We&rsquo;re going to focus on the <code>quick_sort</code> function that takes two indices and a vector as its input. The two indices are <code>start</code> and <code>end</code>, respectively. Notice that the <code>while</code> loop has two indices, <code>i</code> and <code>j</code> and that the loop executes as long as <code>i &lt; j</code>. Initially, <code>i = start</code> and <code>j = end - 1</code>. We also showed that the while loop executes exactly \(\text{end} - \text{start} - 1 \) times.</p>
+<p>This allowed us to prove that the <code>while</code> loop never runs more than \(n^2\) times, where \(n\) equals <code>input.size()</code>. Since the total number of operations involved in completing a run of quick_sort is proportional to the number of times the while loop executes, the amount of time it takes to finish on a given input vector of length \(n\) is no more than \( c \cdot n^2\), for some \(c \in \mathbb{R} \). This is often written as \( O(n^2)\). More precisely,</p>
+<h2 id="definition-big-o-notation">Definition (big O notation)</h2>
+<p>Let \(g : X \rightarrow Y \) be a function where both sets \(X\) and \(Y\) have a total ordering. Then we define \( O(g) := \{ f : X \rightarrow Y | \forall x \geq w_{f}, f(x) \leq c \cdot g(x) \} \), where \( w_{f} \in X\) and \( c \in Y\). A different \(w_f\) can be specified for each function, \(f\). Sometimes we say &ldquo;\(f \) is \(O(g) \)&rdquo;, instead of \( f \in O(g) \).</p>
+<p>We&rsquo;re going to prove some results which will help us determine what \(O\) set a recursively defined function \(T\) belongs to. But first, we consider a useful function.</p>
+<h2 id="definition--i_log_bn-">Definition ( i_log_b(n) )</h2>
+<p>Let \(n, b \in \mathbb{N} \) be positive natural numbers (\( b \geq 2\)). Let \( \left\lceil \frac{\cdot}{b} \right\rceil : \mathbb{N} \rightarrow \mathbb{N}\) be the function which maps \(n\) to the least integer greater than or equal to \(\frac{n}{b}\) (also written \( \left\lceil \frac{n}{b} \right\rceil \)), then we define \( \text{i_log}_b(n) := \) the least integer \(i\), such that \( {\left\lceil \frac{\cdot}{b} \right\rceil}^i (n) = 1 \). Where, for example, \( {\left\lceil \frac{\cdot}{b} \right\rceil}^2 (n) \) equals \( \left\lceil \frac{ \left\lceil \frac{n}{b} \right\rceil }{b} \right\rceil\).</p>
+<h2 id="lemma-1">Lemma (1)</h2>
+<p>\( \text{i_log}_b(n) = \left\lceil { \log_b(n) } \right\rceil\).</p>
+<p>(This is the reason nobody uses \( \text{i_log}_b(n)\))</p>
+<h3 id="proof">Proof</h3>
+<p>We start by proving that \( \text{i_log}_b(n) \) is a non-decreasing function, i.e. \( \text{i_log}_b(n) \leq \text{i_log}_b(n+1) \). Suppose for a contradiction that sometimes it&rsquo;s decreasing, then let \(s\) be the smallest positive natural number such that \( \text{i_log}_b(s) &gt; \text{i_log}_b(s+1) \). Then, by definition, we have \( \text{i_log}_b( \left\lceil \frac{s}{b} \right\rceil) &gt; \text{i_log}_b( \left\lceil \frac{s+1}{b} \right\rceil ) \). We&rsquo;re almost to a contradiction, but there are a couple of minor things we need to show. First, notice that \( \left\lceil { \cdot } \right\rceil \) is non-decreasing. This means that \( \left\lceil \frac{s}{b} \right\rceil \leq \left\lceil \frac{s+1}{b} \right\rceil \). Second, we claim that since \(b \geq 2\), we have \( \left\lceil \frac{s}{b} \right\rceil &lt; s \) (and also for \(s + 1\)). Notice that if we can prove this, then we have a contradiction, because \(s\) was assumed to be the least such natural number.</p>
+<p>Now, let \( s = b \cdot q + r \), where \(0 \leq r &lt; b\), and suppose \( \left\lceil \frac{s}{b} \right\rceil \geq s \). Then \( \left\lceil \frac{b \cdot q + r}{b} \right\rceil \geq s \), which implies that \( q + \left\lceil \frac{r}{b} \right\rceil \geq b \cdot q + r\), which is impossible, since \(b \geq 2 \). Therefore, we&rsquo;ve shown that \( \text{i_log}_b(n) \) is non-decreasing.</p>
+<p>Finally, notice that for all \(k \geq 0 \), \( \text{i_log}_b(b^k) = \log_b(b^k) = k \). So we have \( \text{i_log}_b(n) \leq \log_b( b^{\left\lceil { \log_b(n) } \right\rceil} ) \), which is equals \( \left\lceil \log_b(n) \right\rceil \). Therefore, if we can show that \( \text{i_log}_b(b^k + 1) &gt; \text{i_log}_b(b^k + 1) \), then we are done.</p>
+<p>This is true, because \( \left\lceil \frac{b^k + 1}{b} \right\rceil \) is equal to \( \left\lceil b^{k-1} + \frac{1}{b} \right\rceil\), and that is equal to \( b^{k-1} + 1\). Therefore, we will end up with a chain of integers, \( b^k + 1\), \( b^{k-1} + 1\), &hellip; , \(b^2 + 1 \), \(b + 1\), \(2\), and then \( 1\). However, without the \( + 1\), we would have \( b^k\), \(b^{k-1}\), &hellip; , \(b^2\), \(b\), and \(1\), which is one number shorter.</p>
+<p><strong>QED</strong></p>
+<p>Now we return to our discussion of recursively defined functions. Suppose that \( T(n) := f(n) + a \cdot T( \left\lceil \frac{n}{b} \right\rceil ) \), where \(a \in \mathbb{Q} \), and \(b \in \mathbb{N} \), then notice that we can rewrite \(T\) as follows</p>
+<p>\[ \sum\limits_{i = 0}^{\lambda} a^i f( {\left\lceil \cdot \right\rceil}^i(n) ) \tag{1}\label{1}\]
+Also notice that this holds even if we replace equality in the definition of \(T\) with \( \leq \). If \(f(0) = 0 \), then \(\lambda = \left\lceil \log_b(n) \right\rceil \), by lemma (1). Furthermore, we can see that if \(f \) is non-decreasing and \( n \geq b \), then</p>
+<p>\[ T(b^{ \left\lceil { \log_b(n) } \right\rceil - 1 }) \leq T(n) \leq T( b^{ \left\lceil { \log_b(n) } \right\rceil } ) \tag{2}\label{2} \]</p>
+<p>This is quite useful, because by equation (1), we can see that if \(n = b^k \), then we have</p>
+<p>\[ T(b^{k}) = \sum\limits_{i = 0}^{ k } a^i f(b^{k - i}) \tag{3}\label{3}\]
+and further, if \(f(n) = cn^{\alpha} \), then
+\[ T(b^{k}) = \sum\limits_{i = 0}^{ k } a^i c (b^{k - i})^{\alpha} \tag{4}\label{4}\]
+which is equal to
+\[ T(b^{k}) = \sum\limits_{i = 0}^{ k } a^i c (b^{\alpha})^{k - i} \tag{5}\label{5}\]
+If we factor out \(c\) and \((b^{\alpha})^k \), we get
+\[ c(b^{\alpha})^k \sum\limits_{i=0}^{k} { (\frac{a}{b^{\alpha}})^i } \tag{6}\label{6}\]
+which is a geometric sum. After some algebra, we have
+\[ T(b^k) = \frac{c}{a - b^{\alpha}} [a^{k+1} - (b^{\alpha})^{k+1}] \tag{7}\label{7}\]
+This holds as long as \( a \neq b^{\alpha} \). However, if those two are equal then, by equation (6), we see that
+\[ T(b^k) = c (b^{\alpha})^k \cdot k = f(b^k) k \tag{8}\label{8}\]
+because each term of the sum is equal to \(1\) in that case. With a bit more algebra, and using the fact that \(a^k = (b^{\log_b(a)})^k = (b^k)^{\log_b(a)} \), we see that equation (7) implies
+\[ T(b^k) = \frac{c}{a - b^{\alpha}} [ a (b^k)^{\log_b(a)} - \frac{b^{\alpha}}{c} f(b^k) ] \tag{9}\label{9} \]</p>
+<h2 id="lemma-2">Lemma (2)</h2>
+<p>Let \(h\) and \(l\) be non-decreasing functions from \(\mathbb{N} \) to \(\mathbb{N}\), such that for some \(b\), and every \(k \geq 0 \), \(h(b^k) \leq l(b^k)\), then for all \(n \in \mathbb{N}\), we have \(h(n) \leq l(bn) \).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Notice that \(h(n) \leq h(b^{ \left\lceil \log_b(n) \right\rceil }) \) , and this is less than or equal to \( l(b^{ \left\lceil \log_b(n) \right\rceil }) \leq l(bn)\)</p>
+<p><strong>QED</strong></p>
+<h3 id="lemma-3">Lemma (3)</h3>
+<ol>
+<li>If \(a &lt; b^{\alpha} \), then \(T(b^k) \leq \frac{2c}{a-b^{\alpha}}\frac{b^{\alpha}}{c}f(b^k)\).</li>
+<li>If \(a &gt; b^{\alpha} \), then \(T(b^k) \leq \frac{2c}{a-b^{\alpha}}a(b^k)^{ \log_b(a) } \).</li>
+</ol>
+<h3 id="proof-2">Proof</h3>
+<p>Equation (7) above is equal to a geometric sum of non-negative terms, so we can assume that equation (9) is always non-negative. Then the result follows both for case 1 and 2 by considering equation (7) and observing that \( x \geq y \) implies that \(x^k \geq y^k\) for all \(k \geq 0 \).</p>
+<p><strong>QED</strong></p>
+<p>These results allow us to prove something which can be quite useful. It&rsquo;s almost as powerful as the &ldquo;Master Theorem&rdquo; from the Introduction to Algorithms text book.</p>
+<h2 id="corollary-almost-the-master-theorem">Corollary (Almost the Master Theorem)</h2>
+<p>Let \(T(n) = f(n) + aT(\left\lceil {\frac{n}{b}} \right\rceil)\), where \(f(n) = cn^{\alpha}\), then</p>
+<ol>
+<li>If \(a &lt; b^{\alpha} \), then \(T(n) \in O(f(n)) \).</li>
+<li>If \(a &gt; b^{\alpha} \), then \(T(n) \in O(n^{\log_b(a)}) \).</li>
+<li>If \(a = b^{\alpha}\), then \(T(n) \in O(\log_b(n)f(n))\).</li>
+</ol>
+<h3 id="proof-3">Proof</h3>
+<p><strong>Case 1.</strong> Combining the previous two lemmas, we see that \(T(n) \leq \frac{2c}{a-b^{\alpha}}\frac{b^{\alpha}}{c}f(bn) \). Notice that since \(f(n) = cn^{\alpha}\), we have \(f(bn) = c(bn)^{\alpha} = c(b^{\alpha})n^{\alpha}\), and that is equal to \(b^{\alpha}f(n) \). This proves case 1.</p>
+<p><strong>Case 2.</strong> The proof is very similar to case 1.</p>
+<p><strong>Case 3.</strong> Combining lemma (2) with equation (8), we get \(T(n) \leq f(bn)\log_b(bn) \). We just showed in the proof of case 1 that \(f(bn) = b^{\alpha}f(n)\). Combining that with the fact that \(\log_b(bn) = 1 + \log_b(n) \), we get \(T(n) \leq b^{\alpha}f(n)[\log_b(n) + 1] \). When \(n \geq b\), we have \(T(n) \leq 2b^{\alpha}f(n)\log_b(n) \), which proves case 3.</p>
+<p><strong>QED</strong></p>
+<p>We see from our implementation of <code>quick_sort</code> that \(f(n) = n \), so \(\alpha = 1\). Thus, if we had \(a = b\), then by case 3 of the corollary, we would have \(T(n) \in O(n\log_b(n))\), which is better than \(O(n^2)\). It turns out that with our implementation, this isn&rsquo;t possible. We can, however, show a weaker result about the expected number of steps it will take to finish on a given input vector.</p>
+<p>On a given call to <code>quick_sort(input, start, end)</code>, the <code>while</code> loop exits with <code>j == i</code>, if we treat the final value of those variables as a random variable with possible values in \( \{\text{start}, \text{start} + 1, &hellip;, \text{start} + ((\text{end} - 1) - \text{start}) \} \), then if this random variable is <em>uniformly distributed</em> (see <a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>) among those values, then \(E[T(n)] \in O(\log_b(n)n) \), where \(E[T(n)]\) is the <em>expected value</em> of \(T(n)\).</p>
+<p>You&rsquo;ve probably encountered expected values before, but for clarity, if \(X\) is a discrete random variable, taking on values in a set \(\mathcal{X}\) with probability \(P(X = x)\), for each \(x \in \mathcal{X} \), then \(E[X] = \sum\limits_{x \in \mathcal{X}} (x P(x)) \).</p>
+<p>In order to get the result, we&rsquo;ll have to use a bit of calculus. We&rsquo;ll use a trick very similar to what we used in (<a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/">The Sum of all Prime Reciprocals is Infinite</a>). We won&rsquo;t go into it in as much detail this time.</p>
+<h2 id="lemma-3-1">Lemma (3)</h2>
+<p>\( \sum\limits_{k=1}^n k \ln(k) \leq \frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] \).</p>
+<h3 id="proof-4">Proof</h3>
+<p>Since \( \frac{d}{dx} x \ln(x) = 1 + \ln(x) \), \(x \ln(x)\) is a non-decreasing function when \(x \geq 1\). That means that \( \sum\limits_{k = 1}^n k\ln(k) \leq \int_1^n x \ln(x) dx\). Using &ldquo;u substitution&rdquo;, we get that that integral is equal to \(\frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] \).</p>
+<p><strong>QED</strong></p>
+<p>Now we calculate
+\[ E[T(n)] = E[ n + \sum\limits_{s = 0}^{n-1}P(s = i)\{T(s) + T((n-1) - s)\} ] \tag{10}\label{10} \]</p>
+<p>Since we&rsquo;re assuming that \(i\) is uniformly distributed, \(P(s = i) = \frac{1}{n}\), for all \(s\). We also observe that since the probabilities are all equal, we can write the right hand side of the summand in reverse order, which means that \( \sum\limits_{s=0}^{n-1}\{\frac{1}{n} T((n-1) -s)\} = \sum\limits_{s=0}^{n-1} \{ \frac{1}{n}T(s) \}\). This lets us rewrite equation (10) as</p>
+<p>\[ E[T(n)] = E[ n + \sum\limits_{s = 0}^{n-1}\frac{2}{n}T(s) ] \tag{11}\label{11} \]</p>
+<p>Expected values can be split (since they&rsquo;re integrals), so the right side of (11) is equal to \( E[n] + E[\sum\limits_{s = 0}^{n-1}\frac{2}{n}T(s)] \). Since \(n\) is a constant, \(E[n] = n \), and if we assume that \(E[s] = cs\ln(s) \), for all \( s &lt; n\), then (11) and lemma (3) get us</p>
+<p>\[ E[T(n)] \leq n + \frac{2}{n}\frac{1}{2}c[ n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2} ] \tag{12}\label{12}\]</p>
+<p>The right hand side of (12) is equal to \( n + c[ n(\ln(n) - \frac{1}{2}) + \frac{1}{2n} ] \), which is equal to \( cn\ln(n) + n(1 - \frac{c}{2}) + \frac{c}{2n} \). If \(c\) is larger than \(3\), and \(n\) is larger than \(2\), then this is less than or equal to \(c n\ln(n) \). This proves that \( E[T(n)] \leq cn\ln(n) \).</p>
+<p><strong>QED</strong></p>
+<p>We haven&rsquo;t proven that the final value of <code>i</code> is uniformly distributed among the integers in \( [\text{start} .. \text{end}) \), and we won&rsquo;t in this article. That is something worth revisiting in a later entry. This is it for now.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/probability/" rel="tag">Probability</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/complexity/" rel="tag">Complexity</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Sorting Random Permutations and a Little Bit of Probability</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/finding-the-median-and-an-application-to-sorting/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Finding the Median and an Application to Sorting</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/more-on-sorting-and-analyzing-run-time-complexity/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fmore-on-sorting-and-analyzing-run-time-complexity%2f" />
+</body>
+</html>

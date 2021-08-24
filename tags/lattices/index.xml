@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lattices on EduGovNet.com</title>
+    <link>/tags/lattices/</link>
+    <description>Recent content in Lattices on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jun 2021 11:02:53 -0400</lastBuildDate><atom:link href="/tags/lattices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zassenhaus Lemma and the Jordan Holder Theorem</title>
+      <link>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</link>
+      <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
+      
+      <guid>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</guid>
+      <description>This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Parial Orders Lattices and Some Subgroups</title>
+      <link>/blog/parial-orders-lattices-and-some-subgroups/</link>
+      <pubDate>Thu, 17 Jun 2021 10:26:21 -0400</pubDate>
+      
+      <guid>/blog/parial-orders-lattices-and-some-subgroups/</guid>
+      <description>In this article we mostly talk about partial orders, and lattices, which are a special type of partial order. We tie it in with our discussions of subgroups before proving two distribution laws for lattices.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Some of the Math of Permutations - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Some of the Math of Permutations" />
+<meta property="og:description" content="A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/some-of-the-math-of-permutations/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-03-30T14:48:51-04:00" />
+<meta property="article:modified_time" content="2021-03-30T14:48:51-04:00" />
+
+
+		<meta itemprop="name" content="Some of the Math of Permutations">
+<meta itemprop="description" content="A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y."><meta itemprop="datePublished" content="2021-03-30T14:48:51-04:00" />
+<meta itemprop="dateModified" content="2021-03-30T14:48:51-04:00" />
+<meta itemprop="wordCount" content="1711">
+<meta itemprop="keywords" content="Sets,Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Some of the Math of Permutations"/>
+<meta name="twitter:description" content="A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Some of the Math of Permutations</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-30T14:48:51-04:00">2021-03-30</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/scrabble1.jpg" alt="Some of the Math of Permutations">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#definition-of-a-group">Definition of a Group</a></li>
+    <li><a href="#lemma">Lemma</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="definitions">Definitions</h2>
+<p><span class="first-letter">A</span> <em>permutation</em> is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be <em>one to one (1-1)</em> if whenever \( f(x) = f(y) \), then \( x = y\). Symbolically \( f(x) = f(y) \Rightarrow x = y \). This is often written as \( f: X \xrightarrow{\text{1-1}} Y\). A function from \(X\) to \(Y\) is said to be <em>onto</em> if every \(y\) in the set \( Y \) has at least one \(x\) in the set \(X\) such that \( f(x) = y\), in mathematical notation, \( \forall{y \in Y} \exists x \in X f(x) = y\). This is often written \( f:X \xrightarrow{\text{onto}} Y \). Another name for a function that is both 1-1 and onto is a <em>bijection</em>. They are often written \( f: X \xrightarrow{\text{1-1, onto}} Y\).</p>
+<p>Easy enough, right? The fact that you&rsquo;re here reading about them on this page means that you&rsquo;ve probably heard about them before and might even know much more about them than I do. I&rsquo;m not an expert or anything like that. The first thing we&rsquo;re going to do is show that they form a group under composition, then we&rsquo;ll do some very basic counting of them, and finally show that they can be split into two disjoint sets. One set is the collection of even permutations, and the rest are the odd permutations. For the rest of this article, we will only be dealing with permutations of a finite set. In particular, let&rsquo;s assume \( X \) has exactly \( n \) distinct elements.
+When we say &ldquo;form a group under composition&rdquo;, what we mean by &ldquo;composition&rdquo; is just taking a function of a function. \( f(g(x)) \). It is also often written as \( f \circ g (x) \). First we apply \( g \) to \(x\), and then we apply \( f \) to \( g(x) \). In order to show that the set of all permutations from a set \( X \) into itself is a group we need to establish four facts</p>
+<h2 id="definition-of-a-group">Definition of a Group</h2>
+<ol>
+<li>There is an <em>identity</em> permutation, \( \iota \), such that for any permutation \( \sigma \), \( \sigma \circ \iota = \sigma = \iota \circ \sigma \).</li>
+<li>For every permutation \( \sigma \), there is a permutation \( \tau \), such that \( \sigma \circ \tau = \tau \circ \sigma = \iota \).  (\(\tau\) is said to be the <em>inverse</em> of \(\sigma\))</li>
+<li>For any two permutations, \( \sigma \), \( \tau \), \( \sigma \circ \tau \) is a permutation.</li>
+<li>For any three permutations, \( \sigma \), \( \tau \), \( \upsilon \), \( ( \sigma \circ \tau ) \circ \upsilon = \sigma \circ ( \tau \circ \upsilon ) \).</li>
+</ol>
+<p>To show 1, notice that \( \iota(x) = x \) works. It changes nothing.</p>
+<p>To show 2, define \( \tau(x) \) as follows: \( \tau(x) := y \), where \( \sigma(y) = x \). How do we know this will work? We need to show two things. First we need to show that \( \tau(x) \) is defined for every \( x \), but that&rsquo;s not a problem because every permutation is a bijection (from a set \( X \) into itself), and therefore every permutation is onto, so we are guaranteed that there is an \( y \), such that \( \sigma(y) = x \). The second thing we need to check is that this function is well-defined. I.e. that we aren&rsquo;t going to end up with \( \tau(x) = y \) and \( \tau(x) = z \), where \( y \neq z \). In order for that to happen, \( \sigma(y) = x \), and \( \sigma(z) = x \), but since \( \sigma \) is a bijection, it is 1-1, and so \( \sigma(y) = \sigma(z) \Rightarrow y = z \), so \( \tau(x) \) can&rsquo;t be two different values, and \( \tau \) is well-defined. \( \tau \) is called the inverse of \( \sigma \) and is often written as \( \sigma^{-1} \).</p>
+<p>To show that 3 holds, notice that \( \sigma \circ \tau \) is a function from \( X\) into itself (because both \( \sigma \) and \( \tau \) are functions from \( X \) into itself), and that \( \sigma \circ \tau(x) \) is defined to be \( \sigma ( \tau (x )) \). We now have to show that it is a bijection. I.e. that it is 1-1 and onto. Suppose \( \sigma( \tau(x)) = \sigma( \tau(y)) \). Define \( u := \tau(x) \) and \( v := \tau(y) \). So, \( \sigma( u ) = \sigma (v) \). Since \( \sigma \) is 1-1, we can conclude that \( u = v \). And that means that \( \tau(x) = \tau(y) \), which similarly means that \( x = y \). Thus \( \sigma \circ \tau \) is 1-1. Now let&rsquo;s show that it&rsquo;s onto. Let \( z \) be any element of \( X\). We want to find an \( x \) in \( X \) such that \( \sigma \circ \tau(x ) = z \). Since \( \sigma \) is a bijection, it is onto, and so there is a \( y \in X \), such that \( \sigma(y) = z \). Likewise, \( \tau \) is a bijection, so there is an \( x \in X \), such that \( \tau(x) = y \). Thus, \( \sigma \circ \tau (x ) = \sigma ( \tau (x)) = \sigma(y) = z \). So \( \sigma \circ \tau \) is onto. Therefore it is a bijection and a permutation of \( X \).</p>
+<p>Finally, to show 4 note that
+\[ \sigma \circ (\tau \circ \upsilon)(x) = \sigma \circ ( \tau(\upsilon(x)) ) \]
+\[ \sigma \circ ( \tau(\upsilon(x)) ) = \sigma ( \tau ( \upsilon (x) ) ) \]
+\[ \sigma ( \tau ( \upsilon (x) ) ) = (\sigma \circ \tau) ( \upsilon(x) ) \]
+\[ (\sigma \circ \tau) ( \upsilon(x) ) = ( \sigma \circ \tau ) \circ \upsilon (x) \]</p>
+<p><strong>QED</strong></p>
+<p>Now we&rsquo;re going to count permutations. We&rsquo;ll show that if \(X \) is a set with \( n \) distinct elements, then the number of permutations of \(X \) is equal to \( n (n-1) (n-2) \cdot &hellip; \cdot 2 \cdot 1 \). This is usually written \( n! \). The proof I&rsquo;m going to give is a bit more involved than most proofs, but I hope that it will still be easy to follow. I&rsquo;m going to use induction to count the number of 1-1 functions from \(X|_k := \{ x_1, x_2, &hellip; x_k \} \) to \( X = \{x_1, x_2, &hellip; x_{n-1}, x_{x} \} \).</p>
+<h2 id="lemma">Lemma</h2>
+<p>The number of 1-1 functions, \( \sigma|_k : X|_k \xrightarrow{\text{1-1}} X \) is equal to \( n(n-1)(n-2) &hellip; (n-(k - 1)) = \prod\limits_{i=0}^{k-1}{(n-i)}\).</p>
+<h3 id="proof">Proof</h3>
+<p>By induction on \(k\) ( \(n\) is assumed to be fixed). Let \( k =1 \). Notice that since the domain of \( \sigma|_1 \) has only one element (i.e. \( x_1\)), that it is necessarily 1-1. There are exactly \( n\) distinct \( \sigma|_1 \), each one sends \( x_1 \) to a different element of \( X\).</p>
+<p>Now, assume that the lemma holds for \(k \), and we&rsquo;ll show that it holds for \( k+1 \) (provided \( k + 1 \leq n \) ). In order to do this we have to show that there are exactly \( n - k \) times as many 1-1 functions \( \sigma|_{k+1} \) as there are \( \sigma|_{k} \). By induction we may assume that all \( \sigma|_k \) are unique. Let \( \tau|_k \) be an arbitrarily chosen 1-1 function on \(X|_k\). Notice that \( x_{k+1} \) is not in the domain of \( \tau|_k \), so we can extend it to a \( \tau|_{k+1} \) by defining it on \( x_{k+1} \). What are the possible \( y \in X \), such that we could set \( \tau|_{k+1}(x_{k+1}) = y \) ? Notice that since \( \tau|_{k+1} \) is 1-1, it can&rsquo;t be any of \( Range({\tau|_k}) = \{ \tau|_k(x_1), \tau|_k(x_2), &hellip;, \tau|_k(x_k) \} \). Therefore it can be any element left over in \( X \setminus Range(\tau|_k)\). Notice that \(X \) has exactly \( n \) elements and \( Range(\tau|_k) \) has exactly \( k\) elements, so \( X \setminus Range(\tau|_k)\) has exactly \( n - k \) elements for us to choose from. Thus, as we wanted, there are exactly \( n - k \) ways to extend every \( \sigma|_k \) to a \( \sigma|_{k+1} \).</p>
+<p>Using this lemma, we see that when \( k = n\), there are \( n!\) distinct 1-1 functions from \(X \) to itself. If we can show that each 1-1 function is also onto, then we&rsquo;ll have counted bijections from \( X \) to itself, and our proof will be complete. This is quite easy to show, since the size of the range of any \( \sigma|_k \) is \( k \), so when \( k = n \), the size of the range will be exactly the size of \(X\) and \( Range(\sigma|_n) \subseteq X \), so \( Range(\sigma|_n) = X \), and our functions are onto.</p>
+<p><strong>QED</strong></p>
+<p>Next we show that permutations can be separated into two distinct classes, the even permutations and the odd permutations. First notice that when we were dealing with permutations on a set \(X\) above we had to fix an order to the elements of \(X\), i.e. \(X = \{ x_1, x_2, &hellip; , x_n\} \). And a permutation, \( \sigma \) re-ordered \(X\) as \( \{ \sigma(x_1), \sigma(x_2), &hellip; , \sigma(x_n) \} \). We get the same effect if we consider \( \dot{\sigma} : \{1, 2, &hellip; , n\} \xrightarrow{\text{1-1, onto}} \{1, 2, &hellip; , n\} \), where if \( \sigma(x_i) = x_j \), then \( \dot{\sigma}(i) = j \). Then a permutation \( \sigma \) has a sign, defined as:</p>
+<p>\[ Sign(\sigma) := \prod\limits_{i &gt; j}{\frac{\dot{\sigma}(i) - \dot{\sigma}(j)}{i - j}} \]</p>
+<p>We&rsquo;ll prove some interesting properties of \( Sign \) in the next entry <a href="/blog/more-math-of-permutations/">More Math of Permutations</a>.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sets/" rel="tag">Sets</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/an-intro-to-the-dot-product/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">An Intro to the Dot Product</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/some-of-the-math-of-permutations/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fsome-of-the-math-of-permutations%2f" />
+</body>
+</html>

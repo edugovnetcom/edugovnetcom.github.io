@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Applying Permutations to Group Theory - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Applying Permutations to Group Theory" />
+<meta property="og:description" content="Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/applying-permutations-to-group-theory/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-10T08:39:46-04:00" />
+<meta property="article:modified_time" content="2021-06-10T08:39:46-04:00" />
+
+
+		<meta itemprop="name" content="Applying Permutations to Group Theory">
+<meta itemprop="description" content="Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results."><meta itemprop="datePublished" content="2021-06-10T08:39:46-04:00" />
+<meta itemprop="dateModified" content="2021-06-10T08:39:46-04:00" />
+<meta itemprop="wordCount" content="2618">
+<meta itemprop="keywords" content="Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Applying Permutations to Group Theory"/>
+<meta name="twitter:description" content="Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Applying Permutations to Group Theory</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-10T08:39:46-04:00">2021-06-10</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/paprika.jpg" alt="Applying Permutations to Group Theory">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#theorem-image-is-a-subgroup">Theorem (image is a subgroup)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-equivalence-class">Definition (equivalence class)</a></li>
+    <li><a href="#definition-factor-set">Definition (factor set)</a></li>
+    <li><a href="#mini-lemma-when-ah--h">Mini-Lemma (when aH = H)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-an--na">Mini-Lemma (aN = Na)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-mod-normal-subgroup-is-a-group">Theorem (mod normal subgroup is a group)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-group-actions">Definition (group actions)</a></li>
+    <li><a href="#theorem-originally-due-to-cayley">Theorem (originally due to Cayley)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-either-all-even-or-half-even">Lemma (either all even or half even)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma--2odd-has-a-normal-subgroup-of-order-odd">Lemma ( 2*odd has a normal subgroup of order odd)</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">T</span>his article is a continuation of <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/">More on Groups: Morphisms, Normal Subgroups, etc&hellip;</a> In this article we&rsquo;re going to continue looking into groups and apply some of our results from studying permutations to our study of them. Both fields of study enforce each other.</p>
+<p>But first, we&rsquo;re going to continue our investigation of subgroups, morphisms and equivalence relations. We saw in More on Groups: Morphisms, Normal Subgroups, etc&hellip; that if \( \phi \) is a homomorphism from a group \(A\) to a group \(B\), then \( Ker(\phi) \) is a normal subgroup of \(A\). Now we&rsquo;re going to show</p>
+<h2 id="theorem-image-is-a-subgroup">Theorem (image is a subgroup)</h2>
+<p>Let \( \phi \) be a homomorphism from group \(A\) into not necessarily all of group \(B\). If we let \( Im(\phi) := Range(\phi) = \{ b \in B | \exists a \in A \text{ and } \phi(a) = b \} \). Then \(Im(\phi) \leq B \). That is, \(Im(\phi) \) is a subgroup of \(B\).</p>
+<h3 id="proof">Proof</h3>
+<p>Using the <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#lemma-subgroup-test">subgroup test</a>, suppose that \(x\) and \(y \in Im(\phi) \), then we want to show that \(x \cdot y^{-1} \) is also in \(Im(\phi) \). By definition of \(Im(\phi) \), there are two (not necessarily distinct) elements of \(A\), \(a\) and \(b\), say, such that \( \phi(a) = x \), and \( \phi(b) = y\). Now, since \(A\) is a group, \(a \cdot b^{-1} \in A\), so then \( \phi(a \cdot b^{-1}) = \phi(a) \cdot \phi(b)^{-1} \in Im(\phi) \). That means that, by what we assumed \(a\) and \(b\) were, that \(x \cdot y^{-1} \in Im(\phi) \).</p>
+<p><strong>QED</strong></p>
+<p>In the last entry, we proved that all <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#theorem-kernels-are-normal-subgroups">kernels of homomorphisms were normal subgroups</a>. Soon we&rsquo;ll see that all normal subgroups are kernels for a homomorphism into another group. First we need to take a slight detour and discuss the notion of <em>equivalence classes</em>.</p>
+<h2 id="definition-equivalence-class">Definition (equivalence class)</h2>
+<p>Let \( \equiv \) be an equivalence relation on a set, \(S\), let \( s \in S\) be an element of \(S\). We define the <em>equivalence class</em> of \(s\), often written as \( [s] \), to be the set of all elements, \(t \in S\), such that \( s \equiv t \).</p>
+<h2 id="definition-factor-set">Definition (factor set)</h2>
+<p>Let \(S\) be a set and \( \equiv\) be an equivalence relation among pairs of elements of \(S\). Then the set of equivalence classes of \(S\) form a set, sometimes written as \(S /_{\equiv} \). It is sometimes read &ldquo;\(S\) mod \(\equiv\)&rdquo;, and is referred to as a <em>factor set</em>.</p>
+<p>Factor sets are similar to factor groups, but don&rsquo;t have the added structure that comes from having a binary operator. In order to make a factor group, you have to have a factor set and a binary operator that operates on pairs of equivalence classes, mapping them to a third equivalence class, which obeys the group axioms.</p>
+<p>When the factor set can be turned into a factor group, it&rsquo;s typically written as \(G / H := \{ [g] | g \in G \} \), where \( H \leq G\) is a subgroup and
+\[ [g] = \{ g' \in G | g' \equiv g \mod H\} \]</p>
+<p>Recall that</p>
+<p>\[ g' \equiv g \mod H \Leftrightarrow g' H = g H \]</p>
+<p>However, for most subgroups, \( H \leq G\), this factor set cannot be made into a group. The reason is that a binary operator on the equivalence classes (which we&rsquo;ll sometimes write as \( \circ_{\equiv} \) to avoid confusion with the binary operator in \(G\)) can&rsquo;t be both well-defined and preserve some of the structure of \(G\). What we want is for any two equivalence classes, \( [r] \), and \( [s]\), to have \( [r] \circ_{\equiv} [s] = [r \circ_{G} s] \). The good news is that sometimes this is possible. When \(H\) is a normal subgroup of \(G\), then we can form a factor group, as we&rsquo;ll show below.</p>
+<h2 id="mini-lemma-when-ah--h">Mini-Lemma (when aH = H)</h2>
+<p>\(aH = H \) if and only if \(a \in H \).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Suppose \(aH = H\), then \(a \cdot e \in aH = H \), so \(a \in H\). Now suppose that \(a \in H \), then \( a = a \cdot e \in aH \), so \( a \in H \cap aH \), and since cosets are either equal or disjoint (i.e. their intersection is empty), \(aH = H \).</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-an--na">Mini-Lemma (aN = Na)</h2>
+<p>Let \( N \triangleleft G \), then for all \( g \in G\), the cosets \( g N \) and \(N g \) are the same. (This is an alternate way to define normal subgroup).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Let \(N\) be a normal subgroup of \(G\) and \( g \in G\) be an arbitrary element of \(G\). Then \( g^{-1} N g = N \), which implies that if we apply \(g\) to the left of every element, the cosets will remain equal. That gives us \( N g = g N \).</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-mod-normal-subgroup-is-a-group">Theorem (mod normal subgroup is a group)</h2>
+<p>Let \(G\) be a group, and \(N\) be a normal subgroup. Let \( \alpha(x) := [x] \) be a function which sends any \(x \in G\) to its equivalence class in \(G / N\). Let \( [r] \circ_{\equiv} [s] := [r \circ_{G} s] \) be a binary operator on \(G / N \).</p>
+<ol>
+<li>\( \circ_{\equiv} \) is well-defined. That is, for any two equivalence classes \([r]\) and \([s]\) in \( G / N\), \( [r] \circ_{\equiv} [s] = [r \circ_{G} s] \).</li>
+<li>\( G / N \) is a group with \( \circ_{\equiv} \) its binary operator.</li>
+<li>\( \alpha \) is an epimorphism from \( G\) onto \( G / N \), and \(Ker(\alpha) = N \).</li>
+</ol>
+<h3 id="proof-3">Proof</h3>
+<p>Now we prove \( \circ_{\equiv} \) is well defined. The issue that we have to make sure we avoid is having the binary operator give different results for different choices of equivalence class representatives. What we mean is that if \( [s_1] \) is an equivalence class and \( s_2 \in [s_1] \), then \( [s_1] = [s_2] \). We have to guarantee that if \( [r_1] = [r_2] \), that \( [r_1] \circ_{\equiv} [s_1] = [r_2] \circ_{\equiv} [s_2] \), whenever \( r_1 \equiv r_2\) and \( s_1 \equiv s_2 \).</p>
+<p>Let \( [r_1] = [r_2] \) and \( [s_1] = [s_2] \), we want to show that \( [r_1] \circ_{\equiv} [s_1] = [r_2] \circ_{\equiv} [s_2] \). This will happen if and only if \([r_1 \circ_{G} s_1] = [r_2 \circ_{G} s_2] \), which means that \( r_1 \circ_{G} s_1 \equiv r_2 \circ_{G} s_2 \mod N\), and by definition that will happen if and only if \( (r_1 \circ_{G} s_1) N = (r_2 \circ_{G} s_2) N \).</p>
+<p>Since \( [r_1] \equiv [r_2] \), we have \( r_1 \equiv r_2 \mod N \), which means \( r_1 N = r_2 N \), and likewise we also have \( s_1 N = s_2 N \). We want to show that \( r_1 \circ_{G} s_1 N = r_2 \circ_{G} s_2 N \). In the next calculation, we omit \( \circ_{G} \), and instead just write \( r_1s_1\), for example.</p>
+<p>\( r_1s_1 N = r_1 ( s_1 N)\)\( = r_1 (s_2 N) \), then by the mini lemma above, since \(N\) is a normal subgroup, we have, \( r_1 (s_2 N) = r_1 (N s_2) = (r_1 N) s_2\)\( = (r_2 N) s_2 \). Again, by the mini lemma we have, \( r_2 (N s_2) = r_2 s_2 N \). Thus \( \circ_{\equiv} \) is well-defined, and we have proven claim 1 above.</p>
+<p>By what we&rsquo;ve just shown, for any \(g \in G\), \([g] \circ_{\equiv} [g^{-1}] = [e_{G}]\), so \( [g]^{-1} = [g^{-1}] \), so every equivalence class has an inverse equivalence class. We&rsquo;ve also seen that for every two equivalence classes \( [r] \), and \( [s] \), \( [r] \circ_{\equiv} [s] = [r \circ_{G} s] \), so \(G / N \) is closed under \( \circ_{\equiv} \). The final step to proving that \( G / N\) is a group with binary operator \( \circ_{\equiv} \) is to show that this operator is associative, which is straight-forward.</p>
+<p>Notice that for any three equivalence classes \( [r] \), \( [s] \), and \( [t] \), that \( [r] \circ_{\equiv} ( [s] \circ_{\equiv} [t] ) = [r] \circ_{\equiv} [s \circ_{G} t] \), and that is equal to \( [r \circ_{G} s \circ_{G} \circ_{G} t] = [(r \circ_{G} s) \circ_{G} t]\), which from what we showed in the proof of claim 1 is equal to \( [r \circ_{G}s ] \circ_{\equiv} [t] \), which (again by what we showed from case 1) is equal to \( ([r] \circ_{\equiv} [s]) \circ_{\equiv} [t] \). This finishes the proof of claim 2.</p>
+<p>By the definition of \( \alpha\), it is a homomorphism. Let&rsquo;s determine its kernel.</p>
+<p>Suppose \(g \in G\) is such that \( \alpha(g) = [e] \), that means that \( g \in e N = N \), so by the mini lemma above, \( g \in N \). We also see that \( g \in N \) implies that \( g N = N \), so \( \alpha(g) = [g] = [e] \). Therefore \( Ker(\alpha) = N \).</p>
+<p>The only thing left to check is that it is onto \(G /N\), which is easy. Let \(gN\) be a left coset of \(N \in G / N\), then \( [g] \) is an equivalence class in the range of \( \alpha \). That finishes the proof of claim 3.</p>
+<p><strong>QED</strong></p>
+<p>We hope this isn&rsquo;t getting too confusing. We&rsquo;ve been sloppy about what exactly lives in \(G / N \), and the proof of claim 3 in the above theorem laid that bare. At times it seems like \(G / N\) is a set of cosets of \(N\), and at other times it seems like it&rsquo;s a set of equivalence classes of elements of \(G\). They&rsquo;re really the same thing, though. We showed (in More on Groups: Morphisms, Normal Subgroups, etc&hellip;) that \( \equiv \mod H \) is an equivalence relation on the set of cosets of a subgroup of \(G\). We defined two elements to be in the same equivalence class if they belong to the same coset.</p>
+<p>Now we start to think about how a group can act on a set.</p>
+<h2 id="definition-group-actions">Definition (group actions)</h2>
+<p>Let \(X\) be a set, \(S_{X}\) be the group of all permutations of \(X\), and \(G \leq S_{X}\), then \(g \in G\) is said to act on \(X\), and \(G\) is said to be a group of <em>actions</em> on \(X\).</p>
+<p>In fact, since \(G\) itself is a set with a binary operation, \(G\) can even act on itself. What&rsquo;s more, every group acts on itself.</p>
+<h2 id="theorem-originally-due-to-cayley">Theorem (originally due to Cayley)</h2>
+<p>Let \(G\) be a group, then there is an isomorphism \( \phi: G \rightarrow H \leq S_{G} \), from \(G\) into a subgroup of \(S_{G} \), the group of all permutations of the elements of \(G\).</p>
+<p>This means that any group can be thought of as a subgroup of a group of permutations.</p>
+<h3 id="proof-4">Proof</h3>
+<p>Let \(G\) be a group, but for this proof, let&rsquo;s refer to the set of all of the elements of \(G\) as \(Y\). That is, \( Y = \{ g | g \in G \} \). Then a permutation of \(G\) is a permutation of \(Y\), and belongs to \(S_{Y} \), by definition. Define \( \beta : G \rightarrow S_{Y} \) such that \( \beta(g) := \pi_{g} \in S_{Y} \), where \( \pi_{g}(y) = g \circ_{G} y \), for any \( y \in Y \). Remember, \( y \in Y \) means that \(y\) is an element of \(G\), so \( g \circ_{G} y \) is defined.</p>
+<p>First we have to show that \( \beta(g_1 \circ_{G} g_2)(y) = \beta(g_1) \circ_{S_{Y}} \beta(g_2)(y) = \pi_{g_1} \circ \pi_{g_2}(y) = \pi_{g_1}(\pi_{g_2}(y)) \), for all \(y \in Y\). This follows from the fact that \( \beta( g_1 \circ_{G} g_1)(y) = \pi_{g_1 \circ_{G} g_2}(y) = (g_1 \circ_{G} g_2) \circ_{G} y \), and \( \pi_{g_1} (\pi_{g_2}(y)) = g_1 \circ_{G} ( g_2 \circ_{G} y ) \). By associativity, the two must be equal.</p>
+<p>Finally, we have to show that for any \(g \in G\), \( \beta(g) \in S_{Y} \), i.e. that \( \pi_{g} \) is actually a permutation of \( Y \). To do that we must show that \( \pi_{g} : Y \xrightarrow{\text{1-1, onto}} Y \).</p>
+<p>Let&rsquo;s first show that \( \pi_{g}(y) \) is 1-1. Suppose \( \pi_{g}(y_1) = \pi_{g}(y_2) \), then \( g \circ_{G} y_1 = g \circ_{G} y_2 \). We&rsquo;ve already shown that we can apply cancellation in \(G\), so \( y_1 = y_2 \), and \( \pi \) is 1-1.</p>
+<p>Now we show that \( \pi_{g} \) is onto. Let \( y \) be any element in \(Y\), and thus an element of \(G\). Consider that \( \pi_{g}(g^{-1} \circ_{G} y) = g \circ_{G} (g^{-1} \circ_{G} y) = y \), so \( y \in Range(\pi_{g}) \), thus \( \pi_{g} \) is onto. It is therefore a permutation, and our proof is finished.</p>
+<p><strong>QED</strong></p>
+<p>In the earlier entry (More Math of Permutations), we showed that for any permutation of a finite set, there is a function \(Sign(\pi) = \pm 1 \), and that \(Sign(\pi_1 \circ \pi_2) = Sign(\pi_1) \cdot Sign(\pi_2) \). We now know that \(Sign : S_{X} \rightarrow \{1, -1\} \) is a homomorphism from the set of all permutations of a finite set \(X\) into the set \( \{ 1, -1 \} \). What&rsquo;s more, with the above Theorem of Cayley, there&rsquo;s also such a homomorphism from each finite group into the set of \( \{ 1, -1 \} \). This can be very useful. As an example we can now prove a couple of lemmas:</p>
+<h2 id="lemma-either-all-even-or-half-even">Lemma (either all even or half even)</h2>
+<p>Let \(G\) be a finite group. Then if there exists \( g \in G\), such that \( Sign(g) = -1 \), there exists \( N \triangleleft G\), such that \( (G : N) = 2\). Otherwise for every \(g \in G\), \( Sign(g) = 1 \).</p>
+<h3 id="proof-5">Proof</h3>
+<p>Suppose there is a \(g \in G\), such that \( Sign(g) = -1\), then let \( N := \{ h \in G | Sign(h) = 1 \} \). Notice that if \(n_1\) and \(n_2 \in N \), that \( Sign(n_1 \cdot n_2^{-1}) = Sign(n_1) \cdot Sign(n_2)^{-1} = 1 \cdot 1^{-1} = 1\), so \( n_1 \cdot n_2^{-1} \in N\), and thus \(N\) is a subgroup of \(G\). It is a normal subgroup, because for any \(g \in G\), and \(n \in N \), \(Sign(g^{-1} \cdot n \cdot g) = Sign(g^{-1}) \cdot Sign(n) \cdot Sign(g) \), and that is equal to \( Sign(g)^{-1} \cdot Sign(g) \cdot 1 = 1 \), and so is in \(N\). Therefore \( g^{-1} N g = N \), so \(N\) is normal.</p>
+<p>Now we show that \( (G : N ) = 2 \). Notice that for any \( n \in N \), \( g \cdot n \not\in N \), and likewise, for any \( h \not\in N\), \( g \cdot h \in N \). We previously showed that \( \pi_{g}(x) = g \cdot x \) is 1-1, so \( | N | \leq | G \setminus N | \leq | N | \), therefore \( |N| = \frac{1}{2} | G | \), and thus \( (G : N ) = 2 \).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma--2odd-has-a-normal-subgroup-of-order-odd">Lemma ( 2*odd has a normal subgroup of order odd)</h2>
+<p>Let \(G\) be a group of order \( 2 \cdot ( 2 \cdot k + 1) \), then \(G\) has a subgroup \(N\) of order \( 2 \cdot (2 \cdot k + 1) \), which is normal in \(G\).</p>
+<p>We&rsquo;re going to prove this in the <a href="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/#corollary-2odd-has-normal-subgroup">next entry</a>. It takes a bit more work than the above lemma.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/more-on-groups-morphisms-normal-subgroups-etc/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">More on Groups: Morphisms, Normal Subgroups, etc...</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Subgroups of Even Permutations Orbits Stabilizers etc...</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/applying-permutations-to-group-theory/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fapplying-permutations-to-group-theory%2f" />
+</body>
+</html>

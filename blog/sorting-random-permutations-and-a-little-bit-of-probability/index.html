@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sorting Random Permutations and a Little Bit of Probability - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Sorting Random Permutations and a Little Bit of Probability" />
+<meta property="og:description" content="In this article, we&rsquo;re going to discuss a shuffling algorithm, and then quick_sort &ndash; a sorting algorithm." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/sorting-random-permutations-and-a-little-bit-of-probability/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-24T13:04:07-04:00" />
+<meta property="article:modified_time" content="2021-06-24T13:04:07-04:00" />
+
+
+		<meta itemprop="name" content="Sorting Random Permutations and a Little Bit of Probability">
+<meta itemprop="description" content="In this article, we&rsquo;re going to discuss a shuffling algorithm, and then quick_sort &ndash; a sorting algorithm."><meta itemprop="datePublished" content="2021-06-24T13:04:07-04:00" />
+<meta itemprop="dateModified" content="2021-06-24T13:04:07-04:00" />
+<meta itemprop="wordCount" content="2395">
+<meta itemprop="keywords" content="Probability,Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sorting Random Permutations and a Little Bit of Probability"/>
+<meta name="twitter:description" content="In this article, we&rsquo;re going to discuss a shuffling algorithm, and then quick_sort &ndash; a sorting algorithm."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Sorting Random Permutations and a Little Bit of Probability</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-24T13:04:07-04:00">2021-06-24</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/algorithms/" rel="category">Algorithms</a>, <a class="meta__link" href="/categories/sorting/" rel="category">Sorting</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/recycling_1.jpg" alt="Sorting Random Permutations and a Little Bit of Probability">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#random_perm">random_perm()</a></li>
+    <li><a href="#theorem-random-permutation">Theorem (Random Permutation)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#quick_sort">quick_sort()</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n this article, we&rsquo;re going to discuss a shuffling algorithm, and then <code>quick_sort</code> &ndash; a sorting algorithm. We will be introducing a lot of new concepts. It will also be our first discussion of probabilities. There&rsquo;s a lot of material to cover.</p>
+<p>Here&rsquo;s a python script which outputs a permutation of the integers \( \{0, 1, 2, &hellip;, N-1\}\).</p>
+<h2 id="random_perm">random_perm()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00f">import</span> random
+
+<span style="color:#00f">def</span> random_permutation(N):
+  indices = []
+  <span style="color:#00f">for</span> i <span style="color:#00f">in</span> range(N):
+    indices += [i]
+  <span style="color:#00f">for</span> i <span style="color:#00f">in</span> range(N):
+    r = random.random()*(i + 1)
+    r = int(r)
+    indices[i], indices[r] = indices[r], indices[i]
+  <span style="color:#00f">return</span> indices</code></pre></td></tr></table>
+</div>
+</div>
+<p>We can think of \( \text{random_permutation}(N) \) as a <em>random variable</em>, on the space of all permutations of the set of indices \( I_N := \{ i \in \mathbb{Z} | 0 \leq i \lneq N \} \). This means that we can consider the output to be an element of \(S_{I_N} \) (the group of all permutations on \(I_N\). We introduced this here <a href="/blog/some-of-the-math-of-permutations/">Some of the Math of Permutations</a> and here <a href="/blog/more-math-of-permutations/">More Math of Permutations</a>). When we think of it as an element of that group, we&rsquo;ll sometimes refer to it as \(\rho \)</p>
+<p>Now, since \( \text{random_permutation}(N) \) is a random variable, it has a <em>distribution</em>. I.e. each possible output \( \rho \in S_{I_N}\) has a probability associated with it, \( P(\rho) \). We want to show that if \( \text{random.random()} \) is uniformly distributed on the interval \( [0,1] \), then \( \text{random_variable}(N) \) is <em>uniformly distributed</em> on the set of \( \rho \in S_{I_N} \).</p>
+<p>When we say that \(\text{random.random()}\) is &ldquo;uniformly distributed&rdquo; we mean that \( P(\text{random.random()} \in [a,b]) = b - a \), where \( 0 \leq a \leq b \leq 1 \). On the other hand, when we say that \(\rho\) is uniformly distributed among all of the permutations of \(S_{I_N} \) we mean that \( P(\rho = \sigma) = (N!)^{-1} \), where \(\sigma\) is any permutation in \(S_{I_N}\). What this means in words is that every possible permutation of the indices \( \{0, 1, 2, &hellip;, N-1\} \) is an equally likely output of \( \text{random_permutation}(N) \).</p>
+<h2 id="theorem-random-permutation">Theorem (Random Permutation)</h2>
+<p>\( \text{random_permutation}(N) \) is uniformly distributed on \(S_{I_N}\) if \( \text{random.random}() \) is uniformly distributed on \( [0, 1] \)</p>
+<h3 id="proof">Proof</h3>
+<p>We&rsquo;ll be using induction to prove this, so suppose that the probability that \(\sigma = \text{random_permutation}(M) \) is equal to \( (M!)^{-1} \), for all \( M &lt; N \) (where in this case, \(\sigma\) is a permutation on the set \(I_M\)). Notice that the base case where \(M = 1\) is satisfied, because \((1!)^{-1} = 1 \).</p>
+<p>Let \(\sigma \) be an arbitrary element of \(S_{I_N} \) and let \( t:= (\sigma(N-1), N-1) \). The \(2\)-cycle which swaps \( \sigma(N-1)\) with \(N-1 \), while leaving everything else unchanged. If \( \sigma(N-1) = N-1\), then \(t\) is the identity permutation, instead of a \(2\) cycle. In either case, \(t\) is well-defined. Notice that \(\sigma = \rho \) if and only if \( t \circ \sigma = t \circ \rho \). This happens because permutations form a group under composition and we can apply cancellations within groups (as explained in More Introductory Group Theory &ndash; cancellations mini-lemma). Notice also that \( t \circ \sigma(N-1) = N-1 \). This means that it can be viewed as a permutation on the set of indices \(I_{N-1} \). By induction the probability that \(t \circ \sigma = \text{random_permutation}(N-1) \) = \( ((N-1)!)^{-1} \).</p>
+<p>Now, notice that in computing \( \text{random_permutation}(N) \), that at iteration \(i = N-2 \) of the for loop, we&rsquo;ve generated a permutation on the first \(N-1\) elements in the array \( \text{indices}[] \). This must be true, because for all of the loop iterations where \( i = 0, 1, 2, &hellip; , N-2\), we have \(r \leq i\), so \( \text{indices}[N-1] \) (the index stored at the \(N-1\) position) cannot be affected by any of those iterations.</p>
+<p>Now, what will make the output of \( \text{random_permutation}(N) = \sigma \) ? At the top of the for loop at iteration \(i = N-1\), we have to have \( \text{indices}[] \) correspond to the permutation \( t \circ \sigma \), which happens with probability \( ((N-1)!)^{-1} \). Then, for that iteration, we have to have \(r = \sigma(N-1)\). When (and only when) that happens, the final state of \(\text{indices}[] \) is equal to the array which corresponds to the permutation \( \sigma \).</p>
+<p>What&rsquo;s the probability that in the last iteration \(r = \sigma(N-1) \)? It&rsquo;s exactly equal to \( N^{-1} \). Since \(r\) is selected uniformly at random from all the indices \(0, 1, 2, &hellip; , N -1 \).</p>
+<p>Therefore, the probability that \( \sigma = \rho \) is equal to \( ((N-1)!)^{-1} \) times \( N^{-1} \), because each iteration uses a different call to \( \text{random.random}() \), and we&rsquo;re assuming that each call is independent of all of the calls before it. Multiplying those two probabilities gives us \( (N!)^{-1}\), as we wanted.</p>
+<p><strong>QED</strong></p>
+<p>We used, but didn&rsquo;t prove that fact that the probability of two independent events, \(A\) and \(B\) occurring is equal to \(P(A) \cdot P(B) \), but it is true. We&rsquo;ll get to that in a later entry.</p>
+<p>Now that we&rsquo;ve discussed a nice way to scramble an array, let&rsquo;s discuss some possible ways to unscramble it. That is, let&rsquo;s discuss <em>sorting</em> algorithms.</p>
+<p>There&rsquo;s a good chance that you know more about them than we do. We&rsquo;re not sortingologists, or anything like that.</p>
+<p>We&rsquo;re going to start by discussing one of the most classic sorting algorithm of them all, <em>quick sort</em>. Here&rsquo;s our rendition of it in C++</p>
+<h2 id="quick_sort">quick_sort()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#2b91af">void</span> quick_sort(std::vector&lt;_Float64&gt;&amp; input)
+{
+  quick_sort(input, 0, input.size());
+}
+
+<span style="color:#2b91af">void</span> quick_sort(std::vector&lt;_Float64&gt;&amp; input, <span style="color:#2b91af">int64_t</span> start, <span style="color:#2b91af">int64_t</span> end)
+{
+  <span style="color:#00f">if</span>(end - start &lt; 2) <span style="color:#00f">return</span>;
+
+  _Float64 tmp;
+  <span style="color:#2b91af">int64_t</span> i = start;
+  <span style="color:#2b91af">int64_t</span> j = end - 1;
+
+  <span style="color:#00f">while</span> (i &lt; j)
+  {
+    <span style="color:#00f">if</span> (input[i] &gt;= input[i+1])
+    {
+      tmp = input[i];
+      input[i] = input[i+1];
+      input[i+1] = tmp;
+      i++;
+    }
+    <span style="color:#00f">else</span>
+    {
+      tmp = input[i+1];
+      input[i+1] = input[j];
+      input[j] = tmp;
+      j--;
+    }
+  } <span style="color:#008000">// i == j
+</span><span style="color:#008000"></span>  quick_sort(input, start, i);
+  quick_sort(input, i+1, end);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>This function sorts a vector of floating point numbers. It has some very good qualities. Perhaps the best is that it&rsquo;s easy to understand and in most cases it&rsquo;s about as fast as the best sorting algorithms. However, it does have its drawbacks. The biggest one is that it&rsquo;s performance depends on the initial ordering of the input vector. This might seem obvious, like it has to be a characteristic of all sorting functions, but it isn&rsquo;t. There are sorting algorithms whose performance doesn&rsquo;t depend on how the input vector is arranged at all. We won&rsquo;t address any of those algorithms in this entry, though.</p>
+<p>In order to understand it, we have to understand some of the basics of <em>recursion</em>. Notice we&rsquo;ve used <em>two</em> quick_sort functions. The first just calls the second and passes along two additional parameters, the \(\text{start}\) and \(\text{end} \) variables. \(\text{start} \) is initialized to \(0\), and \(\text{end} \) is initialized to \(\text{input.size()} \), which is the length of \(\text{input}\). To understand what&rsquo;s going on, we have to figure out what&rsquo;s happening with the second, longer, quick_sort function.</p>
+<p>This function isn&rsquo;t very complicated, but we do have to figure out what&rsquo;s going on just before the end where it calls itself twice. This is what makes this implementation of quick_sort recursive. Recursion happens whenever a function, say \(f: \mathcal{X} \rightarrow \mathcal{Y}\) is defined in a way that references itself on a smaller input. There also has to be a base case, i.e. a smallest possible input, and in that case \(f\) is defined without reference to itself. This is like induction, where there has to be a base case, and all other cases are resolved by assuming a solution exists for smaller cases.</p>
+<p>For \(\text{quick_sort}\), the size of a case is \(\text{end} - \text{start} \), which is the length of the subvector to be sorted. The base case is when the length is less than \(2\). In that case, the subvector is already sorted. However, if that isn&rsquo;t the case, then we define two more variables, \(\text{i} := \text{start} \) and \(\text{j} := \text{end} - 1\). These correspond to the positions of the first and last entries of the subvector that will be handled by this call (or instance) of quick_sort.</p>
+<p>Since \(\text{end} - \text{start} \geq 2\), we have \(j - i \geq 1\), so they are not equal to begin with. This means that the \( \text{while} \) loop will execute at least once. In fact, we can calculate exactly how many times this while loop will execute. Notice on each iteration, either \(i \mapsto i+1 \), or \(j \mapsto j - 1\), but not both. The loop will not execute when \(i = j\), so therefore it will execute exactly \( j - i\) times, which is equal to \((\text{end} -1) - \text{i}\), which is \(1\) less than the length of the subvector.</p>
+<p>Notice that \(i\) will always refer to the index of the floating point number which is initially stored at \(\text{input[start]} \). To better see why this is the case, notice that when the while loop is called for the first time, \(i = \text{start} \), and if \(\text{input[i]} &lt; \text{input[i+1]}\) then we don&rsquo;t change \(\text{input[i]} \) or the variable \(i\) at all. On the other hand, if \(\text{input[i]} \geq \text{input[i+1]}\), then we swap the values of those two entries of \(\text{input}\), and increase \(i\) to \(i+1\).</p>
+<p>For example, if \(\text{input} = [1.5_i, 0.5, 2.5, 0.5, 3.5_j] \), where we&rsquo;ve written subscripts to indicate the positions pointed to by \(i\) and \(j\), then after one iteration of the while loop, we will get \( [0.5, 1.5_i, 2.5, 0.5, 3.5_j] \) and further iterations of the loop will yield</p>
+<p>\[ [0.5, 1.5_i, 3.5, 0.5_j, 2.5] \]
+\[ [ 0.5, 1.5_i, 0.5_j, 3.5, 2.5 ] \]
+and finally
+\[ [ 0.5, 0.5, 1.5_{i = j}, 3.5, 2.5 ] \]</p>
+<p>Also notice that by the end of the while loop, all of the entries to the left of \(i\) are strictly less than \(\text{input[i]} \), while those to the right of the \(i^{\text{th}} \) position are \( \geq \text{input[i]} \). This happens, because at every iteration, we&rsquo;re comparing \(\text{input[i]} \)with \(\text{input[i+1]}\). If \(\text{input[i+1]}\) is strictly less than \(\text{input[i]}\), we swap them, and move \(i\) up one (to the new position of what was in \(\text{input[i]}\)), otherwise, we swap \(\text[i+1] \) with another entry from the right side &ndash; the entry at \(\text{input[j]}\). After swapping, we move \(j\) down one, so that we will never compare it with the same item again.</p>
+<p>So, ultimately, at the end of each call of quick_sort, we perform a partial sort of \(\text{input}\), where everything less than \(\text{input[start]} \) is on the left hand side of \(\text{input[i]}\) and everything else ends up to the right. \(i\) ends up somewhere \(\geq \text{start}\) and \( \leq \text{end} - 1\). Then we call quick_sort to sort each side further. When we call quick_sort to sort out the left and the right side of \(i\), we don&rsquo;t need \(\text{input[i]}\) to be a part of either of those subvectors. This is because it is already where it should be (it&rsquo;s to the right of everything less than it and to the left of everything else which is greater than it). It works, and it will finish in a finite amount of time. However, we&rsquo;d like to say more about its running time.</p>
+<p>By our analysis, we can see that if we define \(t(n)\) to be the number of times the while loop is executed during the sorting of a vector of length \(n\), that \(t(n) = (n-1) + t(l) + t(r) \), where \(l + r = (n-1) \). \(t(1) = t(0) = 0\), and \(t(2) = 1\). However, already at \(t(3)\) we aren&rsquo;t guaranteed at specific answer. It&rsquo;s possible that \(t(3) = (3-1) + t(2) + t(0) = 3\), but could also get lucky and have \(t(3) = (3 - 1) + t(1) + t(1) = 2 \). For larger values of \(n\) the range of possible values will become even larger.</p>
+<p>We can prove that \(t(n) \leq n^2 \), using induction. For the base cases, we&rsquo;ve already shown that for \(n \leq 3\) we have \(t(n) \leq n^2\). Now suppose that for all \(k &lt; n\), we have \(t(k) \leq k^2\). Let \( l = (n-1) - r\). Then we need to show that \( t(n) = (n-1) + t(r) + t(l) \leq (n-1) + l^2 + r^2 \leq n^2\), which is equivalent to</p>
+<p>\[ (n-1) + r^2 + ( (n-1) - r)^2 \leq n^2 \tag{1}\label{1}\]
+where \( 0 \leq r &lt; n\).
+Expanding the left side out, we get
+\[ n^2 - n - 2(n-1)r + r^2\]
+which is \(\leq n^2\) if and only if
+\[ n + 2(n-1)r \geq r^2 \]
+and that happens if and only if
+\[ n + 2nr \geq r^2 + 2r \]
+If we let \(n = r + d\), where \(d \geq 1 \), then we have
+\[ (r + d) + 2(r + d)r \geq r^2 + 2r \]
+doing some algebra gives us
+\[ r^2 + d + 2dr \geq r \]
+which must be true. Therefore, we&rsquo;ve shown that \(t(n) \leq n^2 \).</p>
+<p><strong>QED</strong></p>
+<p>If we assume that the overall running time of \(\text{quick_sort}\) is proportional to the number of while loop iterations, then this means that the running time of \(\text{quick_sort}\) is &ldquo;on the order of&rdquo; \(n^2\), which means that it&rsquo;s a member of the class of \(O(n^2)\) sorting algorithms. We&rsquo;ll go into that in more detail in a later entry, but this result is actually not very impressive. A good sorting algorithm should be in the class of \(O(n \cdot \log(n))\) algorithms. What makes it often useful, however, is that even though its worst running time can be \(O(n^2)\) it <em>typically</em> does much better. In fact, it&rsquo;s typically about as fast as an \(O(n \cdot \log(n))\) algorithm.</p>
+<p>We&rsquo;ve got a lot more material to cover later on, but this will do it for this entry. Bye!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/probability/" rel="tag">Probability</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Zassenhaus Lemma and the Jordan Holder Theorem</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/more-on-sorting-and-analyzing-run-time-complexity/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">More on Sorting and Analyzing Run Time Complexity</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/sorting-random-permutations-and-a-little-bit-of-probability/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fsorting-random-permutations-and-a-little-bit-of-probability%2f" />
+</body>
+</html>

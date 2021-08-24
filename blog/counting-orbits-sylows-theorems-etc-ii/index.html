@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Counting Orbits Sylows Theorems etc... (II) - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Counting Orbits Sylows Theorems etc... (II)" />
+<meta property="og:description" content="We&rsquo;re continuing our proofs of Sylow&rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/counting-orbits-sylows-theorems-etc-ii/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-15T09:36:33-04:00" />
+<meta property="article:modified_time" content="2021-06-15T09:36:33-04:00" />
+
+
+		<meta itemprop="name" content="Counting Orbits Sylows Theorems etc... (II)">
+<meta itemprop="description" content="We&rsquo;re continuing our proofs of Sylow&rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&hellip;"><meta itemprop="datePublished" content="2021-06-15T09:36:33-04:00" />
+<meta itemprop="dateModified" content="2021-06-15T09:36:33-04:00" />
+<meta itemprop="wordCount" content="3311">
+<meta itemprop="keywords" content="Sets,Permutations,Sylow&#39;s Theorems,Orbits," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Counting Orbits Sylows Theorems etc... (II)"/>
+<meta name="twitter:description" content="We&rsquo;re continuing our proofs of Sylow&rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&hellip;"/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Counting Orbits Sylows Theorems etc... (II)</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-15T09:36:33-04:00">2021-06-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/missile_silo.jpg" alt="Counting Orbits Sylows Theorems etc... (II)">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lemma--alpha-inverse-of-alpha">Lemma ( alpha inverse of alpha):</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-alpha-of-alpha-inverse">Lemma (alpha of alpha inverse)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-normalizer">Definition (normalizer)</a></li>
+    <li><a href="#definition-hn">Definition (H*N)</a></li>
+    <li><a href="#lemma-h-intersect-n-is-normal-in-h">Lemma (H intersect N is normal in H):</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-an-isomorphism-theorem">Lemma (an isomorphism theorem)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-size-of-hn">Corollary (size of H*N)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-conjugation-preserves-subgroups">Lemma (conjugation preserves subgroups)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-sylows-second">Theorem (Sylow&rsquo;s second)</a>
+      <ul>
+        <li><a href="#proof-6">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-orbits-and-subgroup-actions">Lemma (orbits and subgroup actions)</a>
+      <ul>
+        <li><a href="#proof-7">Proof</a></li>
+        <li><a href="#proof-8">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-another-restriction-on-the-number-of-sylow-p-subgroups">Corollary (another restriction on the number of Sylow p-subgroups):</a>
+      <ul>
+        <li><a href="#proof-9">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-counting-orbits-by-counting-fixes">Theorem (counting orbits by counting fixes)</a>
+      <ul>
+        <li><a href="#proof-10">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n the final two Sylow theorems that we prove, we&rsquo;re going to define the Sylow subgroup to have order \(p^k\), even if that is the order of \(G\). That is, if we let \( |G| = p^k m\), where \( \gcd(p,m) = 1\), then, even if \(m =1 \), we will say that \(G\) itself is its Sylow subgroup. We aren&rsquo;t losing much generality, since we already showed that every p-group of order \(p^k\), where \(k \geq 1\) has a subgroup of order \(p^{k-1}\). This allows us to avoid having to deal with as many cases in the proofs.</p>
+<p>Notice that if \(k-1 \geq 2\), then the subgroup of order \(p^{k-1}\) itself has a subgroup of order \(p^{k-2}\), and on and on, until we are left with \( \{e\}\), the trivial subgroup which contains only the identity element of \(G\).</p>
+<p>Before we can being work on the second and third Sylow theorem, we need to establish some more basic results about homomorphisms. We will also remind ourselves of some of the results we&rsquo;ve already proven in earlier entries.</p>
+<p>In what follows, let \(G\) be a group, \(H \leq G\) a subgroup of \(G\), and \(N \triangleleft G\) a normal subgroup of \(G\). Let \( \alpha : G \rightarrow G/N\) be the homomorphism taking \(g \in G\) to the coset \(gN\) represented by it (i.e. the natural homomorphism).</p>
+<p>If \(S \subseteq G\) is a subset of \(G\) (usually a subgroup, but the definition works for any subset), then \( \alpha(S) := \{ sN | s \in S \} \), is a subset of \(G / N\). Similarly, if \( \dot{S} \subseteq G / N\), then \( \alpha^{-1}(\dot{S}) : = \{ s \in G | \alpha(s) \in \dot{S} \} \).</p>
+<p>We proved in <a href="/blog/counting-orbits-sylows-theorems-etc-i/#lemma-homomorphisms-and-subgroups ">Counting Orbits, Sylow&rsquo;s Theorems, etc&hellip;</a> that if \(\dot{S} \leq G/N\) is a subgroup of the factor group then \(\alpha^{-1}(\dot{S}) \) is a subgroup of \(G\). We also showed that it has \( | \dot{S} | \cdot | N | \) elements (it is the disjoint union of all of the cosets represented by the elements of \(\dot{S}\)).</p>
+<p>We also proved in <a href="/blog/applying-permutations-to-group-theory/#theorem-image-is-a-subgroup">Applying Permutations to Group Theory</a> that the image of a subgroup is a subgroup. I.e. \( \alpha(H) \leq G / N \).</p>
+<p>Now we&rsquo;re going to continue our investigation of images of subgroups.</p>
+<h2 id="lemma--alpha-inverse-of-alpha">Lemma ( alpha inverse of alpha):</h2>
+<p>Let \(H \leq G\) be a subgroup of \(G\), and \(N \triangleleft G\) a normal subgroup of \(G\). Let \(\alpha : G \rightarrow G / N\) be the natural homomorphism taking \(g \in G\) to \( gN \in G/N\). Then \( \alpha^{-1} \circ \alpha(H) \geq H \), is a subgroup of \(G\).</p>
+<h3 id="proof">Proof</h3>
+<p>By definition it contains \(H\). It is a group by what we&rsquo;ve shown above.</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-alpha-of-alpha-inverse">Lemma (alpha of alpha inverse)</h2>
+<p>Let \(G\), and \(N\) be as above. Let \(K \leq G/N\) be a subgroup of the factor group. Then \( \alpha \circ \alpha^{-1}(K) = K \).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Let \(k \in \alpha \circ \alpha^{-1}(K) \), then \(k = k&rsquo;N\) is a coset of \(N\), belonging to \(K\). Then the preimage of \(k\) is the subset \(k&rsquo;N\) of elements of \(G\). Then applying \( \alpha\) to every member of that set gives us the same coset in \(G / N\), namely, \(k&rsquo;N\) (which is an element of \(G/N\) and not a subset of it). This coset is in \(K\). Therefore \( \alpha \circ \alpha^{-1}(K) \subseteq K \).</p>
+<p>Now let \(k \in K\), then, as we said before \(k = k&rsquo;N\), for some coset of \(N\). Applying \( \alpha \circ \alpha^{-1} \) to that coset brings us right back to that exact same coset. Therefore \( K \subseteq \alpha \circ \alpha^{-1}(K) \).</p>
+<p><strong>QED</strong></p>
+<p>What we&rsquo;ve seen from the previous two lemmas is something which shows up again and again all over math. The preimage of a mapping often behaves more nicely than the image when dealing with sets.</p>
+<p>We define \( \alpha^{-1} \circ \alpha (H) \) \( := H \cdot N \). That&rsquo;s the more usual way of defining it, but then the theorems we prove about it become slightly less intuitive.</p>
+<h2 id="definition-normalizer">Definition (normalizer)</h2>
+<p>Let \(H\) be a subgroup of a group \(G\). Then \(N_{G}(H) := \{g \in G | g^{-1} H g = H \}\) is called the normalizer of \(H\) in \(G\). Notice that it is nothing other than \(Stab_G(H) \) under the action of conjugation. Therefore it is a subgroup of \(G\).</p>
+<h2 id="definition-hn">Definition (H*N)</h2>
+<p>Let \(N\) be a subgroup of a group \(G\), let \(H \leq N_{G}(N) \), be a subgroup of \(G\) contained within \(N\)&rsquo;s normalizer. Then if we let \(\alpha\) be the natural homomorphism mapping \(N_{G}(N) \rightarrow N_{G}(N) / N \), so that \( \alpha(x) = xN\), we get</p>
+<p>\[H \cdot N := \alpha^{-1} \circ \alpha(H)\]</p>
+<p>is a subgroup of \(N_{G}(N)\).</p>
+<p>Notice that \(N\) by definition is a normal subgroup of its own normalizer.</p>
+<p>The definition might seem a bit odd at first, but the set is nothing more than \( \{ h \cdot n | h \in H, n \in N \} \). This is fairly immediate from the definition. It is also a subgroup by construction. It has just as many elements as \( |N| \) times the size of \( \alpha(H )\). What is the size of that? Let&rsquo;s do some more lemmas!</p>
+<h2 id="lemma-h-intersect-n-is-normal-in-h">Lemma (H intersect N is normal in H):</h2>
+<p>Let \(H\) be a subgroup of \(G\), where \( H \leq N_{G}(N)\). Then \(H \cap N \triangleleft H \).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Let \(h \in H\) and \(n \in H \cap N \), then, since \( H \leq N_{G}(N)\), we have that \(h^{-1} N h = N \), so \( h^{-1} n h \in N \). Note also that \(n \in H\), so then since \(H\) is a subgroup, \(h^{-1} n h \in H\), therefore it is in \(H \cap N\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-an-isomorphism-theorem">Lemma (an isomorphism theorem)</h2>
+<p>Let \(H\) be a subgroup of \(N_{G}(N) \), then \( H / (H \cap N) \cong \alpha(H) \), the subgroup \( \alpha(H) \) of \(N_{G}(N) / N \). That is, they are isomorphic.</p>
+<h3 id="proof-3">Proof</h3>
+<p>Let&rsquo;s show that the mapping is well-defined. This means that it is a homomorphism, because \(\alpha\) is a homomorphism. Let \(h(H \cap N) \) be a coset of \(H \cap N\). Then \(\alpha(h(H \cap N) = hN \), operating on the entire coset as a subset of \(H\) sends every element to \(hN\). This is because (as you can check), \( h(H \cap N) = hH \cap hN \), which equals \(H \cap hN\), i.e. the elements of the coset \(hN\) that belong to \(H\). The mapping is thus well-defined. Next we show that it&rsquo;s 1-1.</p>
+<p>Suppose \( \alpha( h_1 (H \cap N) ) = \alpha ( h_2 (H \cap N) ) \). Then \( h_1 N = h_2 N\), so they belong to the same coset. Multiplying (or operating, if you want to remain more generic) the cosets on both sides of the equation on the left by \(h_1^{-1}\) gives us \( h_1^{-1}h_2 N = N \), which tells us that \(h_1^{-1} h_2 \in N\). It is clearly in \(H\), since that is a subgroup, so it must also be in the coset \( H \cap N\) of \(H\). Then undoing that (operating on the left by h_1), gives us \(h_1 (H \cap N) = h_2 (H \cap N) \). So our mapping is 1-1.</p>
+<p>It is therefore an isomorphism.</p>
+<h2 id="corollary-size-of-hn">Corollary (size of H*N)</h2>
+<p>Let \(H\), \(G\), \(N\), etc&hellip; be as above. Then, \( | H \cdot N | = | H / (H \cap N) | \cdot | N | \) \(= \frac{|H| \cdot |N|}{| H \cap N |}\).</p>
+<h3 id="proof-4">Proof</h3>
+<p>It&rsquo;s nothing more than multiplying through the sizes of the groups and factor groups.</p>
+<h2 id="lemma-conjugation-preserves-subgroups">Lemma (conjugation preserves subgroups)</h2>
+<p>Let \(H\) be a subgroup of a group \(G\), then for any \(g \in G\), \(g^{-1}Hg\) is a subgroup of \(G\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>This is a straight-forward calculation. Let \( g^{-1}ag\) and \(g^{-1}bg\) be arbitrary elements of \(g^{-1}Hg\), so then \(a\) and \(b\) are elements of \(H\). \( (g^{-1}bg)^{-1} = g^{-1}b^{-1}(g^{-1})^{-1}\) and that is equal to \(g^{-1}b^{-1}g\), which must also be in \(g^{-1}Hg\), since \(H\) is a subgroup. This means that \( (g^{-1}ag) \cdot (g^{-1}bg)^{-1}\) is equal to \( g^{-1}ag \cdot g^{-1}b^{-1}g = g^{-1}(ab^{-1})g\), which is in \(g^{-1}Hg\), again, because \(H\) is a subgroup. Therefore, by the subgroup test lemma, it is a subgroup.</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-sylows-second">Theorem (Sylow&rsquo;s second)</h2>
+<p>Let \(G\) be a group of order \(p^km\), where \( p\) is a prime, \(k, m \geq 1\) and \(\gcd(p,m) = 1\). Then, \(s_G\), the number of subgroups of order \(p^k\) is congruent to \(1 \mod p\). That is, \(s_G = n \cdot p + 1\), for some natural number, \(n\).</p>
+<h3 id="proof-6">Proof</h3>
+<p>Let \(\mathcal{Y} := \{ Y \leq G | | Y | = p^k \} \). That is, \(\mathcal{Y}\) is the set of all Sylow subgroups of \(G\). Let \(G\) act on \(\mathcal{Y} \) by conjugation, that is, \( g(Y) := g^{-1}Yg\), which must also be a subgroup of order \(p^k\), and therefore also be in \(\mathcal{Y}\). We see that this action induces a permutation on \(\mathcal{Y}\).</p>
+<p>Let \(Y \in \mathcal{Y}\) be an element of \(\mathcal{Y}\). We know that \(\mathcal{Y}\) has at least one element by Sylow&rsquo;s first theorem, which we proved near the end of the previous entry (Counting Orbits, Sylow&rsquo;s Theorems, etc&hellip;). Since \(Y\) is a subgroup of \(G\), we can consider its actions on \(\mathcal{Y}\). As we&rsquo;ve shown in previous entries, the action of the subgroup \(Y\) splits \(\mathcal{Y}\) into disjoint orbits, and for any \(X \in \mathcal{Y}\), \( |Orb_{Y}(X) | \cdot | Stab_{Y}(X) | = |Y| = p^k\). This means that the number of elements in each orbit must be a power of \(p\).</p>
+<p>Notice that if we let \(X = Y\), so we consider \(Y\)&rsquo;s own orbit, it must have size equal to \(1\), because for any \( y \in Y\), \( y^{-1}Yy = Y\). Now we prove that this only holds for \(X = Y\).</p>
+<p>Let \(X \in \mathcal{Y}\) be an arbitrary Sylow p-subgroup. Suppose that \( Orb_{Y}(X) = \{X\}\), then that means that \( Y \leq Stab_G(X) \leq G\). This holds because \(Orb_{X} = \{X\}\) means that every \(y \in Y\)&rsquo;s action is trivial, i.e. \( y^{-1}Xy = X\). Therefore \(y \in Stab_G(X) \), the set of all elements of \(G\) whose action on \(X\) is trivial.</p>
+<p>We also easily see that \(X \leq Stab_{G}(X) \), because every \(x \in X\) will have action \( x^{-1} X x = X\).</p>
+<p>Also, since the action we&rsquo;re considering is conjugation, \(Stab_{G}(X) = N_{G}(X) \), the normalizer of \(X\) in \(G\). This enables us to apply the homomorphism lemmas we proved just before this proof. If we let \(\alpha: Stab_{G}(X) \rightarrow Stab_{G}(X) / X \), be the natural homomorphism, then \( Y \cdot X \), which equals \( \alpha^{-1} \circ \alpha (Y) \) is a subgroup of \(Stab_{G}(X) \), which has size equal to \( \frac{ |Y| \cdot |X| }{| Y \cap X |} \) which is equal to \( \frac{p^{2k}}{| Y \cap X |}\). Notice that \( | Y \cap X | \) is a subgroup of \(Y \) (it is also a subgroup of \(X\), but we only need to consider one group for this), that means that \( | Y \cap X | \) divides \( |Y| = p^k \), so \( | Y \cap X | = p^j \), for some \(j \leq k\). This means that the order of \( Y \cdot X = \frac{p^{2k}}{p^j} = p^{2k - j}\).</p>
+<p>\( Y \cdot X \leq N_{G}(X) \leq G\), which means that \( Y \cdot X \leq G\), and since \( |G| = p^k m\), we can conclude that \(p^{2k -j} | p^{k}\), since the order of a subgroup must divide the order of the group. Therefore, \(2k - j \leq k\), which means that \(j \geq k \). We also have \( Y \leq Y \cdot X\), so similarly, \( 2k - j \geq k\), so \( j \leq k\). Therefore \(j = k\). This means that \( |Y \cap X| = p^k \), which means that it is equal to \(Y\) and to \(X\), because it is a subgroup of both of them, but it has exactly as many elements as both.  Therefore, \(Y = X \), as we wanted to show.</p>
+<p>To summarize what we&rsquo;ve shown about the orbits of \(\mathcal{Y}\), under the action of the subgroup \(Y\). \(Y\)&rsquo;s orbit is equal to just \( \{Y\}\), while every other \(Y \neq X \in \mathcal{Y}\) has an orbit that has multiple subgroups in it. We also showed (using the orbit stablizer theorem) that \(p^{i} = |Orb_{P}(X)| \), for all \(X \in \mathcal{Y}\), therefore if we let \( \mathcal{O}_{X_l} \) be the distinct orbits of \(\mathcal{Y}\), where the \(X_l\)&rsquo;s range over orbit representatives, we see that \( |\mathcal{Y}| \) is equal to \( \sum\limits_{X_l}{| \mathcal{O}_{X_l} |}\), which is equal to \( \sum\limits_{X_l} {p^{k_{X_l}}} \), where only one \(\mathcal{O}_{X_l}\) has size equal to \(1\), namely, \(\mathcal{O}_{Y}\). Therefore the sum is equal to \( 1 + np \), for some natural number \(n\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-orbits-and-subgroup-actions">Lemma (orbits and subgroup actions)</h2>
+<p>Let \(H\), and \(K\) be two subgroups of \(G\), such that \(H \leq K\). Let \(G\) act on a set \(S\). Let \(\mathcal{H}_{s}\) be an orbit under the action of the subgroup \(H\) containing \(s \in S\). Then there exists an orbit \(\mathcal{K}_{s}\) (where the \(s\)&rsquo;s are the same) under the action of the subgroup \(K\), such that \(\mathcal{H}_s \subseteq \mathcal{K}_{s} \).</p>
+<p>What this means is that if \(G\) acts on a set \(S\), and \(H\) is a subgroup of \(G\) which is also a subgroup of the subgroup \(K\), then \(H\)&rsquo;s orbits are sub-orbits of \(K\)&rsquo;s orbits.</p>
+<h3 id="proof-7">Proof</h3>
+<p>Let \(s_1\) and \(s_2\) belong to the same orbit under the action of the subgroup \(H\). Then that means that there exists some \(h \in H\), such that \( h(s_1) = s_2\). Since \(H \leq K\), that same \(h \in K\), so that \( h(s_1) = s_2\) still holds under the action of the subgroup \(K\). Therefore they&rsquo;re still in the same orbit.</p>
+<p><strong>QED</strong></p>
+<p>Notice, however, that the orbits under the actions of the subgroup \(K\) may be larger.
+Theorem (Sylow&rsquo;s third):
+All Sylow p-subgroups are conjugates. That is, for any two Sylow p-subgroups, \(X\), and \(Y \leq G\), there is a \(g \in G\), such that \( g^{-1}Xg = Y\).</p>
+<h3 id="proof-8">Proof</h3>
+<p>This proof draws on the last proof quite a bit. However, instead of just considering the orbits of \(\mathcal{Y}\) under the action of a subgroup \(Y\), we consider consider the orbits of \(\mathcal{Y}\) under two distinct Sylow p-subgroups as well as the orbits under the action of the entire group \(G\). We have to be careful to remember what subgroup (even all of \(G\)) we&rsquo;re dealing with.</p>
+<p>To start, suppose that under the action of conjugation from the entire group \(G\), there is more than one orbit of \(\mathcal{Y}\). This would mean that the theorem is false (we&rsquo;re going for a contradiction). Let \(X_1\) and \(X_2\) be elements of two distinct orbits.</p>
+<p>Now we switch from considering the orbits under the action of the entire group \(G\), to considering the orbits under the action of conjugation by elements of \(X_1\) only. By the above lemma, the orbits under the action of the subgroup \(X_1\) will be sub-orbits of the orbits under the action of all of \(G\).</p>
+<p>In the proof of Sylow&rsquo;s second theorem, we showed that \( Orb_{X_1}(X_1) = \{ X_1 \} \), and that all other orbits will have sizes that are a power of \(p\), since \(X_1\) is a p-group. This means that \(Orb_{G}(X_1) \), the orbit of \(X_1\) under the action of all of \(G\) must have size equal to \( 1 + pn_1\), for some natural number \(n_1\). We see this by considering that the larger orbit under the action of \(G\) can be broken up into disjoint sub-orbits under the action of \(X_1\). Each one of those orbits has a size that&rsquo;s a power of \(p\), but only \( Orb_{X_1}(X_1) \) has only one element in it. Again, this is a very similar argument to what we made in the previous Sylow theorem.</p>
+<p>Now consider how large the orbit \( Orb_{G}(X_2) \) is. This is the orbit of \(X_2\) under the action of all of \(G\). By the same argument we made above, but with \(X_2\) substituted for \(X_1\), we see that it must have a size \(= 1 + pn_2\), for some natural number \(n_2\). However, when we consider the sub-orbits under the action of the subgroup \(X_1\), we see that every sub-orbit has a size which is divisible by \(p\). This is because there isn&rsquo;t an orbit of size \(1\). That only happens for the orbit of \(X_1\), but by our choices of \(X_1\) and \(X_2\), they belong to separate orbits of \(\mathcal{Y}\) under the action of all of \(G\). Therefore this orbit (under the action of all of \(G\)) must have size \(= pn_3\), for some natural number \(n_3\), but that&rsquo;s impossible, because there is no natural number which is equal to \( 1 + pn_2\) and \(pn_3\).</p>
+<p>To see why, suppose \(a = 1 + pn_2\), and \(a = pn_3\). Then \(1 = a - pn_2 = pn_3 - pn_2\), which implies that \( 1 = p(n_2 - n_3)\), which means that \(p\) divides \(1\), which cannot happen.</p>
+<p>Therefore, the assumption that there were more than one \(G\) orbits of \(\mathcal{Y}\) is false, which proves the theorem.</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-another-restriction-on-the-number-of-sylow-p-subgroups">Corollary (another restriction on the number of Sylow p-subgroups):</h2>
+<p>Let \(s_G\) denote the number of Sylow p-subgroups of a group \(G\). Then \(s_G | m\), where \( |G| = p^km\), and \( \gcd(p,m) = 1\).</p>
+<p>There are situations where this can allow us to prove that a Sylow p-subgroup is normal, for example.</p>
+<h3 id="proof-9">Proof</h3>
+<p>\(s_G = |orb_G(X)| \), where \(X\) is any Sylow p-subgroup (by the above theorem). By the orbit-stabilizer theorem, we have \( s_G \cdot |Stab_G(X) = |G| = p^km\). But, by the second Sylow theorem, \(s_G = 1 + pn\), so \(s_G \nmid p\), which means that \(s_G | m\).</p>
+<p><strong>QED</strong></p>
+<p>Finally we prove a result that doesn&rsquo;t have anything to do with the Sylow theorems. It&rsquo;s just a nice little result.</p>
+<h2 id="theorem-counting-orbits-by-counting-fixes">Theorem (counting orbits by counting fixes)</h2>
+<p>Let \(G\) be a group acting on a set \(X\). I.e. \(G\) is a subgroup of \(S_X\), the group of all permutations on \(X\). Then the number of orbits of \(X\) induced by the actions of \(G\) is equal to \( \frac{1}{|G|} \sum\limits_{g \in G}{ |fix(g)| } \).</p>
+<h3 id="proof-10">Proof</h3>
+<p>The first and more important step is to determine the size of \( \mathcal{F} :=\{ (g, x) | g \in G, x \in X \text{, where } g(x) = x \} \). Notice that for a given \(x \in X\), \(x\) will be in a pair for every \(g \in G\), such that \(g(x) = x\). That is just the set \( Stab_G(x) \). This means that</p>
+<p>\[ | \mathcal{F} | = \sum\limits_{x \in X} { | Stab_G(x) | } \]</p>
+<p>On the other hand, for any given \(g \in G\), \(g\) will be in a pair for every \(x \), such that \( g(x) = x\), which is just the set \( fix(g) \). Therefore</p>
+<p>\[ \mathcal{F} | = \sum\limits_{g \in G} {| fix(g) |} \]</p>
+<p>Combining them, we get</p>
+<p>\[ \sum\limits_{x \in X} { | Stab_G(x) | } = \sum\limits_{g \in G} {| fix(g) |} \tag{1}\label{1}\]</p>
+<p>We also have</p>
+<p>\[ \sum\limits_{x \in X} | Stab_G(x) | = \sum\limits_{\text{orbit}_i} {( \sum\limits_{x \in \text{orbit}_i} { | Stab_G(x) | } )} \]</p>
+<p>And by the orbit-stabilizer theorem, the right hand side is equal to</p>
+<p>\[ \sum\limits_{\text{orbit}_i} { | G | } = \text{ # of orbits } \cdot | G | \tag{2}\label{2} \]</p>
+<p>Therefore, if we combine (2) with (1) and divide by \( |G| \), we get the desired equation.</p>
+<p><strong>QED</strong></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sets/" rel="tag">Sets</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sylows-theorems/" rel="tag">Sylow&#39;s Theorems</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/orbits/" rel="tag">Orbits</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/counting-orbits-sylows-theorems-etc-i/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Counting Orbits Sylows Theorems etc... (I)</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/parial-orders-lattices-and-some-subgroups/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Parial Orders Lattices and Some Subgroups</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/counting-orbits-sylows-theorems-etc-ii/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fcounting-orbits-sylows-theorems-etc-ii%2f" />
+</body>
+</html>

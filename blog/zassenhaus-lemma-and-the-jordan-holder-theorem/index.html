@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Zassenhaus Lemma and the Jordan Holder Theorem - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Zassenhaus Lemma and the Jordan Holder Theorem" />
+<meta property="og:description" content="This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-22T11:02:53-04:00" />
+<meta property="article:modified_time" content="2021-06-22T11:02:53-04:00" />
+
+
+		<meta itemprop="name" content="Zassenhaus Lemma and the Jordan Holder Theorem">
+<meta itemprop="description" content="This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!"><meta itemprop="datePublished" content="2021-06-22T11:02:53-04:00" />
+<meta itemprop="dateModified" content="2021-06-22T11:02:53-04:00" />
+<meta itemprop="wordCount" content="2595">
+<meta itemprop="keywords" content="Lattices,Zassenhaus,Jordan-Holder," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Zassenhaus Lemma and the Jordan Holder Theorem"/>
+<meta name="twitter:description" content="This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!"/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Zassenhaus Lemma and the Jordan Holder Theorem</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-22T11:02:53-04:00">2021-06-22</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/butterfly-blue.jpg" alt="Zassenhaus Lemma and the Jordan Holder Theorem">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#mini-lemma-products-of-intersections">Mini-lemma (products of intersections)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-zassenhaus-lemma">Theorem (Zassenhaus' Lemma)</a></li>
+    <li><a href="#lemma-normal-through-alpha-inverse-of-alpha">Lemma (normal through alpha inverse of alpha)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-2">Mini-lemma (2)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-3">Lemma (3)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-another-isomorphism-theorem">Lemma (another isomorphism theorem)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-1">Corollary 1</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-jordan---holder-theorem">Corollary (Jordan - Holder Theorem)</a>
+      <ul>
+        <li><a href="#proof-6">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">W</span>e&rsquo;re going to prove some results that will help us further get a feeling for the possible structure of groups. We&rsquo;re going to start out by proving Zassenhaus' Lemma. At least that will be our first significant result for this entry. Before we can do that, though, we&rsquo;ll have to establish several smaller lemmas to support the proof. The first of these is mostly a useful observation. Finally, we&rsquo;ll end the entry with a proof of the Jordan Holder Theorem.</p>
+<h2 id="mini-lemma-products-of-intersections">Mini-lemma (products of intersections)</h2>
+<p>Let \(W\), \(X\), \(Y\), and \(Z\) be subsets of a group, then \( (W \cap X) (Y \cap Z) = WY \cap WZ \cap XY \cap XZ\).</p>
+<h3 id="proof">Proof</h3>
+<p>Notice that \(WY \cap WZ = W(Y \cap Z) \). To see that, consider \(g_1g_2 \in W(Y \cap Z) \), then \( g_1 \in W\), while \( g_2\) is in both \(Y\) and \(Z\). Similarly, \(XY \cap XZ = X(Y \cap Z) \). Combining those two results and then applying the same logic to the \(W\) and \(X\) before the \( (Y \cap Z)\) gives our result.</p>
+<p><strong>QED</strong></p>
+<p>We&rsquo;re going to state Zassenhaus' Lemma, and then prove it later on in the entry. By doing this, we&rsquo;ll give better motivation for the next few lemmas.</p>
+<h2 id="theorem-zassenhaus-lemma">Theorem (Zassenhaus' Lemma)</h2>
+<p>Let \(A\), and \(B\) be two subgroups of a group. Let \( a \triangleleft A\) and \(b \triangleleft B\) be normal subgroups of the two groups. Then
+\[ a(A \cap b) \triangleleft a(A \cap B) \tag{1}\label{1}\]
+\[ b(a \cap B) \triangleleft b(A \cap B) \tag{2}\label{2}\]
+\[ \frac{a(A \cap B)}{a(A \cap b)} \cong \frac{b(A \cap B)}{b(a \cap B)} \tag{3}\label{3}\]</p>
+<p>It can be visualized nicely with this lattice</p>
+<p><img src="/images/lattice_zassenhaus.png" alt="Zassenhaus Lattice" title="Zassenhaus' Lattice"></p>
+<p>The very first thing you will want to notice is that since \( a \triangleleft A\), we have \(a \triangleleft (A \cap B) \), and \(a \triangleleft (A \cap b) \), so the set products along the left side are subgroups. Similarly, the set products along the right side of the lattice are also subgroups (we proved this in Partial Orders, Lattices, and some Subgroups).</p>
+<p>Because the lattice looks a bit like a butterfly (if you stand back and squint a bit), it is sometimes referred to as the Butterfly Lemma. We&rsquo;ll prove equation (3) by showing that both sides are isomorphic to</p>
+<p>\[ \frac{A \cap B}{(a \cap B)(A \cap b)} \tag{4}\label{4}\]</p>
+<p>However, before we get to that, we&rsquo;re going to rewrite the group products using our mini-lemma above.</p>
+<p>\[ a(A \cap B) = A \cap aB \tag{5}\label{5}\]
+\[ a(A \cap b) = A \cap ab \tag{6}\label{6}\]
+\[ b(A \cap B) = bA \cap B \tag{7}\label{7}\]
+\[ b(a \cap B) = ba \cap B \tag{8}\label{8} \]</p>
+<p>All of these follow immediately from the mini-lemma and the fact that \(aA = A \) ( because \(a \subseteq A \)) and \(bB = B\), etc&hellip;</p>
+<p>Next we focus on set product \( (A \cap b)(a \cap B) \). It contains both groups \( A \cap b \) and \(a \cap B \) as subsets. Thus, if it is a group, it is their join (we defined join in the previous entry Partial Orders, Lattices, and some Subgroups. It is simply the smallest subgroup of \(G\) which contains both \( A \cap b \) and \( a \cap B \) as subgroups). Again, using the <a href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/#mini-lemma-products-of-intersections">mini-lemma</a> at the top of this entry,</p>
+<p>\[ (a \cap B)(A \cap b) = A \cap B \cap ab \tag{9}\label{9}\]</p>
+<p>This equation follows because expanding the product out, we get \( aA \cap ab \cap BA \cap Bb \). We see that the first and last terms are \(A\) and \(B\), while the set \(BA\) contains both \(A\) and \(B\), so it contributes nothing to the overall intersection (i.e. it does nothing to further reduce the end result of the intersections). This doesn&rsquo;t prove that it is a subgroup, though. However, that&rsquo;s easy to establish, as it is the intersection of the subgroup \(B\) and \(A \cap ab = a(A \cap b) \), which are both subgroups.</p>
+<p>Next we&rsquo;re going to show that \( a(A \cap b ) \vee (A \cap B) = a(A \cap B)\). We&rsquo;ve written it into the subgroup lattice above, but just because we drew it that way, doesn&rsquo;t mean it&rsquo;s actually so.</p>
+<p>Notice by <a href="#mjx-eqn:5">equations (5) and (6)</a>, we need to show that \( (A \cap ab) \vee (A \cap B) = A \cap aB \). Notice also that since the set product of the two subgroups contains both subgroups, that if it is a group, then it contains their join (this is the exact same reasoning we used above with the previous set product). Since their set product must also be a subset of their join, it would then have to be equal to their join.</p>
+<p>By the <a href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/#mini-lemma-products-of-intersections">lemma</a> at the top of the page, \( (A \cap ab) (A \cap B) = AA \cap AB \cap abA \cap abB \). We&rsquo;ve mentioned before that \(AA = A\). Notice that both \(AB \) and \(abA\) are larger sets than \(A\), so we can ignore both of their contributions to the intersection. And finally, since \(bB = B\), we are left with \(A \cap aB\), which is the result we were after.</p>
+<p>\[ a(A \cap b ) \vee (A \cap B) = a(A \cap B) \tag{10}\label{10}\]</p>
+<p>Before we start proving (1) and (2), let&rsquo;s prove another quick lemma.</p>
+<h2 id="lemma-normal-through-alpha-inverse-of-alpha">Lemma (normal through alpha inverse of alpha)</h2>
+<p>Let \(G\) be a group, \(N \triangleleft G\), \(H \leq G\), \( M \triangleleft H\), then if \( \alpha : G \rightarrow G / N \) is the natural homomorphism sending \(g \in G\) to \( gN \in G/N \), then</p>
+<p>\[ \alpha^{-1} \circ \alpha (M) \triangleleft \alpha^{-1} \circ \alpha (H) \tag{11} \label{11} \]</p>
+<h3 id="proof-1">Proof</h3>
+<p>Let \(h N\) be an arbitrary coset of \(G\) in \( \alpha^{-1} \circ \alpha(H) \) (to be clear, since it belongs to \( \alpha^{-1} \circ \alpha (H)\), we are viewing it as a subset of G, instead of as an element of \(G/N\). We can switch between the two ways of viewing it, though). Let \( m_1N \subseteq \alpha^{-1} \circ \alpha(M) \) (this might be even less clear. It is a subset of \(MN\), corresponding to the coset of a single element of \(M\).). Now consider the set products, \( (hN)^{-1} (m_1N)(hN) \). Since \( N \triangleleft G\), this is equal to \( (h^{-1}N ) (m_1N) (hN) \), which is equal to the coset \( (h^{-1}m_1h) N \) of \(N\) in \(G / N\). Since \(M \triangleleft H\), this is equal to \( m_2 N\), for some \( m_2 \in M\). Therefore, for any \( h \in HN = \alpha^{-1} \circ \alpha (H) \), we must have \( h^{-1} MN h \subseteq MN \), and so they must be equal, as cosets. QED.</p>
+<h2 id="mini-lemma-2">Mini-lemma (2)</h2>
+<p>\(B \leq G\), \(A \leq G\), and \(b \triangleleft B\) implies that \( (b \cap A) \triangleleft (B \cap A)\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>The notation is starting to get a little bit cumbersome, but bear with it, please. Let \(b_1\) be an element of \(B \cap A\). Then, since \(b \triangleleft B\), we have \( b_1^{-1}(b \cap A) b_1 \subseteq b \). What this is saying is that the element \(b_1\) conjugating the subgroup \((b \cap A)\) is equal to a subset of \(b\). This happens because \(b_1 \in B\), and \( (b \cap A) \subseteq b\). And when \(b_1\) conjugates any element of \(b\), the result must lie in \(b\).</p>
+<p>Notice also that since \(b_1 \in (b \cap A) \) that \( b^{-1} (b \cap A )b_1 \subseteq A \). This is because all of the operations involved in that conjugation are among elements of \(A\). Combining these two facts gives us \( b_1^{-1}(b \cap A) b_1 \leq (b \cap A \). Therefore, since it is a coset of \(b \cap A\), the two sets must be equal. QED.</p>
+<p>Now we&rsquo;re all set up to combine the previous two lemmas to show that equation (1) above in Zassenhaus' lemma is true. This follows immediately from recognizing that \( \alpha^{-1} \circ \alpha(A \cap b) = a(A \cap b) \), and that \( \alpha^{-1} \circ \alpha (A \cap B) = a(A \cap B )\).</p>
+<p>In (Part 2) Counting Orbits, Sylow&rsquo;s Theorems, etc&hellip; we established the basic isomorphism result that \( H \leq N_{G}(N) \) implies that \( HN / N \cong H / (H \cap N) \). We&rsquo;re going to apply that by setting \( (A \cap B) = H \) and \( a(A \cap b) = A \cap ab = N \). First we need to show that \( (A \cap B \leq N_{G}( A \cap ab) \).</p>
+<h2 id="lemma-3">Lemma (3)</h2>
+<p>\(G\) is a group, \(A\), \(B\), are subgroups. Let \(a \triangleleft A \), and \(b \triangleleft B\), then \( (A \cap B) \leq N_{G}(A \cap ab) \).</p>
+<h3 id="proof-3">Proof</h3>
+<p>Let \(a_1 \in (A \cap B)\) be equal to \(b_1 \in (A \cap B) \). We write it this way to emphasize that it is both an element of \(A\) and of \(B\). Let \(a_2b_2 \in ab\). That is, \(a_2 \in a\) and \(b_2 \in b\). This means that \(a_2\) is an element of the subgroup \(a\), and \(b_2\) is an element of the subgroup \(b\). Notice that \( a_1^{-1}(a_2b_2)a_1 = a_1^{-1}a_2(a_1 a_1^{-1}) b_2 a_1 \). We simply inserted an additional \(a_1 a_1^{-1} \) into the expression, which is nothing more than adding the identity into the product. Further notice that since \(a_1 = b_1\) we can rewrite this as</p>
+<p>\[ (a_1^{-1} a_2 a_1) (b_1^{-1} b_2 b_1 ) \]</p>
+<p>Notice how since \(a \triangleleft A \), the expression in the left pair of parentheses is equal to an element of \(a\), and similarly the expression in the right pair of parentheses is equal to an element of \(b\). Thus it is equal to an element of \(ab\).</p>
+<p>It&rsquo;s even easier to see that the product is an element of \(A\), since all the terms in these expressions are elements of \(A\).</p>
+<p><strong>QED</strong></p>
+<p>Finally (!) we are all set to apply the isomorphism theorem.</p>
+<p>Let
+\[ H = (A \cap B) \tag{12}\label{12}\]
+\[ N = a(A \cap b) = A \cap ab \tag{13}\label{13}\]</p>
+<p>Then by equation (10) above \(HN = H \vee N = a(A \cap B) \), and clearly \( H \cap N = (A \cap B) \cap (A \cap ab)\) which is equal to \(A \cap B \cap ab \), which, according to equation (9) is equal to \( (a \cap B)(A \cap b) \). Ergo, \(HN / N \cong H / (H \cap N) \) gives us</p>
+<p>\[ \frac{a(A \cap B)}{a(A \cap b)} \cong \frac{A \cap B}{(a \cap B)(A \cap b)} \]
+A very similar argument, but with the \(A\)&rsquo;s and \(B\)&rsquo;s swapped, gives us</p>
+<p>\[ \frac{b(A \cap B)}{b(a \cap B)} \cong \frac{A \cap B}{(a \cap B)(A \cap b)} \]</p>
+<p>Combining the above two results proves part 3 of Zassenhaus' Lemma. We&rsquo;ve already established parts 1 and 2.</p>
+<p><strong>QED (<a href="#theorem-zassenhaus-lemma">Zassenhaus' Lemma</a>)</strong></p>
+<p>The final line of the above proof relied on the fact that isomorphism \( \cong\) is an equivalence relation. It is an equivalence relation. You can see this by observing that the composition of two isomorphisms will preserve operations, and will also be a bijection, since it is the composition of two bijections.</p>
+<p>\[ \phi_1 : H_1 \rightarrow H_2 \]
+\[ \phi_2: H_2 \rightarrow H_3 \]</p>
+<p>Then \( \phi_2 \circ \phi_1 H_1 \rightarrow H_3 \).
+Now we&rsquo;re going to see what happens when we have a whole flock of butterflies.</p>
+<p><img src="/images/lattice_butterflies.png" alt="Butterflies Lattice" title="Butterflies Lattice"></p>
+<p>We&rsquo;re going to draw your attention to a few facts about this. Notice first that if \(B_j = \{e\} \), then \(A_{i+1}(A_i \cap B_j) = A_{i+1} \). Second, if we consider \(G = A_0 = B_0\), then the set of \(A_{i+1}(A_i \cap B_j) \)&rsquo;s contains every \(A_i\), when we index from \(i =0\), instead of \(i = 1\). Similarly, the set of all \(B_{j+1}(A_i \cap B_{j+1}) \) contains every \(B_j\), when we index from \(j = 0\), instead of \(j = 1\). Notice that this works even if \(A_1 = G\), or \(B_1 = G\).</p>
+<p>To recap this,
+\[ \{ A_{i+1}(A_i \cap B_j) | 0 \leq i, 0 \leq j \} \supseteq \{A_i | i \geq 1 \}\]
+And,
+\[ \{ B_{j+1}(A_i \cap B_j) | 0 \leq i, 0 \leq j \} \supseteq \{B_j | j \geq 1 \}\]
+Furthermore, Zassenhaus' lemma tells us that
+\[ \frac{A_{i+1}(A_i \cap B_j)}{A_{i+1}(A_i \cap B_{j+1})} \cong \frac{B_{j+1}(A_i \cap B_j)}{B_{j+1}(A_{i+1} \cap B_j)}\]
+Combining these facts tells us that if we have any two sets of factor groups (as long as they both contain the trivial subgroup \( \{e \} \) !), then we can construct a third set of factor groups which contains factor groups which are isomorphic to every factor group in the first two sets.</p>
+<p>In case it&rsquo;s not perfectly clear what we&rsquo;re saying, let
+\[ \mathcal{A} := \{A_1, A_2, &hellip; , A_m = \{e \}\}\]
+\[ \mathcal{B} := \{ B_1, B_2, &hellip; , B_n = \{e\}\} \]
+Where \( A_{i} \triangleright A_{i+1}\) and \(B_j \triangleright B_{j+1} \). Then let \(\mathcal{A}_{/} := \{ A_1/A_2, A_2/A_3, &hellip; A_{m-1}/A_{m} \}\) and \(\mathcal{B}_{/} := \{ B_1/B_2, B_2/B_3, &hellip; B_{n-1}/B_{n} \} \). Then if we let (remember, we&rsquo;re setting \(A_0 = G = B_0\))</p>
+<p>\( \mathcal{C}^{A} := \{ A_1(A_0 \cap B_0), A_1(A_0 \cap B_1),\)\( &hellip; , A_1(A_0 \cap B_n) = A_1, &hellip; , A_m(A_{m-1} \cap B_n) = \{e\}\} \) and \( \mathcal{C}^{B} := \{ B_1(A_0 \cap B_0), B_1(A_1 \cap B_0),\)\( &hellip; , B_1(A_m \cap B_0) = B_1, &hellip; , B_n(A_{m} \cap B_{n-1}) = \{e\}\} \). They both have \(m \cdot n\) subgroups in them. Furthermore, \( \mathcal{C}^{A}_{/} \) and \( \mathcal{C}^{B}_{/} \) both have \(m \cdot n - 1\) factor groups, and every factor group in one set is isomorphic to a factor group in the other set. This result was originally proved by a mathematician named Shreier.</p>
+<p>We have just a few more things to get through, and then we&rsquo;re finished with this entry (Yay!).</p>
+<h2 id="lemma-another-isomorphism-theorem">Lemma (another isomorphism theorem)</h2>
+<p>Let \(G\) be a group, \(M \triangleleft G\), \(N \triangleleft G\), and \( N \triangleleft M\), then
+\[ G /M \cong \frac{G / N}{N / M} \tag{14}\label{14}\]</p>
+<h3 id="proof-4">Proof</h3>
+<p>Let \( \alpha : G /N \rightarrow G/M \) be such that \( \alpha(gN) = gM \). Then \( \alpha(gN) = eM \), if and only if \(gN \subseteq M \). Therefore, \( Ker(\alpha) = \{ mN | m \in M \} \). I.e. \( M / N \).</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-1">Corollary 1</h2>
+<p>If \(G/N \) is a simple group (i.e. it has no normal subgroups), then \( G \triangleright M \triangleright N \) implies either \( M = G\), or \(M = N\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>By equation (14), we see that if \(M\) isn&rsquo;t either \(G\), or \(N\), then \(G/N\) has a non-trivial normal subgroup, which cannot happen.</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-jordan---holder-theorem">Corollary (Jordan - Holder Theorem)</h2>
+<p>Let \(G\) be a group. Let \( \mathcal{A} = \{ A_i\}^{n}_{i = 1}\) be a set of subgroups, such that \(A_1 = G\), \(A_n = \{e\}\), and \(A_i \triangleright A_{i+1}\). Furthere, suppose that \(A_i / A_{i+1} \) is simple and that \(A_i \neq A_{i+1} \) for any \(i\). Let \( \mathcal{B} \) be another such set of subgroups. Then,</p>
+<p>\( \mathcal{A} \) and \(\mathcal{B} \) have exactly the same size.</p>
+<p>\( \mathcal{A}_{/} \) and \( \mathcal{B}_{/} \), the set of factor groups have the same size, and each element of one is isomorphic to a factor group of the other. Furthermore, there is at least one permutation of mapping a factor group in one set with an isomorphic factor group in the other set.</p>
+<h3 id="proof-6">Proof</h3>
+<p>Combine the previous corollary with Shreier&rsquo;s theorem above.</p>
+<p><strong>QED</strong></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/lattices/" rel="tag">Lattices</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/zassenhaus/" rel="tag">Zassenhaus</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/jordan-holder/" rel="tag">Jordan-Holder</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/parial-orders-lattices-and-some-subgroups/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Parial Orders Lattices and Some Subgroups</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Sorting Random Permutations and a Little Bit of Probability</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fzassenhaus-lemma-and-the-jordan-holder-theorem%2f" />
+</body>
+</html>

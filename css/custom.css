@@ -1,0 +1,13 @@
+body {
+  font-size: 1.2em;
+}
+
+.first-letter{
+  font-size: 4em;
+  line-height: 1em;
+  text-shadow: -4px 2px rgb(161, 161, 161);
+}
+
+p::first-line{
+  line-height: 100%;
+}

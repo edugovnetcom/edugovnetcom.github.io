@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on EduGovNet.com</title>
+    <link>/blog/</link>
+    <description>Recent content in Blogs on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Aug 2021 11:21:15 -0400</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spheres, Distances, Maps and More!</title>
+      <link>/blog/spheres-distances-maps-and-more/</link>
+      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      
+      <guid>/blog/spheres-distances-maps-and-more/</guid>
+      <description>In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map.</description>
+    </item>
+    
+    <item>
+      <title>Even Permutations and Some Simple Non-Abelian Groups</title>
+      <link>/blog/even-permutations-some-simple-non-abelian-groups/</link>
+      <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
+      
+      <guid>/blog/even-permutations-some-simple-non-abelian-groups/</guid>
+      <description>In this entry we prove that A_n is normal when n &amp;gt;= 5. We then use this result to prove that there is no generalization of &amp;ldquo;even&amp;rdquo; and &amp;ldquo;odd&amp;rdquo; permutation to three or more classes &amp;ndash; i.e. there is no class of homomorphisms into Z_n, where n &amp;gt; 2.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice III</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-iii/</link>
+      <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-iii/</guid>
+      <description>As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice II</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-ii/</link>
+      <pubDate>Tue, 27 Jul 2021 14:26:44 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-ii/</guid>
+      <description>As promised, this is the second entry on parallel sorting. In this entry, we&amp;rsquo;ll implement &lt;code&gt;merge_sort&lt;/code&gt;, and then give two different ways to make it run in parallel. The first one will be a bit simpler than the second one.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice I</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-i/</link>
+      <pubDate>Fri, 23 Jul 2021 14:26:40 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-i/</guid>
+      <description>We&amp;rsquo;re going to begin our discussion of parallel algorithms. We&amp;rsquo;ll do this by giving a parallel version of &lt;code&gt;quick_sort_plus&lt;/code&gt;. We finish this entry by extending the &amp;ldquo;Almost the Master Theorem&amp;rdquo; to include cases where f(n) = cn^alpha*log_2(n). In our next entry, we&amp;rsquo;ll introduce &lt;code&gt;merge_sort&lt;/code&gt; as well as a couple different parallel versions of it. We&amp;rsquo;ll also discuss both the theoretical and practical runtimes for these functions.</description>
+    </item>
+    
+    <item>
+      <title>Computing With Permutations, Inverses, Cycles, and More!</title>
+      <link>/blog/computing-with-permutations-inverses-cycles-and-more/</link>
+      <pubDate>Mon, 19 Jul 2021 14:26:15 -0400</pubDate>
+      
+      <guid>/blog/computing-with-permutations-inverses-cycles-and-more/</guid>
+      <description>In this entry, we bring together ideas we&amp;rsquo;ve been developing about permutations, their sign, cycles, and sorting as well as the run time complexity of the algorithms which compute them.</description>
+    </item>
+    
+    <item>
+      <title>Finding the Median and an Application to Sorting</title>
+      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
+      
+      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
+    </item>
+    
+    <item>
+      <title>More on Sorting and Analyzing Run Time Complexity</title>
+      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
+      
+      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Sorting Random Permutations and a Little Bit of Probability</title>
+      <link>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
+      <pubDate>Thu, 24 Jun 2021 13:04:07 -0400</pubDate>
+      
+      <guid>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
+      <description>In this article, we&amp;rsquo;re going to discuss a shuffling algorithm, and then &lt;code&gt;quick_sort&lt;/code&gt; &amp;ndash; a sorting algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Zassenhaus Lemma and the Jordan Holder Theorem</title>
+      <link>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</link>
+      <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
+      
+      <guid>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</guid>
+      <description>This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Parial Orders Lattices and Some Subgroups</title>
+      <link>/blog/parial-orders-lattices-and-some-subgroups/</link>
+      <pubDate>Thu, 17 Jun 2021 10:26:21 -0400</pubDate>
+      
+      <guid>/blog/parial-orders-lattices-and-some-subgroups/</guid>
+      <description>In this article we mostly talk about partial orders, and lattices, which are a special type of partial order. We tie it in with our discussions of subgroups before proving two distribution laws for lattices.</description>
+    </item>
+    
+    <item>
+      <title>Counting Orbits Sylows Theorems etc... (II)</title>
+      <link>/blog/counting-orbits-sylows-theorems-etc-ii/</link>
+      <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
+      
+      <guid>/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
+      <description>We&amp;rsquo;re continuing our proofs of Sylow&amp;rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Counting Orbits Sylows Theorems etc... (I)</title>
+      <link>/blog/counting-orbits-sylows-theorems-etc-i/</link>
+      <pubDate>Sun, 13 Jun 2021 09:36:30 -0400</pubDate>
+      
+      <guid>/blog/counting-orbits-sylows-theorems-etc-i/</guid>
+      <description>In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&amp;rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</description>
+    </item>
+    
+    <item>
+      <title>Subgroups of Even Permutations Orbits Stabilizers etc...</title>
+      <link>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
+      <pubDate>Fri, 11 Jun 2021 09:18:37 -0400</pubDate>
+      
+      <guid>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
+      <description>We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k + 1), and discussing properties of the orbits, stabilizers, fixes, etc&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Applying Permutations to Group Theory</title>
+      <link>/blog/applying-permutations-to-group-theory/</link>
+      <pubDate>Thu, 10 Jun 2021 08:39:46 -0400</pubDate>
+      
+      <guid>/blog/applying-permutations-to-group-theory/</guid>
+      <description>Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results.</description>
+    </item>
+    
+    <item>
+      <title>More on Groups: Morphisms, Normal Subgroups, etc...</title>
+      <link>/blog/more-on-groups-morphisms-normal-subgroups-etc/</link>
+      <pubDate>Wed, 09 Jun 2021 07:42:22 -0400</pubDate>
+      
+      <guid>/blog/more-on-groups-morphisms-normal-subgroups-etc/</guid>
+      <description>In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&amp;rsquo;t as thorough as what you&amp;rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&amp;rsquo;ll continue with that theme&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>More Introductory Group Theory</title>
+      <link>/blog/more-introductory-group-theory/</link>
+      <pubDate>Tue, 08 Jun 2021 16:10:15 -0400</pubDate>
+      
+      <guid>/blog/more-introductory-group-theory/</guid>
+      <description>We&amp;rsquo;ve already introduced some of the topics of Group Theory. In this entry we&amp;rsquo;ll talk about Lagrange&amp;rsquo;s Theorem, various morphisms, and try to tie it back to our ongoing discussion of permutations. We&amp;rsquo;ll also give some examples of groups&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>More Math of Permutations</title>
+      <link>/blog/more-math-of-permutations/</link>
+      <pubDate>Thu, 03 Jun 2021 15:21:46 -0400</pubDate>
+      
+      <guid>/blog/more-math-of-permutations/</guid>
+      <description>Here we prove that permutations can be divided into even permutations and odd permutations. We&amp;rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>The Sum of All Prime Reciprocals Is Infinite</title>
+      <link>/blog/the-sum-of-all-prime-reciprocals-is-infinite/</link>
+      <pubDate>Fri, 14 May 2021 17:11:23 -0400</pubDate>
+      
+      <guid>/blog/the-sum-of-all-prime-reciprocals-is-infinite/</guid>
+      <description>Here we show the classic result that the sum of 1/p, where p ranges over all prime numbers, is infinite.</description>
+    </item>
+    
+    <item>
+      <title>An Intro to the Dot Product</title>
+      <link>/blog/an-intro-to-the-dot-product/</link>
+      <pubDate>Thu, 06 May 2021 16:34:00 -0400</pubDate>
+      
+      <guid>/blog/an-intro-to-the-dot-product/</guid>
+      <description>The dot product is so fundamental to linear algebra that it&amp;rsquo;s easy to take for granted that it works. Here we take a quick look at some of it&amp;rsquo;s potential by showing how it can be used to calculate the angle between two vectors.</description>
+    </item>
+    
+    <item>
+      <title>Some of the Math of Permutations</title>
+      <link>/blog/some-of-the-math-of-permutations/</link>
+      <pubDate>Tue, 30 Mar 2021 14:48:51 -0400</pubDate>
+      
+      <guid>/blog/some-of-the-math-of-permutations/</guid>
+      <description>A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y.</description>
+    </item>
+    
+  </channel>
+</rss>

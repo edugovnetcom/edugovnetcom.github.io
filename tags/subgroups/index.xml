@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subgroups on EduGovNet.com</title>
+    <link>/tags/subgroups/</link>
+    <description>Recent content in Subgroups on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Aug 2021 14:38:14 -0400</lastBuildDate><atom:link href="/tags/subgroups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Even Permutations and Some Simple Non-Abelian Groups</title>
+      <link>/blog/even-permutations-some-simple-non-abelian-groups/</link>
+      <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
+      
+      <guid>/blog/even-permutations-some-simple-non-abelian-groups/</guid>
+      <description>In this entry we prove that A_n is normal when n &amp;gt;= 5. We then use this result to prove that there is no generalization of &amp;ldquo;even&amp;rdquo; and &amp;ldquo;odd&amp;rdquo; permutation to three or more classes &amp;ndash; i.e. there is no class of homomorphisms into Z_n, where n &amp;gt; 2.</description>
+    </item>
+    
+  </channel>
+</rss>

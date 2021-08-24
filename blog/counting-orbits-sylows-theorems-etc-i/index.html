@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Counting Orbits Sylows Theorems etc... (I) - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Counting Orbits Sylows Theorems etc... (I)" />
+<meta property="og:description" content="In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&rsquo;ll show how by proving some famous theorems that were originally due to Sylow." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/counting-orbits-sylows-theorems-etc-i/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-13T09:36:30-04:00" />
+<meta property="article:modified_time" content="2021-06-13T09:36:30-04:00" />
+
+
+		<meta itemprop="name" content="Counting Orbits Sylows Theorems etc... (I)">
+<meta itemprop="description" content="In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&rsquo;ll show how by proving some famous theorems that were originally due to Sylow."><meta itemprop="datePublished" content="2021-06-13T09:36:30-04:00" />
+<meta itemprop="dateModified" content="2021-06-13T09:36:30-04:00" />
+<meta itemprop="wordCount" content="2453">
+<meta itemprop="keywords" content="Sets,Permutations,Sylow&#39;s Theorems,Orbits," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Counting Orbits Sylows Theorems etc... (I)"/>
+<meta name="twitter:description" content="In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&rsquo;ll show how by proving some famous theorems that were originally due to Sylow."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Counting Orbits Sylows Theorems etc... (I)</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-13T09:36:30-04:00">2021-06-13</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/grain_silo.jpg" alt="Counting Orbits Sylows Theorems etc... (I)">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-p-group">Definition (p-group)</a></li>
+    <li><a href="#definition-center-of-a-group">Definition (center of a group)</a></li>
+    <li><a href="#definition-abelian-group">Definition (Abelian group)</a></li>
+    <li><a href="#lemma-abelian-p-group-has-an-element-of-order-p">Lemma (Abelian p-group has an element of order p)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-homomorphisms-and-subgroups">Lemma (homomorphisms and subgroups)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-sylow-p-group">Definition (Sylow p-group)</a></li>
+    <li><a href="#lemma-abelian-p-groups-have-a-sylow-p-group">Lemma (Abelian p-Groups have a Sylow p-group)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-p-groups-have-non-trivial-center">Lemma (p-groups have non-trivial center)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-inner-actions-generate-automorphisms">Lemma (inner actions generate automorphisms)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-centers-are-normal">Lemma (centers are normal)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-all-p-groups-have-a-sylow-p-group">Lemma (All p-groups have a Sylow p-group)</a>
+      <ul>
+        <li><a href="#proof-6">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-some-number-theory">Lemma (some number theory)</a>
+      <ul>
+        <li><a href="#proof-7">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-large-proper-stabilizer-subgroup">Lemma (large proper stabilizer subgroup)</a>
+      <ul>
+        <li><a href="#proof-8">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-almost-there">Corollary (almost there)</a>
+      <ul>
+        <li><a href="#proof-9">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-sylows-first">Theorem (Sylow&rsquo;s first)</a>
+      <ul>
+        <li><a href="#proof-10">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n the previous entry (<a href="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/">Subgroups of Even Permutations, Orbits, Stabilizers, etc&hellip;</a>), we gave a laborious proof that a group with an even number of elements has to have an element of order \(2\). We can do much better than that. We&rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</p>
+<p>There&rsquo;s a lot of work to do before we can prove even one of his results. We&rsquo;re going to have to prove several lemmas and provide some definitions, starting with</p>
+<h2 id="definition-p-group">Definition (p-group)</h2>
+<p>Let \(G\) be a finite group of order \(p^{k}\), for some \(k \in \mathbb{N}\), then \(G\) is said to be a p-group.</p>
+<p>I&rsquo;ve used the term order of a group before, and just in case I didn&rsquo;t explain it, the order of a group is just another name for the number of elements of the group.</p>
+<h2 id="definition-center-of-a-group">Definition (center of a group)</h2>
+<p>Let \(G\) be a group, then the set \( \{ g \in G | \forall h \in G, gh = hg \} \) is called the center of G. I&rsquo;ll write it as \( Z(G) \).</p>
+<h2 id="definition-abelian-group">Definition (Abelian group)</h2>
+<p>Let \(G\) be a group such that \( Z(G) = G\), then \(G\) is said to be an Abelian group.</p>
+<h2 id="lemma-abelian-p-group-has-an-element-of-order-p">Lemma (Abelian p-group has an element of order p)</h2>
+<p>Let \(A\) be an Abelian p-group of order \(p^{k}\), where \( k \geq 1 \), then there is an \(a \in A\), such that \( e \neq a\), and \( a^p = e\).</p>
+<h3 id="proof">Proof</h3>
+<p>\( e \) is the only element of order 1 (since the identity element is unique in \(G\)). Every element of our group generates a subgroup \(&lt; g &gt;\), whose order must divide \( |A|\), the order of the group. The size of \(&lt; a &gt;\) is equal to the order of \(&lt; a &gt;\), so the order must divide the order of the group. Suppose that we can&rsquo;t find any element of order exactly \(p\), but we can find an element of order \(p^m\), where \(m \geq 2\). Consider what the order of \( b^{p^{m - 1}} \) is. Notice that, since the order of \( b\) is \( p^m \), that \(b^{p^m} = e\). Therefore, \( (b^{p^{m-1}})^p = b^{p^m} = e\). So \( b^{p^{m-1}}\) has order \(p\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-homomorphisms-and-subgroups">Lemma (homomorphisms and subgroups)</h2>
+<p>Let \(G\) be a group, and \(N\) be a normal subgroup of \(G\). Let \(H \leq G/N\), then \( \bigcup\limits_{h \in H} {hN} \) is a subgroup of \(G\).
+In other words, if \( \alpha : G \rightarrow G/N \) is the homomorphism where \( \alpha(g) = gN = [g]\), then \(\alpha^{-1}(H) := \{g \in G | \alpha(g) \in H \}\) is a subgroup of \(G\).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Let \(K = \alpha^{-1}(H)\), \(a \), and \(b \in K\). Then \( \alpha(a \cdot b^{-1})\) \( = \alpha(a) \cdot \alpha(b)^{-1} \), but since \( \alpha(a) \in H\) and \(\alpha(b) \in H\), \( \alpha(b)^{-1} \in H\) and so is their product \( \alpha(a) \cdot \alpha(b)^{-1} \), thus \(a \cdot b^{-1} \in K\), so \(K \leq G\).</p>
+<p><strong>QED</strong></p>
+<p>Notice, too, that the order of \(K\) is \( |N| \cdot |H| \).</p>
+<h2 id="definition-sylow-p-group">Definition (Sylow p-group)</h2>
+<p>A Sylow p-group is a proper p-group of maximum size. I.e. if \( |G| = p^k m\), where \( \gcd(m, p) = 1\), then a subgroup of order \(p^k\) is a Sylow p-group. However, if \(m = 1\), so \(G\) is itself a p-group of order \(p^k\), then a Sylow p-group has order \(p^{k-1}\).
+In what follows, sometimes I use p-group for Sylow p-group. The context should make this unambiguous.</p>
+<h2 id="lemma-abelian-p-groups-have-a-sylow-p-group">Lemma (Abelian p-Groups have a Sylow p-group)</h2>
+<p>Let \(A\) be an Abelian p-group of order \(p^{k}\), then \(A\) has a subgroup of order \(p^{k-1}\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Surprisingly, we&rsquo;ll be using induction on this one. We&rsquo;ll also use induction later as well. For each prime \(p\) we do induction on the power of \(p\), so in a way this proof is like a proof template for each prime. Assume that this holds for each \(m &lt; k \). For \(k = 1\), \(&lt; e &gt;\) is our p-group, so the base case works.</p>
+<p>Let \(|A| = p^k\), where \(k \geq 2\). We proved above that \(A\) has an element of order \(p\), so \(&lt; a &gt;\) is a subgroup of order \(p\). Since \(A\) is Abelian, every subgroup is normal (We didn&rsquo;t prove this yet, but you should be able to verify it fairly easily \(g^{-1} \cdot h \cdot g = h\)). So let&rsquo;s consider \(A /&lt; a &gt;\). It has order \( p^{k-1}\), so by induction it has a p-group of order \(p^{k-2}\), call it \(H\), then, if we let \( \alpha \) be as it was in the preceding lemma, \( K = \alpha^{-1}(H) \leq A \), and \( |K| = |&lt; a &gt;| \cdot |H|\) and that is equal to \( p \cdot p^{k-2} = p^{k-1}\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-p-groups-have-non-trivial-center">Lemma (p-groups have non-trivial center)</h2>
+<p>Let \(G\) be a p-group, then \(Z(G) \gneq \{e\}\). I.e. there is more than one element which commutes with every other element of \(G\).</p>
+<h3 id="proof-3">Proof</h3>
+<p>We use something called the class number formula. It&rsquo;s a fancy word for a formula which describes the overall size of a set \(X\) as the sum of disjoint orbits.</p>
+<p>Consider \(G\) as a group of permutations on its own elements where \(g \in G\) acts on \( x \in G\) by \( g^{-1} x g \). (Note, this is not the the action we&rsquo;ve usually considered so far, but it&rsquo;s one we&rsquo;ll use much more in the future). This is sometimes written as \( x^{g}\), but for the rest of this proof, I&rsquo;ll continue writing \( g^{-1} x g\). This is sometimes called the inner action of \(G\), but I will usually refer to it as conjugation. Notice that, like all actions on a set, this action splits \(G\) into disjoint cycles. By the orbit stabilizer theorem (proved in Subgroups of Even Permutations, Orbits, Stabilizers, etc&hellip;), the size of orbit \(i\) is equal to \( |G| / | Stab_{G}(x)|\), where \(x\) is an element of orbit \(i\). Since \( |G|\) is a power of \(p\), all of the orbits have to have sizes that are powers of \(p\). If we let \(n_i := | \text{orbit}_i |\), then \( G\), the size of the set of all of the elements is equal to \( n_1 + n_2 + &hellip; + n_c \), where \( c := \text{# of orbits}\).</p>
+<p>Notice that for every element of \( Z(G)\), the size of the orbit is equal to \(1\), because \( g^{-1}xg = x\), for every \(g \in G\). If \(e\), the identity element, is the only element in \(Z(G)\), then only one \(n_i = 1\), and every other \(n_i = p^m\), where \(m \geq 1\). But if that&rsquo;s the case, then \( |G| = n_1 + n_2 + &hellip; + n_c \) couldn&rsquo;t be a power of \(p\), because \( p \) would divide all the \(n_i\), except for one, which is equal to \(1\).</p>
+<p><strong>QED</strong></p>
+<p>I hope that last sentence makes sense. It relies on a bit of number theory. Here, if \(n_1 = 1\), and for every other \(n_i\), \(n_i = p \cdot n_i'\), then the sum of all of the \(n_i\)&rsquo;s is equal to \(1 + p(n_2' + n_3' + &hellip; + n_c') \), and \(p\) can&rsquo;t divide that total.</p>
+<p>Note that the inner action (or conjugation) is a bit trickier than the usual action of applying the operation on the left (i.e. \(g\) acts on \(x\) by \(g \circ x \)). It takes a bit more care to think about because it is a left action composed with a right action. (It can also be thought of as a right action composed with a left action).</p>
+<h2 id="lemma-inner-actions-generate-automorphisms">Lemma (inner actions generate automorphisms)</h2>
+<p>Let \(G\) be a group, \(g \in G\), then \( \phi : G \rightarrow G \), defined where \( \phi(x) = g^{-1}xg \) is an automorphism of \(G\).</p>
+<h3 id="proof-4">Proof</h3>
+<p>\(\phi\) is 1-1 because it is the composition of two 1-1 operations, the left inverse operation action and the right operation action. Now let&rsquo;s consider \( \phi(x y) \), where \(x\) and \(y\) are elements of \(G\). \(\phi(xy) = \)\( g^{-1}(xy) g = g^{-1}x(g \cdot g^{-1} )yg\). This is equal to \( \phi(x) \phi(y) \), so \( \phi \) is a homomorphism. Finally, in case \(G\) is not finite, we have to show that \( \phi \) is onto. Let \(y \in G\) be an arbitrary element of \(G\). Then, since \(g \in G\), and \(G\) is a group, we have \(gyg^{-1} \in G\). Consider \(\phi(gyg^{-1}) = g^{-1}(gyg^{-1})g = y \), so \(y \in Range(\phi) \), which means that \(\phi\) is onto. Therefore it is an automorphism.</p>
+<p><strong>QED</strong></p>
+<p>We don&rsquo;t actually use this fact to prove Sylow&rsquo;s theorems, but it is an interesting result.</p>
+<h2 id="lemma-centers-are-normal">Lemma (centers are normal)</h2>
+<p>Let \(G\) be a group with center \(Z(G)\). Then \(Z(G) \triangleleft G\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>Let \( g \in G\), and \(c \in Z(G) \). Then \(g^{-1}cg = (g^{-1}c)g \), which is equal to \( (cg^{-1})g \), because \(c\) is in the center of \(G\). We can see immediately that this is equal to \(c\), which we assumed to be in \(Z(G)\). Therefore \(Z(G)\) is normal in \(G\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-all-p-groups-have-a-sylow-p-group">Lemma (All p-groups have a Sylow p-group)</h2>
+<p>Let \(G\) be a group of order \(p^{k}\), where \(k \geq 1\), then there is an \(H \leq G\), such that \( |H| = p^{k-1}\).</p>
+<h3 id="proof-6">Proof</h3>
+<p>We&rsquo;ll also do this one by induction. Surprise.</p>
+<p>If \(G\) is Abelian, we&rsquo;re good, by the lemma above. Now, assume that \(G\) is not Abelian, so \(Z(G) \lneq G\), is a proper subgroup of \(G\). By the non-trivial p-group center lemma, we know that \(Z(G)\) is not trivial, either. That is, \( \{e\} \lneq Z(G) \). \(Z(G)\) must be a normal subgroup (we&rsquo;ve mentioned this already. It&rsquo;s not difficult to prove). So there is a homomorphism \(\alpha: G \rightarrow G/Z(G) \). This factor group has order \( 1 \lneq p^m \lneq p^k \), and so is a p-group. By induction, it has a Sylow p-group of order \(p^{m-1}\). Let&rsquo;s call it \(H\), then \(K = \alpha^{-1}(H)\) is a subgroup of \(G\). How big is \(K\) ?</p>
+<p>Notice that \(G/Z(G) \) has order \(p^{m}\), so \( Z(G)\) must have order \( p^{k - m}\), which means that \( K\) has order \( p^{m-1} \cdot p^{k - m} = p^{k-1}\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-some-number-theory">Lemma (some number theory)</h2>
+<p>Let \( p \) be a prime number that doesn&rsquo;t divide \(m \gneq 1\). Then, \( p \nmid \binom{p^km}{p^k} \).</p>
+<h3 id="proof-7">Proof</h3>
+<p>\[ \binom{p^km}{p^k} = \frac{\prod\limits_{i = 0}^{p^k - 1}{(p^k - i)}}{\prod\limits_{i = 1}^{p^k}{i}} \]</p>
+<p>Let&rsquo;s figure out exactly when \(p^{r} | p^k - i \), where \(p^r\) is the largest power of \(p\) dividing \(p^k - i\), for a given \(i\). Notice that \( p^r | p^k\), because \(r \leq k\), so then \( p^r \) must also divide \(i\). Thus every time \( p^r\) divides \(i \) in the numerator, it will also divide \(i\) in the denominator. Thus, \(p\) occurs exactly the same number of times in the numerator as it does in the denominator. Therefore \( p \nmid \binom{p^km}{p^k} \).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-large-proper-stabilizer-subgroup">Lemma (large proper stabilizer subgroup)</h2>
+<p>Let \(G\) be a group of order \( p^km\), where \(p\) is a prime and \( p \nmid m \gneq 1 \). Let \( \mathcal{S} := \{ S \subset G | | S | = p^k \} \). That is, \( \mathcal{S} \) is the set of all subsets of \(G\) which have exactly \(p^k\) elements. Let \(G\) act on \(\mathcal{S}\) by left operation, i.e \( g \in G \) acts on \( S \in \mathcal{S}\) by sending it to \( g \cdot S \in \mathcal{S}\). Then there exists \(S \in \mathcal{S}\), such that \( p^k | |Stab_{G}(S)| \), and \( Stab_{G}(S) \lneq G \).</p>
+<h3 id="proof-8">Proof</h3>
+<p>We&rsquo;re going to end up using \(Stab_{G}(S)\) to use induction, so that we can obtain a Sylow p-subgroup of \(G\).</p>
+<p>Recall the orbit stabilizer theorem. It says that for any \(S \in \mathcal{S}\), \( |Orb_{G}(S)| \cdot |Stab_{G}(S)| = |G| \). Suppose that there is no set \(S \in \mathcal{S}\), such that \( p^k | |Stab_G(S)| \), then at least one \( p \) divides every \( |Orb_{G}(S)\). But that can&rsquo;t happen, because \( | \mathcal{S} | \) is the disjoint union of the different orbits. If \(p\) divides the size of all of the orbits, then \( p | | \mathcal{S} | \), but that equals \( \binom{p^km}{p^k}\), and we just showed that \(p \) doesn&rsquo;t divide that. Therefore \( p^k \) must divide the order of one of the stabilizers.</p>
+<p>Now we need to prove that it isn&rsquo;t all of \(G\). Suppose that \(Stab_{G}(S) = G\). Then \(g \cdot S = S\) for every \(g \in G\). But that&rsquo;s impossible, because if \(g \) ranges over all of the elements of \(G\), then even for a single \(x \in G\), the orbit of \(g \cdot x\) is all of \(G\). Therefore \(Stab_G(S)\) is a proper subgroup.</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-almost-there">Corollary (almost there)</h2>
+<p>Let \(G\) be a group of order \(p^k m\), where \( p \) is a prime and \( p \nmid m\), and \( m &gt; 1 \). Then \(G\) has a Sylow p-subgroup.</p>
+<h3 id="proof-9">Proof</h3>
+<p>We use induction on \(m\) (yes, m!). In this way, you can think of this proof as a template that ranges over all the different primes \(p\)s and all of the different \(m\)s that are relatively prime to the \(p\)s. Suppose that the result holds for all \(d | m\).</p>
+<p>Letting \(\mathcal{S}\) be defined the same as it was in the previous lemma, we see that there is an \(S \in \mathcal{S}\), such that \( p^k | |Stab_{G}(S)| \), and that that subgroup is a proper subgroup of \(G\). Then by induction it has a Sylow p-subgroup of order \(p^k\). That Sylow p-subgroup is also a Sylow p-subgroup of \(G\).</p>
+<p>Finally, we need to clarify that the base case works. The base case will be when \( |G| = p^k q \), where \(q \) is another prime. Since \( Stab_{G}(S)\) in that case is still a proper subgroup and \(p^k \) still divides its order, it is guaranteed to be a Sylow p-subgroup.</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-sylows-first">Theorem (Sylow&rsquo;s first)</h2>
+<p>Let \(G\) be a group of order \(p^km\), where \( p\) is a prime, \(k, m \geq 1\), and \( \gcd(p, m) = 1\). Then
+If \(m = 1\), \(G\) has a subgroup of order \(p^{k-1}\).
+Otherwise \(G\) has a subgroup of order \(p^k\).</p>
+<h3 id="proof-10">Proof</h3>
+<p>We&rsquo;re proven it. All of the cases are contained in the above lemmas.</p>
+<p><strong>QED</strong></p>
+<p>We&rsquo;ll get to his other theorems soon. Notice that this theorem means that there are subgroups of order \(p^n\), where \(n \leq k\).</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sets/" rel="tag">Sets</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sylows-theorems/" rel="tag">Sylow&#39;s Theorems</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/orbits/" rel="tag">Orbits</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Subgroups of Even Permutations Orbits Stabilizers etc...</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/counting-orbits-sylows-theorems-etc-ii/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Counting Orbits Sylows Theorems etc... (II)</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/counting-orbits-sylows-theorems-etc-i/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fcounting-orbits-sylows-theorems-etc-i%2f" />
+</body>
+</html>

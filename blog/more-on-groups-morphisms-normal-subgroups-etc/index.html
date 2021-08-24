@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>More on Groups: Morphisms, Normal Subgroups, etc... - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="More on Groups: Morphisms, Normal Subgroups, etc..." />
+<meta property="og:description" content="In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&rsquo;t as thorough as what you&rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&rsquo;ll continue with that theme&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/more-on-groups-morphisms-normal-subgroups-etc/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-09T07:42:22-04:00" />
+<meta property="article:modified_time" content="2021-06-09T07:42:22-04:00" />
+
+
+		<meta itemprop="name" content="More on Groups: Morphisms, Normal Subgroups, etc...">
+<meta itemprop="description" content="In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&rsquo;t as thorough as what you&rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&rsquo;ll continue with that theme&hellip;"><meta itemprop="datePublished" content="2021-06-09T07:42:22-04:00" />
+<meta itemprop="dateModified" content="2021-06-09T07:42:22-04:00" />
+<meta itemprop="wordCount" content="1871">
+<meta itemprop="keywords" content="Morphisms," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="More on Groups: Morphisms, Normal Subgroups, etc..."/>
+<meta name="twitter:description" content="In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&rsquo;t as thorough as what you&rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&rsquo;ll continue with that theme&hellip;"/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">More on Groups: Morphisms, Normal Subgroups, etc...</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-09T07:42:22-04:00">2021-06-09</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/gears_and_flowers.jpg" alt="More on Groups: Morphisms, Normal Subgroups, etc...">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-conjugation">Definition (conjugation)</a></li>
+    <li><a href="#mini-lemma-inverse-of-product-of-inverses">Mini-Lemma (inverse of product of inverses)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-inverse-of-inverse">Mini-Lemma (inverse of inverse)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-conjugation-is-transitive">Lemma (conjugation is transitive)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-normal-subgroup">Definition (Normal Subgroup)</a></li>
+    <li><a href="#definition-kernel">Definition (Kernel)</a></li>
+    <li><a href="#lemma-subgroup-test">Lemma (subgroup test)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-image-of-identity-and-inverses">Mini-Lemma (image of identity and inverses)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-kernels-are-normal-subgroups">Theorem (Kernels are Normal Subgroups)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-equivalence-relation">Definition (equivalence relation)</a></li>
+    <li><a href="#definition-mod-a-coset">Definition (mod a coset)</a></li>
+    <li><a href="#lemma-mod-h-is-an-equivalence-relation">Lemma (mod H is an equivalence relation)</a>
+      <ul>
+        <li><a href="#proof-6">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-subset-conjugation-is-an-equivalence-relation">Lemma (subset conjugation is an equivalence relation)</a>
+      <ul>
+        <li><a href="#proof-7">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n the previous entry More of an Introduction to Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&rsquo;t as thorough as what you&rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&rsquo;ll continue with that theme.</p>
+<h2 id="definition-conjugation">Definition (conjugation)</h2>
+<p>Two elements of a group, \(G\), \(x \) and \(y\) are said to be conjugate to each other if there exists \(z \in G \), such that \(z^{-1} \cdot x \cdot z = y \). This is equivalent to \( x \cdot z = z \cdot y \).</p>
+<p>Similarly, two subsets \( S_1, S_2 \subseteq G \) are said to be conjugate to each other if there exists \(z \in G\), such that \( z^{-1} \cdot S_1 \cdot z = S_2 \).
+I&rsquo;ll sometimes write \( x \sim y\), or in the case of subsets, \( S_1 \sim S_2 \).</p>
+<h2 id="mini-lemma-inverse-of-product-of-inverses">Mini-Lemma (inverse of product of inverses)</h2>
+<p>Let \(x\) and \(y\) be elements of the group \(G\). Then \(x^{-1} \cdot y^{-1} = (y \cdot x)^{-1} \).</p>
+<h3 id="proof">Proof</h3>
+<p>\(x^{-1} \cdot y^{-1} = (y \cdot x)^{-1} \) means, by the definition of inverse, that \(x^{-1} \cdot x^{-1} \cdot (y \cdot x) = e \), the identity element of \(G\). We&rsquo;ve shown that we can remove, or rearrange the parentheses, so the expression on the left is equal to \( x^{-1} \cdot ( y^{-1} \cdot y ) \cdot x = e \).</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-inverse-of-inverse">Mini-Lemma (inverse of inverse)</h2>
+<p>Let \(x \) be an arbitrary element of a group, then \( (x^{-1})^{-1} = x \).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Let \(x\) be an arbitrary element of a group, and let \( y = (x^{-1})^{-1} \). By the definition of inverse, we have \( x^{-1} \cdot y = e \), which implies that \( x \cdot x^{-1} \cdot y = x \), and that implies that \(y = x \).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-conjugation-is-transitive">Lemma (conjugation is transitive)</h2>
+<p>Let \( x \sim y \) and \(y \sim z\), then \(x \sim z \).
+Similarly, for subsets, \(S_1 \sim S_2 \) and \(S_2 \sim S_3\) implies \(S_1 \sim S_3\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Suppose \(S_1 \sim S_2 \) and \(S_2 \sim S_3 \), then there exists \(z_1\) and \(z_2 \in G\), such that \( z_1^{-1} S_1 z_1 = S_2 \), and \( z_2^{-1} S_2 z_2 = S_3 \), but then \( z_2^{-1} ( z_1^{-1} S_1 z_1 ) z_2 = S_3 \), so \( (z_2^{-1} z_1^{-1}) S_1 (z_1 z_2) = S_3 \), but since \( z_2^{-1} z_1^{-1} = (z_1z_2)^{-1} \), we have \((z_1z_2)^{-1} S_1 (z_1 z_2) = S_3\), which means that \( S_1 \sim S_3 \), as desired. This proves 2. To prove 1, just let \(S_1 = \{x\}\) and \(S_2 = \{y\}\).</p>
+<p><strong>QED</strong></p>
+<h2 id="definition-normal-subgroup">Definition (Normal Subgroup)</h2>
+<p>Let \(N \), be a subgroup of \(G\), if \( z^{-1} \cdot N \cdot z = N \), for every \(z \in G \), then \(N\) is said to be a normal subgroup of \(G\). This is usually written \( N \triangleleft G \).</p>
+<p>Now we change topics slightly, but we&rsquo;ll come back around to what we&rsquo;ve been talking about soon.</p>
+<h2 id="definition-kernel">Definition (Kernel)</h2>
+<p>Let \(A \) and \(B\) be two groups. Let \( \phi : A \rightarrow B \) be a homomorphism. Then the subset of \(A\) of all of the elements that \( \phi \) sends to \( e_B \), the identity element of \(B\) is called the kernel of \( \phi \). This is sometimes written \( Ker(\phi) \).
+In set notation, \( Ker(\phi) := \{ a \in A | \phi(a) = e_B \} \).</p>
+<h2 id="lemma-subgroup-test">Lemma (subgroup test)</h2>
+<p>Let \( G\) be a group and \( \emptyset \neq S \subseteq G\) be a non-empty subset of \(G\). If \(x \cdot y^{-1} \in S\), for any \(x\) and \(y \in S\), then \(S \leq G\). I.e. \(S\) is a subgroup of \(G\).</p>
+<h3 id="proof-3">Proof</h3>
+<p>First we verify that \(e\), the identity element of \(G\) must be in \(S\). Let \(x = y\), then \(x \cdot x^{-1} \in S\), so \( e \in S \).
+Now we verify that each element of \(S\) has an inverse in \(S\).
+Let \(y \) be an arbitrary element of \(S\), then since \(e \in S\), if we set \(x = e\), then \( x \cdot y^{-1} = e \cdot y^{-1} = y^{-1} \in S \), so every element has an inverse in \(S\).
+Finally we show that \(S\) is closed under \( \cdot \), i.e. for any \(s_1\), \(s_2 \in S\), \(s_1 \cdot s_2 \in S\).
+Let \(s_1 \) and \(s_2\) be two arbitrary elements of \(S\). Then, since every element of \(S\) has an inverse in \(S\), \(s_2^{-1} \in S\). But then \( s_1 \cdot (s_2^{-1})^{-1} \) must be in \(S\), and since \( (s_2^{-1})^{-1} = s_2 \), we have that \(s_1 \cdot s_2 \in S\), so it is closed under \( \cdot \) and is therefore a subgroup.</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-image-of-identity-and-inverses">Mini-Lemma (image of identity and inverses)</h2>
+<p>Let \(A\) and \(B\) be groups and \( \phi \) a homomorphism from \(A\) to \(B\), also let \(e_A\) and \(e_B\) be the identity elements of \(A\) and \(B\), respectively. Then</p>
+<ol>
+<li>\( \phi(e_A) = e_B \).</li>
+<li>For any \(x \in A\), \( \phi(x^{-1}) = (\phi(x))^{-1} \).</li>
+</ol>
+<h3 id="proof-4">Proof</h3>
+<p>Let \( \circ_A \) and \( \circ_B \) be the binary operations of \(A \) and \(B \). Since \( \phi\) is a homomorphism, we have for an arbitrary \( x \in A\),
+\[ \phi(x) = \phi(x \circ_A e_A ) = \phi(x) \circ_B \phi(e_A) \]
+Thus
+\[ \phi(x)^{-1} \circ_B \phi(x) = \phi(x)^{-1} \circ_B \phi(x) \circ_B \phi(e_A) \]
+Thus \( e_B = e_B \circ_B \phi(e_A) \) so \( e_B = \phi(e_A) \).
+Now for the proof of part 2. Again, let \(x \in A\) be any element.
+\[ e_B = \phi(e_A) = \phi(x \circ_A x^{-1}) = \phi(x) \circ_B \phi(x^{-1}) \]
+This implies
+\[ \phi(x)^{-1} \circ_B e_B = \phi(x)^{-1} \circ_B \phi(x) \circ_B \phi(x^{-1}) \]
+That implies
+\[ \phi(x)^{-1} = \phi(x^{-1}) \]</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-kernels-are-normal-subgroups">Theorem (Kernels are Normal Subgroups)</h2>
+<p>Let \(A\) and \(B\) be two groups and let \( \phi \) be a homomorphism from \(A\) to \(B\), then \( Ker(\phi) \triangleleft G \).</p>
+<h3 id="proof-5">Proof</h3>
+<p>First we prove that \(Ker(\phi) \) is a subgroup. Let \(x \) and \(y\) be two arbitrary elements of \( Ker(\phi) \), so \( \phi(x) = \phi(y) = e_B \). Then \( \phi(x \circ_A y^{-1}) = \phi(x) \circ_B \phi(y)^{-1} = e_B \circ_B (e_B)^{-1} = e_B \). Therefore, \(x \circ_A y^{-1} \in Ker(\phi) \). Thus by the subgroup test lemma, \( Ker(\phi) \leq G \).
+Now let&rsquo;s prove it&rsquo;s a normal subgroup. Let \(z \) be an arbitrary element of \(A\), and \(x\) be an arbitrary element of \( Ker(\phi) \). Then \( \phi(z^{-1} \circ_A x \circ_A z) = \phi(z^{-1}) \circ_B \phi(x) \circ_B \phi(z) \). By the above lemmas, and since \(x \in Ker(\phi) \), we have
+\[ \phi(z^{-1}) \circ_B \phi(x) \circ_B \phi(z) = \phi(z)^{-1} \circ_B e_B \circ \phi(z) = \phi(z)^{-1} \circ_B \phi(z) = e_B \]
+Therefore \( z^{-1} \circ_A x \circ_A z \in Ker(\phi) \), thus \( z^{-1} \circ_A Ker(\phi) \circ_A z \subseteq Ker(\phi) \).
+For the rest of the proof, we&rsquo;ll drop the subscript \( \circ \), and instead just write \( \cdot \). So,
+\( z^{-1} \cdot Ker(\phi) \cdot z \subseteq Ker(\phi) \) implies that \( z \cdot z^{-1} \cdot Ker(\phi) z \cdot z^{-1} \subseteq z \cdot Ker(\phi) \cdot z^{-1} \), which means that \( Ker(\phi) \subseteq z \cdot Ker(\phi) \cdot z^{-1}\).
+Recall that \( z \in A\) was arbitrary, so we have \( z^{-1} \cdot Ker(\phi) \cdot z \subseteq Ker(\phi) \) and \(Ker(\phi) \subseteq z \cdot Ker(\phi) \cdot z^{-1} \) for all \(z \in A\). So, if instead we replace all of the \(z\)&rsquo;s with \( z^{-1} \), then the set inclusions will be reversed. Therefore the sets are all equal. This means that \( z^{-1} \cdot Ker(\phi) \cdot z = Ker(\phi) \), for any \(z \in A\). Thus \( Ker(\phi) \triangleleft A \).</p>
+<p><strong>QED</strong></p>
+<p>We showed previously that cosets of a subgroup are either disjoint or equal, which means that for subgroups that have more than one element (i.e. if the subgroup isn&rsquo;t just the identity element), then a coset could be represented by more than one element of the group. What this means is that there could be two elements, say, \(a_1\) and \(a_2\) in our group \(G\), such that for the subgroup \(H\), \(a_1H = a_2H \). It turns out that this forms an equivalence relation on the elements of \(G\). We actually dealt with an equivalence relation earlier in this entry, but we didn&rsquo;t prove that it was an equivalence relation (because we hadn&rsquo;t mentioned equivalence relations at all).</p>
+<h2 id="definition-equivalence-relation">Definition (equivalence relation)</h2>
+<p>Let \( \equiv \) be a relation among two elements of a set, such that
+For all \(s \in S \), \( s \equiv s\).
+For all \(s_1\) and \( s_2 \in S\), \( s_1 \equiv s_2 \Rightarrow s_2 \equiv s_1 \). (Reflexive)
+For all \(s_1\), \(s_2\), and \(s_3 \in S\), \( s_1 \equiv s_2\) and \( s_2 \equiv s_3\), then \(s_1 \equiv s_3\). (Transitive)</p>
+<h2 id="definition-mod-a-coset">Definition (mod a coset)</h2>
+<p>Let \(a\) and \(b\) be two elements of a group, \(G\), and let \(H\) be a subgroup of \(G\). Then \(a\) is said to be equal to \(b\) mod \(H\), written
+\[ a \equiv b \mod H \]
+if and only if the two cosets of \(H\), \( aH \) and \(bH\) are equal.
+The syntax we&rsquo;ve used for the &ldquo;\( \equiv \mod H\)&rdquo; relation suggests that it is an equivalence relation among the elements of the group \(G\), but just because we&rsquo;ve used the symbol &ldquo;\( \equiv \mod H \)&rdquo; to represent it doesn&rsquo;t mean that it actually is an equivalence relation. We have to prove that by showing that \( a \equiv b \mod H\) satisfies all three of the criteria given above for an equivalence relation. Fortunately, though, it does satisfy those criteria, as we show with the following lemma.</p>
+<h2 id="lemma-mod-h-is-an-equivalence-relation">Lemma (mod H is an equivalence relation)</h2>
+<p>\( \equiv \mod H \) is an equivalence relation.</p>
+<h3 id="proof-6">Proof</h3>
+<p>Condition 1 and 2 are obvious. For 3, suppose \( a \equiv b \mod H \) and \( b \equiv c \mod H\) so \(aH = bH\) and \(bH = cH\), then by equality, \(aH = cH\), which means \( a \equiv c \mod H \).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-subset-conjugation-is-an-equivalence-relation">Lemma (subset conjugation is an equivalence relation)</h2>
+<p>Subset conjugation \( \sim \) is an equivalence relation.</p>
+<h3 id="proof-7">Proof</h3>
+<p>We already showed 3 (transitivity) of \( \sim \). 1 is clear by letting \(z = e\), the identity. Now we prove 2.
+Let \( S_1 \sim S_2 \), so there is some \(z \in G\), such that \( z^{-1} \cdot S_1 \cdot z = S_2 \), then, if we further conjugate by \(z^{-1}\), we obtain \( z \cdot (z^{-1} S_1 \cdot z) \cdot z^{-1} = z \cdot S_2 \cdot z^{-1} \). This means that \( S_1 = z \cdot S_2 \cdot z^{-1} \), but this is just the same as \( (z^{-1})^{-1} \cdot S_2 \cdot (z^{-1}) = S_1 \), and that means that \(S_2 \sim S_1\).</p>
+<p><strong>QED</strong></p>
+<p>This entry is becoming a bit long, so we&rsquo;re going to continue this discussion in a future entry.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/morphisms/" rel="tag">Morphisms</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/more-introductory-group-theory/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">More Introductory Group Theory</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/applying-permutations-to-group-theory/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Applying Permutations to Group Theory</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/more-on-groups-morphisms-normal-subgroups-etc/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fmore-on-groups-morphisms-normal-subgroups-etc%2f" />
+</body>
+</html>

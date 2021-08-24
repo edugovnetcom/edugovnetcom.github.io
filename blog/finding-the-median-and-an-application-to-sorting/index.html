@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Finding the Median and an Application to Sorting - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Finding the Median and an Application to Sorting" />
+<meta property="og:description" content="In the previous few entries we&rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&rsquo;re going to apply what we&rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/finding-the-median-and-an-application-to-sorting/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-07-14T14:25:44-04:00" />
+<meta property="article:modified_time" content="2021-07-14T14:25:44-04:00" />
+
+
+		<meta itemprop="name" content="Finding the Median and an Application to Sorting">
+<meta itemprop="description" content="In the previous few entries we&rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&rsquo;re going to apply what we&rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time."><meta itemprop="datePublished" content="2021-07-14T14:25:44-04:00" />
+<meta itemprop="dateModified" content="2021-07-14T14:25:44-04:00" />
+<meta itemprop="wordCount" content="2943">
+<meta itemprop="keywords" content="Median Finding,Median of Medians,Permutations,Complexity," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Finding the Median and an Application to Sorting"/>
+<meta name="twitter:description" content="In the previous few entries we&rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&rsquo;re going to apply what we&rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Finding the Median and an Application to Sorting</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-14T14:25:44-04:00">2021-07-14</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/algorithms/" rel="category">Algorithms</a>, <a class="meta__link" href="/categories/sorting/" rel="category">Sorting</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/highway_median_at_night.jpg" alt="Finding the Median and an Application to Sorting">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pivot">pivot()</a></li>
+    <li><a href="#bubble_sort">bubble_sort()</a></li>
+    <li><a href="#kth_smallest">kth_smallest()</a></li>
+    <li><a href="#lemma-linear-inequality">Lemma (linear inequality)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#quick_sort">quick_sort</a></li>
+    <li><a href="#quick_sort_plus">quick_sort_plus</a></li>
+    <li><a href="#runtime-plots">Runtime Plots</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n the previous few entries we&rsquo;ve been discussing <code>quick_sort</code> and analyzing the run-time complexity of recursive algorithms. We&rsquo;re going to apply what we&rsquo;ve learned so far to finding the median of an array in \(O(n)\) time. Then we&rsquo;re going to see how that can be added to <code>quick_sort</code> to guarantee that it finishes in \(O(n\log_2(n))\) time.</p>
+<p>The program we&rsquo;re going to provide and discuss in this entry is more general than one that just finds the median. Given an array of integers of length \(N\) and a \(k\), such that \( 0 \leq k &lt; N\), then our program will move all of the \(k\) smallest elements of the array to the first \(k\) positions. For example, if our original array is \([ 97_{0}, 54_{1}, 11_{2}, 60_{3}, 66_{4}, 27_{5}, 20_{6}, 78_{7}, 63_{8}, 67_{9} ] \) (where the subscript represents the index in the array), so that \(N = 10\), and we let \(k = 3\), then the output might be something like \([ 27_{0}, 11_{1}, 20_{2}, 54_{k = 3}, 78_{4}, 60_{5}, 63_{6}, 97_{7}, 66_{8}, 67_{9} ]\).</p>
+<p>Notice that our indexing of the elements of the array starts at \(0\), so the \(4^{th}\) position has index \(3\). The resulting element with index \(3\) is the \(4^{th}\) smallest element of the array. What&rsquo;s more, everything to the left of it is smaller than or equal to it, and everything to the right of it is greater than or equal to it. In our case all of the inequalities are strict, because each element is unique.</p>
+<p>Using this program, you can determine the median of an array. If the array has an odd number of elements, say, \(N = 2n + 1\), then the median is found by setting \(k = n\). The program doesn&rsquo;t return that value, but you would then know that the element with index \(n\) is the median. On the other hand, if the array has an even number of elements, so \(N = 2n\), then we can determine the median by setting \(k = n\), once again, and then finding the maximum element to the left of position \(n\). What&rsquo;s significant about this is that we can accomplish all of this <em>without</em> having to bother to sort the entire array. As mentioned above, our algorithm&rsquo;s time complexity, \(T(n)\) is an element of \(O(n)\), which we will prove later in this entry. That&rsquo;s much better than the upper bound we&rsquo;ve proven for <code>quick_sort</code>.</p>
+<p>To be fair, so far we haven&rsquo;t proven that the worst case run-time for <code>quick_sort</code> is actually \(O(n^2)\). It is, and we&rsquo;ll show that later. For now, let&rsquo;s dig in to this new algorithm which separates an array into lesser and greater elements.
+We&rsquo;ve implemented it in C++. Here&rsquo;s the first function involved, it&rsquo;s quite similar to what <code>quick_sort</code> does.</p>
+<h2 id="pivot">pivot()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#008000">/*
+</span><span style="color:#008000">  Let b = pivot(input, length). Then a &lt; b &lt; c
+</span><span style="color:#008000">  implies that input[a] &lt; input[b] &lt;= input[c].
+</span><span style="color:#008000">  
+</span><span style="color:#008000">  input[b] is where input[0] is moved to at the
+</span><span style="color:#008000">  end of execution.
+</span><span style="color:#008000">*/</span>
+
+<span style="color:#2b91af">int64_t</span> pivot(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> length)
+{
+  <span style="color:#2b91af">int64_t</span> i, j, tmp;
+  i = 0;
+  j = length - 1;
+
+  <span style="color:#00f">while</span> (i &lt; j)
+  {
+    tmp = input[i+1];
+    <span style="color:#00f">if</span>(input[i+1] &lt; input[i])
+    {
+      input[i+1] = input[i];
+      input[i] = tmp;
+      i++;
+    }
+    <span style="color:#00f">else</span>
+    {
+      input[i+1] = input[j];
+      input[j] = tmp;
+      j--;
+    }
+  }<span style="color:#008000">// i == j
+</span><span style="color:#008000"></span>  <span style="color:#00f">return</span> i;
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>quick_sort</code> is nothing more than repeatedly calling <code>pivot()</code> on successively smaller sub arrays of the initial input array. <code>pivot()</code>&rsquo;s running time is \(O(n)\), where \(n\) is the length of the input array. Notice that this function takes an array of <code>int64_t</code>s as its input, instead of a <code>vector</code>, which we used in our implementation of quick_sort. We chose this because it&rsquo;s slightly simpler and doesn&rsquo;t take away from the point of the algorithm.</p>
+<p>The next function we&rsquo;ll discuss is <code>bubble_sort</code>. It&rsquo;s fine to use to sort short arrays. What&rsquo;s nice about it is that it only involves two for loop and it avoids using any recursion.</p>
+<h2 id="bubble_sort">bubble_sort()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#008000">/*
+</span><span style="color:#008000">  Runs in O(n^2) time, only use on small arrays
+</span><span style="color:#008000">*/</span>
+<span style="color:#2b91af">void</span> bubble_sort(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> length)
+{
+  <span style="color:#2b91af">int64_t</span> i, j, tmp;
+
+  <span style="color:#00f">for</span>(i = 0; i &lt; length; i++)
+  {
+    <span style="color:#00f">for</span>(j = i+1; j &lt; length; j++)
+    {
+      <span style="color:#00f">if</span>(input[j] &lt; input[i])
+      {
+        tmp = input[i];
+        input[i] = input[j];
+        input[j] = tmp;
+      }
+    }<span style="color:#008000">// the j loop makes array[i] at least as small as everything to the right
+</span><span style="color:#008000"></span>  }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>You can see we&rsquo;ve mentioned in the comments above the implementation of the function that it runs in \(O(n^2)\) time, where \(n\) is the length of the input array. The reason why including this function in our algorithm doesn&rsquo;t mean that the running time of <code>kth_smallest()</code> is an element of \(O(n^2)\) is that it is only ever runs on arrays of length <code>CHUNK_SIZE</code> or smaller. Typically <code>CHUNK_SIZE</code> is equal to 5.
+Finally, we introduce the function which combines the above two, and ultimately separates the array.</p>
+<h2 id="kth_smallest">kth_smallest()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#008000">// CHUNK_SIZE is usually 5 //
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> kth_smallest(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> k, <span style="color:#2b91af">int64_t</span> length)
+{
+  <span style="color:#00f">if</span> (length &lt;= CHUNK_SIZE)
+  {
+    bubble_sort(input, length);
+    <span style="color:#00f">return</span>;
+  }
+
+  <span style="color:#2b91af">int64_t</span> i, j, m_index, tmp, tmp_length;
+
+  <span style="color:#00f">for</span> (i = 0, j = 0; i &lt; length; i+= CHUNK_SIZE, j++)
+  {
+    tmp_length = i + CHUNK_SIZE &lt; length ? CHUNK_SIZE : length - i;
+    bubble_sort(&amp;input[i], tmp_length);
+
+    <span style="color:#008000">// the index of the median of the small subarray
+</span><span style="color:#008000"></span>    m_index = i + tmp_length / 2;
+
+    tmp = input[m_index];
+    input[m_index] = input[j];
+    input[j] = tmp;
+  }
+  <span style="color:#008000">/*
+</span><span style="color:#008000">  This array replaces the front portion of input[] with the
+</span><span style="color:#008000">  medians of the small subarrays.
+</span><span style="color:#008000">
+</span><span style="color:#008000">  j is now equal to the length of the front portion of input[]
+</span><span style="color:#008000">  */</span>
+
+  m_index = j / 2;
+  kth_smallest(input, m_index, j);
+
+  <span style="color:#008000">/* 
+</span><span style="color:#008000">  m_index is the index of the median of the medians,
+</span><span style="color:#008000">  which is where the name of the algorithm originates.
+</span><span style="color:#008000">  */</span>
+
+  tmp = input[m_index];
+  input[m_index] = input[0];
+  input[0] =  tmp;
+
+  m_index = pivot(input, length);
+
+  <span style="color:#008000">/*
+</span><span style="color:#008000">  We moved the median of the medians into input[0], which
+</span><span style="color:#008000">  means that pivot will move everything &lt; the median of medians
+</span><span style="color:#008000">  to the left of m_index, and everything &gt;= to the right.
+</span><span style="color:#008000">
+</span><span style="color:#008000">  Note that the median of the medians is guaranteed to be greater than
+</span><span style="color:#008000">  or equal to (j/2)*3 elements of input[].
+</span><span style="color:#008000">  */</span>
+
+  <span style="color:#008000">// m_index is exactly where we want it. Nothing more to do.
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (m_index == k)
+  {
+    <span style="color:#00f">return</span>;
+  }
+
+  <span style="color:#008000">/*
+</span><span style="color:#008000">  k is to the right of m_index, so we have to search among
+</span><span style="color:#008000">  the right part of the array.
+</span><span style="color:#008000">
+</span><span style="color:#008000">  Notice that we have to subtract m_index + 1 from the value
+</span><span style="color:#008000">  of k and the length, because we&#39;re on the right side of
+</span><span style="color:#008000">  m_index.
+</span><span style="color:#008000">  */</span>
+  <span style="color:#00f">if</span> (m_index &lt; k)
+  {
+    kth_smallest(&amp;input[m_index + 1], (k - (m_index + 1)), length - (m_index + 1));
+  }
+
+  <span style="color:#008000">/*
+</span><span style="color:#008000">  k is to the left of m_index, so we have to search among
+</span><span style="color:#008000">  the left part of the array
+</span><span style="color:#008000">  */</span>
+  kth_smallest(input, k, m_index);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>We&rsquo;re going to show that \(T(n)\), the number of steps <code>kth_smallest()</code> takes to finish on an input array of length \(n\) is equal to
+\[ T(n) = c\left\lceil{ 0.2n }\right\rceil + T(\left\lceil {0.2n} \right\rceil) + T( \left\lceil { 0.7n } \right\rceil ) \tag{1}\label{1}\]</p>
+<p>We&rsquo;re going to assume that <code>CHUNK_SIZE</code> \(= 5\) in our analysis.</p>
+<p>The leftmost term \(c\left\lceil{ 0.2n }\right\rceil\) comes from the bubble sorts. Each one takes \(c\) time. Easy enough. Then the next term comes from recursively calling <code>kth_smallest()</code> on the sub array of medians. This sub array has length \(\left\lceil {0.2n} \right\rceil\). Easy enough. Now let&rsquo;s handle the rightmost term.</p>
+<p>This comes from the two possible recursive calls to kth_smallest() at the end of the function. We want to show that we&rsquo;ve eliminated at least \(\left\lfloor{0.3n}\right\rfloor\) elements from the input to the next function call. We&rsquo;ll ignore the case where <code>m_index == k</code>, because then there&rsquo;s no more work left to do. Case 1 is where <code>m_index &lt; k</code>, so <code>k</code> is to the right of <code>m_index</code>.</p>
+<p>Let&rsquo;s stop for a bit to consider what <code>m_index</code> is. It is the index of the &ldquo;median of the medians&rdquo; (as mentioned in the comments to the code above). Let \(n = 5q + r\), then <code>m_index</code> is at least as large as \(3\left\lfloor {\frac{q}{2}} \right\rfloor\). This is because there are at least \(\left\lfloor {\frac{q}{2}} \right\rfloor\) &ldquo;medians&rdquo; (of the groups of 5) less than or equal to the element at <code>m_index</code>. Each one of those medians was at least as large as the two smaller elements in its group of 5. Therefore, each of those \(\left\lfloor {\frac{q}{2}} \right\rfloor\) groups of 5 had at least 3 elements less than or equal to the element at index <code>m_index</code>. Thus the element at <code>m_index</code> is greater than or equal to \(3\left\lfloor {\frac{q}{2}} \right\rfloor\) elements of the input array. We can rewrite this as \(\left\lfloor{\frac{n-r}{10}}\right\rfloor\), where \(r &lt; 5\). This isn&rsquo;t <em>quite</em> what we wanted, so maybe it&rsquo;s better to say that we&rsquo;ve eliminated at least \(\left\lfloor{0.29n}\right\rfloor\) of the original array for large enough \(n\). This is still good enough.</p>
+<p>Case 2 where <code>m_index &gt; k</code> is similar.</p>
+<p>Now that we&rsquo;ve (basically) shown that equation (1) holds, notice that \(\left\lceil {0.2n}\right\rceil \leq 0.2n + 1 \), and similarly, \(\left\lceil{ 0.7n }\right\rceil \leq 0.7n + 1 \). This means that their sum is less than or equal to \( 0.9n + 2 \).
+We will ultimately show that \(T\) is linear, but we don&rsquo;t even need all of that for this next step. All we need to do is assume that \(T\) is convex (sometimes called &ldquo;concave up&rdquo; in calculus) and \(T(0) = 0\) to conclude that \(T(m_1) + T(m_2) \leq T(m_1 + m_2) \). We prove that with the following lemma.</p>
+<h2 id="lemma-linear-inequality">Lemma (linear inequality)</h2>
+<p>Let \(S : \mathbb{R} \rightarrow \mathbb{R} \) be a convex function, such that \(S(0) = 0\), then \( 0 \leq x, y \) implies that \( S(x) + S(y) \leq S(x + y) \).</p>
+<h3 id="proof">Proof</h3>
+<p>The real power of the proof comes from the definition of convexity. \(S\) is convex if and only if \(S( (1 - \lambda)x_1 + \lambda x_2 ) \leq (1 - \lambda)S(x_1) + \lambda S(x_2)\). Here&rsquo;s a picture showing what this means:</p>
+<p><img src="/images/convex_function.png" alt="Example Convex Function" title="An Example Convex Function and A Linear Function"></p>
+<p>Let \(x_1 = 0\), then we have \( S(\lambda x_2) \leq \lambda S(x_2)\), for any \(x_2 \geq 0\) and any \( \lambda \in [0,1]\). Now consider \( \lambda_1 = \frac{x}{x+y}\) and \(x_2 = x + y\), then we have \( S( \frac{x}{x+y}[x+y]) \leq \frac{x}{x+y} S(x+y)\), which gives us
+\[S(x) \leq \frac{x}{x+y}S(x + y) \tag{2}\label{2}\]
+Similarly, if we set \(\lambda_2 = \frac{y}{x+y}\), we get
+\[S(y) \leq \frac{y}{x+y} S(x+y) \tag{3}\label{3}\]
+adding (2) to (3) we get
+\[ S(x) + S(y) \leq S(x + y) \tag{4}\label{4} \]</p>
+<p><strong>QED</strong></p>
+<p>Using that lemma, we see that since \(T(0) = 0\), all we have to do is suppose that \(T(n)\) grows at least as fast as \(cn\) (it could be much worse, like \(ce^{n}\)) to conclude that \(T(\left\lceil { 0.2n} \right\rceil) + T( \left\lceil {0.71n} \right\rceil) \leq T( \left\lceil {0.2n}\right\rceil + \left\lceil {0.71n}\right\rceil) \). It&rsquo;s not hard to show that for large enough \(n\), \(\left\lceil {0.2n}\right\rceil + \left\lceil {0.71n}\right\rceil \leq \left\lceil { 0.95n } \right\rceil \). Putting this all together with equation (1) from above, we get</p>
+<p>\[ T(n) \leq c \left\lceil 0.2n \right\rceil + T(\left\lceil 0.95n \right\rceil) \tag{5}\label{5}\]</p>
+<p>Using the &ldquo;Almost the Master Theorem&rdquo; from (More on Sorting and Analyzing Run Time Complexity), with equation (5) we can conclude that \(T(n) \in O(n) \). The proof that we gave, though, shows that \(T(n)\) &ldquo;almost&rdquo; didn&rsquo;t make it. It was almost in \(O(n\log_2(n))\). Mathematically, that might not make a whole lot of sense, either a function is in \(O(n)\), or it isn&rsquo;t, but in practice, it might take a while for \(T(n)\) to behave linearly.</p>
+<p>We tested our program on 9000 randomly generated inputs with lengths that ranged from 10,000 elements to 100,000 elements. We counted the number of steps <code>kth_smallest(input_array, k)</code> took to separate <code>input_array</code> into the smallest <code>k</code> elements to the left, where <code>k</code> was chosen uniformly at random among all of the possible indices. Here&rsquo;s a plot showing the distribution of the number of steps vs the length of the input array.</p>
+<p><img src="/images/all_lengths_count_max_plot_line.png" alt="All Lengths vs Counts and Max Plot Line" title="All Counts vs Array Lengths and Max Plot Line"></p>
+<p>We&rsquo;ve fit a line to the points that represent the most steps for a given input size. You can see that the actual upper limit seems to be convex. This means that for input sizes smaller than 100,000 elements, the run time isn&rsquo;t behaving linear yet. That&rsquo;s something that can happen in practice with real algorithms. Just because a function behaves linearly as it approaches infinity doesn&rsquo;t mean it will do that in the range of real-world situations. We never get that close to infinity, afterall. On the other hand, testing only below 100,000 isn&rsquo;t really testing for very large real-world applications. Real data can have trillions of entries.</p>
+<p>We want to point out that this function can be added to <code>quick_sort</code>, which we will call &ldquo;<code>quick_sort_plus</code>&rdquo;, which we can show is in \(O(n\log_2(n))\). Here we&rsquo;ve re-written <code>quick_sort</code> so that it uses the <code>pivot()</code> function implemented above.</p>
+<h2 id="quick_sort">quick_sort</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#2b91af">void</span> quick_sort(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> length)
+{
+  quick_sort(input, 0, length);
+}
+<span style="color:#2b91af">void</span> quick_sort(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> start, <span style="color:#2b91af">int64_t</span> end)
+{
+  <span style="color:#00f">if</span>(end - start &lt; 2)
+  {
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#2b91af">int64_t</span> k = pivot(&amp;input[start], end - start) + start;
+  
+  quick_sort(input, start, k);
+  quick_sort(input, k + 1, end);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="quick_sort_plus">quick_sort_plus</h2>
+<p>Here&rsquo;s our implementation of <code>quick_sort_plus()</code>. Notice how similar the two are.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#2b91af">void</span> quick_sort_plus(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> length)
+{
+  quick_sort_plus(input, 0, length);
+}
+<span style="color:#2b91af">void</span> quick_sort_plus(<span style="color:#2b91af">int64_t</span>* input, <span style="color:#2b91af">int64_t</span> start, <span style="color:#2b91af">int64_t</span> end)
+{
+  <span style="color:#00f">if</span>(end - start &lt; 2)
+  {
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#2b91af">int64_t</span> m = (start + end) / 2;
+  kth_smallest(&amp;input[start], m - start, end - start);
+
+  quick_sort_plus(input, start, m);
+  quick_sort_plus(input, m + 1, end);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>Since <code>kth_smallest()</code> runs in \(O(n)\) time, it is bounded by some \(cn\), for some \(c \in \mathbb{R}\). Thus \(T(n)\) for <code>quick_sort_plus</code> is less than or equal to \(cn + 2T(\left\lceil {\frac{n}{2}}\right\rceil) \), and that means that it is in \(O(n\log_2(n))\).</p>
+<p><strong>QED</strong></p>
+<p>Now we&rsquo;re going to show that <code>quick_sort</code> can take \(O(n^2)\) steps to complete when given the worst input. The worst input is one which is in reverse order, so \( \text{input} = [a_0, a_1, &hellip; , a_{n-1}]\), where \( a_0 &gt; a_1 &gt; &hellip; &gt; a_{n-1}\). When this is the case <code>pivot</code> takes \(n-1\) steps to send \(a_0\) to the rightmost position of the array (which is where it belongs, since it&rsquo;s the largest element). In doing so, it doesn&rsquo;t change the relation of any of the other elements with respect to each other. For example, if \( \text{input} = [5,4,3,2,1] \), then when <code>pivot</code> finishes, \( \text{input} = [4,3,2,1,5] \). \(5\) is now in the far right position, where it belongs, and everything else has been moved one position to the left. The index returned by <code>pivot</code> is \(n-1\), so when the two recursive calls to <code>quick_sort</code> are executed, one will have length \(n-1\) and the other will have length \(0\). Now the call to <code>quick_sort</code> that has input length \(n-1\) is in almost the exact same situation as the original call to <code>quick_sort</code>, except that its input is one element shorter. This is because its input is also in reverse order. Thus we will have to recursively sort sub-arrays of length \(n-1, n-2, n-3, &hellip; , 2, 1\), before we finish. For the recursive call with input of length \(m\), <code>quick_sort</code> calls the <code>pivot</code> subroutine, which will take \(cm\) steps to complete. Therefore, the entire execution of <code>quick_sort</code> on this input will take \( \sum\limits_{m = 1}^{n} cm = c\frac{n(n+1)}{2} \) steps. Therefore <code>quick_sort</code> is in \(O(n^2)\).</p>
+<p><strong>QED</strong></p>
+<p>We want to point out, though, that in practice the original <code>quick_sort</code> is very good. We ran a similar test with <code>quick_sort</code> and <code>quick_sort_plus</code> to what we did above with <code>kth_smallest</code>. We counted the number of steps it took each to sort 9000 randomly generated arrays with lengths ranging from 10,000 elements to 100,000 elements. We tested both algorithms on the exact same set of randomly generated arrays. Here are the results for <code>quick_sort</code>:</p>
+<h2 id="runtime-plots">Runtime Plots</h2>
+<p><img src="/images/quick_sort_step_count.png" alt="Quick Sort Step Count" title="quick_sort Step Count vs Array Length"></p>
+<p>Here are the results for <code>quick_sort_plus</code>:</p>
+<p><img src="/images/quick_sort_plus_step_count.png" alt="Quick Sort Plus Step Count" title="quick_sort_plus Step Count vs Array Length"></p>
+<p>They may look similar enough, but the vertical scale isn&rsquo;t the same. Here&rsquo;s what we get when we merge the two into one scatter plot:</p>
+<p><img src="/images/quick_sort_and_plus_step_count_comparison.png" alt="Quick Sort and Quick Sort Plus Step Count" title="quick_sort and quick_sort_plus step count comparison"></p>
+<p>The results are kind of shocking. The plain <code>quick_sort</code> implementation greatly outperformed <code>quick_sort_plus</code>! The results aren&rsquo;t even close. It turns out that the arrays that take ordinary <code>quick_sort</code> a long time to sort are incredibly rare. If you&rsquo;re worried about one of those slowing your system down, you can simply check the value that <code>pivot</code> returns. If it&rsquo;s too small or too large, so that the two sub-arrays are heavily imbalanced, simply randomly permute the array, and try again. Applying a random permutation can be done in \(O(n)\) steps. The chances that you&rsquo;ll have to permute the array more than a couple times are extremely low.</p>
+<p>That&rsquo;s all for this entry!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/median-finding/" rel="tag">Median Finding</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/median-of-medians/" rel="tag">Median of Medians</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/complexity/" rel="tag">Complexity</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/more-on-sorting-and-analyzing-run-time-complexity/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">More on Sorting and Analyzing Run Time Complexity</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/computing-with-permutations-inverses-cycles-and-more/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Computing With Permutations, Inverses, Cycles, and More!</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/finding-the-median-and-an-application-to-sorting/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2ffinding-the-median-and-an-application-to-sorting%2f" />
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>omp on EduGovNet.com</title>
+    <link>/tags/omp/</link>
+    <description>Recent content in omp on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jul 2021 14:26:47 -0400</lastBuildDate><atom:link href="/tags/omp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parallel Sorting in Theory and in Practice III</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-iii/</link>
+      <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-iii/</guid>
+      <description>As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice II</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-ii/</link>
+      <pubDate>Tue, 27 Jul 2021 14:26:44 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-ii/</guid>
+      <description>As promised, this is the second entry on parallel sorting. In this entry, we&amp;rsquo;ll implement &lt;code&gt;merge_sort&lt;/code&gt;, and then give two different ways to make it run in parallel. The first one will be a bit simpler than the second one.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice I</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-i/</link>
+      <pubDate>Fri, 23 Jul 2021 14:26:40 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-i/</guid>
+      <description>We&amp;rsquo;re going to begin our discussion of parallel algorithms. We&amp;rsquo;ll do this by giving a parallel version of &lt;code&gt;quick_sort_plus&lt;/code&gt;. We finish this entry by extending the &amp;ldquo;Almost the Master Theorem&amp;rdquo; to include cases where f(n) = cn^alpha*log_2(n). In our next entry, we&amp;rsquo;ll introduce &lt;code&gt;merge_sort&lt;/code&gt; as well as a couple different parallel versions of it. We&amp;rsquo;ll also discuss both the theoretical and practical runtimes for these functions.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Group Theory on EduGovNet.com</title>
+    <link>/categories/group-theory/</link>
+    <description>Recent content in Group Theory on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Aug 2021 14:38:14 -0400</lastBuildDate><atom:link href="/categories/group-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Even Permutations and Some Simple Non-Abelian Groups</title>
+      <link>/blog/even-permutations-some-simple-non-abelian-groups/</link>
+      <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
+      
+      <guid>/blog/even-permutations-some-simple-non-abelian-groups/</guid>
+      <description>In this entry we prove that A_n is normal when n &amp;gt;= 5. We then use this result to prove that there is no generalization of &amp;ldquo;even&amp;rdquo; and &amp;ldquo;odd&amp;rdquo; permutation to three or more classes &amp;ndash; i.e. there is no class of homomorphisms into Z_n, where n &amp;gt; 2.</description>
+    </item>
+    
+    <item>
+      <title>Zassenhaus Lemma and the Jordan Holder Theorem</title>
+      <link>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</link>
+      <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
+      
+      <guid>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</guid>
+      <description>This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Parial Orders Lattices and Some Subgroups</title>
+      <link>/blog/parial-orders-lattices-and-some-subgroups/</link>
+      <pubDate>Thu, 17 Jun 2021 10:26:21 -0400</pubDate>
+      
+      <guid>/blog/parial-orders-lattices-and-some-subgroups/</guid>
+      <description>In this article we mostly talk about partial orders, and lattices, which are a special type of partial order. We tie it in with our discussions of subgroups before proving two distribution laws for lattices.</description>
+    </item>
+    
+    <item>
+      <title>Counting Orbits Sylows Theorems etc... (II)</title>
+      <link>/blog/counting-orbits-sylows-theorems-etc-ii/</link>
+      <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
+      
+      <guid>/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
+      <description>We&amp;rsquo;re continuing our proofs of Sylow&amp;rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Counting Orbits Sylows Theorems etc... (I)</title>
+      <link>/blog/counting-orbits-sylows-theorems-etc-i/</link>
+      <pubDate>Sun, 13 Jun 2021 09:36:30 -0400</pubDate>
+      
+      <guid>/blog/counting-orbits-sylows-theorems-etc-i/</guid>
+      <description>In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&amp;rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</description>
+    </item>
+    
+    <item>
+      <title>Subgroups of Even Permutations Orbits Stabilizers etc...</title>
+      <link>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
+      <pubDate>Fri, 11 Jun 2021 09:18:37 -0400</pubDate>
+      
+      <guid>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
+      <description>We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k + 1), and discussing properties of the orbits, stabilizers, fixes, etc&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Applying Permutations to Group Theory</title>
+      <link>/blog/applying-permutations-to-group-theory/</link>
+      <pubDate>Thu, 10 Jun 2021 08:39:46 -0400</pubDate>
+      
+      <guid>/blog/applying-permutations-to-group-theory/</guid>
+      <description>Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results.</description>
+    </item>
+    
+    <item>
+      <title>More on Groups: Morphisms, Normal Subgroups, etc...</title>
+      <link>/blog/more-on-groups-morphisms-normal-subgroups-etc/</link>
+      <pubDate>Wed, 09 Jun 2021 07:42:22 -0400</pubDate>
+      
+      <guid>/blog/more-on-groups-morphisms-normal-subgroups-etc/</guid>
+      <description>In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&amp;rsquo;t as thorough as what you&amp;rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&amp;rsquo;ll continue with that theme&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>More Introductory Group Theory</title>
+      <link>/blog/more-introductory-group-theory/</link>
+      <pubDate>Tue, 08 Jun 2021 16:10:15 -0400</pubDate>
+      
+      <guid>/blog/more-introductory-group-theory/</guid>
+      <description>We&amp;rsquo;ve already introduced some of the topics of Group Theory. In this entry we&amp;rsquo;ll talk about Lagrange&amp;rsquo;s Theorem, various morphisms, and try to tie it back to our ongoing discussion of permutations. We&amp;rsquo;ll also give some examples of groups&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

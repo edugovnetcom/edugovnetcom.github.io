@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on EduGovNet.com</title>
+    <link>/categories/algorithms/</link>
+    <description>Recent content in Algorithms on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jul 2021 14:26:47 -0400</lastBuildDate><atom:link href="/categories/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parallel Sorting in Theory and in Practice III</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-iii/</link>
+      <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-iii/</guid>
+      <description>As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice II</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-ii/</link>
+      <pubDate>Tue, 27 Jul 2021 14:26:44 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-ii/</guid>
+      <description>As promised, this is the second entry on parallel sorting. In this entry, we&amp;rsquo;ll implement &lt;code&gt;merge_sort&lt;/code&gt;, and then give two different ways to make it run in parallel. The first one will be a bit simpler than the second one.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Sorting in Theory and in Practice I</title>
+      <link>/blog/parallel-sorting-in-theory-and-in-practice-i/</link>
+      <pubDate>Fri, 23 Jul 2021 14:26:40 -0400</pubDate>
+      
+      <guid>/blog/parallel-sorting-in-theory-and-in-practice-i/</guid>
+      <description>We&amp;rsquo;re going to begin our discussion of parallel algorithms. We&amp;rsquo;ll do this by giving a parallel version of &lt;code&gt;quick_sort_plus&lt;/code&gt;. We finish this entry by extending the &amp;ldquo;Almost the Master Theorem&amp;rdquo; to include cases where f(n) = cn^alpha*log_2(n). In our next entry, we&amp;rsquo;ll introduce &lt;code&gt;merge_sort&lt;/code&gt; as well as a couple different parallel versions of it. We&amp;rsquo;ll also discuss both the theoretical and practical runtimes for these functions.</description>
+    </item>
+    
+    <item>
+      <title>Computing With Permutations, Inverses, Cycles, and More!</title>
+      <link>/blog/computing-with-permutations-inverses-cycles-and-more/</link>
+      <pubDate>Mon, 19 Jul 2021 14:26:15 -0400</pubDate>
+      
+      <guid>/blog/computing-with-permutations-inverses-cycles-and-more/</guid>
+      <description>In this entry, we bring together ideas we&amp;rsquo;ve been developing about permutations, their sign, cycles, and sorting as well as the run time complexity of the algorithms which compute them.</description>
+    </item>
+    
+    <item>
+      <title>Finding the Median and an Application to Sorting</title>
+      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
+      
+      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
+    </item>
+    
+    <item>
+      <title>More on Sorting and Analyzing Run Time Complexity</title>
+      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
+      
+      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Sorting Random Permutations and a Little Bit of Probability</title>
+      <link>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
+      <pubDate>Thu, 24 Jun 2021 13:04:07 -0400</pubDate>
+      
+      <guid>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
+      <description>In this article, we&amp;rsquo;re going to discuss a shuffling algorithm, and then &lt;code&gt;quick_sort&lt;/code&gt; &amp;ndash; a sorting algorithm.</description>
+    </item>
+    
+  </channel>
+</rss>

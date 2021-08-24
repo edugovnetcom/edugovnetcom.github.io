@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>More Math of Permutations - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="More Math of Permutations" />
+<meta property="og:description" content="Here we prove that permutations can be divided into even permutations and odd permutations. We&rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/more-math-of-permutations/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-03T15:21:46-04:00" />
+<meta property="article:modified_time" content="2021-06-03T15:21:46-04:00" />
+
+
+		<meta itemprop="name" content="More Math of Permutations">
+<meta itemprop="description" content="Here we prove that permutations can be divided into even permutations and odd permutations. We&rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&hellip;"><meta itemprop="datePublished" content="2021-06-03T15:21:46-04:00" />
+<meta itemprop="dateModified" content="2021-06-03T15:21:46-04:00" />
+<meta itemprop="wordCount" content="1987">
+<meta itemprop="keywords" content="Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="More Math of Permutations"/>
+<meta name="twitter:description" content="Here we prove that permutations can be divided into even permutations and odd permutations. We&rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&hellip;"/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">More Math of Permutations</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-03T15:21:46-04:00">2021-06-03</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/dogs_playing_poker.jpg" alt="More Math of Permutations">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lemma-a">Lemma a</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-b">Lemma b</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-sign">Definition (Sign)</a></li>
+    <li><a href="#theorem-product">Theorem (product)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-inverse">Corollary (inverse)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-units">Theorem (units)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-sign-of-k-cycle">Theorem (sign of k-cycle)</a></li>
+    <li><a href="#theorem-disjoint-cycles">Theorem (disjoint cycles)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">H</span>ere we prove that permutations can be divided into <em>even</em> permutations and <em>odd</em> permutations. We&rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&hellip;</p>
+<p>This entry is a continuation of <a href="/blog/some-of-the-math-of-permutations/">Some of the Math of Permutations</a>.</p>
+<p>Let&rsquo;s get started! The first thing we&rsquo;re going to do is prove a couple of nice lemmas.</p>
+<h2 id="lemma-a">Lemma a</h2>
+<p>Let \( \rho \) be a permutation on the set of integers \( \{ 1, 2, &hellip; , n \} \), and let \( f_{\rho} \) be a function from the set of ordered pairs \( \mathbb{D} = \{ (i, j) | 1 \leq j &lt; i \leq n \} \) such that \( f_{\rho}( (i,j) ) := ( \rho(i), \rho(j) )\) then</p>
+<ol>
+<li>\( f_{\rho}\) is 1 -1</li>
+<li>If \( (u, v) \in Range(f_{\rho}) \), then \( (v, u) \not\in Range(f_{\rho}) \).</li>
+</ol>
+<h3 id="proof">Proof</h3>
+<p>To prove 1, suppose \( f_{\rho}((i, j)) = f_{\rho}((k, l)) \), then by definition of \( f_{\rho}\), \( \rho(i) = \rho(k) \). Since \( \rho \) is a permutation, it is 1-1, so \( i = k \), similarly, \( j = l \), so \( (i,j) = (k, l) \).</p>
+<p>To prove 2, suppose \( f_{\rho}( (i,j) ) = (u, v)\) and \( f_{\rho}( (k, l) ) = (v, u) \), then \( \rho(i) = u = \rho(l) \), so \( i = l \), and similarly we can show that \( j = k \), so we have shown that \( (k, l) = (j, i) \), but then \( k &lt; l \), so it isn&rsquo;t in \(\mathbb{D} = Domain(f_{\rho}) \), a contradiction. QED.</p>
+<h2 id="lemma-b">Lemma b</h2>
+<p>Let \( \sigma \) and \( \rho \) be permutations on the set of integers \( \{ 1, 2, &hellip; , n \} \). Then
+\[ \prod\limits_{i &gt; j} { \frac{\sigma(i) - \sigma(j)}{i - j} } = \prod\limits_{\rho(i) &gt; \rho(j)}{ \frac{\sigma(i) - \sigma(j)}{i - j} } \tag{1}\label{1}\]</p>
+<h3 id="proof-1">Proof</h3>
+<p>We split the products into two cases.</p>
+<p><strong>Case 1</strong>: \( i &gt; j \) and \( \rho(i) &gt; \rho(j) \)</p>
+<p>In this case \( \frac{\sigma(i) - \sigma(j)}{i - j} \) occurs on both sides of the equation.
+Before we handle case 2, notice that in both products, if \(i \neq j \), then by lemma a above, either the tuple \( (i, j) \) or \( (j, i) \) occurs in the product, but not both.</p>
+<p><strong>Case 2</strong>: \( i &gt; j \) but \( \rho(i) &lt; \rho(j) \)</p>
+<p>In this case the product on the left will contain \( \frac{\sigma(i) - \sigma(j)}{i - j} \), but the product on the right will contain \( \frac{\sigma(j) - \sigma(i)}{j - i} \). Notice that \( \frac{\sigma(i) - \sigma(j)}{i - j} = \frac{-[\sigma(j) - \sigma(i)]}{i - j}\) and that \( \frac{-[\sigma(j) - \sigma(i)]}{i - j} = \frac{\sigma(j) - \sigma(i)}{j - i} \). So the terms occurring on both sides of the equation are equal. Thus the products are equal.</p>
+<p><strong>QED</strong></p>
+<p>In an earlier post, we noted that any permutation of a set \( X \) can be associated with a permutation of the indices of the elements of the set with respect to its ordering. What we mean by this is that if we let \( X = \{ x_1, x_2, &hellip; \} \), then \( \sigma(x_i) = x_j \), and we can identify \( \sigma \) with \( \dot{\sigma} \), where \( \sigma(x_i) = x_j \Leftrightarrow \dot{\sigma}(i) = j \). I.e. \( \sigma(x_i) = x_{\dot{\sigma}(i)} \).</p>
+<h2 id="definition-sign">Definition (Sign)</h2>
+<p>Now we can reintroduce the definition of \( Sign(\sigma) \), the sign of a finite permutation. Let
+\( \sigma \) be a permutation of a finite set. Then
+\[ Sign(\sigma) := \prod\limits_{i &gt; j}{ \frac{ \dot{\sigma}(i) - \dot{\sigma}(j) }{i - j} } \]
+For the rest of this article, we will blur the distinction and assume that all permutations are permutations of \( \{ 1, 2, &hellip;, n \} \), for some finite \( n \).</p>
+<h2 id="theorem-product">Theorem (product)</h2>
+<p>Let \( \sigma \) and \( \tau \) be permutations, then \( Sign(\sigma \circ \tau) = Sign(\sigma) \cdot Sign(\tau) \).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Note that
+\[ Sign(\sigma \circ \tau) = \prod\limits_{i &gt; j} { \frac{ \sigma \circ \tau(i) - \sigma \circ \tau(j) }{i - j} } \tag{2}\label{2}\]</p>
+<p>The right side of (2) can be split as
+\[ \prod\limits_{i &gt; j} { \frac{ \sigma \circ \tau (i) - \sigma \circ \tau (j) }{\tau(i) - \tau(j)} \cdot \frac{ \tau(i) - \tau(j) }{i - j} } \tag{3}\label{3}\]</p>
+<p>That can be regrouped as
+\[ \prod\limits_{i &gt; j} { \frac{ \sigma \circ \tau (i) - \sigma \circ \tau (j) }{\tau(i) - \tau(j)} } \prod\limits_{i &gt; j} \frac{ \tau(i) - \tau(j) }{ i - j } \tag{4}\label{4} \]</p>
+<p>The right product of (4) you&rsquo;ll recognize as \( Sign(\tau) \), so now we turn our focus to the left side.
+By <a href="/blog/more-math-of-permutations/#lemma-a">lemma (a)</a> above, the left product is equal to</p>
+<p>\[ \prod\limits_{ \tau(i) &gt; \tau(j) } { \frac{ \sigma \circ \tau(i) - \sigma \circ \tau(j) }{ \tau(i) - \tau(j) } } \tag{5}\label{5} \]</p>
+<p>If we define \( u := \tau(i) \) and \( v := \tau(j) \), then we can rewrite (5) as
+\[ \prod\limits_{u &gt; v} { \frac{ \sigma(u) - \sigma(v) }{u - v} } \tag{6}\label{6} \]
+Clearly, (6) is equal to \( Sign(\sigma) \), and our proof is finished.</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-inverse">Corollary (inverse)</h2>
+<p>Let \( \sigma \) be a permutation. Then
+\[ Sign(\sigma^{-1}) = \frac{1}{Sign(\sigma)} \tag{7}\label{7} \]</p>
+<h3 id="proof-3">Proof</h3>
+<p>Let \( \iota \) be the identity permutation. I.e. \( \iota(i) = i \). If you calculate \( Sign(\iota) \), you get \( 1 \), notice that \( \sigma \circ (\sigma^{-1}) = \iota \). QED.</p>
+<h2 id="theorem-units">Theorem (units)</h2>
+<p>\(Sign(\sigma) = \pm 1 \).</p>
+<h3 id="proof-4">Proof</h3>
+<p>This proof only requires a slight extension of <a href="/blog/more-math-of-permutations/#lemma-a">lemma (a)</a>. Recall from that proof that we defined \( \mathbb{D} := \{ (i, j ) | 1 \leq j &lt; i \leq n \} \), and that we defined \( f_{\sigma}( (i,j) ) := (\sigma(i), \sigma(j)) \). Now we introduce the function</p>
+<p>\[ g(u, v) := \begin{cases} (u, v), u &gt; v \ (v, u), v &gt; u \end{cases}\]</p>
+<p>Notice that by definition, \( g \circ f_{\sigma} : \mathbb{D} \rightarrow \mathbb{D}\). Further, notice that by lemma a, \( g \circ f_{\sigma} : \mathbb{D} \xrightarrow{\text{1-1}} \mathbb{D} \). Since \( \mathbb{D} \) is finite, \( g \circ f_{\sigma} \) must also be onto. Thus every pair \( i - j \) in the denominator of the product \( \prod\limits_{i &gt; j} { \frac{ \sigma(i) - \sigma(j) }{i - j} } \) occurs once in the numerator, or its negative occurs once in the numerator, but not both. Thus the product is \( \pm 1 \).</p>
+<p><strong>QED</strong></p>
+<p>Now that we&rsquo;ve shown that \( Sign(\sigma) \) behaves nicely, you might be wondering whether it&rsquo;s of any use at all. What if every permutation has \( Sign = 1\) ? That would be utterly useless. Fortunately, it&rsquo;s not difficult to show that there are permutations whose \( Sign = -1 \).</p>
+<p><strong>Claim</strong></p>
+<p>Let \( n = 2 \), and \( \sigma(1) = 2\) and \( \sigma(2) = 1 \). Then \( Sign(\sigma) = -1 \). Doing the calculation results in \( Sign(\sigma) = \frac{1 - 2}{2 - 1 } \).</p>
+<p><strong>QED</strong></p>
+<p>Even more generally, for any \(n \geq 2 \), if \( \sigma \) is a permutation that only swaps two numbers, say \( i \) and \( j \), where \( i \neq j \), then \( Sign(\sigma) = -1 \).</p>
+<p><strong>Proof</strong></p>
+<p>Without loss of generality, suppose \( j &lt; i \), then we have
+\[ \sigma(n) := \begin{cases} i, n = j \ j, n = i \ n, \text{otherwise} \end{cases} \]</p>
+<p>Let&rsquo;s define</p>
+<p>\[ \tau(n) := \begin{cases} 1, n = j \ 2, n = i \ n, \text{otherwise} \end{cases} \]
+\[ \rho(n) :\ \begin{cases} 1, n = 2 \ 2, n = 1 \ n, \text{otherwise} \end{cases} \]</p>
+<p>We leave it to the reader to confirm that \( \rho = \tau \circ \sigma \circ \tau^{-1} \), even if \( i \) and \( j \) aren&rsquo;t necessarily distinct from \( 1 \) and \( 2 \). Then, by the product theorem and the inverse corollary above, \( Sign(\sigma) = Sign(\rho) \). So now all we have to do is show that \( Sign(\rho) = -1 \).</p>
+<p>Notice in the calculation of \( Sign(\rho) \) that the denominators are always positive. Notice as well that if \( i \geq 3 \), then no matter what \( j \) is, \( \rho(i) &gt; \rho(j) \), so the numerator is positive in those cases. Finally, if \( i \leq 2 \), then it must be equal to \( 2 \), otherwise there is no \( j \) that can be strictly less than it. So in that case we are dealing with the pair \( i = 2 \) and \( j = 1 \). In that case, the numerator is negative. Since this is the only negative term in the entire product, we have shown that \(Sign(\rho) = - 1\).</p>
+<p><strong>QED</strong></p>
+<p>Next we extend this result to <em>cycles</em> of length greater than 2. A permutation is a cycle if it is of the form</p>
+<p>\[ \sigma(n) := \begin{cases} \sigma(i), &amp; n = i \\ \sigma^{2}(i), &amp; n = \sigma(i) \\ \sigma^3(i), &amp; n = \sigma^2(i) \\ &hellip; \\ \sigma^{k-1}(i), &amp; n = \sigma^{k-2}(i) \\ \sigma^{k}(i) = i, &amp; n = \sigma^{k-1}(i) \\ n, &amp; \text{otherwise} \end{cases} \]</p>
+<p>In this case, \( k \) is the <em>length or period</em> of the cycle. You should convince yourself that all of the \( \sigma^n(i) \) &rsquo;s are unique for \( 1 \leq n \leq k \). Otherwise \( \sigma \) would not be 1-1.</p>
+<p>We&rsquo;ll introduce the standard notation for cycles. We can represent the \( \sigma \) defined above as</p>
+<p>\[ (i, \sigma(i), \sigma^2(i), &hellip; , \sigma^{k-1}(i) ) \]</p>
+<p>We leave it to the reader to confirm that</p>
+<p>\[ (i, \sigma(i), \sigma^2(i), &hellip; , \sigma^{k-1}(i) ) = ( i, \sigma^{k-1}(i) ) \circ ( i, \sigma^{k-2}(i) ) \circ &hellip; \circ (i, \sigma^{1}(i)) \tag{8}\label{8} \]</p>
+<p>Remember that when evaluating the composition of functions, you apply the right most function first. This means that in (8) above, the first permutation to be applied is the two-cycle \( (i, \sigma^{1}(i) ) \) and the last two-cycle to be applied is \( ( i, \sigma^{k-1}(i) ) \). Since all of the two cycles move \( i\), the order matters!</p>
+<p>By breaking down a cycle of length \(k\) (also called a <em>k-cycle</em>) into \(k-1\) two-cycles, we can see that it has \( Sign = (-1)^{k-1} \). And we&rsquo;ve proved the theorem</p>
+<h2 id="theorem-sign-of-k-cycle">Theorem (sign of k-cycle)</h2>
+<p>Let \( \sigma \) be a k-cycle, then \( Sign(\sigma) = (-1)^{k-1} \).</p>
+<p><strong>Already Proved</strong></p>
+<p>Next we prove that cycles are disjoint. But first, notice that if \( \sigma^n(i) \) is an element of a k-cycle, then \( \sigma^k(i) = i \), which means that \( \sigma^{n+k} (i) = \sigma^n \circ \sigma^k (i) = \sigma^n(\sigma^k(i)) = \sigma^n (i) \).</p>
+<h2 id="theorem-disjoint-cycles">Theorem (disjoint cycles)</h2>
+<p>Let \( C_1 = \{ \sigma^1(i), \sigma^2(i), &hellip; , \sigma^{k_1}(i) \} \), and \( C_2 = \{ \sigma^1(j), \sigma^2(j), &hellip; , \sigma^{k_2}(j) \} \), where \( \sigma^{k_1}(i) = i \) and \( \sigma^{k_2}(j) = j \), then either \( C_1 = C_2 \), or \( C_1 \cap C_2 = \emptyset \).</p>
+<h3 id="proof-5">Proof</h3>
+<p>Suppose the two sets overlap, so for some \(m\) and \( n\) we have\( \sigma^n(i) = \sigma^m(j) \). This means that for all \( k \geq 0 \), \( \sigma^{m+k}(i) = \sigma^{n+k}(j) \). From what we showed just before this theorem, that means that the two sets have to have the same size, so \( k_1 = k_2 \), and that means that the two sets have the exact same \( k_1 = k_2 \) members.</p>
+<p><strong>QED</strong></p>
+<p>That&rsquo;s all for this entry. There will be more later!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">The Sum of All Prime Reciprocals Is Infinite</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/more-introductory-group-theory/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">More Introductory Group Theory</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/more-math-of-permutations/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fmore-math-of-permutations%2f" />
+</body>
+</html>

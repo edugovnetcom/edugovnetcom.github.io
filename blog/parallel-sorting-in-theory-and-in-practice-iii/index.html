@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Parallel Sorting in Theory and in Practice III - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Parallel Sorting in Theory and in Practice III" />
+<meta property="og:description" content="As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/parallel-sorting-in-theory-and-in-practice-iii/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-07-28T14:26:47-04:00" />
+<meta property="article:modified_time" content="2021-07-28T14:26:47-04:00" />
+
+
+		<meta itemprop="name" content="Parallel Sorting in Theory and in Practice III">
+<meta itemprop="description" content="As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism."><meta itemprop="datePublished" content="2021-07-28T14:26:47-04:00" />
+<meta itemprop="dateModified" content="2021-07-28T14:26:47-04:00" />
+<meta itemprop="wordCount" content="2594">
+<meta itemprop="keywords" content="Parallel Sorting,omp,Parallel Computing," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Parallel Sorting in Theory and in Practice III"/>
+<meta name="twitter:description" content="As promised, the last of a three-part series of entries on sorting in parallel. Here we present a parallel implementation of merge_sort which runs in O(nlog_2(n)) time and achieves fairly good parallelism."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Parallel Sorting in Theory and in Practice III</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-28T14:26:47-04:00">2021-07-28</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/algorithms/" rel="category">Algorithms</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/trainyard_with_snow.jpg" alt="Parallel Sorting in Theory and in Practice III">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#kth_element">kth_element()</a></li>
+    <li><a href="#parallel_merge2">parallel_merge2</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">A</span>s promised, the last of a three-part series of entries on sorting in parallel. If you haven&rsquo;t yet, check out the first two here <a href="/blog/parallel-sorting-in-theory-and-in-practice-i/">Parallel Sorting in Theory and in Practice (I)</a> and here <a href="/blog/parallel-sorting-in-theory-and-in-practice-ii/">Parallel Sorting in Theory and in Practice (II)</a>. Here we present a parallel implementation of <code>merge_sort</code> which runs in \(O(n \log_2(n))\) time and achieves fairly good parallelism.</p>
+<p>This implementation of <code>parallel_merge_sort</code> is identical to the one presented in part II, except for the <code>parallel_merge</code> function. In the original implementation, we had two parallel for loops, one which iterated over <code>i</code> and calculated <code>j</code> and <code>k</code>, and another one which iterated over <code>j</code> and calculated <code>i</code> and <code>k</code>. In the updated version of <code>merge_sort</code>, what we&rsquo;ll call &ldquo;<code>merge_sort2</code>&rdquo;, we select several almost evenly-spaced <code>k</code>&rsquo;s, and then calculate both <code>i</code> and <code>j</code> for each of those <code>k</code>&rsquo;s. In fact, no matter how large the input array, we only calculate <code>i</code> and <code>j</code> for a fixed number of <code>k</code>&rsquo;s. These are the endpoints of non-overlapping intervals. The threads will loop over these intervals so that each handles a different subset of them. This way we split the total work involved in merging up into several independent sub-arrays. Since we do it only for a fixed amount of <code>k</code>&rsquo;s, no matter how large the input arrays are, we add at most a constant amount of extra work. The awesome part is, though, that calculating the <code>i</code>&rsquo;s and the <code>j</code>&rsquo;s takes only \(O(\log_2(n))\) steps, so we aren&rsquo;t even adding that much extra work.</p>
+<p>The real magic of <code>merge_sort2</code> comes from the function which calculates the <code>i</code>&rsquo;s and the <code>j</code>&rsquo;s. We call it <code>kth_element</code>. The name might seem a bit odd at first, but it does make sense. What it does is, given an input of two sorted arrays, <code>array1</code> and <code>array2</code> of lengths <code>length1</code> and <code>length2</code>, respectively, and a<code>k</code>, it will compute the index of the \(k^{th}\) element. It will also return a value, <code>array_number</code> which identifies which array contains the \(k^{th}\) element.</p>
+<p>We&rsquo;ve implemented it in C++ as a void function which uses the <code>&amp;</code> operator to change the values of <code>index1</code>, <code>index2</code>, and <code>array_number</code> by reference, while looking like they&rsquo;re passed as values. If that bothers you (and we can understand why it might), feel free to implement it as a function which returns a struct or class containing all those values. We certainly wouldn&rsquo;t argue that we&rsquo;ve implemented anything in the best possible style.</p>
+<p>Here&rsquo;s our implementation.</p>
+<h2 id="kth_element">kth_element()</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#2b91af">void</span> kth_element(<span style="color:#2b91af">int64_t</span>* array1, <span style="color:#2b91af">int64_t</span>* array2, <span style="color:#2b91af">int64_t</span> k,
+  <span style="color:#2b91af">int64_t</span> length1, <span style="color:#2b91af">int64_t</span> length2,
+  <span style="color:#2b91af">int64_t</span>&amp; index1, <span style="color:#2b91af">int64_t</span>&amp; index2, <span style="color:#2b91af">int16_t</span>&amp; array_number)
+{
+  <span style="color:#008000">// base case (a)
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (length2 &lt; 1)
+  {
+    index2 = 0;
+    index1 = k;
+    array_number = 0;
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#008000">// base case (b)
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (length1 &lt; 1)
+  {
+    index1 = 0;
+    index2 = k;
+    array_number = 1;
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#008000">// base case (c)
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (k == 0)
+  {
+    index1 = 0;
+    index2 = 0;
+    <span style="color:#00f">if</span> (array1[0] &lt;= array2[0])
+    {
+      array_number = 0;
+    }
+    <span style="color:#00f">else</span>
+    {
+      array_number = 1;
+    }
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#008000">// base case (d)
+</span><span style="color:#008000"></span>  <span style="color:#008000">// we know k &gt;= 1
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> ((length1 == 1) &amp;&amp; (length2 == 1))
+  {
+    <span style="color:#008000">// k == 1 so find the larger element //
+</span><span style="color:#008000"></span>    index1 = 0;
+    index2 = 0;
+    <span style="color:#00f">if</span> (array1[0] &lt;= array2[0])
+    {
+      array_number = 1;
+    }
+    <span style="color:#00f">else</span>
+    {
+      array_number = 0;
+    }
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#008000">// non-trivial search cases
+</span><span style="color:#008000"></span>  <span style="color:#2b91af">int64_t</span> n1, n2;
+
+  <span style="color:#008000">// case (s-1)
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (length1 &gt;= length2)
+  {
+    n1 = length1 / 2;
+    n2 = least_upper_bound(array2, array1[n1], length2);
+  }
+  <span style="color:#008000">// case (s-2)
+</span><span style="color:#008000"></span>  <span style="color:#00f">else</span>
+  {
+    n2 = length2 / 2;
+    n1 = min_greater_than(array1, array2[n2], length1);
+  }
+  <span style="color:#008000">// recursive cases
+</span><span style="color:#008000"></span>  <span style="color:#008000">// case (r-1)
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span> (k &lt; n1 + n2)
+  {
+    kth_element(array1, array2, k, n1, n2, index1, index2, array_number);
+    <span style="color:#00f">return</span>;
+  }
+  <span style="color:#008000">// case (r-2)
+</span><span style="color:#008000"></span>  kth_element(&amp;array1[n1], &amp;array2[n2], k - (n1+n2),
+    length1 - n1, length2 - n2, index1, index2, array_number);
+  index1 += n1;
+  index2 += n2;
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>The function is a bit complicated, so we&rsquo;ve labeled subsections with comments in the code. The first four cases are the base cases. Hopefully they all make sense. The first two just handle what happens if one of the arrays has no elements in it. That&rsquo;s incredibly easy, because the other array is already ordered. The \(k^{th}\) element is just the element in the \(k^{th}\) position of that array. Easy. The third case is where \(k = 0\), so you just have to compare the two smallest elements of the two arrays. Easy. The third one got us in trouble when we forgot to include it. It&rsquo;s actually possible to have both arrays have length \(1\), and if \(k\) is also equal to \(1\), then the recursive cases might not get any smaller. That&rsquo;s because you&rsquo;re then guaranteed to have <code>n1</code> and <code>n2</code> both equal to <code>0</code>, so you end up in case <code>(r-2)</code>. This gets you into an infinite loop, because if you look at what happens to all of the values of the inputs to the recursive call to <code>kth_element</code>, they&rsquo;re all the same as the parent function&rsquo;s inputs. Thus you need to include base case <code>(d)</code>.</p>
+<p>Now we&rsquo;re into the search cases. There are two possible cases. They&rsquo;re designed to guarantee that we eliminate at least \(\left\lfloor \frac{\max(\text{length1}, \text{length2})}{2} \right\rfloor\) elements for the next iterative step. We&rsquo;ll come back to that in a little bit. For now, you might be wondering why we have to use two different functions to calculate <code>n1</code> and <code>n2</code>. It&rsquo;s the same reason we had to use the different functions in the original <code>parallel_merge</code> given in the previous entry (<a href="/blog/parallel-sorting-in-theory-and-in-practice-ii/#parallel_merge">Parallel Sorting in Theory and in Practice (II)</a>). It&rsquo;s because in providing an ordering to the two arrays, we have to have a way to handle ties between the two arrays. For example, if <code>array1[i]</code> is equal to <code>array2[j]</code>, we have to be consistent in deciding which comes before the other. We have arbitrarily chosen elements of <code>array1</code> to come before elements of <code>array2</code>. Therefore, an element of array1 comes after every element of <code>array2</code> which is strictly less than it. Here&rsquo;s an example we hope is helpful.</p>
+<p>Suppose <code>array1 = [1,1,2,3,5,8,13]</code> and <code>array2 = [1,2,3,4,5,6,7]</code>. Then l<code>ength1</code> = <code>length2</code> and they&rsquo;re both equal to 7, so we&rsquo;re in search case <code>(s-1)</code>, this means that <code>n1 = 3</code>, and that means that <code>array1[n1]</code> is equal to <code>3</code>. There&rsquo;s also a <code>3</code> in <code>array2</code>! Since we&rsquo;ve decided that elements of <code>array1</code> come before elements of <code>array2</code>, that <code>3</code> (in <code>array1</code>) comes after the first two elements of <code>array2</code>, the sub-array <code>[1,2]</code>, (but before the <code>3</code> in <code>array2</code>). This has length 2, which is exactly what is returned by <code>least_upper_bound(array2, array1[n1], length2)</code>. This is because <code>least_upper_bound(array2, n, length2)</code> is designed to return the smallest index <code>j</code> of an element of <code>array2</code> such that every smaller index has an element which is strictly less than <code>n</code>. In this way, <code>n</code> is a least (strictly) upper bound of the array with indices less than <code>j</code>.</p>
+<p>On the other hand, suppose that <code>array2 = [0,1,2,3,4,5,6,7]</code>, but that <code>array1</code> is exactly as it was in the previous example. Then we&rsquo;re no longer in search case <code>(s-1)</code>, we&rsquo;re now in search case <code>(s-2)</code>. Now <code>n2</code> is equal to <code>4</code>, so we&rsquo;re going to have to find all of the elements of <code>array1</code> which come before <code>array2[n2]</code>, which is equal to <code>3</code>. Once again, <code>3</code> is an element in both arrays. We want to find all of the elements of <code>array1</code> which come before this <code>3</code> in <code>array2</code>. We&rsquo;ve decided that any <code>3</code> in <code>array1</code> should come before this <code>3</code>, so we want to find the index of the first element which is strictly greater than <code>3</code>. That is exactly what <code>min_greater_than(array2, array2[n2], length1)</code> returns. In this case that will be <code>4</code>, which is the index of the <code>5</code> in <code>array1</code>. It is also the length of the initial sub-array <code>[1,1,2,3]</code> of <code>array1</code>.</p>
+<p>Now we return to considering how many elements we&rsquo;ve eliminated from the recursive step. Notice that either <code>n1 = length1 / 2</code> or <code>n2 = lengh2 / 2</code>, depending on which is larger. If that length is an even number, then half of it is exactly half. Otherwise, if that length is odd, then half of it in C++ is equal to \( \left\lfloor\frac{\text{length}}{2}\right\rfloor \). This means that if we end up in recursive case <code>(r-2)</code>, then the sub-array fed into the recursive call to <code>kth_element</code> will have length \(\left\lceil \frac{\text{length}}{2} \right\rceil\). The other array can have any length \(\leq \) its original length fed into the function at the top.</p>
+<p>For example, if we call <code>kth_element</code> with two arrays of length <code>length1</code> and <code>length2</code>, where <code>length1</code> \(\geq\) <code>length2</code>, then the recursive call to <code>kth_element</code> will have two arrays, where the length of <code>array1</code>, <code>length1</code>, is \(\leq \left\lceil \frac{ \text{length1} }{2} \right\rceil \). What this means is that if we let \(n = \text{length1} + \text{length2} \), then the combined size of the inputs to the recursive call to <code>kth_element</code> will be \( \leq \left\lceil \frac{3n}{4} \right\rceil + 1\).</p>
+<h2>Proof</h2>
+<p>We can see that the combined size of the input arrays to the recursive calls is</p>
+<p>\[ \leq n - \left\lfloor { \frac{ { \left\lceil \frac{n}{2} \right\rceil } }{2} } \right\rfloor \tag{1}\label{1} \]</p>
+<p>If we let \(n = 4q + r\), where \(0 \leq r &lt; 3\), then \( \left\lceil \frac{n}{2}\right\rceil \) is equal to \(2q + \left\lceil \frac{r}{2} \right\rceil \). Then, dividing by \(2\) and applying the floor function gets us</p>
+<p>\[q + \left\lfloor { \frac{ { \left\lceil \frac{r}{2} \right\rceil } }{2} } \right\rfloor \]</p>
+<p>This means that the right side of equation (1) is equal to</p>
+<p>\[ 3q + r - \left\lfloor { \frac{ { \left\lceil \frac{r}{2} \right\rceil } }{2} } \right\rfloor \tag{2}\label{2} \]</p>
+<p>Whereas \( \left\lceil \frac{3n}{4}\right\rceil + 1 \) is equal to</p>
+<p>\[ 3q + \left\lceil \frac{r}{4} \right\rceil + 1 \tag{3}\label{3} \]</p>
+<p>Checking the cases where \(r = 0, 1, 2\), or \(3\), we see that \( n - \left\lfloor { \frac{ { \left\lceil \frac{n}{2} \right\rceil } }{2} } \right\rfloor \) is less than or equal to \( \left\lceil \frac{3n}{4} \right\rceil + 1\).</p>
+<p><strong>QED</strong></p>
+<p>Using this result we can show that for large enough \(n\), we have \( n - \left\lfloor { \frac{ { \left\lceil \frac{n}{2} \right\rceil } }{2} } \right\rfloor \) is less than or equal to \( \left\lceil \frac{n}{1.3} \right\rceil \).</p>
+<p>If we let \(T(n)\) represent, as usual, the number of steps it takes kth_element to finish on an input whose combined length is \(n\), then we have</p>
+<p>\[T(n) \leq cn^0 + T(\left\lceil \frac{n}{1.3} \right\rceil) \tag{4}\label{4}\]</p>
+<p>If we apply equation (4) above with the <a href="/blog/more-on-sorting-and-analyzing-run-time-complexity/#corollary-almost-the-master-theorem">&ldquo;Almost the Master&rdquo;</a> Theorem from More on Sorting and Analyzing Run Time Complexity, then we see that \(T(n) \in O( \log_2(n) ) \).</p>
+<p>Now we&rsquo;re ready to see how we use <code>kth_element</code> to make <code>parallel_merge2</code> work. Here&rsquo;s our implementation.</p>
+<h2 id="parallel_merge2">parallel_merge2</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#2b91af">void</span> parallel_merge2(<span style="color:#2b91af">int64_t</span>* array, <span style="color:#2b91af">int64_t</span>* array_copy,
+  <span style="color:#2b91af">int64_t</span> length, <span style="color:#2b91af">int16_t</span> n_threads)
+{
+  <span style="color:#00f">if</span> (n_threads &lt; 2 || length &lt;= n_threads*MERGE_BUCKET_MULTIPLIER*32)
+  {
+    <span style="color:#2b91af">int64_t</span> h = length / 2;
+    serial_merge(array_copy, &amp;array_copy[h], array, h, length - h);
+    <span style="color:#00f">return</span>;
+  }
+  
+  <span style="color:#2b91af">int64_t</span> l_indices[n_threads*MERGE_BUCKET_MULTIPLIER + 1];
+  <span style="color:#2b91af">int64_t</span> r_indices[n_threads*MERGE_BUCKET_MULTIPLIER + 1];
+
+  <span style="color:#2b91af">int64_t</span> h = length / 2;
+  <span style="color:#2b91af">int64_t</span> i, j, k, k_max, e1, e2, n;
+
+  l_indices[0] = 0;
+  r_indices[0] = 0;
+  l_indices[n_threads*MERGE_BUCKET_MULTIPLIER] = h;
+  r_indices[n_threads*MERGE_BUCKET_MULTIPLIER] = length - h;
+
+  <span style="color:#008000">/*
+</span><span style="color:#008000">    In this parallel for loop, we calculate the endpoints of
+</span><span style="color:#008000">    n_threads*MERGE_BUCKET_MULTIPLIER non-overlapping
+</span><span style="color:#008000">    intervals. They will all have the same total length of
+</span><span style="color:#008000">    length / (n_threads*MERGE_BUCKET_MULTIPLIER), except
+</span><span style="color:#008000">    for possibly the last interval, which will have length
+</span><span style="color:#008000">    length - (length / (n_threads*MERGE_BUCKET_MULTIPLIER))
+</span><span style="color:#008000">    * n_threads*MERGE_BUCKET_MULTIPLIER).
+</span><span style="color:#008000">  */</span>
+  omp_set_nested(1);
+  <span style="color:#00f">#pragma omp parallel for private(i, j, k, e1, e2) 
+</span><span style="color:#00f"></span>    shared(array, array_copy, length, n_threads)
+  <span style="color:#00f">for</span> (i = 1; i &lt; n_threads*MERGE_BUCKET_MULTIPLIER; i++)
+  {
+    k = i*(length / (n_threads*MERGE_BUCKET_MULTIPLIER));
+    <span style="color:#2b91af">int16_t</span> array_number = 0;
+    kth_element(array_copy, &amp;array_copy[h], k, h, length - h, e1, e2, array_number);
+
+    <span style="color:#00f">if</span> (array_number == 0)
+    {
+      l_indices[i] = e1;
+      r_indices[i] = k - e1;
+    }
+    <span style="color:#00f">else</span>
+    {
+      r_indices[i] = e2;
+      l_indices[i] = k - e2;
+    }
+  }
+  <span style="color:#008000">/*
+</span><span style="color:#008000">    In this parallel for loop, we perform seral_merge on the
+</span><span style="color:#008000">    n_threads*MERGE_BUCKET_MULTIPLIER non-overlapping
+</span><span style="color:#008000">    intervals.
+</span><span style="color:#008000">  */</span>
+  omp_set_nested(1);
+  <span style="color:#00f">#pragma omp parallel for private(i, j, k, k_max, e1, e2, n) 
+</span><span style="color:#00f"></span>    shared(array, array_copy, length, n_threads, h, l_indices, r_indices)
+  <span style="color:#00f">for</span> (i = 0; i &lt; n_threads*MERGE_BUCKET_MULTIPLIER; i++)
+  {
+    k  = l_indices[i] + r_indices[i];
+    e1 = l_indices[i];
+    e2 = r_indices[i];
+
+    serial_merge(&amp;array_copy[e1], &amp;array_copy[e2 + h], &amp;array[e1 + e2], 
+      l_indices[i+1] - e1, r_indices[i+1] - e2);
+  }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>As mentioned in the comments, all of the non-overlapping intervals have exactly the same length, with the possible exception of the last interval. That one has length equal to <code>length - (length / (n_threads*MERGE_BUCKET_MULTIPLIER)) * n_threads*MERGE_BUCKET_MULTIPLIER</code>. Let \( l = \text{length}\), \(t = \text{n_threads}\), and \(B = \text{ MERGE_BUCKET_MULTIPLIER } \), then the length of the last interval is equal to</p>
+<p>\[ l - tB \left\lfloor \frac{l}{tB} \right\rfloor \tag{5}\label{5} \].</p>
+<p>Now let \(l = tB \cdot q + r ), where ( 0 \leq r &lt; tB \), then equation (5) becomes</p>
+<p>\[ (tB)q + r - tB( q + \left\lfloor \frac{r}{tB} \right\rfloor ) \]</p>
+<p>which is exactly equal to \(r\), because \(\left\lfloor \frac{r}{tB} \right\rfloor = 0 \).</p>
+<p>This means that the loads for the non-overlapping intervals are evenly balanced, except for the last one, which will have to merge fewer elements. Since each iteration of each for loop handles a different interval, we don&rsquo;t have to worry about concurrency issues, and there is no need for semaphores! This allows this sorting function to achieve a high degree of parallelism. Indeed, in the real-world test case of sorting an array of 200 million elements, it completed this task in 4.2 seconds. This was on the exact same input with which the other algorithms were tested. Again, we used 8 cores and 16 threads with an Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz processor. Nothing exceptionally fancy.</p>
+<p>In all the tests, we only counted the number of milliseconds it took to complete the sorting function. We did not include the time it took the data to be loaded into memory. Therefore, they were reasonably fair comparisons between the functions. To recap, we have</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Algorithm</th>
+<th style="text-align:left">Time</th>
+<th>Speed Up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Parallel merge sort with &ldquo;parallel merge 2&rdquo;</td>
+<td style="text-align:left">4.2 seconds</td>
+<td>4.8x</td>
+</tr>
+<tr>
+<td style="text-align:left">Parallel merge sort with &ldquo;parallel merge&rdquo;</td>
+<td style="text-align:left">6.5 seconds</td>
+<td>3.1x</td>
+</tr>
+<tr>
+<td style="text-align:left">Serial merge sort</td>
+<td style="text-align:left">20.0 seconds</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">Serial quick sort</td>
+<td style="text-align:left">25.4 seconds</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">Parallel quick sort &ldquo;plus&rdquo;</td>
+<td style="text-align:left">87.7 seconds</td>
+<td>9.2x</td>
+</tr>
+<tr>
+<td style="text-align:left">Serial quick sort &ldquo;plus&rdquo;</td>
+<td style="text-align:left">811.4 seconds</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>You can see that <code>parallel_quick_sort_plus</code> actually achieved good parallelism with 9.2x speedup on 16 threads. It&rsquo;s poor performance is simply a result of the underlying function&rsquo;s poor performance. Don&rsquo;t use it on real-world applications!</p>
+<p>That&rsquo;s it for parallel sorting, at least for now. If you haven&rsquo;t read them yet, check out the first two entries on this topic: <a href="/blog/parallel-sorting-in-theory-and-in-practice-i/">Parallel Sorting in Theory and in Practice (I)</a> and <a href="/blog/parallel-sorting-in-theory-and-in-practice-ii/">Parallel Sorting in Theory and in Practice (II)</a>.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/parallel-sorting/" rel="tag">Parallel Sorting</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/omp/" rel="tag">omp</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/parallel-computing/" rel="tag">Parallel Computing</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/parallel-sorting-in-theory-and-in-practice-ii/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Parallel Sorting in Theory and in Practice II</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/even-permutations-some-simple-non-abelian-groups/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Even Permutations and Some Simple Non-Abelian Groups</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/parallel-sorting-in-theory-and-in-practice-iii/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fparallel-sorting-in-theory-and-in-practice-iii%2f" />
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Subgroups of Even Permutations Orbits Stabilizers etc... - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Subgroups of Even Permutations Orbits Stabilizers etc..." />
+<meta property="og:description" content="We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k &#43; 1), and discussing properties of the orbits, stabilizers, fixes, etc&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-06-11T09:18:37-04:00" />
+<meta property="article:modified_time" content="2021-06-11T09:18:37-04:00" />
+
+
+		<meta itemprop="name" content="Subgroups of Even Permutations Orbits Stabilizers etc...">
+<meta itemprop="description" content="We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k &#43; 1), and discussing properties of the orbits, stabilizers, fixes, etc&hellip;"><meta itemprop="datePublished" content="2021-06-11T09:18:37-04:00" />
+<meta itemprop="dateModified" content="2021-06-11T09:18:37-04:00" />
+<meta itemprop="wordCount" content="2266">
+<meta itemprop="keywords" content="Sets,Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Subgroups of Even Permutations Orbits Stabilizers etc..."/>
+<meta name="twitter:description" content="We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k &#43; 1), and discussing properties of the orbits, stabilizers, fixes, etc&hellip;"/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Subgroups of Even Permutations Orbits Stabilizers etc...</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-11T09:18:37-04:00">2021-06-11</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/rocket.jpg" alt="Subgroups of Even Permutations Orbits Stabilizers etc...">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-orbit">Definition (orbit)</a></li>
+    <li><a href="#definition-stabilizer">Definition (stabilizer)</a></li>
+    <li><a href="#definition-fix">Definition (fix)</a></li>
+    <li><a href="#lemma-subgroup-intersections">Lemma (subgroup intersections)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-normal-subgroup-intersections">Lemma (normal subgroup intersections)</a></li>
+    <li><a href="#definition-subgroup-generated-by-a-set">Definition (subgroup generated by a set)</a></li>
+    <li><a href="#definition-cycle">Definition (cycle)</a></li>
+    <li><a href="#definition-cyclic-permutation">Definition (cyclic permutation)</a></li>
+    <li><a href="#theorem-disjoint-orbits">Theorem (disjoint orbits)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-stabilizer-is-a-subgroup">Lemma (stabilizer is a subgroup)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-orbit-stabilizer">Theorem (orbit stabilizer)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-orbits-at-most-as-big-as-the-order-of-the-permutation">Corollary (orbits at most as big as the order of the permutation):</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#corollary-2odd-has-normal-subgroup">Corollary (2*odd has normal subgroup)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">W</span>hen we left off in the previous entry <a href="">Applying Permutations to Group Theory</a>, we were about to prove that a finite group with \( 2(2k + 1) \) elements always has a normal subgroup of idex 2. Now we continue in that direction.</p>
+<p>In the entry, More Math of Permutations, we showed that a finite permutation is composed of finite disjoint cycles. We now take that a little bit further and show that every permutation can be factored into the product of disjoint cycles. We&rsquo;re also going to re-define what it means for a permutation to be cyclic. Our reformulation won&rsquo;t rely on notation as much as what we did before. It will also tie in better with our ongoing discussion of groups. Before we do that, though, we&rsquo;re going to introduce some definitions.</p>
+<h2 id="definition-orbit">Definition (orbit)</h2>
+<p>Let \( S \) be a set of permutations (not necessarily a group) of a set \(X\). The orbit of \(x\), where \( x \in X\), is
+\[ Orb_{S}(x) := \{ y \in X | \exists \sigma \in S \text{, where } \sigma(x) = y \} \]</p>
+<h2 id="definition-stabilizer">Definition (stabilizer)</h2>
+<p>Let \(S\) be a set of permutations (not necessarily a group) of a set \(X\). The stabilizer of \(x\), where \(x \in X\), is
+\[ Stab_{S}(x) := \{ \sigma \in S | \sigma(x) = x \} \]</p>
+<h2 id="definition-fix">Definition (fix)</h2>
+<p>Let \(\sigma\) be a permutation of \(X\). Then \( fix(\sigma) := \{ x \in X | \sigma(x) = x \} \).
+We can rephrase our definition of a cyclic permutation, now, using some of the definitions and concepts we&rsquo;ve introduced in the entries since we last considered them.</p>
+<h2 id="lemma-subgroup-intersections">Lemma (subgroup intersections)</h2>
+<p>Let \( \{H_i\}_{i \in I} \) be subgroups of a group, \(G\), then \( \bigcap_{i \in I} H_i \) is also a subgroup of \(G\). I.e. the intersection of arbitrarily many subgroups of a group is itself a subgroup.</p>
+<h3 id="proof">Proof</h3>
+<p>This is straight-forward. Let \(x \), \(y \in\) \( \bigcap_{i \in I} H_i \), then since each \( H_i \) is a subgroup, \( y^{-1} \in H_i \), for every \(H_i\), and likewise since each one is closed under the binary operation of \(G\), \( x \cdot y^{-1} \in H_i \), for every \(H_i\). That means that \( x \cdot y^{-1} \in \bigcap_{i \in I} H_i \). Thus it is a subgroup of \(G\).</p>
+<p><strong>QED</strong></p>
+<p>Notice there&rsquo;s a very similar proof, which we&rsquo;ll leave to you, that the intersection of normal subgroups is a normal subgroup.</p>
+<h2 id="lemma-normal-subgroup-intersections">Lemma (normal subgroup intersections)</h2>
+<p>Let \( \{N_i\}_{i \in I}\) be normal subgroups of a group of \(G\), then \( \bigcap_{i \in I} N_i \) is a normal subgroup of \(G\).</p>
+<h2 id="definition-subgroup-generated-by-a-set">Definition (subgroup generated by a set)</h2>
+<p>Let \( X \leq G \) be a subset of elements of a group, \(G\), then \( &lt; X &gt; := \bigcap\limits_{ X \subseteq H \leq G} {H} \). That is, it is the intersection of all of the subgroups of \(G\) which contain all of \(X\). By the above lemma, it is a subgroup and by definition, it contains all of \(X\).</p>
+<p>If \(X = {x_1, x_2, &hellip; } \), sometimes \( &lt; X &gt; \) is written as \( &lt;x_1, x_2, &hellip; &gt; \). We especially use that notation when \(X\) has only a few elements.</p>
+<h2 id="definition-cycle">Definition (cycle)</h2>
+<p>A cycle of a permutation, \(\pi\) on a set \(X\) is an orbit, \( Orb_{&lt;\pi&gt;}(x) \), of some \(x \in X\), under the action of the group of permutations \( &lt;\pi&gt; \).
+Notice is that \( &lt; \pi &gt; \) is just equal to all of the positive and negative &ldquo;powers&rdquo; of \( \pi \). That is, it is equal to \( \{ \pi^k \}_{i = -\infty}^{i=\infty}\). Also notice that if \( \pi^k = \iota \), and \(k\) is the least non-negative integer where that happens, then \( \{ \pi^k \}_{i = -\infty}^{i = \infty} \) \( = \{ \iota, \pi, \pi^2, &hellip; \pi^{k-1} \}\).
+We&rsquo;ll sometimes refer to the orbits generated by the subgroup \( &lt;\pi&gt; \) as \(\pi\)-orbits.</p>
+<h2 id="definition-cyclic-permutation">Definition (cyclic permutation)</h2>
+<p>A permutation \(\pi \in S_{X} \) is <em>cyclic</em> if and only if \( \forall x, y \in (X \setminus fix(\pi)\), \( Orb_{&lt;\pi&gt;}(x) = Orb_{&lt;\pi&gt;}(y) \).</p>
+<p>What this says in words is that any two elements of \(X\) which aren&rsquo;t fixed by \( \pi \) are in the same \(\pi\)-orbit, so there is only one non-trivial \(\pi\)-orbit.</p>
+<p>Notice that the identity permutation, \( \iota \), is trivially cyclic. This is because \( \iota(x) = x \) for all \( x \in X\), so \( fix(\iota) = X\), which means that \( X \setminus fix(\pi) = \emptyset \).</p>
+<p>The benefit of using this definition is that it doesn&rsquo;t depend on notation, and it still works even if the cycle isn&rsquo;t finite.</p>
+<p>Also notice, as we showed before in More Math of Permutations, that for any given \(x \not\in fix(\pi) \), where \( \pi \) is a cycle, that, by definition, every other element that isn&rsquo;t fixed is equal to \( \pi^{l}(x) \) for some \( l \).</p>
+<p>Also keep in mind that even if \(\pi\) is cyclic, there can be many (even an infinite amount of) orbits. It just means that there&rsquo;s at most one non-trivial orbit (i.e. at most one orbit has more than one element in it). For example, consider the set \(X = \mathbb{N} \) of natural numbers. As we mentioned earlier \(\iota\), the identity permutation is cyclic, but each \(n \in \mathbb{N} \) belongs to its own orbit, so there&rsquo;s an infinite number of them. On the other hand, the permutation \( \text{+1}(x) := x + 1\) is also cyclic, and has only one orbit, all of \(\mathbb{N}\).</p>
+<p>The next theorem we prove is going to be similar to, but more generic than some theorems/lemmas we&rsquo;ve already proved. The proof should be fairly familiar by now.</p>
+<h2 id="theorem-disjoint-orbits">Theorem (disjoint orbits)</h2>
+<p>Let \(G\) be a group of permutations on the set \(X\). Then for any two \(x\) and \(y\) in \(X\), we have either \(Orb_{G}(x) = Orb_{G}(y) \), or \(Orb_{G}(x) \cap Orb_{G}(y) = \emptyset \).</p>
+<h3 id="proof-1">Proof</h3>
+<p>Suppose \(a \in Orb_{G}(x) \cap\) \(Orb_{G}(y) \). Then \( a = g_1(x) \) and \( a = g_2(y) \), for some \(g_1\), \(g_2 \in G\). This means that \( x = g_1^{-1}(a)\), and thus \( x = g_1^{-1}( g_2(y) ) \). Now let \(z\) be any element of \(Orb_{G}(x) \), then \( z = g_3(x) \), for some \(g_3 \in G\). Combining all of this gives us
+\[ z = g_3 ( g_1^{-1} ( g_2 (y) ) ) \]</p>
+<p>This means that \(z \in Orb_{G}(y) \). Thus \( Orb_{G}(x) \subseteq Orb_{G}(y) \). A similar argument shows that \( Orb_{G}(x) \supseteq Orb_{G}(y) \), so they are equal.</p>
+<p><strong>QED</strong></p>
+<p>Notice that we needed the set of permutations to be a group to guarantee that inverses and function composition worked.</p>
+<p>So, for any permutation, we have shown that it&rsquo;s cycles are the orbits under the group generated by itself. This reaffirms what we showed earlier that a permutation&rsquo;s cycles were disjoint or equal. Now we see that this is still the case, even if the cycles aren&rsquo;t finite. The result also doesn&rsquo;t depend on notation.</p>
+<p>We also see that every permutation is composed of disjoint cycles. The means that each permutation \(\pi\) can be decomposed as the composition of disjoint cyclic permutations. I.e. \( \pi = &hellip; \circ \sigma_n \circ &hellip; \circ \sigma_2 \circ \sigma_1 \), where each \(\sigma_i \) is cyclic. We can do this by setting \( \sigma_i(x) = \pi(x) \), if \( x \) is in \(X\)&rsquo;s \(i^{th} \) orbit, and \(\sigma_i(x) = x\) otherwise. Notice also that for all \(i\), \(j\), we have \( \sigma_i \circ \sigma_j = \sigma_j \circ \sigma_i \), because they act non-trivially in non-overlapping subsets of \(X\).</p>
+<p>Breaking a permutation down into disjoint cycles can be helpful in calculating \(Sign(\pi) \), since, as we showed in More Math of Permutations, a cyclic permutation whose cycle has length \(k\) has \(Sign = (-1)^{k-1}\). We&rsquo;ll use this fact near the end of this entry.</p>
+<h2 id="lemma-stabilizer-is-a-subgroup">Lemma (stabilizer is a subgroup)</h2>
+<p>Let \(G\) be a group of permutations on the set \(X\). Then for any \(x \in X\), \(Stab_{G}(x) \leq G\).</p>
+<p>This means that if the set of permutations is a group, then the stabilizer of any element of \(X\) is a subgroup of \(G\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>Let \( a \), and \(b\) be two elements of \(Stab_{G}(x)\). Recall that the stabilizer of an element of \(X\) is a subset of permutations, so \(a\) and \(b\) are elements of \(G\). Then \(a(x) = x\), and \(b(x) = x\), so we also have \( b^{-1}(x) = x\), and then finally, \(a (b^{-1}(x)) = x\), so \(a \cdot b^{-1} \in Stab_G(x) \), thus it is a subgroup.</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-orbit-stabilizer">Theorem (orbit stabilizer)</h2>
+<p>Let \(G\) be a finite group of permutations on the finite set \(X\). Let \(x \in X\) be any element of \(X\). Then \( | Orb_{G}(x) | \cdot | Stab_{G}(x) | = | G | \).</p>
+<h3 id="proof-3">Proof</h3>
+<p>Let&rsquo;s represent the set of permutations in \(G\) as the disjoint union of the cosets of \(Stab_G(x) \). I.e.</p>
+<p>\[ G = \{ \iota Stab_G(x), g_2 Stab_G(x), &hellip; g_n Stab_G(x) \} \]</p>
+<p>Where, \( \iota \) is the identity permutation, and the \(g_i\)&rsquo;s are different coset representatives. It&rsquo;s clear that by the definition of \(Stab_G(x) \), each coset sends \(x\) to the same element (i.e. every permutation in the coset \(g_i Stab_G(x) \) sends \(x\) to \( g_i(x) \)). Now what&rsquo;s left is to show that no two cosets send \(x\) to the same element.</p>
+<p>Suppose, that there are two cosets that send \(x\) to the same element, say, \(y\). Then \( g_i(x) = g_j(x) = y\), which means that \(g_i^{-1}(y) = x \), so \( g_i^{-1}(g_j(x)) = x\), and \( g_i^{-1} \circ g_j \in Stab_G(x) \). This means that \( g_i^{-1} \circ g_j Stab_{G}(x) = Stab_G(x)\), so applying \(g_i \) to every element of \(Stab_G(x) \) and \( g_i^{-1} \circ g_j Stab_G(x) \) shows us that</p>
+<p>\[ g_j Stab_G(x) = g_i Stab_G(x) \]</p>
+<p>which means that \(g_i\) and \(g_j\) didn&rsquo;t represent two distinct cosets, so \( i = j \). This means that</p>
+<p>\[ | Orb_G(x) | = (G : Stab_G(x) ) \]</p>
+<p>which gives us our desired result.</p>
+<p><strong>QED</strong></p>
+<h2 id="corollary-orbits-at-most-as-big-as-the-order-of-the-permutation">Corollary (orbits at most as big as the order of the permutation):</h2>
+<p>Let \( \pi \) be a permutation of the set \(X\), such that \( \pi^k = \iota \), the identity permutation. Then for every \(x \in X\), \( |Orb_{&lt;\pi&gt;}(x)| \leq k \).
+In words, this means that if \( \pi^k \) is the identity permutation, then all of the orbits of \( \pi \) have at most \( k\) elements in them.</p>
+<h3 id="proof-4">Proof</h3>
+<p>By the orbit stabilizer theorem, the size of the orbit can be at most as large as \( &lt; \pi &gt; \), the group generated by the permutation \( \pi \). That group is no larger than \(k\), since \( \pi^k = \iota \).</p>
+<p><strong>QED</strong></p>
+<p>Now we prove a nice little result.</p>
+<h2 id="corollary-2odd-has-normal-subgroup">Corollary (2*odd has normal subgroup)</h2>
+<p>Let \(G\) be a group with \( 2 (2 k + 1) \) elements, then there is a normal subgroup of index \(2\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>In the entry Applying Permutations to Group Theory we showed that we can get the desired result by showing that there is an element \(g \in G\), such that \(Sign(g) = -1\).</p>
+<p>First we show that because \(G\) has an even number of elements, there is an element of order \(2\), i.e. there is a \(e \neq g \in G\), such that \(g^2 = e \). Notice that for any \(g \in G\), we have \( (g^{-1})^{-1} = g \), which means that all of the elements of \(G\) can be uniquely placed in pairs with their inverses. However, some elements are their own inverse &ndash; the identity is always its own inverse, for example. So, some of these &ldquo;pairs&rdquo; actually only have one element. If no element has order \(2\), then all of the pairs except for the identity element must have two distinct elements in them. However, this isn&rsquo;t possible, since \(G\) has an even number of elements, and when we take away the identity element, we have an odd number of elements of \(G\) to form pairs with. Thus, whenever \(G\) has an even number of elements, there must be an element, which is not the identity which is its own inverse.</p>
+<p>Let \(e \neq g \in G\) be its own inverse.</p>
+<p>We&rsquo;ve shown that \(G\) can be viewed as a subgroup of the group of permutations of its elements (Cayley&rsquo;s Theorem, also proved in Applying Permutations to Group Theory). So, \(g\) as a permutation of the elements of \(G\) can be broken down into disjoint cycles. Each cycle has size \( \leq 2\). We want to show that each cycle has exactly two elements in it.</p>
+<p>Suppose for a contradiction that \(h \in G\) has an orbit of size \(1\), then \(g \cdot h = h\), but that means that \(g = e\), the identity element of \(G\) and by our choice of \(g\) we made sure that it isn&rsquo;t the identity element. Thus \(g\) as a permutation of the elements of \(G\) can be factored into disjoint 2-cycles. Each cycle acting on a distinct pair of elements of \(G\). Thus there must be exactly \(2 k + 1\) of them.</p>
+<p>We showed in More Math of Permutations that every 2-cycle has \(Sign = -1\), so since \(g\) is the composition of \(2 k + 1\) 2-cycles, we have \(Sign(g) = (-1)^{2k + 1} = -1 \). This gives us our result.</p>
+<p><strong>QED</strong></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sets/" rel="tag">Sets</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/applying-permutations-to-group-theory/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Applying Permutations to Group Theory</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/counting-orbits-sylows-theorems-etc-i/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Counting Orbits Sylows Theorems etc... (I)</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fsubgroups-of-even-permutations-orbits-stabilizers-etc%2f" />
+</body>
+</html>

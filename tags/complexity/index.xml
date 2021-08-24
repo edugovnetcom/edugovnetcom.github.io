@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complexity on EduGovNet.com</title>
+    <link>/tags/complexity/</link>
+    <description>Recent content in Complexity on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jul 2021 14:25:44 -0400</lastBuildDate><atom:link href="/tags/complexity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding the Median and an Application to Sorting</title>
+      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
+      
+      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
+    </item>
+    
+    <item>
+      <title>More on Sorting and Analyzing Run Time Complexity</title>
+      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
+      
+      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Spheres, Distances, Maps and More! - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Spheres, Distances, Maps and More!" />
+<meta property="og:description" content="In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/spheres-distances-maps-and-more/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-08-16T11:21:15-04:00" />
+<meta property="article:modified_time" content="2021-08-16T11:21:15-04:00" />
+
+
+		<meta itemprop="name" content="Spheres, Distances, Maps and More!">
+<meta itemprop="description" content="In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map."><meta itemprop="datePublished" content="2021-08-16T11:21:15-04:00" />
+<meta itemprop="dateModified" content="2021-08-16T11:21:15-04:00" />
+<meta itemprop="wordCount" content="3679">
+<meta itemprop="keywords" content="Dot Product,Trigonometry,Geometry," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spheres, Distances, Maps and More!"/>
+<meta name="twitter:description" content="In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Spheres, Distances, Maps and More!</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-16T11:21:15-04:00">2021-08-16</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/linear-algebra/" rel="category">Linear Algebra</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/bw_old_map_near_equator.png" alt="Spheres, Distances, Maps and More!">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#interactive-map">Interactive Map</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#notation-used-in-this-entry">Notation Used in this Entry</a></li>
+    <li><a href="#converting-between-polar-and-cartesian-coordinates">Converting between polar and Cartesian coordinates</a></li>
+    <li><a href="#distance-between-two-points-on-a-sphere">Distance between two points on a sphere</a></li>
+    <li><a href="#drawing-a-line-between-two-points-on-a-sphere">Drawing a line between two points on a sphere</a></li>
+    <li><a href="#definition-cross-product">Definition (cross product)</a></li>
+    <li><a href="#theorem-perpendicular-vector-determines-2-d-plane-through-the-origin">Theorem (perpendicular vector determines 2-d plane through the origin)</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#distance-between-a-point-on-a-sphere-and-a-line-on-the-sphere">Distance between a point on a sphere and a line on the sphere</a></li>
+    <li><a href="#computing-latitude-from-longitude-and-a-perpendicular-vector">Computing latitude from longitude and a perpendicular vector</a></li>
+    <li><a href="#thank-you">Thank you</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="interactive-map">Interactive Map</h2>
+<div>
+<h3 style="text-align: center;">Click on the Map to Add a Point</h3>
+</div>
+<div id="map" style="height: 500px;"></div>
+<br>
+<div id="locations_table">
+</div>
+<div>
+  <table>
+  <caption><h3>Enter Lat & Long or Click on the Map to Add a Point</h3></caption>
+  <tr>
+    <td>
+      <label for="latitude">Latitude (degrees)</label>
+    </td>
+    <td>
+      <label for="longitude">Longitude (degrees)</label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <input id="latitude_input" name="latitude" type="number">
+    </td>
+    <td>
+    <input id="longitude_input" name="longitude" type="number">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="submit" value="Add Point" onclick="addPoint()">
+    </td>
+  </tr>
+  </table>
+</div>
+<div>
+  <table id="points_table">
+  </table>
+</div>
+<div>
+  <h3>This will find the line which best fits the given points on the map.</h3>
+  <h3>Note: There must be at least two points.</h3>
+  <input id="fit_line_input" type="submit" value="Fit Line" onclick="fitLineToPoints()" />
+</div>
+<br>
+<p><strong>Note:</strong> The <span style="color: green;">green line</span> is fit by minimizing the \(L^2\) norm, and the <span style="color:blue;">blue line</span> is fit by minimizing the \(L^{\infty}\) norm.</p>
+<h2 id="introduction">Introduction</h2>
+<p><span class="first-letter">I</span>n this entry, we use the <em>dot product</em>, which we first introduced in <a href="/blog/an-intro-to-the-dot-product/">this entry</a>, alongside some <em>Linear Algebra</em> and <em>Geometry</em> to figure out how to draw a line between two points on a sphere. We also derive a formula for calculating the distance between two points as well as the distance from a point to a line on a sphere.</p>
+<h2 id="notation-used-in-this-entry">Notation Used in this Entry</h2>
+<p>Notation varies among fields and we make no effort to conform to any particular one of them. If you&rsquo;re an astronomer, physicist, etc&hellip; we apologize for the inconvenience this may cause.</p>
+<ol>
+<li>\(\theta\) is the <em>longitude</em>.</li>
+<li>\(r\) is the <em>radius</em> of the sphere.</li>
+<li>\(\phi\) is the <em>latitude</em>.</li>
+</ol>
+<p>When we give coordinates in the Cartesian coordinate system, you are free to envision it however you like. We will convert between them like this</p>
+<h2 id="converting-between-polar-and-cartesian-coordinates">Converting between polar and Cartesian coordinates</h2>
+<p>Going from polar to Cartesian, we use</p>
+<p>$$\begin{align}
+x &amp;= r \cos{\theta}\cos{\phi} \\<br>
+y &amp;= r \sin{\theta}\cos{\phi} \tag{1}\label{1} \\<br>
+z &amp;= r \sin{\phi}
+\end{align}$$</p>
+<p>while going the other way, from Cartesian to polar, we use</p>
+<p>$$\begin{align}
+r &amp;= \sqrt{x^2 + y^2 + z^2} \\<br>
+\phi &amp;= \sin^{-1}(\frac{z}{r}) \tag{2}\label{2}\\<br>
+\theta &amp;= \sin^{-1}(\frac{y}{r \cos{\phi}})
+\end{align}$$</p>
+<p>A little caution is required when using (2). If \( \langle x, y, z \rangle = \vec{0}\), then \(r = 0\), and it doesn&rsquo;t matter what \( \phi \) and \( \theta\) are. Notice also that if we are at either pole, so that \(\phi = \pm \frac{\pi}{2}\), then \(\theta\) doesn&rsquo;t matter, which is good, because it can&rsquo;t be determined, since the \(\cos{\phi}\) in the denominator is equal to \(0\).</p>
+<h2 id="distance-between-two-points-on-a-sphere">Distance between two points on a sphere</h2>
+<p>Notice here that we want the distance <em>as you would travel <strong>on</strong> the surface of the sphere</em> to get from one point to another. Further, notice that this distance will never be greater than \( \pi \cdot r\), because that is equal to <em>half</em> of the circumference of the sphere. If you find yourself traveling more than \(\pi \cdot r\) to reach your destination, you should have headed in the opposite direction.</p>
+<p>Let \(p_1\) and \(p_2\) be two distinct points on a sphere. We can think of both of them as vectors with length (or <em>norm</em>) \(r\), the radius of the sphere. When we think of them as vectors, we can denote them as \(\vec{p_1}\) and \(\vec{p_2}\) to make that clearer.</p>
+<p>Recall from <a href="/blog/an-intro-to-the-dot-product/">An Intro to the Dot Product</a> that the dot product of \(\vec{p_1}\) and \(\vec{p_2}\) is equal to the cosine of the angle between them multiplied by both of their norms. I.e. if \(\alpha\) is the angle between \(\vec{p_1}\) and \(\vec{p_2}\), then</p>
+<p>\[ ||\vec{p_1}|| || \vec{p_2}|| \cos({\alpha}) = \vec{p_1} \cdot \vec{p_2} \tag{3}\label{3} \]</p>
+<p>We can use this to calculate \(\alpha\)</p>
+<p>\[ \alpha = \cos^{-1}({ \frac{ \vec{p_1} \cdot \vec{p_2} }{ || \vec{p_1} || || \vec{p_2} || } }) \tag{4}\label{4} \]</p>
+<p>Since \(p_1\) and \(p_2\) lie on the surface of a sphere of radius \(r\), both of the norms are equal to \(r\). Now, once we have the angle \(\alpha\) we can calculate the <em>arc length</em> between the points \(p_1\) and \(p_2\) as \(\alpha r\).</p>
+<p>This makes sense, because if \(\alpha = 2\pi\), so we&rsquo;re going completely around the sphere, we would travel the entire length of the circumference of a circle with radius \(r\) &ndash; i.e. \(2\pi r\).</p>
+<p>The distance, then, is given by</p>
+<p>\[ d(p_1, p_2) = r \cos^{-1}({\frac{\vec{p_1} \cdot \vec{p_2}}{r^2}}) \tag{5}\label{5}\]</p>
+<p>since \(|| \vec{p_i} || = r \).</p>
+<p>When we want to calculate the distance between two points on a globe, they&rsquo;ll probably be specified with latitude and longitude (and the radius of the sphere). We can use the equations in (1) above to determine the \(\vec{p_i}\).</p>
+<p>Let \(p_i = \langle \phi_i, \theta_i \rangle \), and \(r\) be the radius of the sphere. Then</p>
+<p>\[ \vec{p_i} = \langle x_i, y_i, z_i \rangle \tag{6}\label{6} \]</p>
+<p>where</p>
+<p>$$\begin{align}
+x_i &amp;= r\cos(\theta_i)\cos(\phi_i) \\<br>
+y_i &amp;= r\sin(\theta_i)\cos(\phi_i) \tag{7}\label{7} \\<br>
+z_i &amp;= r\sin(\phi_i)
+\end{align}$$</p>
+<p>Combining (7) with (5) gives us</p>
+<p>\[ d(\langle \phi_1, \theta_1 \rangle, \langle \phi_2, \theta_2 \rangle) = r \cos^{-1}( \gamma )\]</p>
+<p>where (after rearranging some of the terms)</p>
+<p>$$\begin{align}
+\gamma = &amp; \cos(\phi_1)\cos(\phi_2)\cos(\theta_1)\cos(\theta_2) \\<br>
++ &amp; \cos(\phi_1)\cos(\phi_2)\sin(\theta_1)\sin(\theta_2) \tag{8}\label{8}\\<br>
++ &amp; \sin(\phi_1)\sin(\phi_2)
+\end{align}$$</p>
+<h2 id="drawing-a-line-between-two-points-on-a-sphere">Drawing a line between two points on a sphere</h2>
+<p>Even on a sphere, the rule that a line is determined by two distinct points holds. Notice that a line on a sphere will wrap around onto itself, once it has finished going completely around the sphere. When it does this it forms a great circle.</p>
+<p>That great circle is the intersection of a 2-dimensional plane and the sphere. The plane goes through the center of the sphere, which our construction has at \( (0,0,0) \).</p>
+<p>To see that this is true, represent the two points as vectors \(\vec{p_1}\) and \( \vec{p_2} \). That plane is then the span of \(\vec{p_1}\) and \(p_2\), where</p>
+<p>\[ \text{Span}(\{ \vec{p_1}, \vec{p_2} \}) := \{ a_1\vec{p_1} + a_2\vec{p_2} | a_1, a_2 \in \mathbb{R} \} \tag{9}\label{9} \]</p>
+<p>There is a subtlety we have to watch out for. We need to make sure that this span is 2-dimensional. It <em>could</em> be 1-dimensional. Even though we assumed that \(p_1\) and \(p_2\) are distinct points on the surface of the sphere, if they are at opposite ends of the sphere (e.g. the north and the south poles), then \(\vec{p_1} = - \vec{p_2}\), so we have \(\text{Span}(\{\vec{p_1}, \vec{p_2}\}) = \text{Span}(\{ \vec{p_1} \})\), which obviously has dimension 1 (and not 0, because \(r &gt;0\), so \(\vec{p_1} \neq \vec{0}\)).</p>
+<p>In the above case where \(\vec{p_1} = -\vec{p_2}\), there are an infinite number of possible planes we can use. This is because there are an infinite number of great circles that contain both \(p_1\) and \(p_2\). Pick any third point, \(p_3\), on the surface of the sphere which is not equal to either \(p_1\) or \(p_2\). The great circle containing both \(p_1\) and \(p_3\) will <em>also</em> contain \(p_2\). This is because every great circle which contains a point \(q\) will also contain the point on the opposite side of the sphere to \(q\).</p>
+<p>Now we&rsquo;ll see how to find the plane and with that, find the great circle.</p>
+<h2 id="definition-cross-product">Definition (cross product)</h2>
+<p>Let \(\vec{p}, \vec{q} \in \mathbb{R}^3\), where \(\vec{p} = \langle p_1, p_2, p_3 \rangle\) and \(\vec{q} = \langle q_1, q_2, q_3 \rangle\). Then the <em>cross product</em> of \(\vec{p}\) with \(\vec{q}\) is equal to</p>
+<p>\[ \vec{p} \times \vec{q} = \langle v_1, v_2, v_3\rangle \tag{10}\label{10} \]</p>
+<p>where</p>
+<p>$$\begin{align}
+v_1 &amp; = p_2 q_3 - p_3 q_2 \\<br>
+v_2 &amp; = p_3 q_1 - p_1 q_3 \tag{11}\label{11} \\<br>
+v_3 &amp; = p_1 q_2 - p_2 q_1
+\end{align}$$</p>
+<p>Notice that</p>
+<p>$$\begin{align}
+\vec{p} \times \vec{q} &amp;= -\vec{q} \times \vec{p}  \\<br>
+\vec{p} \cdot ( \vec{p} \times \vec{q} ) &amp;= 0 \tag{12}\label{12}\\<br>
+\vec{q} \cdot (\vec{p} \times \vec{q}) &amp;= 0<br>
+\end{align}$$</p>
+<p>We also have for any \(\vec{u}\), \(\vec{v}\) and \(\vec{w}\) \() \in \mathbb{R}^3 \)</p>
+<p>$$\begin{align}
+&amp;\vec{u} \times (a\vec{v} + b\vec{w}) = \tag{13}\label{13} \\
+&amp;a(\vec{u} \times \vec{v}) + b(\vec{u} \times \vec{w})
+\end{align}$$</p>
+<p>Verifying (12) and (13) is straight-forward. All you have to do is plug in (11) and recall the definition of the dot product (for 12).</p>
+<h2 id="theorem-perpendicular-vector-determines-2-d-plane-through-the-origin">Theorem (perpendicular vector determines 2-d plane through the origin)</h2>
+<p>Let \(P\) be a 2-dimensional plane in \( \mathbb{R}^3 \) which contains the origin, \((0,0,0)\). Then</p>
+<ol>
+<li>there is a vector \(\vec{p} \in \mathbb{R}^3\), such that for all \(\vec{v} \in P\), \(\vec{p} \cdot \vec{v} = 0\).</li>
+<li>any other vector \(\vec{q} \in \mathbb{R}^3\), such that \( \vec{q} \cdot \vec{v} = 0 \), for every \(\vec{v} \in P\) is equal to \( a \vec{p}\) for some \(a \in \mathbb{R}\).</li>
+</ol>
+<h3 id="proof">Proof</h3>
+<p>A 2-dimensional plane \(P\) is a 2-dimensional subspace of \(\mathbb{R}^3\), so it is equal to \( \text{Span}(\{ \vec{u}, \vec{v} \}) \), where \( \vec{u} \neq a \vec{v}\) for any \(a \in \mathbb{R}\). I.e. it is the span of two linearly-independent vectors.</p>
+<p>Let \(\vec{p} = \vec{u} \times \vec{v} \). Let \(\vec{w} \in P\), then we have \(\vec{w} = a\vec{u} + b\vec{v}\), which means that \( \vec{p} \cdot \vec{w} = \vec{p} \cdot ( a\vec{u} + b\vec{v} ) \), and since the dot product distributes (you can easily verify this) that dot product is equal to \(a \vec{p} \cdot \vec{u} + b \vec{p} \cdot \vec{v}\). This is equal to \( a(\vec{u} \times \vec{v}) \cdot \vec{u} + b(\vec{u} \times \vec{v}) \cdot \vec{v} \), which by (12) above, we see is equal to \(0\). Thus \(\vec{p}\) satisfies part 1 of the lemma.</p>
+<p>The proof of part 2 of the lemma is <strong>much</strong> more work. In it, we make frequent use of the <em>transpose</em> of a vector (and also of a matrix). The <em>transpose</em> of a row vector is a column vector and <em>vice versa</em>. Similarly, the transpose of an \( n \times m\) matrix is an \(m \times n \) matrix, where the rows from the original are the columns in the transpose.</p>
+<p>Notice what happens to the subscripts</p>
+<p>$${\begin{pmatrix}
+a_{1,1} &amp; a_{1,2} &amp; &hellip; &amp; a_{1, m} \\<br>
+a_{2,1} &amp; a_{2,2} &amp; &hellip; &amp; a_{2, m} \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>
+a_{n,1} &amp; a_{n, 2} &amp; &hellip; &amp; a_{n, m} \\<br>
+\end{pmatrix}}^{T}=\begin{pmatrix}
+a_{1,1} &amp; a_{2,1} &amp; &hellip; &amp; a_{n, 1} \\<br>
+a_{1,2} &amp; a_{2,2} &amp; &hellip; &amp; a_{n, 2} \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>
+a_{1,m} &amp; a_{2,m} &amp; &hellip; &amp; a_{n,m} \\<br>
+\end{pmatrix}$$</p>
+<p>To start the proof of part 2, notice that if \(\vec{u} = \langle u_1, u_2, u_3 \rangle\) and \(\vec{v} = \langle v_1, v_2, v_3 \rangle\), and \( \vec{q} = \langle q_1, q_2, q_3 \rangle\), then we have the following matrix equations</p>
+<p>$$\begin{pmatrix}
+u_1 &amp; u_2 &amp; u_3 \\<br>
+v_1 &amp; v_2 &amp; v_3 \\<br>
+0 &amp; 0 &amp; 0 \\<br>
+\end{pmatrix}
+\begin{pmatrix}
+p_1 \\<br>
+p_2 \\ \tag{14}\label{14}
+p_3 \\<br>
+\end{pmatrix}=\begin{pmatrix}
+0 \\<br>
+0 \\<br>
+0 \\<br>
+\end{pmatrix}$$</p>
+<p>and</p>
+<p>$$\begin{pmatrix}
+u_1 &amp; u_2 &amp; u_3 \\<br>
+v_1 &amp; v_2 &amp; v_3 \\<br>
+0 &amp; 0 &amp; 0 \\<br>
+\end{pmatrix}
+\begin{pmatrix}
+q_1 \\<br>
+q_2 \\ \tag{15}\label{15}
+q_3 \\<br>
+\end{pmatrix}=\begin{pmatrix}
+0 \\<br>
+0 \\<br>
+0 \\<br>
+\end{pmatrix}$$</p>
+<p>Let&rsquo;s denote the matrix on the left as \(M\), so</p>
+<p>$$M=\begin{pmatrix}
+u_1 &amp; u_2 &amp; u_3 \\<br>
+v_2 &amp; v_2 &amp; v_3 \\<br>
+0 &amp; 0 &amp; 0 \\<br>
+\end{pmatrix}$$</p>
+<p>Let \(\vec{x} \in \text{Ker}(M) \cap P \), the intersection of the kernel of \(M\) and \(P\). Since \( \vec{x} \in P\), we have \( \vec{x} = a\vec{u} + b\vec{v}\), which means</p>
+<p>$$\vec{x}=\begin{pmatrix}
+u_1 &amp; v_1 &amp; 0 \\<br>
+u_2 &amp; v_2 &amp; 0 \\<br>
+u_3 &amp; v_3 &amp; 0 \\<br>
+\end{pmatrix}\begin{pmatrix}
+a \\<br>
+b \tag{15.1}\label{15.1}\\<br>
+c \\<br>
+\end{pmatrix}$$</p>
+<p>where \(c\) can be any real number. If we let \( {\vec{y} = \langle a, b, c \rangle}^{T}\), then</p>
+<p>\[ \vec{x} = M^{T}\vec{y} \]</p>
+<p>However, since \( \vec{x} \in \text{Ker}(M)\), we also have</p>
+<p>\[ M\vec{x} = \vec{0} \]</p>
+<p>combining them and computing the norm squared of \(\vec{x}\), we get</p>
+<p>$$\begin{align}
+\vec{x} \cdot \vec{x} &amp;= \vec{x}^{T} \vec{x} \\<br>
+&amp;= (\vec{y}^{T}M)(M^{T}\vec{y}) \\<br>
+&amp;= \vec{y}^{T}(MM^{T}\vec{y}) \tag{16}\label{16}\\<br>
+&amp;= \vec{y}^{T}(M\vec{x}) \\<br>
+&amp;= \vec{y}^{T} \vec{0} \\<br>
+&amp;= 0
+\end{align}$$</p>
+<p>So the intersection of \( \text{Ker}(M) \) and \(P\) is \( \{ \vec{0} \} \).</p>
+<p>We&rsquo;ll leave it to the reader to show that both \(P\) and \(\text{Ker}(M)\) are subspaces of \(\mathbb{R}^3\).</p>
+<p>Finally, let \( \mathcal{B}_1 = \{ \vec{\beta_1}, \vec{\beta_2}, &hellip; , \vec{\beta_k} \} \) be a basis for \(P\) and \( \mathcal{B}_2 = \{\vec{\gamma_1}, \vec{\gamma_2}, &hellip; , \vec{\gamma_l} \} \) be a basis for \( \text{Ker}(M) \). Then \( \mathcal{B}_1 \cup \mathcal{B}_2\) is still a basis. It is a basis for a \(k + l\) dimensional subspace of \( \mathbb{R}^3 \). To see this, suppose</p>
+<p>$$\begin{align}
+\vec{0} &amp;= \vec{v_1} + \vec{v_2} \\<br>
+\vec{v_1} &amp;= b_1\vec{\beta_1} + &hellip; + b_k\vec{\beta_k} \tag{17.1}\label{17.1}\\<br>
+\vec{v_2} &amp;= g_1\vec{\gamma_1} + &hellip; + g_l\vec{\gamma_l} \tag{17.2}\label{17.2}
+\end{align}$$</p>
+<p>then \( \vec{v_1} = -\vec{v_2} \), which means by (17.1) and (17.2) that \(\vec{v_1} \in \text{Ker}(M) \cap P \). By (16), this means that \(\vec{v_1} = \vec{0}\). Similarly, \(\vec{v_2} = \vec{0}\), and since \(\mathcal{B}_1\) and \(\mathcal{B}_2\) are both bases, this means that \(b_i = 0\) and \(g_i = 0\). Therefore \( \mathcal{B}_1 \cup \mathcal{B}_2 \) is a basis.</p>
+<p>Putting everything together, we have shown that the dimension of \(P\) + the dimension of \( \text{Ker}(M) \) must be less than the dimension of \(\mathbb{R}^3\), which is 3 (by definition). Since \(\dim{P} = 2\), we must have \( \dim(\text{Ker}(M)) \leq 1 \).</p>
+<p>Now, since \( \vec{p} = \vec{u} \times \vec{v} \) is a non-zero element of \( \text{Ker}(M) \) it must have dimension at least 1. This means that \( \text{Ker}(M) = \{a\vec{p} | a \in \mathbb{R}\} \).</p>
+<p>By (15.1) this gives us our result. This finishes the proof of part 2 of this lemma.</p>
+<p><strong>QED</strong></p>
+<p>Now, back to drawing a line connecting two points on a sphere.</p>
+<p>By the above theorem, if we let \(\vec{p_1}\) and \(\vec{p_2}\) represent the two points as vectors, then the plane spanned by the two is equal to the set of \(\vec{w} \in \mathbb{R}^3\), such that \(\vec{w} \cdot (\vec{p_1} \times \vec{p_2}) = 0\). That means that the great circle that passes through \(p_1\) and \(p_2\) is the subset of that plane whose vectors have length equal to \(r\), the radius of the sphere. Let</p>
+<p>\[ \vec{n} := \vec{p_1} \times \vec{p_2} \tag{18}\label{18}\]</p>
+<p>This means that the great circle which passes through \(p_1\) and \(p_2\) is equal to</p>
+<p>\[ \{ \vec{w} \in \mathbb{R}^3 | \vec{w} \cdot \vec{n} = 0, || \vec{w} || = r \} \tag{19}\label{19} \]</p>
+<p>We can use this to determine the distance between a third point, \(u\) and the this great circle. Let \(\vec{u}\) represent \(u\) as a vector. Then in order to find the distance to the great circle, we have to determine the angle that \(\vec{u}\) makes with the plane that defines the great circle. We can find that angle by first projecting \(\vec{u}\) on to the plane.</p>
+<p><img src="/images/sphere_with_great_circle.png" alt="Sphere With Great Circle" title="Sphere with great circle"></p>
+<p>Notice the dotted line from \(\vec{u}\) to the plane of the great circle. That line is obtained by adding \( \lambda \vec{n}\), the perpendicular (or &ldquo;normal&rdquo;) vector to the plane, until we meet the plane.</p>
+<p>That happens exactly when we find the \(\lambda\), such that</p>
+<p>\[ (\vec{u} + \lambda \vec{n}) \cdot \vec{n} = 0 \tag{20}\label{20} \]</p>
+<p>which implies that</p>
+<p>\[ \lambda = -\frac{\vec{u}\cdot\vec{n}}{\vec{n}\cdot\vec{n}} \tag{21}\label{21}\]</p>
+<p>this means that</p>
+<p>\[ \vec{w} = r\frac{ \vec{u} - (\frac{\vec{u}\cdot\vec{n}}{\vec{n}\cdot\vec{n}}) \vec{n} }{ || \vec{u} - (\frac{\vec{u}\cdot\vec{n}}{\vec{n}\cdot\vec{n}}) \vec{n} || } \tag{22}\label{22} \]</p>
+<p>Therefore, the distance that we travel on the surface of the sphere is determined by applying (22) to the distance formula we derived above in equation (4).</p>
+<p>When we apply that, we get</p>
+<h2 id="distance-between-a-point-on-a-sphere-and-a-line-on-the-sphere">Distance between a point on a sphere and a line on the sphere</h2>
+<p>$$\begin{align}
+\vec{u} \cdot \vec{u} &amp;= r^2 \\<br>
+\mu &amp;= \vec{u} \cdot \vec{n} \\<br>
+\nu &amp;= \vec{n} \cdot \vec{n} \\<br>
+d(\vec{u}, \vec{w}) &amp;= r\cos^{-1}(\frac{\vec{u}\cdot\vec{w}}{||\vec{u}|| || \vec{w}||}) \tag{23}\label{23} \\<br>
+\end{align}$$</p>
+<p>The first line is simply because \(\vec{u}\) is the vector to a point on the sphere, and the sphere has radius \(r\).</p>
+<p>With the map at the top of the page, we&rsquo;ve added the ability to fit a line to two or more points on the map by using the distance formula given by equation (23). We calculate the total distance of all of the given points to a line, and then use <em>gradient descent</em> to try to minimize that function.</p>
+<p>In fact, we don&rsquo;t start with gradient descent. We calculate the distance for 10,000 different great circles (which correspond to 10,000 different \(\vec{n}\)&rsquo;s). We take the \(\vec{n}\) whose great circle is nearest to all of the provided points, and then use gradient descent to get an even better result.</p>
+<p>If you provide exactly two points, then it just calculates \(\vec{n}\) as the cross product of the two vectors representing those points. That line will fit exactly.</p>
+<h2 id="computing-latitude-from-longitude-and-a-perpendicular-vector">Computing latitude from longitude and a perpendicular vector</h2>
+<p>Lastly, once we have found a suitable \(\vec{n}\) whose great circle minimizes distances to the given points, we have to calculate a latitude for each longitude. This is so that we can compute the great circle as a function of longitude. This won&rsquo;t work if the great circle <em>is</em> a line of longitude (and the line of longitude on the opposite side of the earth). This only happens, when \(\vec{n}\) lies on the \(xy\) plane, where \(z = 0\). If this happens, our great circle fitting function will fail. Sorry. Maybe one day we&rsquo;ll address this corner case, but not today..</p>
+<p>Since we only care about latitude and longitude, it&rsquo;s much easier to ignore \(r\) by assuming it&rsquo;s equal to 1. If \(\vec{n} = \vec{p_1} \times \vec{p_2}\), then let</p>
+<p>\[ \vec{t} = \frac{\vec{n}}{|| \vec{n} ||} \tag{24}\label{24} \]</p>
+<p>You can check for yourself that \(|| \vec{t} || = 1\).</p>
+<p>We will write the components of \(\vec{t}\) as \( \langle t_1, t_2, t_3 \rangle \), and \(\langle x,y,z\rangle\) will represent a point on the great circle (which is orthogonal to \(\vec{t}\)). Then, by definition, we have \(\langle t_1, t_2, t_3\rangle \cdot \langle x,y,z\rangle = 0\). Since we&rsquo;re assuming that \(\vec{t}\) does not lie on the equator, we have \(t_3 \neq 0\), so we can now safely solve for \(z\) in terms of \(x\) and \(y\). When we do that, we get</p>
+<p>\[ z = -\frac{1}{t_3}(t_1x + t_2y) \tag{25}\label{25} \]</p>
+<p>and since we&rsquo;re trying to solve for latitude in terms of longitude, we&rsquo;ll convert this to polar coordinates by applying equation (1) (from near the top of the page). When we do that, we get</p>
+<p>\[ \sin(\phi) = -\frac{1}{t_3}[t_1\cos(\theta) + t_2\sin(\theta)]\cos(\phi) \tag{26}\label{26} \]</p>
+<p>solving for \(\phi\) gives us</p>
+<p>\[ \phi = \tan^{-1}(-\frac{t_1\cos(\theta) + t_2\sin(\theta)}{t_3}) \tag{27}\label{27}\]</p>
+<h2 id="thank-you">Thank you</h2>
+<p>That&rsquo;s all for this entry. There will be bugs and mistakes in this entry. We&rsquo;ll try to update this page with fixes as they are pointed out to us (which we do with every entry).</p>
+<p>A special thanks goes out to <a href="https://www.openstreetmap.org/">Open Street Map</a>, which serves an open-source map of the world. It&rsquo;s completely free to use! We also have to thank <a href="https://leafletjs.com/">Leaflet</a>. They provide an open-source javascript library, which you can use to create interactive maps!</p>
+<p>While we&rsquo;re at it, this site is currently hosted on <a href="https://pages.github.com/">GitHub pages</a> for free! Free is great!</p>
+<p>Thanks!!</p>
+<script>
+  
+  var map = L.map('map').setView([0, 0], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  map.on('mouseover', function(e){
+    console.log("mouseover");
+  });
+  map.on('click', function(e){
+    console.log("click");
+    addPointToMap(e.latlng.lat, e.latlng.lng);
+  });
+
+var mapPointsDict = {};
+var markerDict = {};
+
+var pVecMarker_1 = null;
+var pVecMarker_2 = null;
+var pVecMarker_3 = null;
+var pVecMarker_4 = null;
+multiPolyline = null;
+multiPolyline2 = null;
+
+var latLon2xyz = function(lat, long)
+{
+  x = Math.cos(long)*Math.cos(lat);
+  y = Math.sin(long)*Math.cos(lat);
+  z = Math.sin(lat);
+  return [x,y,z];
+}
+
+var xyz2LatLon = function (vec)
+{
+  var phi = Math.asin(vec[2]);
+  var c = Math.cos(phi);
+  var theta = 0.0;
+  if (Math.abs(c) > 0.0001)
+  {
+    theta = Math.asin(vec[1]/c);
+  }
+  return {"lat": phi, "long": theta};
+}
+
+var dot = function(vec1, vec2)
+{
+  return vec1[0]*vec2[0] + vec1[1]*vec2[1] + vec1[2]*vec2[2];
+}
+
+var dist2pLine = function(yVec, pVec)
+{
+  var d2p = dot(yVec, pVec);
+
+  var numerator = 1 - d2p*d2p;
+
+  var x1 = yVec[0] - pVec[0]*d2p;
+  var x2 = yVec[1] - pVec[1]*d2p;
+  var x3 = yVec[2] - pVec[2]*d2p;
+
+  var denom = Math.sqrt(x1*x1 + x2*x2 + x3*x3);
+
+  // we have to catch errors from float rounding errors
+  if (numerator / denom >= 1.0)
+  {
+    return 0.0;
+  }
+  if (numerator / denom <= -1.0)
+  {
+    return Math.PI;
+  }
+
+  return Math.acos(numerator / denom);
+}
+
+var sphericalDist = function(lat1, long1, lat2, long2)
+{
+  var yVect = latLon2xyz(lat1, long1);
+  var pVect = latLon2xyz(lat2, long2);
+
+  return dist2pLine(yVect, pVect);
+}
+
+var totalSphericalDistanceSQ = function(pLatLong, y_array)
+{
+  var d_total = 0.0;
+  for (var i = 0; i < y_array.length; i++)
+  {
+    d_total += Math.pow(sphericalDist(y_array[i]["lat"], y_array[i]["long"],pLatLong["lat"], pLatLong["long"]), 2);
+  }
+  return d_total;
+}
+
+var totalSphericalDistance = function(pLatLong, y_array)
+{
+  var d_total = 0.0;
+  var d_tmp = 0.0;
+  for (var i = 0; i < y_array.length; i++)
+  {
+    d_tmp =  Math.abs(sphericalDist(y_array[i]["lat"], y_array[i]["long"],pLatLong["lat"], pLatLong["long"]));
+    if (d_tmp > d_total)
+    {
+      d_total = d_tmp;
+    }
+  }
+  return d_total;
+}
+
+var findMinInBoxSQ = function(latMin, latMax, longMin, longMax, ys_array)
+{
+  i = 0;
+  j = 0;
+  k = 0;
+  d = 0.0;
+  deltaLat = (latMax - latMin) / 100;
+  deltaLong = (longMax - longMin) / 100;
+  
+  results = [];
+  Len = ys_array.length;
+
+  for (i = 0; i <= 100; i++)
+  {
+    var pLat = latMin + (i*deltaLat);
+    for(j = 0; j <= 100; j++)
+    {
+      var pLong = longMin + (j*deltaLong);
+      d = 0.0;
+      for (k = 0; k < Len; k++)
+      {
+        d += Math.pow(sphericalDist(ys_array[k]["lat"], ys_array[k]["long"], pLat, pLong), 2);
+      }
+      results.push({
+        'lat': pLat,
+        'long': pLong,
+        'distance': d,
+      });
+    }
+  }
+  // Now we sort the results.
+  results = sortResults(results);
+
+  var lat_min = 10.0;
+  var lat_max = -10.0;
+  var long_min = 10.0;
+  var long_max = -10.0;
+
+  for (i = 0; i < 100; i++)
+  {
+    if (results[i]["lat"] < lat_min)
+    {
+      lat_min = results[i]["lat"];
+    }
+    if (results[i]["lat"] > lat_max)
+    {
+      lat_max = results[i]["lat"]
+    }
+    if (results[i]["long"] < long_min)
+    {
+      long_min = results[i]["long"];
+    }
+    if (results[i]["long"] > long_max)
+    {
+      long_max = results[i]["long"];
+    }
+  }
+  var output = results[0];
+  output["latRange"] = [lat_min, lat_max];
+  output["longRange"] = [long_min, long_max];
+  //console.log(results);
+  return output;
+}
+
+var findMinInBox = function(latMin, latMax, longMin, longMax, ys_array)
+{
+  i = 0;
+  j = 0;
+  k = 0;
+  d = 0.0;
+  deltaLat = (latMax - latMin) / 100;
+  deltaLong = (longMax - longMin) / 100;
+  
+  results = [];
+  Len = ys_array.length;
+
+  for (i = 0; i <= 100; i++)
+  {
+    var pLat = latMin + (i*deltaLat);
+    for(j = 0; j <= 100; j++)
+    {
+      var pLong = longMin + (j*deltaLong);
+      d = 0.0;
+      for (k = 0; k < Len; k++)
+      {
+        d += Math.abs(sphericalDist(ys_array[k]["lat"], ys_array[k]["long"], pLat, pLong));
+      }
+      results.push({
+        'lat': pLat,
+        'long': pLong,
+        'distance': d,
+      });
+    }
+  }
+  // Now we sort the results.
+  results = sortResults(results);
+
+  var lat_min = 10.0;
+  var lat_max = -10.0;
+  var long_min = 10.0;
+  var long_max = -10.0;
+
+  for (i = 0; i < 100; i++)
+  {
+    if (results[i]["lat"] < lat_min)
+    {
+      lat_min = results[i]["lat"];
+    }
+    if (results[i]["lat"] > lat_max)
+    {
+      lat_max = results[i]["lat"]
+    }
+    if (results[i]["long"] < long_min)
+    {
+      long_min = results[i]["long"];
+    }
+    if (results[i]["long"] > long_max)
+    {
+      long_max = results[i]["long"];
+    }
+  }
+  var output = results[0];
+  output["latRange"] = [lat_min, lat_max];
+  output["longRange"] = [long_min, long_max];
+  //console.log(results);
+  return output;
+}
+
+// Stupid implementation of merge sort //
+var sortResults = function(results)
+{
+  var Len_sort = results.length;
+  if (Len_sort < 2) return results;
+  var left_len = Math.floor(Len_sort/2);
+  var right_len = Len_sort - left_len;
+
+  var results_l = [];
+  var results_r = [];
+
+  var i_sort;
+
+  for (i_sort = 0; i_sort < Len_sort; i_sort++)
+  {
+    if (i_sort < left_len)
+    {
+      results_l.push(results[i_sort]);
+    }
+    else
+    {
+      results_r.push(results[i_sort]);
+    }
+  }
+  results_l = sortResults(results_l);
+  results_r = sortResults(results_r);
+
+  var output = [];
+
+  i_sort = 0;
+  var j_sort = 0;
+
+  while ((i_sort < left_len) && (j_sort < right_len))
+  {
+    if(results_l[i_sort]["distance"] <= results_r[j_sort]["distance"])
+    {
+      output.push(results_l[i_sort]);
+      i_sort++;
+    }
+    else
+    {
+      output.push(results_r[j_sort]);
+      j_sort++;
+    }
+  }
+
+  while (i_sort < left_len)
+  {
+    output.push(results_l[i_sort]);
+    i_sort++;
+  }
+
+  while (j_sort < right_len)
+  {
+    output.push(results_r[j_sort]);
+    j_sort++;
+  }
+  return output;
+}
+
+var find_P_SQ = function (ys)
+{
+  var result = findMinInBoxSQ(-Math.PI/2, Math.PI/2, -Math.PI, Math.PI, ys);
+  // Now let's try a gradient descent //
+
+  var tmpPhi = result["lat"];
+  var tmpTheta = result["long"];
+
+  var dPhi = 0.0;
+  var dTheta = 0.0;
+  var gradNorm = 0.0;
+  var N_ = 1000000;
+  var delta = 1.0 / (N_*10);
+
+  for (var i = 0; i < N_; i++)
+  {
+    //totalSphericalDistance = function(pLatLong, y_array)
+    
+    dPhi = totalSphericalDistanceSQ({"lat":tmpPhi + delta, "long":tmpTheta}, ys) - totalSphericalDistanceSQ({"lat":tmpPhi, "long":tmpTheta}, ys);
+
+    dTheta = totalSphericalDistanceSQ({"lat":tmpPhi, "long":tmpTheta + delta}, ys) - totalSphericalDistanceSQ({"lat":tmpPhi, "long":tmpTheta}, ys);
+
+    dPhi *= 1000;
+    dTheta *= 1000;
+
+    gradNorm = Math.sqrt(dPhi*dPhi + dTheta*dTheta);
+
+    if (gradNorm !== gradNorm)
+    {
+      console.log("break!");
+      console.log(dPhi);
+      console.log(dTheta);
+      console.log(tmpPhi);
+      console.log(tmpTheta);
+      break;
+    }
+
+    if (gradNorm < 0.0000000001)
+    {
+      break;
+    }
+
+    dPhi = (dPhi / (gradNorm)) * delta;
+    dTheta = (dTheta / (gradNorm)) * delta;
+
+    tmpPhi -= dPhi;
+    tmpTheta -= dTheta;
+    
+  }
+
+  return {
+    "lat":tmpPhi,
+    "long":tmpTheta,
+    "distance": totalSphericalDistanceSQ({"lat": tmpPhi, "long": tmpTheta}, ys),
+    };
+}
+
+var find_P = function (ys)
+{
+  var result = findMinInBox(-Math.PI/2, Math.PI/2, -Math.PI, Math.PI, ys);
+  // Now let's try a gradient descent //
+
+  var tmpPhi = result["lat"];
+  var tmpTheta = result["long"];
+
+  var dPhi = 0.0;
+  var dTheta = 0.0;
+  var gradNorm = 0.0;
+  var N_ = 1000000;
+  var delta = 1.0 / (N_*10);
+
+  for (var i = 0; i < N_; i++)
+  {
+    //totalSphericalDistance = function(pLatLong, y_array)
+    
+    dPhi = totalSphericalDistance({"lat":tmpPhi + delta, "long":tmpTheta}, ys) - totalSphericalDistance({"lat":tmpPhi, "long":tmpTheta}, ys);
+
+    dTheta = totalSphericalDistance({"lat":tmpPhi, "long":tmpTheta + delta}, ys) - totalSphericalDistance({"lat":tmpPhi, "long":tmpTheta}, ys);
+
+    dPhi *= 1000;
+    dTheta *= 1000;
+
+    gradNorm = Math.sqrt(dPhi*dPhi + dTheta*dTheta);
+
+    if (gradNorm !== gradNorm)
+    {
+      console.log("break!");
+      console.log(dPhi);
+      console.log(dTheta);
+      console.log(tmpPhi);
+      console.log(tmpTheta);
+      break;
+    }
+
+    if (gradNorm < 0.0000000001)
+    {
+      break;
+    }
+
+    dPhi = (dPhi / (gradNorm)) * delta;
+    dTheta = (dTheta / (gradNorm)) * delta;
+
+    tmpPhi -= dPhi;
+    tmpTheta -= dTheta;
+    
+  }
+
+  return {
+    "lat":tmpPhi,
+    "long":tmpTheta,
+    "distance": totalSphericalDistance({"lat": tmpPhi, "long": tmpTheta}, ys),
+    };
+}
+
+
+var latFromLong = function(pVec, long)
+{
+  //console.log(pVec);
+  if (Math.abs(pVec[2]) < 0.00001)
+  {
+    return Math.PI / 2;
+  }
+  var num = -(pVec[0]*Math.cos(long) + pVec[1]*Math.sin(long));
+  return Math.atan(num / pVec[2]);
+}
+
+var pointsCounter = 1;
+
+var addPointToMap = function (degLatInput, degLongInput)
+{
+  // lat long should be in degrees //
+
+  var degLat = 0.0;
+  var degLong = 0.0;
+
+  if (degLatInput < -90.0)
+  {
+    degLat = -90.0;
+  }
+  else if (degLatInput > 90.0)
+  {
+    degLat = 90.0;
+  }
+  else
+  {
+    degLat = degLatInput;
+  }
+
+  if (degLongInput < -180.0)
+  {
+    degLong = -180.0;
+  }
+  else if (degLatInput > 180.0)
+  {
+    degLong = 180.0;
+  }
+  else
+  {
+    degLong = degLongInput;
+  }
+ 
+
+  var marker = L.marker([degLat, degLong]).addTo(map)
+    .bindPopup(pointsCounter.toString())
+    .openPopup();
+  marker.id = "marker_" + pointsCounter.toString();
+
+  console.log("marker id:");
+  console.log(marker.id);
+
+  var table = $("#points_table");
+  var table_html = table.html();
+  if (pointsCounter < 2)
+  {
+    table_html += '<tr><td>Id</td><td>Latitude</td><td>Longitude</td></tr>';
+  }
+  table_html += '<tr id="row_'+pointsCounter+'"><td>' + pointsCounter.toString() + '</td><td>'+ degLat.toString() +'</td><td>'+ degLong.toString() +'</td><td><input type="submit" value="Remove Point" onclick="removePointFromMap('+pointsCounter+')"></td></tr>';
+  table.html(table_html);
+
+  mapPointsDict[pointsCounter] = {"lat": degLat * (Math.PI / 180), "long": degLong * (Math.PI / 180)};
+
+  markerDict[pointsCounter] = marker;
+
+  pointsCounter++;
+
+}
+
+var removePointFromMap = function (pointNumber)
+{
+  console.log("removePointFromMap called with: " + pointNumber.toString());
+  var marker = markerDict[pointNumber];
+  map.removeLayer(marker);
+  delete markerDict[pointNumber];
+  delete mapPointsDict[pointNumber];
+  var markerRow = $("table#points_table tr#row_" + pointNumber.toString()).remove();
+}
+
+var addPoint = function()
+{
+  console.log("addPoint clicked.");
+  var lat_input = $("#latitude_input");
+  var long_input = $("#longitude_input");
+  
+  if (lat_input.val() === "")
+  {
+    return;
+  }
+  if (long_input.val() === "")
+  {
+    return;
+  }
+
+  addPointToMap(lat_input.val(), long_input.val());
+  lat_input.val('');
+  long_input.val('');
+}
+
+var fitLineToPoints = function ()
+{
+  console.log("fitLineToPoints called.");
+  var keys = Object.keys(mapPointsDict);
+  var yarray = [];
+  console.log(keys);
+  if (keys.length < 2)
+  {
+    return;
+  }
+
+  for (var i = 0; i < keys.length; i++)
+  {
+    var key = keys[i];
+    yarray.push(mapPointsDict[key]);
+  }
+  console.log(yarray);
+  var pVec = null;
+  var pVecSQ = null;
+  var pLatLong = {};
+  var pLatLongSQ = {};
+  if (yarray.length < 3)
+  {
+    // compute cross product //
+    console.log("2 vectors");
+    var x = latLon2xyz(yarray[0]["lat"], yarray[0]["long"]);
+    var y = latLon2xyz(yarray[1]["lat"], yarray[1]["long"]);
+    pVec = [x[1]*y[2] - x[2]*y[1], x[2]*y[0] - x[0]*y[2], x[0]*y[1] - x[1]*y[0]];
+    var norm = Math.sqrt(dot(pVec, pVec));
+    pVec[0] = pVec[0] / norm;
+    pVec[1] = pVec[1] / norm;
+    pVec[2] = pVec[2] / norm;
+    pLatLong = xyz2LatLon(pVec); // this is buggy
+  }
+  else {
+    console.log(">= 3 vectors.");
+    pLatLong = find_P(yarray); //
+    pLatLongSQ = find_P_SQ(yarray);
+    pVecSQ = latLon2xyz(pLatLongSQ["lat"], pLatLongSQ["long"]);
+    pVec = latLon2xyz(pLatLong["lat"], pLatLong["long"]);
+    console.log("pVecSQ:");
+    console.log(pVecSQ);
+  }
+  
+  console.log("pVec:");
+  console.log(pVec);
+  console.log("pLatLong:");
+  console.log(pLatLong);
+  console.log("pVec norm:");
+  console.log(Math.sqrt(dot(pVec,pVec)));
+
+  var deltaLong = Math.PI / 360;
+
+  if (pVecMarker_1)
+  {
+    map.removeLayer(pVecMarker_1);
+    pVecMarker_1 = null;
+  }
+  if (pVecMarker_2)
+  {
+    map.removeLayer(pVecMarker_2);
+    pVecMarker_2 = null;
+  }
+  if (pVecMarker_3)
+  {
+    map.removeLayer(pVecMarker_3);
+    pVecMarker_3 = null;
+  }
+  if (pVecMarker_4)
+  {
+    map.removeLayer(pVecMarker_4);
+    pVecMarker_4 = null;
+  }
+
+  p1Lat = pLatLong["lat"]*(180/Math.PI);
+  p1Long = pLatLong["long"]*(180/Math.PI);
+  p2Lat = pLatLong["lat"]*(-180/Math.PI);
+  p2Long = pLatLong["long"]*(180/Math.PI) < 0 ? pLatLong["long"]*(180/Math.PI) + 180: pLatLong["long"]*(180/Math.PI) - 180;
+
+  if (pVecSQ)
+  {
+    console.log("there is: pVecSQ");
+    p3Lat = pLatLongSQ["lat"]*(180/Math.PI);
+    p3Long = pLatLongSQ["long"]*(180/Math.PI);
+    p4Lat = pLatLongSQ["lat"]*(-180/Math.PI);
+    p4Long = pLatLongSQ["long"]*(180/Math.PI) < 0 ? pLatLongSQ["long"]*(180/Math.PI) + 180: pLatLongSQ["long"]*(180/Math.PI) - 180;
+
+    pVecMarker_3 = L.marker([p3Lat, p3Long]).addTo(map)
+      .bindPopup('Least Squares<br>(L_2 Norm)<br>Perpendicular Point (3)<br>Lat: ' + p3Lat.toString() + '<br>Long: ' + p3Long.toString());
+
+    pVecMarker_4 = L.marker([p4Lat, p4Long]).addTo(map)
+      .bindPopup('Least Squares<br>(L_2 Norm)<br>Perpendicular Point (4)<br>Lat: ' + p4Lat.toString() + '<br>Long: ' + p4Long.toString());
+  }
+
+  pVecMarker_1 = L.marker([p1Lat, p1Long]).addTo(map)
+    .bindPopup('Least Max Distance<br>(L_infinity Norm)<br>Perpendicular Point (1)<br>Lat: ' + p1Lat.toString() + '<br>Long: ' + p1Long.toString());
+
+  pVecMarker_2 = L.marker([p2Lat, p2Long]).addTo(map)
+    .bindPopup('Least Max Distance<br>(L_infinity Norm)<br>Perpendicular Point (2)<br>Lat: ' + p2Lat.toString() + '<br>Long: ' + p2Long.toString());
+
+  /*L.marker([51.5, -0.09]).addTo(map)
+      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+      .openPopup();
+  */
+
+  var latlongs = [];
+  var latlongsSQ = [];
+
+  for (i = -720; i < 720; i++)
+  {
+    latlongs.push([(180)/Math.PI*latFromLong(pVec, deltaLong*i), (180/Math.PI)*deltaLong*i]);
+  }
+
+  if (multiPolyline2)
+  {
+    map.removeLayer(multiPolyline2);
+    multiPolyline2 = null;
+  }
+
+  if(pVecSQ)
+  {
+    for (i = -720; i < 720; i++)
+    {
+      latlongsSQ.push([(180)/Math.PI*latFromLong(pVecSQ, deltaLong*i), (180/Math.PI)*deltaLong*i]);
+    }
+    var multiPolylineOptionsSQ = {color: 'green'};
+    multiPolyline2 = L.polyline(latlongsSQ, multiPolylineOptionsSQ);
+    multiPolyline2.addTo(map);
+  }
+
+  //console.log(latlongs);
+
+  var multiPolylineOptions = {color: 'blue'};
+
+  if (multiPolyline)
+  {
+    map.removeLayer(multiPolyline);
+    multiPolyline = null;
+  }
+
+  multiPolyline = L.polyline(latlongs, multiPolylineOptions);
+
+  multiPolyline.addTo(map);
+
+}
+
+</script><blockquote>
+</blockquote>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/dot-product/" rel="tag">Dot Product</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/trigonometry/" rel="tag">Trigonometry</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/geometry/" rel="tag">Geometry</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/even-permutations-some-simple-non-abelian-groups/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Even Permutations and Some Simple Non-Abelian Groups</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/spheres-distances-maps-and-more/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fspheres-distances-maps-and-more%2f" />
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Even Permutations and Some Simple Non-Abelian Groups - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Even Permutations and Some Simple Non-Abelian Groups" />
+<meta property="og:description" content="In this entry we prove that A_n is normal when n &gt;= 5. We then use this result to prove that there is no generalization of &ldquo;even&rdquo; and &ldquo;odd&rdquo; permutation to three or more classes &ndash; i.e. there is no class of homomorphisms into Z_n, where n &gt; 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/even-permutations-some-simple-non-abelian-groups/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-08-13T14:38:14-04:00" />
+<meta property="article:modified_time" content="2021-08-13T14:38:14-04:00" />
+
+
+		<meta itemprop="name" content="Even Permutations and Some Simple Non-Abelian Groups">
+<meta itemprop="description" content="In this entry we prove that A_n is normal when n &gt;= 5. We then use this result to prove that there is no generalization of &ldquo;even&rdquo; and &ldquo;odd&rdquo; permutation to three or more classes &ndash; i.e. there is no class of homomorphisms into Z_n, where n &gt; 2."><meta itemprop="datePublished" content="2021-08-13T14:38:14-04:00" />
+<meta itemprop="dateModified" content="2021-08-13T14:38:14-04:00" />
+<meta itemprop="wordCount" content="2807">
+<meta itemprop="keywords" content="Jordan-Holder,Subgroups,Permutations," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Even Permutations and Some Simple Non-Abelian Groups"/>
+<meta name="twitter:description" content="In this entry we prove that A_n is normal when n &gt;= 5. We then use this result to prove that there is no generalization of &ldquo;even&rdquo; and &ldquo;odd&rdquo; permutation to three or more classes &ndash; i.e. there is no class of homomorphisms into Z_n, where n &gt; 2."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Even Permutations and Some Simple Non-Abelian Groups</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-13T14:38:14-04:00">2021-08-13</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/group-theory/" rel="category">Group Theory</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lemma-1">Lemma 1</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-2-product-of-2-cycles">Lemma 2 (product of 2-cycles)</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-3-pair-of-2-cycles-equals-product-of-3-cycles">Lemma 3 (pair of 2-cycles equals product of 3-cycles)</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-4-long-cycle-implies-3-cycle">Lemma 4 (long cycle implies 3-cycle)</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-a_n-is-simple-when-n--5">Theorem (A_n is simple when n &gt;= 5)</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-n_th-roots-of-unity">Definition (n_th roots of unity)</a></li>
+    <li><a href="#corollary-no-analogous-complex-sign">Corollary (no analogous complex Sign)</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>n this entry, we&rsquo;re going to prove that \(A_n\), the subgroup of all even permutations on \(n\) symbols is <em>simple</em>. Recall that a subgroup \(H\) of \(G\) is a <em>normal subgroup</em> (written \(H \trianglelefteq G\)) if and only if \( gHg^{-1} = H\), for all \(g \in G\).</p>
+<p>We should point out a subtlety in how we&rsquo;ve used this symbol. \(N \triangleleft G\) often means that \(N\) is a <em>proper</em> normal subgroup of \(G\) &ndash; i.e. that \(N\) is not equal to \(G\). However, we&rsquo;ve been using it (in previous entries) to mean that &ldquo;\(N\) is a normal subgroup of \(G\) and it might be equal to \(G\)&rdquo;. We&rsquo;re going to switch to using the more standard notation, and instead write \(N \trianglelefteq G\) for that, instead. Sorry for the inconvenience.</p>
+<p>Let&rsquo;s get started. We begin, as usual, with some lemmas.</p>
+<h2 id="lemma-1">Lemma 1</h2>
+<p>Let \(H \trianglelefteq A_n\), where \(n \geq 5\). If \( (a, b, c) \in H \) is a <em>3-cycle</em>, then \(H\) contains <em>every</em> <em>3-cycle</em> of \(A_n\).</p>
+<h3 id="proof">Proof</h3>
+<p>First, notice that for any <em>3-cycle</em> \( (x, y, z) \), it&rsquo;s inverse, \((x,y,z)^{-1}\) is equal to \( (x, z, y) \).</p>
+<p>Second, notice that \(Sign( (x,y,z) ) = 1 \), so every <em>3-cycle</em> (in \(S_n\)) is an even permutation, and thus belongs to \(A_n\). (proven <a href="/blog/more-math-of-permutations/#theorem-sign-of-k-cycle">here</a>)</p>
+<p>Now, since \(n \geq 5\), there are at least two symbols which do not appear in \( (a,b,c)\), let&rsquo;s call them \(i\) and \(j\). Since \(H \trianglelefteq G \), we must have
+\[ (a, i , j)(a, b, c)(a, i, j)^{-1} \]
+\[ = (a,i,j)(a,b,c)(a, j, i) \]
+\[ = (b, c, i) \in H \tag{1}\label{1} \]</p>
+<p>Further, notice that since \(H\) is a subgroup, that \( (a,b,c)^{-1} = \) \( (a,c,b) \in H\), so a similar calculation to what we just did above shows that \( (c,b,i) \in H \).</p>
+<p>Similarly, using \( (b, i, j) \) and \( (c, i, j) \), we can show that \( (c, a, i) \), \( (a, c, i) \), \( (a, b, i) \) and \( (b, a, i) \) are all in \(H\).</p>
+<p>Going even further, by starting with \( (a, j, i)\), instead, we can show all of the above <em>3-cycles</em> with \(j\) instead of \(i\) are also in \(H\).</p>
+<p>Ultimately, since \(i\) and \(j\) we arbitrarily chosen symbols not in \( (a,b,c)\), we can show that every <em>3-cycle</em> with <em>exactly</em> two of \(a\), \(b\), or \(c\) is in \(H\).</p>
+<p>Since every <em>3-cycle</em> with exactly two of \(a\), \(b\), or \(c\) is in \(H\), we have</p>
+<p>\[ (a, b, j)(b, a, i) = (a, i, j) \in H \tag{2}\label{2} \]</p>
+<p>Since \(H\) is a subgroup.</p>
+<p>Again, \(a\) can be replaced by \(b\) or \(c\) in the above equation. We can also swap the order of, \(i\) and \(j\), or replace either (or both of) them with any other symbol(s) not equal to \(a\), \(b\), or \(c\), which means we&rsquo;ve now shown that \(H\) contains every <em>3-cycle</em> with exactly one of \(a\), \(b\), or \(c\).</p>
+<p>Since there are only 5 symbols, at least one of them in a <em>3-cycle</em> must be \(a\), \(b\), or \(c\). Thus, when \(n = 5\), \(H\) contains every <em>3-cycle</em></p>
+<p>Now, suppose that \(n &gt; 5\), and let \(k\) be another symbol.</p>
+<p>Since \(H\) contains every <em>3-cycle</em> with exactly one of \(a\), \(b\), or \(c\), we have
+\[ (a, k, i)(a, i, j) = (i, j, k) \in H \tag{3}\label{3}\]</p>
+<p>Since \(i\), \(j\), and \(k\) can be any symbols not equal to \(a\), \(b\), or \(c\), we have shown that \(H\) contains all of the <em>3-cycles</em> with no symbols in common with \( (a,b,c)\).</p>
+<p>Therefore, \(H\) contains every <em>3-cycle</em> in \(S_n\).</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-2-product-of-2-cycles">Lemma 2 (product of 2-cycles)</h2>
+<p>Every permutation in \(S_n\), where \(n \geq 2\), can be factored as a product of <em>2-cycles</em>.</p>
+<p><strong>Note:</strong> this factorization is <strong>not</strong> unique, and in general these will <strong>not</strong> be <em>disjoint</em> 2-cycles.</p>
+<h3 id="proof-1">Proof</h3>
+<p>We know from the <a href="/blog/more-math-of-permutations/#theorem-disjoint-cycles">Disjoint Cycles Theorem</a> that we can break down a permutation into <em>disjoint</em> cycles. Generally, those cycles will not be 2-cycles. However, all we have to do is show that each <em>k-cycle</em> can be factored into a product of <em>2-cycles</em> and we&rsquo;ll have our result.</p>
+<p>First notice that if the length of the cycle is \(1\), so that the cycle is equal to \((a)\), then since \(n \geq 2\), there is another symbol not equal to \(a\). Call it \(b\). Then, \( (a,b)(a,b) = (a)\), because they both fix everything.</p>
+<p>Second, if the length of the cycle is \(2\), we&rsquo;re okay.</p>
+<p>Third, notice that for \(k &gt; 2\), we have</p>
+<p>\[ (a_1, a_2, &hellip; a_k) \]
+\[ = (a_k, a_{k-1})(a_k, a_{k-2}) &hellip; (a_k, a_2)(a_k, a_1) \tag{4}\label{4} \]</p>
+<p>Remember, permutation composition, like function composition, goes from right to left. Notice that first, \(a_k\) goes to \(a_1\), which is where it should go. This means that \(a_k\) is the first element which is taken care of. Then \(a_1\) goes to \(a_k\) and then from \(a_k\) to \(a_2\) in the second product from the right. By the end, every element from \(a_1\) to \(a_{k-2}\) will go &ldquo;through&rdquo; \(a_k\) to get to the right element. Then, finally, on the far left, \(a_{k-1}\) goes to \(a_k\). They are then all taken care of.</p>
+<p>This shows that each <em>k-cycle</em> can be broken down into a product of <em>2-cycles</em></p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-3-pair-of-2-cycles-equals-product-of-3-cycles">Lemma 3 (pair of 2-cycles equals product of 3-cycles)</h2>
+<p>Let \(n \geq 4\), then any product of two <em>2-cycles</em> in \(S_n\) is equal to a product of <em>3-cycles</em>.</p>
+<p><strong>Note:</strong> Once again, these <em>3-cycles</em> will <strong>not</strong> in general be disjoint cycles.</p>
+<h3 id="proof-2">Proof</h3>
+<p>There are three possibilities for the pair of <em>2-cycles</em></p>
+<ol>
+<li>They share both symbols. This means that the pair is of the form \( (a,b)(a,b)\), which is the identity. Since \(n \geq 4\) there is another symbol, let&rsquo;s call it \(c\), so we can replace the pair with \( (a,b,c)(a,b,c)\).</li>
+<li>They share one symbol. So the pair is of the form \( (a,b)(a,c)\). This is equal to the <em>3-cycle</em> \( (a,c,b) \).</li>
+<li>They share no symbols. In this case they are of the form \((a,b)(c,d)\). This is also fine, as they are equivalent to \((a,d,c)(a,b,c)\).</li>
+</ol>
+<p>That takes care of all of the possibilities.</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-4-long-cycle-implies-3-cycle">Lemma 4 (long cycle implies 3-cycle)</h2>
+<p>Let \(N\) be a normal subgroup of \(A_n\), where \(n \geq 5\). Let \(\rho\) be a permutation of \(N\), such that when \(\rho\) is broken into disjoint cycles, there is at least one cycle of length \(l \geq 4\). Then \(N\) must contain a <em>3-cycle</em></p>
+<p>(We&rsquo;ll end up using this lemma a few times in the proof of the following corollary.)</p>
+<h3 id="proof-3">Proof</h3>
+<p>Let \(c_l\) represent the cycle of length \(l\), so that \(c_l = (a_1, a_2, &hellip; a_l) \). Then we have</p>
+<p>\[ \rho = c_l \cdot \sigma \tag{5}\label{5} \]</p>
+<p>where \(\sigma\) is the product of all of the other cycles of \(\rho\) not equal to \(c_l\).  Since \(N \trianglelefteq A_n\), and \( (a_1, a_2, a_3)\) is an even permutation and therefore an element of \(A_n\), we can conjugate \(\rho\) by \( (a_1, a_2, a_3) \) and obtain an element of \(N\). Thus</p>
+<p>\[ (a_1, a_2, a_3) \cdot \rho \cdot (a_1, a_3, a_2) = \pi \tag{6}\label{6} \]</p>
+<p>is an element of \(N\). Combining equations (5) and (6) above we get</p>
+<p>\[ \pi = (a_1, a_2, a_3) \cdot c_l \cdot \sigma \cdot (a_1, a_3, a_2) \tag{7}\label{7} \]</p>
+<p>Since \(a_1\), \(a_2\) and \(a_3\) are all elements of cycle \(c_l\) and \(\sigma\) is the product of the other disjoint cycles of \(\rho\), \(\sigma\) fixes \(a_1\), \(a_2\) and \(a_3\). Therefore, it commutes with \( (a_1, a_3, a_2) \), \(c_l\), and \( (a_1, a_2, a_3) \), which gives us</p>
+<p>\[ \pi = (a_1, a_2, a_3) \cdot c_l \cdot (a_1, a_3, a_2) \cdot \sigma \tag{8}\label{8} \]</p>
+<p>Since \(N\) is a group, \( \rho \cdot \pi^{-1} \) must also be an element of \(N\). Notice that</p>
+<p>\[ \pi^{-1} = \sigma^{-1} \cdot (a_1, a_2, a_3) \cdot c_l^{-1} \cdot (a_1, a_3, a_2) \tag{9}\label{9}\]</p>
+<p>We can calculate \( \rho \cdot \pi^{-1}\) by using equations (5) and (9). Notice that the \(\sigma^{-1}\) in equation (9) will cancel with the \(\sigma\) in equation (5). This gives us</p>
+<p>\[ \rho \cdot \pi^{-1} = c_l \cdot (a_1, a_2, a_3) \cdot c_l^{-1} \cdot (a_1, a_3, a_2) \tag{10}\label{10} \]</p>
+<p>Let&rsquo;s compute where \(a_1\) gets sent to together.</p>
+<p>First it is sent to \(a_3\) (starting from the far right, since we&rsquo;re composing permutations), then in \(c_l^{-1}\) it is sent to \(a_2\). Then, moving one more group to the left, it is sent to \(a_3\) again. Finally, in \(c_l\) on the far left, it is sent to \(a_4\). When you calculate out the rest, you get</p>
+<p>\[ \rho \cdot \pi^{-1} = (a_1, a_4, a_2) \tag{11}\label{11} \]</p>
+<p>Therefore, \(N\) has a <em>3-cycle</em>.</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-a_n-is-simple-when-n--5">Theorem (A_n is simple when n &gt;= 5)</h2>
+<p>Let \(A_n\) be the subgroup of even permutations of \(S_n\), the group of all permutations on \(n\) symbols. When \(n \geq 5\), \(A_n\) is <em>simple</em>.</p>
+<p>I.e. if \(N \trianglelefteq A_n\), then \(N = A_n\) or \(N = \{e\}\).</p>
+<h3 id="proof-4">Proof</h3>
+<p>Suppose that \(N \trianglelefteq A_n\). We will prove two facts:</p>
+<ol>
+<li>Every permutation in \(A_n\) can be rewritten as the product of <em>3-cycles</em></li>
+<li>\(N\) contains every <em>3-cycle</em>.</li>
+</ol>
+<p>Proof of 1:</p>
+<p>By <a href="#lemma-2-product-of-2-cycles">lemma 2</a> above, every element of \(S_n\) can be written as a product of <em>2-cycles</em>. Therefore, since \(A_n \leq S_n\), every element of it can also be written as a product of <em>2-cycles</em>. Recall from <a href="/blog/more-math-of-permutations/#theorem-sign-of-k-cycle">Theorem (sign of k-cycle)</a>, that a <em>2-cycle</em>, will have \(Sign = -1\). Every element of \(A_n\) has \(Sign = 1\) (by definition), so no matter how we factor a permutation in \(A_n\) into a product of <em>2-cycles</em> there must be an even number of them (this is where the term &ldquo;<em>even permutation</em>&rdquo; comes from).</p>
+<p>By <a href="#lemma-3-pair-of-2-cycles-equals-product-of-3-cycles">lemma 3</a> each pair of <em>2-cycles</em> can be re-written as a product of <em>3-cycles</em>. This finishes the proof of 1.</p>
+<p>Proof of 2:</p>
+<p>By <a href="#lemma-1">lemma 1</a> all  we need to do is prove \(N\) contains at least one <em>3-cycle</em>. It&rsquo;s not as easy as it sounds at first.</p>
+<p>Recall that</p>
+<p>\[ \text{fix}(\rho) := \{ x \in X | \rho(x) = x \}\]</p>
+<p>Let \(\rho \in N\) be such that no other permutation &ndash; except for the identity &ndash; fixes more elements. Suppose \(\rho \) only has <em>2-cycles</em>, except for the elements which it fixes, if there are any. First suppose there are no fixed points, so we have</p>
+<p>\[ \rho = (a_1, a_2) \cdot (a_3, a_4) \cdot (a_5, a_6) \cdot &hellip; \]</p>
+<p>because \(n \geq 5\), and every element belongs to a <em>2-cycle</em>.</p>
+<p>(In what we do next, we will be making an argument very similar to what we did in the proof of lemma 4, just above. Because this argument is so similar, we will not be as thorough.)</p>
+<p>Then, since \(N \trianglelefteq A_n\), we can conjugate \(\rho\) by the <em>3-cycle</em> \( (a_1, a_3, a_5) \) to obtain</p>
+<p>\[ (a_1, a_3, a_5) \cdot (a_1, a_2) \cdot (a_3, a_4) \cdot (a_5, a_6) \cdot (a_1, a_5, a_3) \cdot &hellip; \]</p>
+<p>which must be an element of \(N\).</p>
+<p>That is equal to</p>
+<p>\[ \pi = (a_1, a_6) \cdot (a_2, a_3) \cdot (a_4, a_5) \cdot &hellip; \]</p>
+<p>(In the proof of lemma 4, we calculated \( \rho \cdot \pi^{-1} \), however here, since every cycle is a <em>2-cycle</em>, \(\pi = \pi^{-1}\), so we&rsquo;ll omit the inverse)</p>
+<p>This gives us</p>
+<p>\[ \rho \cdot \pi = (a_1, a_5, a_3)(a_2, a_4, a_6) \tag{12}\label{12} \]</p>
+<p>is an element of \(N\). This is impossible, however, because we assumed that no other permutation fixed more elements than \(\rho\). \(\rho \cdot \pi\), however, fixes \(a_7\) and \(a_8\), which \(\rho\) cannot, since it is composed of an even number of <em>2-cycles</em> and therefore contains at least <strong>four</strong> <em>2-cycles</em>.</p>
+<p>Therefore, if \(\rho\) consists entirely of <em>2-cycles</em>, it must have <strong>exactly</strong> two <em>2-cycles</em>.</p>
+<p>Now, suppose \(\rho = (a_1, a_2) \cdot (a_3, a_4) \).</p>
+<p>As we did before, \( (a_1, a_3, a_5) \in A_n\), and \(N\) is a normal subgroup, so
+\[ \pi = (a_1, a_3, a_5) \cdot (a_1, a_2) \cdot (a_3, a_4) \cdot (a_1, a_5, a_3) \]
+which is equal to
+\[ (a_2, a_3) \cdot (a_4, a_5) \]
+Then, taking the composition, \( \rho \cdot \pi \) gives us
+\[ (a_1, a_2, a_4, a_5, a_3) \]
+Which, by lemma 4, above, implies that \(N\) has a <em>3-cycle</em>.</p>
+<p>So far we&rsquo;ve shown that if \(N\) contains a permutation which is only the product of <em>2-cycles</em>, then it also must contain a <em>3-cycle</em>.</p>
+<p>Lemma 4 shows us that if \(N\) contains a permutation with a cycles longer than \(4\), it must also contain a <em>3-cycle</em>, so now suppose that it contains a permutation with more than one <em>3-cycle</em>.</p>
+<p>Then</p>
+<p>\[ \rho = (a_1, a_2, a_3) \cdot (a_4, a_5, a_6) \cdot &hellip; \]</p>
+<p>Once again, we have \( (a_1, a_4, a_5) \in A_n\), so the product</p>
+<p>\[ \pi = (a_1, a_4, a_5)  \cdot (a_1, a_2, a_3) \cdot (a_4, a_5, a_6) \cdot (a_1, a_5, a_4) \cdot &hellip; \]</p>
+<p>is also in \(N\).</p>
+<p>Computing \( \rho \cdot \pi^{-1}\) gives us</p>
+<p>\[ (a_1, a_4, a_2, a_6, a_5) \]</p>
+<p>which must be a permutation in \(N\). By lemma 4 above, this implies that \(N\) contains a <em>3-cycle</em>.</p>
+<p>The only other case to consider is when \(N\) contains a <em>3-cycle</em>. In that case, we are done.</p>
+<p><strong>QED</strong></p>
+<p>The best-known corollary of this theorem comes from <a href="https://en.wikipedia.org/wiki/Galois_theory" target="_blank">Galois Theory (Wikipedia)</a>, which we&rsquo;ll get to later. That&rsquo;s the theorem that shows that it&rsquo;s impossible to solve the general quintic equation with radicals. However, since we&rsquo;ve proven the <a href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/#corollary-jordan---holder-theorem">Jordan-Holder Theorem</a>, we&rsquo;re able to prove another result about the impossibility of finding a different type of equation.</p>
+<p>Before we do that, though, we&rsquo;ll have to briefly introduce <em>roots of unity</em>.</p>
+<h2 id="definition-n_th-roots-of-unity">Definition (n_th roots of unity)</h2>
+<p>Let \(z \in \mathbb{C}\) be such that \(z^n = 1\). We say that \(z\) is an <em>n<sup>th</sup> root of unity</em>.</p>
+<p>For example, \(1\) is a 1<sup>st</sup> root of unity (not very interesting, though), \( \{1, -1 \} \) is the set of 2<sup>nd</sup> roots of unity. The 3<sup>rd</sup> roots of unity look like this</p>
+<p><img src="/images/roots_of_unity.png" alt="3rd roots of unity" title="3rd roots of unity and the unit circle"></p>
+<p>We&rsquo;ve drawn the unit circle as well. Every n<sup>th</sup> root of unity for every n will lie on that circle (it is afterall, called the <em>unit</em> circle). The horizontal dotted line represents the real number line, while the vertical dotted line represents the imaginary number line.</p>
+<p>This means that two of the three 3<sup>rd</sup> roots of unity don&rsquo;t lie on the real number line. The set of 3<sup>rd</sup> roots of unity is \( \{ 1, \omega, \omega^2 \} \), where \(\omega = -\frac{1}{2} + \frac{\sqrt{3}}{2}i\), and \(\omega^{2} = -\frac{1}{2} - \frac{\sqrt{3}}{2}i\).</p>
+<p>The n<sup>th</sup> roots of unity form a group under multiplication, with identity element equal to 1. The group is cyclic. We&rsquo;ll prove this in a later entry.</p>
+<p>This is enough of an intro to roots of unity for the result we&rsquo;re going to prove.</p>
+<p>Recall the definition of \(Sign(\sigma)\), where \(\sigma \in S_n\) (<a href="/blog/more-math-of-permutations/#definition-sign">defined here</a>).</p>
+<p>Notice that \(Sign\) is a family of homomorphisms from \(S_m\) into the set \(\{1, -1\} \). We just saw that that set is equal to the group of the 2<sup>nd</sup> roots of unity. It&rsquo;s natural to wonder whether it&rsquo;s possible to find other families of homomorphisms \( \phi_{m,n} : S_m \rightarrow \mathcal{R}_n\), where \(\mathcal{R}_n\) is the set of n<sup>th</sup> roots of unity, and \(m \geq n\). It turns out that this is impossible when \(n &gt; 2\).</p>
+<h2 id="corollary-no-analogous-complex-sign">Corollary (no analogous complex Sign)</h2>
+<p>Let \(S_m\) be the group of permutations on \(m\) symbols, and let \(\mathcal{R}_n\) be the group of \(n^{th}\) roots of unity. \(m \geq n\).</p>
+<p>If \(m \geq 5\) and \(n &gt; 2\), there is no homomorphism \(\phi_{m,n} : S_m \rightarrow \mathcal{R}_n\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>Suppose there were such a \(\phi_{m,n} : S_m \rightarrow \mathcal{R}_n\), then by <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#theorem-kernels-are-normal-subgroups">this theorem</a> the kernel of \(\phi_{m,n}\) would be a normal subgroup of \(S_m\). It would have index \(n\).</p>
+<p>This means that \(S_m\) would have a chain of subnormal subgroups like
+\[ S_m \triangleright \ker(\phi_{m,n}) \triangleright &hellip; \triangleright \{e\} \tag{13}\label{13}\]</p>
+<p>However, when we proved that \(A_m\) is a simple group (because \(m \geq 5\)) we showed that \(S_m\) has a chain of subnormal subgroups that is exactly equal to</p>
+<p>\[S_m \triangleright A_m \triangleright \{e\} \tag{14}\label{14}\]</p>
+<p>which <em>cannot</em> possibly be made any longer.</p>
+<p>By the <a href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/#corollary-jordan---holder-theorem">Jordan-Holder Theorem</a> those two chains will produce sets of factor groups which are equal up to isomorphisms and reordering, but this is impossible to do with (13) and (14) because the chain in (14) produces a set of exactly two factor groups, namely</p>
+<p>\[ \{ \mathbb{Z}_2, A_m\} \tag{15}\label{15}\]</p>
+<p>where \( \mathbb{Z}_2 = S_m / A_m \) and \( A_m = A_m / \{e\}\).</p>
+<p>However, the chain from (13) above will generate a set of factor groups containing \( \mathbb{Z}_n = S_{m} / {\ker(\phi_{m,n})}\). Therefore, the two sets can&rsquo;t be equal, and we have achieved a contradiction, so there cannot be such a family of homomorphisms.</p>
+<p><strong>QED</strong></p>
+<p>That&rsquo;s it for this entry. Bye!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/jordan-holder/" rel="tag">Jordan-Holder</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/subgroups/" rel="tag">Subgroups</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/permutations/" rel="tag">Permutations</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/parallel-sorting-in-theory-and-in-practice-iii/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Parallel Sorting in Theory and in Practice III</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/blog/spheres-distances-maps-and-more/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Spheres, Distances, Maps and More!</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+/blog/even-permutations-some-simple-non-abelian-groups/
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2feven-permutations-some-simple-non-abelian-groups%2f" />
+</body>
+</html>
