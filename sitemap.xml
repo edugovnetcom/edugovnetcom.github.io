@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/binomial-expansion/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-08-16T11:21:15-04:00</lastmod>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-08-16T11:21:15-04:00</lastmod>
-  </url><url>
-    <loc>/tags/dot-product/</loc>
-    <lastmod>2021-08-16T11:21:15-04:00</lastmod>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/tags/factorial/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/categories/fields/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/tags/ideals/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/blog/intro-to-rings-and-fields/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/categories/math/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/categories/rings/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-08-27T08:42:22-04:00</lastmod>
+  </url><url>
+    <loc>/tags/dot-product/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
     <loc>/tags/geometry/</loc>
@@ -20,13 +44,7 @@
     <loc>/categories/linear-algebra/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/categories/math/</loc>
-    <lastmod>2021-08-16T11:21:15-04:00</lastmod>
-  </url><url>
     <loc>/blog/spheres-distances-maps-and-more/</loc>
-    <lastmod>2021-08-16T11:21:15-04:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
     <loc>/tags/trigonometry/</loc>

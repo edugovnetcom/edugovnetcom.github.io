@@ -72,6 +72,29 @@
 		<h1 class="main__title">Blogs</h1>
 	</header><article class="list__item post">
 	<figure class="list__thumbnail">
+		<a href="/blog/intro-to-rings-and-fields/">
+			<img src="/images/tiny_tree_on_stump.jpg" alt="Intro to Rings and Fields" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/blog/intro-to-rings-and-fields/" rel="bookmark">
+			Intro to Rings and Fields
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-27T08:42:22-04:00">2021-08-27</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/rings/" rel="category">Rings</a>, <a class="meta__link" href="/categories/fields/" rel="category">Fields</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		In this entry we introduce rings and fields. We establish some of their basic properties.
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
 		<a href="/blog/spheres-distances-maps-and-more/">
 			<img src="/images/bw_old_map_near_equator.png" alt="Spheres, Distances, Maps and More!" />
 		</a>
@@ -157,29 +180,6 @@
 	<div class="content list__excerpt post__content clearfix">
 		As promised, this is the second entry on parallel sorting. In this entry, we&rsquo;ll implement <code>merge_sort</code>, and then give two different ways to make it run in parallel. The first one will be a bit simpler than the second one.
 	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="/blog/parallel-sorting-in-theory-and-in-practice-i/">
-			<img src="/images/trainyard_with_lights.jpg" alt="Parallel Sorting in Theory and in Practice I" />
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/blog/parallel-sorting-in-theory-and-in-practice-i/" rel="bookmark">
-			Parallel Sorting in Theory and in Practice I
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-23T14:26:40-04:00">2021-07-23</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/algorithms/" rel="category">Algorithms</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		We&rsquo;re going to begin our discussion of parallel algorithms. We&rsquo;ll do this by giving a parallel version of <code>quick_sort_plus</code>. We finish this entry by extending the &ldquo;Almost the Master Theorem&rdquo; to include cases where f(n) = cn^alpha*log_2(n). In our next entry, we&rsquo;ll introduce <code>merge_sort</code> as well as a couple different parallel versions of it. We&rsquo;ll also discuss both the theoretical and practical runtimes for these functions.
-	</div>
 </article>
 </main>
 
@@ -195,11 +195,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/blog/intro-to-rings-and-fields/">Intro to Rings and Fields</a></li>
 			<li class="widget__item"><a class="widget__link" href="/blog/spheres-distances-maps-and-more/">Spheres, Distances, Maps and More!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/blog/even-permutations-some-simple-non-abelian-groups/">Even Permutations and Some Simple Non-Abelian Groups</a></li>
 			<li class="widget__item"><a class="widget__link" href="/blog/parallel-sorting-in-theory-and-in-practice-iii/">Parallel Sorting in Theory and in Practice III</a></li>
 			<li class="widget__item"><a class="widget__link" href="/blog/parallel-sorting-in-theory-and-in-practice-ii/">Parallel Sorting in Theory and in Practice II</a></li>
-			<li class="widget__item"><a class="widget__link" href="/blog/parallel-sorting-in-theory-and-in-practice-i/">Parallel Sorting in Theory and in Practice I</a></li>
 		</ul>
 	</div>
 </div>
@@ -212,6 +212,10 @@
 				<span class="widget__counter widget__counter--bubble">7</span>
 				</li>
 			<li class="widget__item">
+				<a class="widget__link" href="/categories/fields/">Fields</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
 				<a class="widget__link" href="/categories/group-theory/">Group Theory</a>&nbsp;
 				<span class="widget__counter widget__counter--bubble">9</span>
 				</li>
@@ -221,10 +225,14 @@
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/math/">Math</a>&nbsp;
-				<span class="widget__counter widget__counter--bubble">14</span>
+				<span class="widget__counter widget__counter--bubble">15</span>
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/number-theory/">Number Theory</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/rings/">Rings</a>&nbsp;
 				<span class="widget__counter widget__counter--bubble">1</span>
 				</li>
 			<li class="widget__item">
@@ -237,10 +245,13 @@
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/binomial-expansion/" title="Binomial expansion">Binomial expansion</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/complexity/" title="Complexity">Complexity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dot-product/" title="Dot Product">Dot Product</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/factorial/" title="Factorial">Factorial</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/geometry/" title="Geometry">Geometry</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/homomorphisms/" title="Homomorphisms">Homomorphisms</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ideals/" title="Ideals">Ideals</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/infinite-sums/" title="Infinite Sums">Infinite Sums</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/jordan-holder/" title="Jordan-Holder">Jordan-Holder</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lattices/" title="Lattices">Lattices</a>
@@ -287,7 +298,6 @@
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script src="/js/custom.js"></script>/blog/
-<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2f" />
+<script src="/js/custom.js"></script><img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2f" />
 </body>
 </html>

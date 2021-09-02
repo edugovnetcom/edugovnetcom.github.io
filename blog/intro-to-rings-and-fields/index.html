@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Intro to Rings and Fields - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Intro to Rings and Fields" />
+<meta property="og:description" content="In this entry we introduce rings and fields. We establish some of their basic properties." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/intro-to-rings-and-fields/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-08-27T08:42:22-04:00" />
+<meta property="article:modified_time" content="2021-08-27T08:42:22-04:00" />
+
+
+		<meta itemprop="name" content="Intro to Rings and Fields">
+<meta itemprop="description" content="In this entry we introduce rings and fields. We establish some of their basic properties."><meta itemprop="datePublished" content="2021-08-27T08:42:22-04:00" />
+<meta itemprop="dateModified" content="2021-08-27T08:42:22-04:00" />
+<meta itemprop="wordCount" content="2557">
+<meta itemprop="keywords" content="Factorial,Binomial expansion,Ideals," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intro to Rings and Fields"/>
+<meta name="twitter:description" content="In this entry we introduce rings and fields. We establish some of their basic properties."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Intro to Rings and Fields</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-27T08:42:22-04:00">2021-08-27</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/rings/" rel="category">Rings</a>, <a class="meta__link" href="/categories/fields/" rel="category">Fields</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/tiny_tree_on_stump.jpg" alt="Intro to Rings and Fields">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-of-ring">Definition of Ring</a></li>
+    <li><a href="#definition-of-a-field">Definition of a Field</a></li>
+    <li><a href="#a-note-on-notation">A note on notation</a></li>
+    <li><a href="#mini-lemma-1-times-0">Mini-Lemma 1: Times 0</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-2-times-negative">Mini-lemma 2: Times negative</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-corollary-neg-1-squared">Mini-corollary: neg 1 squared</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definitions-factorial-and-binomial-coefficient">Definitions: Factorial and Binomial coefficient</a></li>
+    <li><a href="#lemma-pascals-triangle">Lemma: Pascal&rsquo;s Triangle</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-binomial-expansion">Lemma Binomial Expansion</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-ring-homomorphism">Definition: Ring homomorphism</a></li>
+    <li><a href="#definition-ideal">Definition: Ideal</a></li>
+    <li><a href="#definition-subring">Definition: subring</a></li>
+    <li><a href="#mini-lemma-subring-test">Mini-lemma: subring test</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-ideals-are-subrings">Mini-lemma: Ideals are subrings</a>
+      <ul>
+        <li><a href="#proof-6">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-image-of-phi-is-a-subring">Mini-lemma: Image of phi is a subring</a>
+      <ul>
+        <li><a href="#proof-7">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-factor-rings-are-rings">Lemma: Factor rings are rings</a>
+      <ul>
+        <li><a href="#proof-8">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">I</span>t&rsquo;s about time we introduced <em>rings</em> and <em>fields</em>.</p>
+<h2 id="definition-of-ring">Definition of Ring</h2>
+<p>Let \(R\) be a set with two binary operators, usually written \(+\) and \(\cdot\), where the following conditions hold</p>
+<ol>
+<li>\(R\) under the action of \(+\) is an <em>Abelian</em> group with identity element \(0\).
+<ol>
+<li>For all \(x, y \in R\), we have \( x + y = y + x\)</li>
+<li>For all \(x \in R\), we have \( x + 0 = 0 + x = x\)</li>
+<li>For all \(x, y, z \in R\), we have \( (x + y) + z = x + (y + z)\)</li>
+<li>For all \(x \in R\), there is a \(y \in R\), such that \(x + y = 0\). \(y\) is written as &ldquo;\(-x\)&rdquo; (recall that the inverse of an element of a group is unique, so \(-x\) is well-defined for any \(x\))</li>
+</ol>
+</li>
+<li>\(R\) under the action of \(\cdot\) is associative. This means that for all \(x,y,z \in R\), we have \( (x \cdot y) \cdot z = x \cdot (y \cdot z) \)</li>
+<li>There are <em>distributive laws</em> that hold between the two operators. This means that for all \(x, y, z \in R\) we have
+<ol>
+<li>\( x \cdot (y + z) = (x \cdot y) + (x \cdot z) \)</li>
+<li>\( (y + z ) \cdot x = (y \cdot x) + (z \cdot x) \)</li>
+</ol>
+</li>
+<li><em>Some</em> rings (but not all!) have an element, usually written &ldquo;\(1\)&rdquo;, such that for all \(x\in R\), \(x \cdot 1 = 1 \cdot x = x\). Those are sometimes called &ldquo;<em>rings with identity</em>&rdquo;, others call them &ldquo;<em>rings with unity</em>&rdquo;. They are very common. We will often fail to mention that a ring has \(1\), and instead point out when a ring <em>doesn&rsquo;t</em> have \(1\).</li>
+<li><em>Some</em> rings (but not all!) <em>commute</em> with respect to \(\cdot\). This means that for all \(x,y \in R\), we have \( x \cdot y = y \cdot x\). Rings where this property holds are called <em>commutative rings</em>.</li>
+</ol>
+<h2 id="definition-of-a-field">Definition of a Field</h2>
+<p>A field, \(F\) is a <em>commutative ring with identity</em> such that for every \(x\) in \(R\) which is <strong>not</strong> equal to \(0\), there exists a \(y\) in \(R\), such that \(x \cdot y = 1\).</p>
+<p>This means that \(F \setminus \{0\}\), sometimes written \(F^{*}\), is a group with respect to the action of \(\cdot\). This means that the \(y\) mentioned in the definition is unique for each \(x\). It is often written \(x^{-1}\).</p>
+<h2 id="a-note-on-notation">A note on notation</h2>
+<p>We&rsquo;ll often omit the &ldquo;\( \cdot \)&rdquo; operator. It should come as no surprise that &ldquo;\(\cdot\)&rdquo; is often identified with <em>multiplication</em>, so we&rsquo;ll omit it like we do with multiplication when the meaning is clear (which is most of the time).</p>
+<p>We&rsquo;ll write \( x - y\) in place of \(x + (-y)\), and sometimes we&rsquo;ll write \( \frac{x}{y}\) instead of \( xy^{-1}\).</p>
+<p>We&rsquo;ll write \(x^n\) in place of \(xxx &hellip; x\), where \(x\) occurs exactly \(n\) times.</p>
+<p>Let&rsquo;s establish some basic facts about rings.</p>
+<h2 id="mini-lemma-1-times-0">Mini-Lemma 1: Times 0</h2>
+<p>Let \(x\) be an arbitrary element of a ring, \(R\). Then we have \(x0 = 0x = 0\).</p>
+<h3 id="proof">Proof</h3>
+<p>We&rsquo;ll prove that \(x0 = 0\). The proof that \(0x = 0\) is nearly identical.</p>
+<p>Notice that since \(0 = 0 + 0\), we have \(x0 = x(0 + 0)\). By the first distribution law above, this is equal to \(x0 + x0\), which means that \(x0 = x0 + x0\). We can then add \(-x0\) to both sides of the equation to obtain</p>
+<p>\[ x0 - x0 = (x0 + x0) - x0 \tag{1}\label{1}\]</p>
+<p>By part (1) subpart (3) of the definition of a ring, we have</p>
+<p>\[ (x0 + x0) - x0 = x0 + (x0 - x0) \tag{2}\label{2} \]</p>
+<p>combining equations (1) and (2) gives us</p>
+<p>\[ 0 = x0 - x0 = x0 + 0 \tag{3}\label{3}\]</p>
+<p>and by the definition of \(0\), the right-hand side of (3) is equal to \(x0\).</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-2-times-negative">Mini-lemma 2: Times negative</h2>
+<p>Let \(x\) and \(y\) be arbitrary elements of a ring \(R\). Then we have</p>
+<ol>
+<li>\(x(-y) = -xy\)</li>
+<li>\((-x)y = -xy\)</li>
+</ol>
+<h3 id="proof-1">Proof</h3>
+<p>We&rsquo;re only going to prove part 1. The proof of part 2 is very similar.</p>
+<p>By mini-lemma 1, we have \(0 = x0 = x(y + (-y))\). Applying the distributive law gives us \(xy + x(-y)\).</p>
+<p>Therefore, since \(0 = xy + x(-y)\), we have \(-xy = x(-y)\).</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-corollary-neg-1-squared">Mini-corollary: neg 1 squared</h2>
+<p>Let \(R\) be a ring with unity, then \((-1)^2 = 1\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>We&rsquo;ll show that \( (-1) + (-1)^2 = 0\), which will give us our result. Notice that \( (-1) + (-1)^2\) is equal to \( (-1) \cdot 1 + (-1)(-1) \). By the distributive law (1) above, this is equal to \(  (-1)(1 - 1) \), which is equal to \((-1) \cdot 0 = 0\).</p>
+<p><strong>QED</strong></p>
+<p>We&rsquo;ve already used the binomial coefficient in our proof of <a href="/blog/counting-orbits-sylows-theorems-etc-i/#lemma-some-number-theory">Sylow&rsquo;s first theorem</a>. We&rsquo;ll define it here, anyway.</p>
+<h2 id="definitions-factorial-and-binomial-coefficient">Definitions: Factorial and Binomial coefficient</h2>
+<p>Let \(n\) be a non-negative integer. Then \(n\) <em>factorial</em>, written \(n!\), is defined so that</p>
+<p>\[ n! := \prod\limits_{m = 1}^{n} m \tag{4}\label{4} \]</p>
+<p>whenever \(n &gt; 0\).  However, \(0! = 1\) by definition.</p>
+<p>Let \(n\) be a non-negative integer and \(k\) a non-negative integer such that \(k \leq n\), then</p>
+<p>\[ \binom{n}{k} := \frac{n!}{(n-k)!k!} \tag{5}\label{5} \]</p>
+<p>Notice that by equation (5) we can conclude that</p>
+<p>\[ \binom{n}{k} = \binom{n}{n-k} \tag{6}\label{6} \]</p>
+<p>We&rsquo;re going to call the next lemma <em>Pascal&rsquo;s Triangle</em> because you can use it to prove that <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Pascal&rsquo;s Triangle</a> is composed of binomial coefficients.</p>
+<h2 id="lemma-pascals-triangle">Lemma: Pascal&rsquo;s Triangle</h2>
+<p>Let \(n\) and \(k\) be integers, such that \( 1 \leq k &lt; n\), then</p>
+<p>\[ \binom{n-1}{k} + \binom{n-1}{k-1} = \binom{n}{k} \tag{7}\label{7} \]</p>
+<h3 id="proof-3">Proof</h3>
+<p>Applying equation (5) to the left side of equation (7) gives us</p>
+<p>$$\begin{align} &amp;\frac{(n-1)!}{((n - 1) -k)!k!} + \tag{8}\label{8} \\<br>
+&amp;\frac{(n-1)!}{((n -1) - (k-1))!(k-1)!} \tag{9}\label{9} \\<br>
+\end{align}$$</p>
+<p>Notice that \( (n-1) - (k-1) = n - k\), so (9) is equal to</p>
+<p>\[ \frac{(n-1)!}{(n - k)!(k-1)!} \tag{10}\label{10} \]</p>
+<p>and (8) is equal to</p>
+<p>\[ \frac{(n-1)!}{(n -k - 1)!k!} \tag{11}\label{11} \]</p>
+<p>Now we have to find a common denominator for (10) and (11) so that we can add them. We can do that by multiplying \( (k-1)! \) in (10) by \(k\) to get \(k!\). Similarly, we multiply \( (n-k - 1)!\) in (11) by \( n-k\) to get \( (n-k)!\).</p>
+<p>When we do that (10) becomes</p>
+<p>\[ \frac{k(n-1)!}{(n-k)!k!} \tag{12}\label{12} \]</p>
+<p>and (11) becomes</p>
+<p>\[ \frac{(n-k)(n-1)!}{(n-k)!k!} \tag{13}\label{13} \]</p>
+<p>Adding (12) and (13) we get</p>
+<p>\[ \frac{n(n-1)!}{(n-k)!k!} = \frac{n!}{(n-k)!k!} \tag{14}\label{14} \]</p>
+<p>and that is equal to \( \binom{n}{k} \).</p>
+<p><strong>QED</strong></p>
+<p>And now, the reason why they&rsquo;re called <em>binomial coefficients</em>.</p>
+<h2 id="lemma-binomial-expansion">Lemma Binomial Expansion</h2>
+<p>Let \(x\) and \(y\) be arbitrary elements of a <strong>commutative ring with unity</strong>, \(R\), then we have</p>
+<p>\[ (x + y)^n = \sum\limits_{k = 0}^{n} \binom{n}{k}x^{n-k}y^k \tag{15}\label{15} \]</p>
+<p><strong>Note:</strong> When we have a ring with unity, then we identify \(x^0 = 1\).</p>
+<h3 id="proof-4">Proof</h3>
+<p>We&rsquo;ll do this one by induction on \(n\). Notice that if \(n = 1\), then both sides are equal to \(x + y\).</p>
+<p>Now, suppose that this lemma holds for all \(m &lt; n\). We have \( (x + y)^{n} = (x + y)^{n-1}(x + y)\). By induction,</p>
+<p>\[ (x + y)^{n-1} = \sum\limits_{k = 0}^{n-1} \binom{n-1}{k} x^{n - 1 - k}y^k \tag{16}\label{16} \]</p>
+<p>multiplying the right side of (16) by \(x+y\) gives us</p>
+<p>$$\begin{align}
+&amp; \sum\limits_{k=0}^{n-1} \binom{n-1}{k} x^{n-k}y^k + \tag{17.1}\label{17.1} \\<br>
+&amp; \sum\limits_{k=0}^{n - 1} \binom{n-1}{k} x^{n - (k+1)}y^{k+1} \tag{17.2}\label{17.2} \\<br>
+\end{align}$$</p>
+<p>(17.1) is where we multiplied by \(x\) and (17.2) is where we multiplied by \(y\). In (17.2) we also re-wrote the exponent of \(x\). It works because \(n-1-k\) is equal to \(n-k-1\), which is equal to \(n - (k+1)\).</p>
+<p>We can substitute \(l = k+1\) in (17.2) to obtain</p>
+<p>\[ \sum\limits_{l=1}^{n} \binom{n-1}{l-1}x^{n - l}y^l \tag{18}\label{18} \]</p>
+<p>but since \(l\) is a <em>bound</em> variable &ndash; because it is the variable we&rsquo;re summing over, we can replace it with anything we like. Replacing it in (18) with \(k\) gives us</p>
+<p>\[ \sum\limits_{k=1}^{n} \binom{n-1}{k-1}x^{n-k}y^k \tag{19}\label{19} \]</p>
+<p>So, what we have shown so far is that \( (x+y)^n \) is equal to (17.1) + (19). That is</p>
+<p>$$\begin{align}
+&amp; \sum\limits_{k=0}^{n-1} \binom{n-1}{k} x^{n-k}y^k + \tag{20.1}\label{20.1} \\<br>
+&amp; \sum\limits_{k=1}^{n} \binom{n-1}{k-1} x^{n - k}y^{k} \tag{20.2}\label{20.2} \\<br>
+\end{align}$$</p>
+<p>Let&rsquo;s evaluate the sum of (20.1) and (20.2) in three cases.</p>
+<ol>
+<li>\(k = 0\). This case only occurs in (20.1), and in that case it evaluates to \(x^n = \binom{n}{0}x^ny^0\).</li>
+<li>\(k = n\). This case only occurs in (20.2), and in that case it evalueates to \(y^n = \binom{n}{n}x^0y^n\).</li>
+<li>\(0 &lt; k &lt; n\). In this case we have to add terms from both (20.1) and (20.2), where we get</li>
+</ol>
+<p>\[ \left [ \binom{n-1}{k} + \binom{n-1}{k-1} \right ] x^{n-k}y^k \tag{21}\label{21} \]</p>
+<p>By equation (7) from <a href="#lemma-pascals-triangle">Pascal&rsquo;s triangle lemma above</a>, the sum of the two binomial coefficients inside the brackets is equal to \( \binom{n}{k} \).</p>
+<p>Therefore, when we combine all three cases, we see that (20.1) plus (20.2) is equal to</p>
+<p>\[ \sum\limits_{k=0}^{n} \binom{n}{k}x^{n-k}y^k \]</p>
+<p><strong>QED</strong></p>
+<p>We&rsquo;ll conclude this entry by investigating some of the properties of homomorphisms between two rings.</p>
+<h2 id="definition-ring-homomorphism">Definition: Ring homomorphism</h2>
+<p>Let \(R\) and \(S\) be rings. Let \(\phi: R \rightarrow S\) be a function from \(R\) to \(S\), such that for any two \(x,y \in R\), we have</p>
+<ol>
+<li>\( \phi(x \cdot y) = \phi(x) \cdot \phi(y)\)</li>
+<li>\( \phi(x + y) = \phi(x) + \phi(y) \)</li>
+</ol>
+<p>Then \(\phi\) is said to be a <em>ring homomorphism</em> from \(R\) to \(S\).</p>
+<p>The definitions of</p>
+<ul>
+<li>isomorphism</li>
+<li>automorphism</li>
+<li>endomorphism</li>
+<li>monomorphism</li>
+<li>epimorphism</li>
+</ul>
+<p>are analogous to those we discussed <a href="/blog/more-introductory-group-theory/#definition-homomorphism">here</a> in the context of groups. In fact, analogous morphisms can be found among all sorts of mathematical objects.  We&rsquo;ll dive deeper into this in a later entry when we discuss sets, models, (mathematical) languages, and (mathematical) theories.</p>
+<h2 id="definition-ideal">Definition: Ideal</h2>
+<p>Let \(\phi : R \rightarrow S\) be a ring homomorphism with kernel \(I \subseteq R\), then \(I\) is said to be an <em>ideal</em> of \(R\).</p>
+<h2 id="definition-subring">Definition: subring</h2>
+<p>Let \(Q \subseteq R\) be a subset of a ring \(R\), such that for any \(x, y \in Q\), we have</p>
+<ol>
+<li>\( x + y \in Q\)</li>
+<li>\(x \cdot y \in Q\)</li>
+<li>\(-x, -y \in Q\)</li>
+</ol>
+<p>Then \(Q\) is said to be a <em>subring</em> of \(R\).</p>
+<p>Notice that combining conditions 1 and 3 means that \( 0 = x + (-x) \in Q\).</p>
+<p>The following few lemmas are very similar to their group counterparts. You can probably get away with skipping the proofs.</p>
+<h2 id="mini-lemma-subring-test">Mini-lemma: subring test</h2>
+<p>Let \(Q \subseteq R\) be such that for any \(x, y \in Q\), we have</p>
+<ol>
+<li>\( x - y \in Q\)</li>
+<li>\( x \cdot y \in Q\)</li>
+</ol>
+<p>Then \(Q\) is a subring of \(R\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>Notice that if \(x = y\) in condition 1, then we are guaranteed to have \(0 \in Q\). Then for each \(y \in Q\), \(0 - y = -y \in Q\), which takes care of 3. Condition 2 is the same in both.</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-ideals-are-subrings">Mini-lemma: Ideals are subrings</h2>
+<p>Let \(\phi: R \rightarrow S\) be a ring homomorphism from \(R\) to \(S\) with kernel equal to the <em>ideal</em> \(I\). \(I\) is a subring of \(R\).</p>
+<h3 id="proof-6">Proof</h3>
+<p>This is a straight-forward computation. Notice that since \(I = \text{Ker}(\phi) = \{ x \in R | \phi(x) = 0 \}\), then for all \(x, y \in \text{Ker}(\phi) \), we have \( \phi(x - y) = \phi(x) - \phi(y) = 0-0 = 0\). Thus \( x-y \in \text{Ker}(\phi) \) and condition 1 of the subring test is satisfied.</p>
+<p>We also have \(\phi(x \cdot y) = \phi(x) \cdot \phi(y) = 0 \cdot 0 = 0\). Thus \( x \cdot y \in \text{Ker}(\phi) \) and condition 2 is satisfied.</p>
+<p><strong>QED</strong></p>
+<h2 id="mini-lemma-image-of-phi-is-a-subring">Mini-lemma: Image of phi is a subring</h2>
+<p>Let \(\phi : R \rightarrow S\) be a ring homomorphism. Then \( \text{Im}(\phi) = \{ y \in S | \exists x \in R, \phi(x) = y \} \) is a subring of \(S\).</p>
+<h3 id="proof-7">Proof</h3>
+<p>Let \(x, y \in  \text{Im}(\phi)\). Then there exists \(u, v \in R\), such that \( \phi(u) = x\) and \(\phi(v) = y\). Then \(\phi(u - v) = \phi(u) - \phi(v) = x - y \in \text{Im}(\phi)\). Therefore \(x - y \in \text{Im}(\phi) \) and condition 1 of the subring test is satisfied.</p>
+<p>Similarly, \( \phi(u \cdot v) = \phi(u) \cdot \phi(v)\) which is equal to \( x \cdot y \in \text{Im}(\phi)\), so condition 2 is satisfied.</p>
+<p><strong>QED</strong></p>
+<h2 id="lemma-factor-rings-are-rings">Lemma: Factor rings are rings</h2>
+<p>Let \(\phi : R \rightarrow S\) be a ring homomorphism with kernel \(I\). Then we can define an equivalence relation where \( x \equiv y (\mod I)\) if and only if \(x - y \in I\).</p>
+<p>This is well-defined and an equivalence relation. Furthermore, the set of equivalence classes is a ring. It is denoted \( R/I\).</p>
+<h3 id="proof-8">Proof</h3>
+<p>It&rsquo;s well-defined and an equivalence relation because it is equal to \(R / I\), where \(I\) is the normal subgroup of \(R\) when viewed as an Abelian group with the operator \( +\). We showed that mod a normal subgroup is an equivalence relation and that the set of equivalence classes form a group. (We showed that <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#lemma-mod-h-is-an-equivalence-relation">here</a> and <a href="/blog/applying-permutations-to-group-theory/#theorem-mod-normal-subgroup-is-a-group">here</a>). This works, because the definition of the equivalence relation only makes reference to \(+\) (in the form of \(-\)).</p>
+<p>Now we only have to show that the set of equivalence classes form a ring. We already mentioned that \(R/I\) is a group with the operator \(+\), so we only have to verify the ring axioms that involve \( \cdot\). These are</p>
+<ol>
+<li>\(R\) under the action of \(\cdot\) is associative. This means that for all \(x,y,z \in R\), we have \( (x \cdot y) \cdot z = x \cdot (y \cdot z) \)</li>
+<li>There are <em>distributive laws</em> that hold between the two operators. This means that for all \(x, y, z \in R\) we have
+<ol>
+<li>\( x \cdot (y + z) = (x \cdot y) + (x \cdot z) \)</li>
+<li>\( (y + z ) \cdot x = (y \cdot x) + (z \cdot x) \)</li>
+</ol>
+</li>
+</ol>
+<p>In order to prove 1, we must show that the equivalence classes of \(R/I\) are well-defined with respect to \(\cdot\). I.e. \( [x_1] \cdot [y_1] = [x_2] \cdot [y_2]\) whenever \(x_1 \equiv x_2\) and \(y_1 \equiv y_2\). This happens if we can show that \(x_1y_1 - x_2 y_2 \in I\).</p>
+<p>\(x_1 \equiv x_2\) because \( x_1 - x_2 \in I \), which means that \( \phi(x_1 - x_2) = 0 \), which means that \( \phi(x_1) = \phi(x_2)\). Similarly, \( \phi(y_1) = \phi(y_2)\). Therefore, \(\phi(x_1y_1) = \phi(x_1) \cdot \phi(y_1)\) \( = \phi(x_2) \cdot \phi(y_2) = \phi(x_2y_2) \). That means that \( \phi(x_1y_1) - \phi(x_2y_2) = 0\) and that means that \( \phi(x_1y_1 - x_2y_2) = 0 \), which implies that \( x_1y_1 - x_2y_2 \in I \).</p>
+<p>So we have finished proving 1. Now we will prove the distributive laws.</p>
+<p>The same reasoning that we applied in showing that condition 1 holds works in this case as well. Since distributivity holds in \(R\), we are guaranteed that \( x \cdot (y + z) = (x \cdot y) + (x \cdot z) \). Since \(R/I\) is well-defined with respect to \(\cdot\), we are guaranteed to have \( [x] \cdot ([y] + [z]) = ([x] \cdot [y]) + ([x] \cdot [z]) \).</p>
+<p><strong>QED</strong></p>
+<p>That&rsquo;s all that we have time for with this entry. We&rsquo;ll continue our discussion of rings and fields with the next entry. Thanks for reading!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/factorial/" rel="tag">Factorial</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/binomial-expansion/" rel="tag">Binomial expansion</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/ideals/" rel="tag">Ideals</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/spheres-distances-maps-and-more/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Spheres, Distances, Maps and More!</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fintro-to-rings-and-fields%2f" />
+</body>
+</html>

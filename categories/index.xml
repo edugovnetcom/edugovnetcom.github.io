@@ -6,22 +6,40 @@
     <description>Recent content in Categories on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 11:21:15 -0400</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 08:42:22 -0400</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linear Algebra</title>
-      <link>/categories/linear-algebra/</link>
-      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      <title>Fields</title>
+      <link>/categories/fields/</link>
+      <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
-      <guid>/categories/linear-algebra/</guid>
+      <guid>/categories/fields/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Math</title>
       <link>/categories/math/</link>
-      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
       <guid>/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rings</title>
+      <link>/categories/rings/</link>
+      <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
+      
+      <guid>/categories/rings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>/categories/linear-algebra/</link>
+      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      
+      <guid>/categories/linear-algebra/</guid>
       <description></description>
     </item>
     
