@@ -228,6 +228,7 @@ z_i &amp;= r\sin(\phi_i)
 <p>In the above case where \(\vec{p_1} = -\vec{p_2}\), there are an infinite number of possible planes we can use. This is because there are an infinite number of great circles that contain both \(p_1\) and \(p_2\). Pick any third point, \(p_3\), on the surface of the sphere which is not equal to either \(p_1\) or \(p_2\). The great circle containing both \(p_1\) and \(p_3\) will <em>also</em> contain \(p_2\). This is because every great circle which contains a point \(q\) will also contain the point on the opposite side of the sphere to \(q\).</p>
 <p>Now we&rsquo;ll see how to find the plane and with that, find the great circle.</p>
 <h2 id="definition-cross-product">Definition (cross product)</h2>
+<div class="emphasized">
 <p>Let \(\vec{p}, \vec{q} \in \mathbb{R}^3\), where \(\vec{p} = \langle p_1, p_2, p_3 \rangle\) and \(\vec{q} = \langle q_1, q_2, q_3 \rangle\). Then the <em>cross product</em> of \(\vec{p}\) with \(\vec{q}\) is equal to</p>
 <p>\[ \vec{p} \times \vec{q} = \langle v_1, v_2, v_3\rangle \tag{10}\label{10} \]</p>
 <p>where</p>
@@ -236,6 +237,7 @@ v_1 &amp; = p_2 q_3 - p_3 q_2 \\<br>
 v_2 &amp; = p_3 q_1 - p_1 q_3 \tag{11}\label{11} \\<br>
 v_3 &amp; = p_1 q_2 - p_2 q_1
 \end{align}$$</p>
+</div>
 <p>Notice that</p>
 <p>$$\begin{align}
 \vec{p} \times \vec{q} &amp;= -\vec{q} \times \vec{p}  \\<br>
@@ -249,11 +251,13 @@ v_3 &amp; = p_1 q_2 - p_2 q_1
 \end{align}$$</p>
 <p>Verifying (12) and (13) is straight-forward. All you have to do is plug in (11) and recall the definition of the dot product (for 12).</p>
 <h2 id="theorem-perpendicular-vector-determines-2-d-plane-through-the-origin">Theorem (perpendicular vector determines 2-d plane through the origin)</h2>
+<div class="emphasized">
 <p>Let \(P\) be a 2-dimensional plane in \( \mathbb{R}^3 \) which contains the origin, \((0,0,0)\). Then</p>
 <ol>
 <li>there is a vector \(\vec{p} \in \mathbb{R}^3\), such that for all \(\vec{v} \in P\), \(\vec{p} \cdot \vec{v} = 0\).</li>
 <li>any other vector \(\vec{q} \in \mathbb{R}^3\), such that \( \vec{q} \cdot \vec{v} = 0 \), for every \(\vec{v} \in P\) is equal to \( a \vec{p}\) for some \(a \in \mathbb{R}\).</li>
 </ol>
+</div>
 <h3 id="proof">Proof</h3>
 <p>A 2-dimensional plane \(P\) is a 2-dimensional subspace of \(\mathbb{R}^3\), so it is equal to \( \text{Span}(\{ \vec{u}, \vec{v} \}) \), where \( \vec{u} \neq a \vec{v}\) for any \(a \in \mathbb{R}\). I.e. it is the span of two linearly-independent vectors.</p>
 <p>Let \(\vec{p} = \vec{u} \times \vec{v} \). Let \(\vec{w} \in P\), then we have \(\vec{w} = a\vec{u} + b\vec{v}\), which means that \( \vec{p} \cdot \vec{w} = \vec{p} \cdot ( a\vec{u} + b\vec{v} ) \), and since the dot product distributes (you can easily verify this) that dot product is equal to \(a \vec{p} \cdot \vec{u} + b \vec{p} \cdot \vec{v}\). This is equal to \( a(\vec{u} \times \vec{v}) \cdot \vec{u} + b(\vec{u} \times \vec{v}) \cdot \vec{v} \), which by (12) above, we see is equal to \(0\). Thus \(\vec{p}\) satisfies part 1 of the lemma.</p>

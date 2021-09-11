@@ -127,7 +127,9 @@
 <p>We should point out a subtlety in how we&rsquo;ve used this symbol. \(N \triangleleft G\) often means that \(N\) is a <em>proper</em> normal subgroup of \(G\) &ndash; i.e. that \(N\) is not equal to \(G\). However, we&rsquo;ve been using it (in previous entries) to mean that &ldquo;\(N\) is a normal subgroup of \(G\) and it might be equal to \(G\)&rdquo;. We&rsquo;re going to switch to using the more standard notation, and instead write \(N \trianglelefteq G\) for that, instead. Sorry for the inconvenience.</p>
 <p>Let&rsquo;s get started. We begin, as usual, with some lemmas.</p>
 <h2 id="lemma-1">Lemma 1</h2>
+<div class="emphasized">
 <p>Let \(H \trianglelefteq A_n\), where \(n \geq 5\). If \( (a, b, c) \in H \) is a <em>3-cycle</em>, then \(H\) contains <em>every</em> <em>3-cycle</em> of \(A_n\).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>First, notice that for any <em>3-cycle</em> \( (x, y, z) \), it&rsquo;s inverse, \((x,y,z)^{-1}\) is equal to \( (x, z, y) \).</p>
 <p>Second, notice that \(Sign( (x,y,z) ) = 1 \), so every <em>3-cycle</em> (in \(S_n\)) is an even permutation, and thus belongs to \(A_n\). (proven <a href="/blog/more-math-of-permutations/#theorem-sign-of-k-cycle">here</a>)</p>
@@ -151,7 +153,9 @@
 <p>Therefore, \(H\) contains every <em>3-cycle</em> in \(S_n\).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-2-product-of-2-cycles">Lemma 2 (product of 2-cycles)</h2>
+<div class="emphasized">
 <p>Every permutation in \(S_n\), where \(n \geq 2\), can be factored as a product of <em>2-cycles</em>.</p>
+</div>
 <p><strong>Note:</strong> this factorization is <strong>not</strong> unique, and in general these will <strong>not</strong> be <em>disjoint</em> 2-cycles.</p>
 <h3 id="proof-1">Proof</h3>
 <p>We know from the <a href="/blog/more-math-of-permutations/#theorem-disjoint-cycles">Disjoint Cycles Theorem</a> that we can break down a permutation into <em>disjoint</em> cycles. Generally, those cycles will not be 2-cycles. However, all we have to do is show that each <em>k-cycle</em> can be factored into a product of <em>2-cycles</em> and we&rsquo;ll have our result.</p>
@@ -164,7 +168,9 @@
 <p>This shows that each <em>k-cycle</em> can be broken down into a product of <em>2-cycles</em></p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-3-pair-of-2-cycles-equals-product-of-3-cycles">Lemma 3 (pair of 2-cycles equals product of 3-cycles)</h2>
+<div class="emphasized">
 <p>Let \(n \geq 4\), then any product of two <em>2-cycles</em> in \(S_n\) is equal to a product of <em>3-cycles</em>.</p>
+</div>
 <p><strong>Note:</strong> Once again, these <em>3-cycles</em> will <strong>not</strong> in general be disjoint cycles.</p>
 <h3 id="proof-2">Proof</h3>
 <p>There are three possibilities for the pair of <em>2-cycles</em></p>
@@ -176,7 +182,9 @@
 <p>That takes care of all of the possibilities.</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-4-long-cycle-implies-3-cycle">Lemma 4 (long cycle implies 3-cycle)</h2>
+<div class="emphasized">
 <p>Let \(N\) be a normal subgroup of \(A_n\), where \(n \geq 5\). Let \(\rho\) be a permutation of \(N\), such that when \(\rho\) is broken into disjoint cycles, there is at least one cycle of length \(l \geq 4\). Then \(N\) must contain a <em>3-cycle</em></p>
+</div>
 <p>(We&rsquo;ll end up using this lemma a few times in the proof of the following corollary.)</p>
 <h3 id="proof-3">Proof</h3>
 <p>Let \(c_l\) represent the cycle of length \(l\), so that \(c_l = (a_1, a_2, &hellip; a_l) \). Then we have</p>
@@ -197,8 +205,10 @@
 <p>Therefore, \(N\) has a <em>3-cycle</em>.</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem-a_n-is-simple-when-n--5">Theorem (A_n is simple when n &gt;= 5)</h2>
+<div class="emphasized">
 <p>Let \(A_n\) be the subgroup of even permutations of \(S_n\), the group of all permutations on \(n\) symbols. When \(n \geq 5\), \(A_n\) is <em>simple</em>.</p>
 <p>I.e. if \(N \trianglelefteq A_n\), then \(N = A_n\) or \(N = \{e\}\).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>Suppose that \(N \trianglelefteq A_n\). We will prove two facts:</p>
 <ol>
@@ -249,7 +259,9 @@ Which, by lemma 4, above, implies that \(N\) has a <em>3-cycle</em>.</p>
 <p>The best-known corollary of this theorem comes from <a href="https://en.wikipedia.org/wiki/Galois_theory" target="_blank">Galois Theory (Wikipedia)</a>, which we&rsquo;ll get to later. That&rsquo;s the theorem that shows that it&rsquo;s impossible to solve the general quintic equation with radicals. However, since we&rsquo;ve proven the <a href="/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/#corollary-jordan---holder-theorem">Jordan-Holder Theorem</a>, we&rsquo;re able to prove another result about the impossibility of finding a different type of equation.</p>
 <p>Before we do that, though, we&rsquo;ll have to briefly introduce <em>roots of unity</em>.</p>
 <h2 id="definition-n_th-roots-of-unity">Definition (n_th roots of unity)</h2>
+<div class="emphasized">
 <p>Let \(z \in \mathbb{C}\) be such that \(z^n = 1\). We say that \(z\) is an <em>n<sup>th</sup> root of unity</em>.</p>
+</div>
 <p>For example, \(1\) is a 1<sup>st</sup> root of unity (not very interesting, though), \( \{1, -1 \} \) is the set of 2<sup>nd</sup> roots of unity. The 3<sup>rd</sup> roots of unity look like this</p>
 <p><img src="/images/roots_of_unity.png" alt="3rd roots of unity" title="3rd roots of unity and the unit circle"></p>
 <p>We&rsquo;ve drawn the unit circle as well. Every n<sup>th</sup> root of unity for every n will lie on that circle (it is afterall, called the <em>unit</em> circle). The horizontal dotted line represents the real number line, while the vertical dotted line represents the imaginary number line.</p>
@@ -259,8 +271,10 @@ Which, by lemma 4, above, implies that \(N\) has a <em>3-cycle</em>.</p>
 <p>Recall the definition of \(Sign(\sigma)\), where \(\sigma \in S_n\) (<a href="/blog/more-math-of-permutations/#definition-sign">defined here</a>).</p>
 <p>Notice that \(Sign\) is a family of homomorphisms from \(S_m\) into the set \(\{1, -1\} \). We just saw that that set is equal to the group of the 2<sup>nd</sup> roots of unity. It&rsquo;s natural to wonder whether it&rsquo;s possible to find other families of homomorphisms \( \phi_{m,n} : S_m \rightarrow \mathcal{R}_n\), where \(\mathcal{R}_n\) is the set of n<sup>th</sup> roots of unity, and \(m \geq n\). It turns out that this is impossible when \(n &gt; 2\).</p>
 <h2 id="corollary-no-analogous-complex-sign">Corollary (no analogous complex Sign)</h2>
+<div class="emphasized">
 <p>Let \(S_m\) be the group of permutations on \(m\) symbols, and let \(\mathcal{R}_n\) be the group of \(n^{th}\) roots of unity. \(m \geq n\).</p>
 <p>If \(m \geq 5\) and \(n &gt; 2\), there is no homomorphism \(\phi_{m,n} : S_m \rightarrow \mathcal{R}_n\).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>Suppose there were such a \(\phi_{m,n} : S_m \rightarrow \mathcal{R}_n\), then by <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#theorem-kernels-are-normal-subgroups">this theorem</a> the kernel of \(\phi_{m,n}\) would be a normal subgroup of \(S_m\). It would have index \(n\).</p>
 <p>This means that \(S_m\) would have a chain of subnormal subgroups like

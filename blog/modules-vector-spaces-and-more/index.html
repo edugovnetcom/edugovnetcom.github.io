@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="Modules, Vector Spaces, and More!" />
-<meta property="og:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later." />
+<meta property="og:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/modules-vector-spaces-and-more/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-09-05T09:30:30+00:00" />
@@ -16,13 +16,13 @@
 
 
 		<meta itemprop="name" content="Modules, Vector Spaces, and More!">
-<meta itemprop="description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."><meta itemprop="datePublished" content="2021-09-05T09:30:30+00:00" />
+<meta itemprop="description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."><meta itemprop="datePublished" content="2021-09-05T09:30:30+00:00" />
 <meta itemprop="dateModified" content="2021-09-05T09:30:30+00:00" />
 <meta itemprop="wordCount" content="3196">
 <meta itemprop="keywords" content="Vector Spaces,Modules,Algebras,Matrices," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Modules, Vector Spaces, and More!"/>
-<meta name="twitter:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."/>
+<meta name="twitter:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."/>
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
@@ -134,6 +134,7 @@
 			<p><span class="first-letter">W</span>e&rsquo;ve already used vectors and matrices without defining them. It&rsquo;s about time we treated them with a bit more rigor.</p>
 <p>Feel free to skip over whatever you&rsquo;re already familiar with.</p>
 <h2 id="definition-r-module">Definition: R-Module</h2>
+<div class="emphasized">
 <p>Let \(R\) be a ring and let \(\mathcal{M}\) be a set with the following properties.</p>
 <ol>
 <li>For any \( r \in R\), and \( m_1, m_2 \in \mathcal{M}\) we have
@@ -146,20 +147,27 @@
 <li>For any \( r_1, r_2 \in R\) and \(m \in \mathcal{M}\), we have
 <ol>
 <li>\( (r_1 + r_2)m = r_1m + r_2m \in \mathcal{M} \)</li>
-<li>\( m(r_1 + r_2) = mr_1 + mr_2 \in \mathcal{M} \)</li>
+<li>\( m(r_1 + r_2) = mr_1 + mr_2 \in \mathcal{M} \)
+\(\mathcal{M}\) is said to be a <em>module over \(R\)</em>.</li>
 </ol>
 </li>
 </ol>
-<p>\(\mathcal{M}\) is said to be a <em>module over \(R\)</em>.</p>
 <p>If only 1.1 and 2.1 hold, then \(\mathcal{M}\) is said to be a <em>right module over \(R\)</em>. Similarly, if only 1.2 and 2.2 hold, then \(\mathcal{M}\) is said to be a <em>left module over \(R\)</em>.</p>
+</div>
 <h2 id="definition-f-vector-space">Definition: F-Vector Space</h2>
+<div class="emphasized">
 <p>A <em>module</em> over a <em>field</em> is called a <em>vector space</em>.</p>
+</div>
 <h2 id="definition-r-algebra">Definition: R-Algebra</h2>
+<div class="emphasized">
 <p>Let \(\mathcal{A}\) be a Vector Space over a ring with unity \(R\). If \(\mathcal{A}\) is also a ring with unity, such that for all \(r \in R\) and \(a_1, a_2 \in \mathcal{A}\) we have</p>
 <p>\( (ra_1)a_2 = r(a_1a_2) = a_1(ra_2) \), then \(\mathcal{A}\) is said to be an <em>algebra over \(R\)</em>, or an <em>\(R\)-algebra</em>.</p>
+</div>
 <p>Notice that a ring is a trivial module over itself. Similarly a field is a trivial vector space and algebra over itself.</p>
 <h2 id="definition-matrix">Definition: Matrix</h2>
+<div class="emphasized">
 <p>Let \(R\) be a ring. A <em>Matrix</em>, \(M\) is a <em>2-dimensional</em> array of elements of \(m_{i,j}\) of \(R\), where for each \(i\), the 1-dimensional array \(m_{i,j}\) where \(j = 1, 2, &hellip;\) has the same length. The length is not necessarily finite. Likewise, for each \(j\), the one dimensional array \(m_{i,j}\), where \(i = 1, 2, &hellip;\) has the same length.</p>
+</div>
 <p>It is common to write the \(i^{th}\) row of \(M\) as \((m_{i *})\), and the \(j^{th}\) column of \(M\) as \((m_{* j})\).</p>
 <p>They are usually written so that the \(i\)&rsquo;s index rows and the \(j\)&rsquo;s index columns. For example</p>
 <p>$$
@@ -209,8 +217,10 @@ $$</p>
 <p>It&rsquo;s easy to see that all of the ones involving \(+\) hold, since \(+\) works component-wise. For example, \(+\) in \(R^{s \times s}\) is associative because \( ((a_{i,j}) + (b_{i,j})) + (c_{i,j}) \) is equal to \( (a_{i,j}) + ((b_{i,j}) + (c_{i,j})) \).</p>
 <p>Matrix &ldquo;multiplication&rdquo; (the \( \cdot \) operator for \(R^{s \times s}\)) isn&rsquo;t obviously associative, and it&rsquo;s also not obvious that it distributes with matrix \(+\). We&rsquo;ll prove both of those next.</p>
 <h2 id="lemma-matrix-multiplication-is-associative">Lemma: Matrix multiplication is associative</h2>
+<div class="emphasized">
 <p>Let \( (a_{i,j}) \), \((b_{i,j})\), and \( (c_{i,j}) \) be elements of \(R^{s,s}\), where \(R\) is a ring. Then</p>
 <p>\[ ((a_{i,j}) \cdot (b_{i,j})) \cdot (c_{i,j}) = (a_{i,j}) \cdot ((b_{i,j}) \cdot (c_{i,j})) \tag{5}\label{5}\]</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>By definition, the left-hand side of the equation is equal to</p>
 <p>\[ \left ( \sum\limits_{k=1}^{s} {a_{i,k}b_{k,j}} \right) \cdot (c_{i,j}) \tag{6}\label{6} \]</p>
@@ -227,11 +237,13 @@ $$</p>
 <p><strong>QED</strong></p>
 <p>Now let&rsquo;s verify that the distributive laws hold</p>
 <h2 id="lemma-matrix-multiplication-distributes">Lemma: Matrix multiplication distributes</h2>
+<div class="emphasized">
 <p>Let \( A \), \(B\), and \(C\) be elements of \(R^{s \times s}\), then</p>
 <ol>
 <li>\(A (B + C) = AB + AC \)</li>
 <li>\( (B + C)A = BA + CA \)</li>
 </ol>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>The proofs are nothing more than applying definitions and pushing symbols. We&rsquo;ll provide the proof for case 1. The other case is nearly identical.</p>
 <p>\[ A(B + C) = (a_{i,j}) \left ( (b_{i,j}) + (c_{i,j}) \right ) \tag{11}\label{11} \]</p>
@@ -256,7 +268,9 @@ $$</p>
 $$\delta_{i,j} = \begin{cases} 1, i = j \\ 0, i \neq j \end{cases}  $$</p>
 <p>This will be familiar to anyone who has encountered Matrices before. Now we&rsquo;ll prove that it is actually the identity.</p>
 <h2 id="mini-lemma-the-identity-matrix">Mini-lemma: the identity matrix</h2>
+<div class="emphasized">
 <p>Let \(R\) be a ring with identity, then \(I = \delta_{i,j}\) is the identity element of \(R^{s \times s}\).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>We&rsquo;ll prove \(IM = M\), the other way is nearly the same.</p>
 <p>$$
@@ -270,8 +284,9 @@ $$</p>
 <p>Now we&rsquo;re going to switch focus slightly and prove a result about the structure of the lattice of a module and its submodules.</p>
 <p>In an earlier entry, we gave the definition of a <a href="/blog/partial-orders-lattices-and-some-subgroups/#definition-modular-lattice"><em>modular lattice</em></a>, and then we proved some theorems about how well-behaved they are. Here we&rsquo;re going to prove that the lattice of submodules of a given module is modular (we think this is where the name comes from).</p>
 <h2 id="theorem-lattice-of-submodules-is-modular">Theorem: Lattice of submodules is modular</h2>
-<p>Let \(\mathcal{L}_{\mathcal{V}}\) be the lattice of submodules of a module, \(\mathcal{V}\). Then \(\mathcal{L}_{\mathcal{V}}\) is <em>modular</em>. That is, there is no sub-lattice like this</p>
-<p><img src="/images/lattice_non_modular_modules.png" alt="A non modular sub-lattice" title="non-modular sub-lattice of modules"></p>
+<div class="emphasized">
+<p>Let \(\mathcal{L}_{\mathcal{V}}\) be the lattice of submodules of a module, \(\mathcal{V}\). Then \(\mathcal{L}_{\mathcal{V}}\) is <em>modular</em>. That is, there is no sub-lattice like this
+<img src="/images/lattice_non_modular_modules.png" alt="A non modular sub-lattice" title="non-modular sub-lattice of modules"></p>
 <p>Where</p>
 <p>$$
 \begin{align}
@@ -280,6 +295,7 @@ $$</p>
 \mathcal{N} \subsetneq \mathcal{P} &amp;
 \end{align}
 $$</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>The proof is fairly easy. It relies mostly on proving the following claim.
 Let \( \mathcal{M} \) and \( \mathcal{N} \) be modules over a ring, \(R\). Then</p>
@@ -305,26 +321,32 @@ Let \( \mathcal{M} \) and \( \mathcal{N} \) be modules over a ring, \(R\). Then<
 <p>We&rsquo;re all familiar with \(\mathbb{Z}\), the set of all integers, where \( m + n\) is the usual addition operator and \(mn\) multiplication. Since \( mn = nm\) for all \(m, n \in \mathbb{Z}\), it is a <em>commutative ring</em>, which we defined in the previous entry. However, it has another useful property which we have not discussed so far, but will do so now.</p>
 <p>In order for \(mn = 0\) to hold in \( \mathbb{Z} \), either \(m = 0\), \(n=0\), or they both have to equal \(0\). This isn&rsquo;t alway the case with rings, though. For rings, like \(\mathbb{Z}\), where it does hold, we call that ring an <em>integral domain</em>.</p>
 <h2 id="definition-integral-domain">Definition: Integral Domain</h2>
-<p>Let \(R\) be a ring where for any two \(r_1\) and \(r_2 \in R\), we have</p>
-<p>$$
+<div class="emphasized">
+<p>Let \(R\) be a ring where for any two \(r_1\) and \(r_2 \in R\), we have
+$$
 \begin{align}
 &amp; r_1r_2 = 0 \implies \\
 &amp; r_1 = 0 \text{ or } r_2 = 0
 \end{align}
 $$</p>
 <p>then \(R\) is said to be an <em>integral domain</em>.</p>
+</div>
 <p>Now we&rsquo;re going to fill in a gap we left in the previous entry. In that entry we showed that <em>Ideals</em>, i.e. Kernels of ring homomorphisms, are sub-rings. Now we&rsquo;re going to see when a given sub-ring is an ideal, but first we need a definition</p>
 <h2 id="definition-mod-an-ideal">Definition: mod an Ideal</h2>
+<div class="emphasized">
 <p>Let \( \phi : R \rightarrow S\) be a ring homomorphism from \(R\) to \(S\), and let \( I \) be the kernel of \(\phi\). Then, for any elements, \(r, s \in R\), we define</p>
 <p>\[ r \equiv s \text{ (mod } I \text{)} \tag{19}\label{19} \]</p>
 <p>if and only if (iff)</p>
 <p>\[ \phi(r - s) = 0 \tag{20}\label{20} \]</p>
+</div>
 <p>What this means is that the addition operator of \(R\) determines the cosets of \(I\). Because of this, we know from our work with normal subgroups that these cosets will be well-behaved with respect to the addition operator. Next we&rsquo;ll show that they are also well-behaved with respect to the multiplication operator.</p>
 <h2 id="lemma-r-mod-i-is-a-ring">Lemma: R mod I is a ring</h2>
+<div class="emphasized">
 <p>Let \( \phi: R \rightarrow S \) be a ring homomorphism from a ring \(R\) to a ring \(S\). Let \(I\) be the kernel of \(\phi\). Then</p>
 <p>\[ R / I := \{ [r] | r \in R \} \tag{21}\label{21} \]</p>
 <p>is a ring, where</p>
 <p>\[ [r] := \{ r' \in R | r' \equiv r \text{ (mod} I \text{)} \tag{22}\label{22} \} \]</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>We know that \(I\) is a subgroup of the group with the elements of \(R\) under the operator \(+\). We also know that it is a normal subgroup, since \(R\) with the addition operator is Abelian. Therefore \(R/I\) satisfies conditions 1.1, 1.2, 1.3, and 1.4 of the <a href="/blog/intro-to-rings-and-fields/#definition-of-ring">ring axioms</a> from <a href="/blog/applying-permutations-to-group-theory/#theorem-mod-normal-subgroup-is-a-group">this theorem from group theory</a>).</p>
 <p>We also know from the proof of that theorem that for all \(x, y \in R\), \([x] + [y] = [x+y]\).</p>
@@ -372,12 +394,14 @@ $$\begin{align}
 <p>so condition 5 holds in \(R/I\).</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem-when-a-sub-ring-is-an-ideal">Theorem: When a sub-ring is an Ideal</h2>
+<div class="emphasized">
 <p>Let \(I\) be a sub-ring of a ring \(R\), such that for all \(r \in R\) we have</p>
 <ol>
 <li>\( rI \subseteq I \)</li>
 <li>\( Ir \subseteq I \)</li>
 </ol>
 <p>Then \(I\) is an <em>ideal</em> of \(R\).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>It makes sense that both of the conditions would have to hold for \(I\) to be the kernel of a ring homomorphism, because \(\phi(I) = 0\). The interesting fact is that these conditions are sufficient for \(I\) to be the kernel of a homomorphism.</p>
 <p>We&rsquo;ll do this by showing that \( \phi(r) = r + I \) is a homomorphism.</p>

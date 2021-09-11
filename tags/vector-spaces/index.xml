@@ -13,7 +13,7 @@
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
       <guid>/blog/modules-vector-spaces-and-more/</guid>
-      <description>In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later.</description>
+      <description>In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later.</description>
     </item>
     
   </channel>

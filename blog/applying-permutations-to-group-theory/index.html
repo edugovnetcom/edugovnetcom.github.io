@@ -132,15 +132,21 @@
 			<p><span class="first-letter">T</span>his article is a continuation of <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/">More on Groups: Morphisms, Normal Subgroups, etc&hellip;</a> In this article we&rsquo;re going to continue looking into groups and apply some of our results from studying permutations to our study of them. Both fields of study enforce each other.</p>
 <p>But first, we&rsquo;re going to continue our investigation of subgroups, morphisms and equivalence relations. We saw in More on Groups: Morphisms, Normal Subgroups, etc&hellip; that if \( \phi \) is a homomorphism from a group \(A\) to a group \(B\), then \( Ker(\phi) \) is a normal subgroup of \(A\). Now we&rsquo;re going to show</p>
 <h2 id="theorem-image-is-a-subgroup">Theorem (image is a subgroup)</h2>
+<div class="emphasized">
 <p>Let \( \phi \) be a homomorphism from group \(A\) into not necessarily all of group \(B\). If we let \( Im(\phi) := Range(\phi) = \{ b \in B | \exists a \in A \text{ and } \phi(a) = b \} \). Then \(Im(\phi) \leq B \). That is, \(Im(\phi) \) is a subgroup of \(B\).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>Using the <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#lemma-subgroup-test">subgroup test</a>, suppose that \(x\) and \(y \in Im(\phi) \), then we want to show that \(x \cdot y^{-1} \) is also in \(Im(\phi) \). By definition of \(Im(\phi) \), there are two (not necessarily distinct) elements of \(A\), \(a\) and \(b\), say, such that \( \phi(a) = x \), and \( \phi(b) = y\). Now, since \(A\) is a group, \(a \cdot b^{-1} \in A\), so then \( \phi(a \cdot b^{-1}) = \phi(a) \cdot \phi(b)^{-1} \in Im(\phi) \). That means that, by what we assumed \(a\) and \(b\) were, that \(x \cdot y^{-1} \in Im(\phi) \).</p>
 <p><strong>QED</strong></p>
 <p>In the last entry, we proved that all <a href="/blog/more-on-groups-morphisms-normal-subgroups-etc/#theorem-kernels-are-normal-subgroups">kernels of homomorphisms were normal subgroups</a>. Soon we&rsquo;ll see that all normal subgroups are kernels for a homomorphism into another group. First we need to take a slight detour and discuss the notion of <em>equivalence classes</em>.</p>
 <h2 id="definition-equivalence-class">Definition (equivalence class)</h2>
+<div class="emphasized">
 <p>Let \( \equiv \) be an equivalence relation on a set, \(S\), let \( s \in S\) be an element of \(S\). We define the <em>equivalence class</em> of \(s\), often written as \( [s] \), to be the set of all elements, \(t \in S\), such that \( s \equiv t \).</p>
+</div>
 <h2 id="definition-factor-set">Definition (factor set)</h2>
+<div class="emphasized">
 <p>Let \(S\) be a set and \( \equiv\) be an equivalence relation among pairs of elements of \(S\). Then the set of equivalence classes of \(S\) form a set, sometimes written as \(S /_{\equiv} \). It is sometimes read &ldquo;\(S\) mod \(\equiv\)&rdquo;, and is referred to as a <em>factor set</em>.</p>
+</div>
 <p>Factor sets are similar to factor groups, but don&rsquo;t have the added structure that comes from having a binary operator. In order to make a factor group, you have to have a factor set and a binary operator that operates on pairs of equivalence classes, mapping them to a third equivalence class, which obeys the group axioms.</p>
 <p>When the factor set can be turned into a factor group, it&rsquo;s typically written as \(G / H := \{ [g] | g \in G \} \), where \( H \leq G\) is a subgroup and
 \[ [g] = \{ g' \in G | g' \equiv g \mod H\} \]</p>
@@ -148,22 +154,28 @@
 <p>\[ g' \equiv g \mod H \Leftrightarrow g' H = g H \]</p>
 <p>However, for most subgroups, \( H \leq G\), this factor set cannot be made into a group. The reason is that a binary operator on the equivalence classes (which we&rsquo;ll sometimes write as \( \circ_{\equiv} \) to avoid confusion with the binary operator in \(G\)) can&rsquo;t be both well-defined and preserve some of the structure of \(G\). What we want is for any two equivalence classes, \( [r] \), and \( [s]\), to have \( [r] \circ_{\equiv} [s] = [r \circ_{G} s] \). The good news is that sometimes this is possible. When \(H\) is a normal subgroup of \(G\), then we can form a factor group, as we&rsquo;ll show below.</p>
 <h2 id="mini-lemma-when-ah--h">Mini-Lemma (when aH = H)</h2>
+<div class="emphasized">
 <p>\(aH = H \) if and only if \(a \in H \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Suppose \(aH = H\), then \(a \cdot e \in aH = H \), so \(a \in H\). Now suppose that \(a \in H \), then \( a = a \cdot e \in aH \), so \( a \in H \cap aH \), and since cosets are either equal or disjoint (i.e. their intersection is empty), \(aH = H \).</p>
 <p><strong>QED</strong></p>
 <h2 id="mini-lemma-an--na">Mini-Lemma (aN = Na)</h2>
+<div class="emphasized">
 <p>Let \( N \triangleleft G \), then for all \( g \in G\), the cosets \( g N \) and \(N g \) are the same. (This is an alternate way to define normal subgroup).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Let \(N\) be a normal subgroup of \(G\) and \( g \in G\) be an arbitrary element of \(G\). Then \( g^{-1} N g = N \), which implies that if we apply \(g\) to the left of every element, the cosets will remain equal. That gives us \( N g = g N \).</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem-mod-normal-subgroup-is-a-group">Theorem (mod normal subgroup is a group)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, and \(N\) be a normal subgroup. Let \( \alpha(x) := [x] \) be a function which sends any \(x \in G\) to its equivalence class in \(G / N\). Let \( [r] \circ_{\equiv} [s] := [r \circ_{G} s] \) be a binary operator on \(G / N \).</p>
 <ol>
 <li>\( \circ_{\equiv} \) is well-defined. That is, for any two equivalence classes \([r]\) and \([s]\) in \( G / N\), \( [r] \circ_{\equiv} [s] = [r \circ_{G} s] \).</li>
 <li>\( G / N \) is a group with \( \circ_{\equiv} \) its binary operator.</li>
 <li>\( \alpha \) is an epimorphism from \( G\) onto \( G / N \), and \(Ker(\alpha) = N \).</li>
 </ol>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>Now we prove \( \circ_{\equiv} \) is well defined. The issue that we have to make sure we avoid is having the binary operator give different results for different choices of equivalence class representatives. What we mean is that if \( [s_1] \) is an equivalence class and \( s_2 \in [s_1] \), then \( [s_1] = [s_2] \). We have to guarantee that if \( [r_1] = [r_2] \), that \( [r_1] \circ_{\equiv} [s_1] = [r_2] \circ_{\equiv} [s_2] \), whenever \( r_1 \equiv r_2\) and \( s_1 \equiv s_2 \).</p>
 <p>Let \( [r_1] = [r_2] \) and \( [s_1] = [s_2] \), we want to show that \( [r_1] \circ_{\equiv} [s_1] = [r_2] \circ_{\equiv} [s_2] \). This will happen if and only if \([r_1 \circ_{G} s_1] = [r_2 \circ_{G} s_2] \), which means that \( r_1 \circ_{G} s_1 \equiv r_2 \circ_{G} s_2 \mod N\), and by definition that will happen if and only if \( (r_1 \circ_{G} s_1) N = (r_2 \circ_{G} s_2) N \).</p>
@@ -178,10 +190,14 @@
 <p>We hope this isn&rsquo;t getting too confusing. We&rsquo;ve been sloppy about what exactly lives in \(G / N \), and the proof of claim 3 in the above theorem laid that bare. At times it seems like \(G / N\) is a set of cosets of \(N\), and at other times it seems like it&rsquo;s a set of equivalence classes of elements of \(G\). They&rsquo;re really the same thing, though. We showed (in More on Groups: Morphisms, Normal Subgroups, etc&hellip;) that \( \equiv \mod H \) is an equivalence relation on the set of cosets of a subgroup of \(G\). We defined two elements to be in the same equivalence class if they belong to the same coset.</p>
 <p>Now we start to think about how a group can act on a set.</p>
 <h2 id="definition-group-actions">Definition (group actions)</h2>
+<div class="emphasized">
 <p>Let \(X\) be a set, \(S_{X}\) be the group of all permutations of \(X\), and \(G \leq S_{X}\), then \(g \in G\) is said to act on \(X\), and \(G\) is said to be a group of <em>actions</em> on \(X\).</p>
+</div>
 <p>In fact, since \(G\) itself is a set with a binary operation, \(G\) can even act on itself. What&rsquo;s more, every group acts on itself.</p>
 <h2 id="theorem-originally-due-to-cayley">Theorem (originally due to Cayley)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, then there is an isomorphism \( \phi: G \rightarrow H \leq S_{G} \), from \(G\) into a subgroup of \(S_{G} \), the group of all permutations of the elements of \(G\).</p>
+</div>
 <p>This means that any group can be thought of as a subgroup of a group of permutations.</p>
 <h3 id="proof-4">Proof</h3>
 <p>Let \(G\) be a group, but for this proof, let&rsquo;s refer to the set of all of the elements of \(G\) as \(Y\). That is, \( Y = \{ g | g \in G \} \). Then a permutation of \(G\) is a permutation of \(Y\), and belongs to \(S_{Y} \), by definition. Define \( \beta : G \rightarrow S_{Y} \) such that \( \beta(g) := \pi_{g} \in S_{Y} \), where \( \pi_{g}(y) = g \circ_{G} y \), for any \( y \in Y \). Remember, \( y \in Y \) means that \(y\) is an element of \(G\), so \( g \circ_{G} y \) is defined.</p>
@@ -192,13 +208,17 @@
 <p><strong>QED</strong></p>
 <p>In the earlier entry (More Math of Permutations), we showed that for any permutation of a finite set, there is a function \(Sign(\pi) = \pm 1 \), and that \(Sign(\pi_1 \circ \pi_2) = Sign(\pi_1) \cdot Sign(\pi_2) \). We now know that \(Sign : S_{X} \rightarrow \{1, -1\} \) is a homomorphism from the set of all permutations of a finite set \(X\) into the set \( \{ 1, -1 \} \). What&rsquo;s more, with the above Theorem of Cayley, there&rsquo;s also such a homomorphism from each finite group into the set of \( \{ 1, -1 \} \). This can be very useful. As an example we can now prove a couple of lemmas:</p>
 <h2 id="lemma-either-all-even-or-half-even">Lemma (either all even or half even)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a finite group. Then if there exists \( g \in G\), such that \( Sign(g) = -1 \), there exists \( N \triangleleft G\), such that \( (G : N) = 2\). Otherwise for every \(g \in G\), \( Sign(g) = 1 \).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>Suppose there is a \(g \in G\), such that \( Sign(g) = -1\), then let \( N := \{ h \in G | Sign(h) = 1 \} \). Notice that if \(n_1\) and \(n_2 \in N \), that \( Sign(n_1 \cdot n_2^{-1}) = Sign(n_1) \cdot Sign(n_2)^{-1} = 1 \cdot 1^{-1} = 1\), so \( n_1 \cdot n_2^{-1} \in N\), and thus \(N\) is a subgroup of \(G\). It is a normal subgroup, because for any \(g \in G\), and \(n \in N \), \(Sign(g^{-1} \cdot n \cdot g) = Sign(g^{-1}) \cdot Sign(n) \cdot Sign(g) \), and that is equal to \( Sign(g)^{-1} \cdot Sign(g) \cdot 1 = 1 \), and so is in \(N\). Therefore \( g^{-1} N g = N \), so \(N\) is normal.</p>
 <p>Now we show that \( (G : N ) = 2 \). Notice that for any \( n \in N \), \( g \cdot n \not\in N \), and likewise, for any \( h \not\in N\), \( g \cdot h \in N \). We previously showed that \( \pi_{g}(x) = g \cdot x \) is 1-1, so \( | N | \leq | G \setminus N | \leq | N | \), therefore \( |N| = \frac{1}{2} | G | \), and thus \( (G : N ) = 2 \).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma--2odd-has-a-normal-subgroup-of-order-odd">Lemma ( 2*odd has a normal subgroup of order odd)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group of order \( 2 \cdot ( 2 \cdot k + 1) \), then \(G\) has a subgroup \(N\) of order \( 2 \cdot (2 \cdot k + 1) \), which is normal in \(G\).</p>
+</div>
 <p>We&rsquo;re going to prove this in the <a href="/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/#corollary-2odd-has-normal-subgroup">next entry</a>. It takes a bit more work than the above lemma.</p>
 
 		</div>

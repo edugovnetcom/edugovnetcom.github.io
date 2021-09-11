@@ -146,31 +146,43 @@
 </div><div class="content post__content clearfix">
 			<p>In this article we mostly talk about partial orders, and lattices, which are a special type of partial order. We tie it in with our discussions of subgroups before proving two distribution laws for lattices.</p>
 <h2 id="definition-partial-order">Definition (partial order)</h2>
+<div class="emphasized">
 <p>A partial order is a relation between two elements of a set,\(S\), usually written \( \leq \), which satisfies the following axioms</p>
 <ol>
 <li>\(\forall x \in S\), \( x \leq x\).</li>
 <li>\(\forall x, y \in S\), \( x \leq y\) and \(y \leq x \) implies that \(x = y \).</li>
 <li>\(\forall x, y, z \in S\), \( x \leq y\) and \( y \leq z \) implies \(x \leq z\).</li>
 </ol>
+</div>
 <p>When writing out the partial order, we sometimes write it as an ordered pair \( (S, \leq)\), writing out the set and the partial order symbol.</p>
 <p>As the name suggests, partial orders are less strict than total orders, like \( \leq \) among the rational numbers. For example, if we take \( \mathbb{Q} \times \mathbb{Q} \) with the relation \( (x_1, x_2) \leq (y_1, y_2) \) if and only if \( x_1 \leq y_1\) and \( x_2 = y_2 \), then this is a partial order. We can see that all of the axioms are satisfied by this order, but there are many ordered pairs which can&rsquo;t be compared with each other. For example, \( (1, 2) \) and \( (2, 1 )\) aren&rsquo;t comparable as \(x_2 \neq y_2 \).</p>
 <p>Consider a second example of ordered pairs of rationals where \( (x_1, x_2 ) \leq (y_1, y_2 ) \) if and only if \( x_1 \leq y_1\) and \(x_2 \leq y_2\). Notice that with this partial order on \( \mathbb{Q} \times \mathbb{Q} \), that for any pair of elements \( x\) and \(y\), we can find a \(z\), such that \( x \leq z\) and \( y \leq z\). To see this, let \( (x_1, x_2)\) and \( (y_1, y_2) \) be two ordered pairs of rational numbers. Then if we let \( z = ( \max(x_1, y_1), \max(x_2, y_2) ) \), we see that \( x \leq z\) and \( y \leq z\) as we wanted. Similarly, by taking \( z = ( \min(x_1, y_1), \min(x_2, y_2) ) \), we have \( z \leq x\) and \( z \leq y\).</p>
 <p>However, the first example we gave didn&rsquo;t have this property. To see that, consider the example pair we gave above, \( x = (1,2)\) and \(y = (2,1) \). There is no \(z\) which can be comparable to both \(x\) and \(y\), because in that case \( z_2\), the second component of \(z\), would have to equal both \(1\) and \(2\).</p>
 <p>This brings us to our next few definitions.</p>
 <h2 id="definition-lattice">Definition (lattice)</h2>
+<div class="emphasized">
 <p>Let \( (S, \leq) \) be a partial order such that for any two elements, \(x\) and \(y\) \( \in S\), there exists \(w, z \in S\), such that \( w \leq x\), \( w\leq y\), \( x \leq z\) and \(y \leq z\), then this partial order is said to be a lattice.</p>
+</div>
 <h2 id="definition-join">Definition (join)</h2>
+<div class="emphasized">
 <p>Let \( (S, \leq) \) be a lattice. Let \( x\) and \(y \in S\), then the \( \leq\)-least element \(z \in S\), such that \( x \leq z\) and \(y \leq z\) is said to be their join. It is typically written as \( z = x \vee y\).</p>
+</div>
 <p>This is also called \( \max(x,y) \), which I used earlier when constructing the max of two ordered pairs. Hopefully that wasn&rsquo;t too confusing, though, since I was using it in its more common setting, where the order is the usual order on the rationals. It can also be called the supremum of the set \( \{x, y\}\). We&rsquo;ll define that more precisely later.</p>
 <h2 id="definition-meet">Definition (meet)</h2>
+<div class="emphasized">
 <p>Let \( (S, \leq) \) be a lattice. Let \(x\) and \(y \in S\), then the \( \leq\)-greatest element \(z \in S\), such that \( z \leq x\) and \(z \leq y\) is said to be their meet. It is typically written as \(z = x \wedge y\).</p>
+</div>
 <p>More precisely, \( x \vee y = z\), where \( \forall u, x \leq u\) and \( y \leq u \) implies \( z \leq u\). The precise definition for \( \wedge\) is similar. It is sometimes called \( \min(x,y)\).</p>
 <p>Notice that \( \vee\) and \( \wedge \) are functions which map every element of \( S \times S\) to another element of \(S\), whenever \( (S, \leq) \) is a lattice. Now we prove that it&rsquo;s associative.</p>
 <h2 id="definition---">Definition ( &gt;= )</h2>
+<div class="emphasized">
 <p>Let \( (S, \leq) \) be a partial order. Then we define \( \geq \) to be the relation such that \( x \geq y \), if and only if \( y \leq x \) for all \(x\), \(y \in S\).</p>
+</div>
 <p>Hopefully that last definition didn&rsquo;t confuse or surprise anyone.</p>
 <h2 id="theorem--v-is-associative">Theorem ( v is associative):</h2>
+<div class="emphasized">
 <p>Let \(x\), \(y\) and \(z\) be elements of \(S\). Let&rsquo;s \(S, \leq \) be a lattice. Then, \( (x \vee y ) \vee z = x \vee (y \vee z) \).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>Let \( s := x \vee y \), and \( t := y \vee z\). Also let \( a := s \vee z \) and \( b: = x \vee t \). Then we have</p>
 <p>\[ a = s \vee z \]</p>
@@ -178,29 +190,41 @@
 <p>Then, by definition, we have \( a \geq z \), \(s \geq y\), and \( a \geq s\). By the transitivity of \( \geq\), we have \( a \geq y\). Therefore, by the definition of \(t\), we have \( a \geq t\). We also have \( s \geq x\), which means that applying transitivity again, \( a \geq x\). This means, that, by the definition of \(b\), \( a \geq b\). A similar argument will show that \(b \geq a\), and thus \( a = b\) by partial order axiom 2.</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem---is-associative">Theorem ( ^ is associative)</h2>
+<div class="emphasized">
 <p>Let \(x\), \(y\) and \(z\) be elements of \(S\). Let&rsquo;s \(S, \leq \) be a lattice. Then, \( (x \wedge y ) \wedge z = x \wedge (y \wedge z) \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Very similar to the proof for \( \vee \).</p>
 <h2 id="definition-bounded-lattice">Definition (bounded lattice)</h2>
+<div class="emphasized">
 <p>Let \( (S, \leq)\) be a lattice, such that there are two elements of \(S\), which we&rsquo;ll call \( 1\) and \(0\), such that for all \(s \in S\), \( s \leq 1\) and \( 0 \leq s \). Then \( (S, \leq) \) is said to be a bounded lattice.</p>
+</div>
 <h2 id="theorem-subgroups-form-a-bounded-lattice">Theorem (subgroups form a bounded lattice)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group and let \( \mathcal{G} := \{ H \leq G \} \), then \( (\mathcal{G}, \leq) \), where \( H_1 \leq H_2 \) is the usual subgroup relation, is a bounded lattice.</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>By the definition of subgroup, we know that \( H_1 \leq H_2 \) and \(H_2 \leq H_3 \) implies \(H_1 \leq H_3\), so \( \leq \) is transitive. That takes care of partial order axiom 3. Axioms 1 and 2 are equally easy to prove. We also know that \( H \leq G \) and \( \{e \} \leq H\), for all \(H \in \mathcal{G}\), so it is bounded. The only thing that remains to be shown is that this partial order is a lattice. To do that we need to show that \( \vee \) and \( \wedge\) are well-defined. We&rsquo;ll show that with a couple lemmas, which we&rsquo;ll prove below.</p>
 <h2 id="lemma--is-well-defined">Lemma (^ is well-defined)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, \(H_1\) and \(H_2\) be two subgroups, then \( H_1 \cap H_2\) is a subgroup and furthermore \( H_1 \wedge H_2 = H_1 \cap H_2\).</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>Let \(a\) and \(b\) be in \(H_1 \cap H_2\), then \(a\) and \(b\) are in both \(H_1\) and \(H_2\), so by the subgroup test lemma, \(ab^{-1} \) in both \(H_1\) and \(H_2\), so their intersection must be a subgroup. Now, let \(K \) be any subgroup where \( K \leq H_1\) and \(K \leq H_2\). Then since \(K\) is a subgroup of both subgroups, it must also be a subset of both subgroups, so we must have \(K \leq H_1 \cap H_2\). This implies that \( H_1 \cap H_2 = H_1 \wedge H_2\).</p>
 <p><strong>QED</strong></p>
 <p>I&rsquo;m starting to think I&rsquo;ve already proved that the intersection of two subgroups is a subgroup, but at least the proof is very quick.</p>
 <h2 id="lemma-v-is-well-defined">Lemma (v is well-defined):</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, \(H_1\) and \(H_2\) be two subgroups, then \(H_1 \vee H_2\) is equal to \( \bigcap\limits_{H_1 \leq K, H_2 \leq K} {K} \).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>\(G\) is in this intersection, so it is not an empty intersection. We&rsquo;ve just shown that the intersection is a subgroup (in fact, in a previous entry, we showed that it&rsquo;s true even for an infinite amount of subgroups). Clearly, any subgroup \( \geq\) to both \(H_1\) and \(H_2\) will contain this intersection, so it is \( \vee\).</p>
 <p><strong>QED</strong></p>
 <p>This completes our proof that subgroups form a bounded lattice.</p>
 <h2 id="theorem-when-v--">Theorem (when v = *)</h2>
+<div class="emphasized">
 <p>Let \(H\), and \(N\) be subgroups in \( \mathcal{G} \), such that \(H\) is also a subgroup of \(N_G(G) \), the normalizer of \(N\) in \(G\). That is, for all \( h \in H\), we have \( h^{-1}Nh = N\), then \(H \vee N = H \cdot N\).</p>
+</div>
 <h2 id="proof-5">Proof</h2>
 <p>Clearly \(H \cdot N\) is a subgroup of \(G\) which contains both \(H\) and \(N\). Therefore, we only need to show that there is no strictly smaller subgroup which contains both. This is straight-forward.</p>
 <p>Let \(K\) be a subgroup such that \( H \leq K \) and \(N \leq K\), then for any \(h \in H\), and any \( n \in N\), \(h \in K\) and \(n \in K\). Now, since \(K\) is a subgroup, \(hn \in K\). Therefore, \(H \cdot N \leq K\), thus \(H \cdot N = H \vee N\).</p>
@@ -208,7 +232,9 @@
 <p>Unfortunately, when \(H\) isn&rsquo;t in the normalizer of \(N\), we don&rsquo;t have this nice relationship.</p>
 <p>I&rsquo;ve mentioned before that what I&rsquo;ve used as the definition for \(H \cdot N\) isn&rsquo;t typical. It&rsquo;s more common to define \( H \cdot N \), (also written simply as \(HN\), as \( \{ hn | h \in H, n \in N \} \). This definition is preferable when we don&rsquo;t necessarily know that \(H\), and \(N\) are subgroups of a group \(G\), or when we&rsquo;re not sure that \( H \leq N_{G}(N) \), because it is always equal to a subset of \(G\) (but not necessarily a subgroup of \(G\)). From now on, I&rsquo;ll also use that as the definition of \(HN\), and treat the formula \( HN = \alpha^{-1} \circ \alpha(H) \) more like the result of a theorem, instead.</p>
 <h2 id="theorem-hk--kh-implies-it-is-a-subgroup">Theorem (HK = KH implies it is a subgroup)</h2>
+<div class="emphasized">
 <p>Let \(H\) and \(K\) be two subgroups of a group \(G\), then \(HK = KH\) implies \(HK\) is a subgroup.</p>
+</div>
 <h3 id="proof-6">Proof</h3>
 <p>Suppose \(HK = KH\), then let \(a = h_1k_1\) and \(b = h_2k_2\) be two elements of \(HK\). Then \(b^{-1} = k_2^{-1}h_2^{-1} \), so \(ab^{-1} = h_1 (k_1 k_2^{-1})h_2^{-1} \). Since \(K\) is a subgroup, \(k_1 k_2^{-1} = k_3 \), for some \(k_3 \in K\). Therefore the product is equal to \( (h_1 k_3) h_2^{-1}\). Now, since \(HK = KH \), \( h_1 k_3 \) is equal to \(k_4 h_4\), for some \(k_4 \in K\) and \(h_4 \in H\). Then the product is equal to \( k_4 (h_4 h_2^{-1})\), which itself is equal to \( k_4 h_5\), because \( h_4 h_2^{-1} = h_5\), for some \(h_5 \in H\), because \(H\) is a subgroup.</p>
 <p>Therefore, \(ab^{-1} = k_4 h_5 \in KH\), which is equal to \(HK\), by assumption, and so by the subgroup test, \(HK \) is a subgroup.</p>
@@ -216,13 +242,17 @@
 <p>The argument in the proof that \(\vee = \cdot\) above still works here. Thus in this case as well we have \(HK = H \vee K\).</p>
 <p>Next, we&rsquo;re going to introduce</p>
 <h2 id="definition-modular-lattice">Definition (modular lattice)</h2>
+<div class="emphasized">
 <p>Let \(\mathcal{L}\) be a lattice such that if \(C\), and \(D \in \mathcal{L} \), such that \( C \leq D\), then for any \( B \in \mathcal{L}\), we have \( (C \vee B) \wedge D = (D \wedge B ) \vee C \), then \(\mathcal{L}\) is said to be a modular lattice.</p>
+</div>
 <p>To better appreciate that definition, here&rsquo;s a picture of a lattice that is not modular.</p>
 <p><img src="/images/lattice_non_modular.png" alt="Non-modular lattice" title="Non-modular lattice"></p>
 <p>Notice that \((C \vee B) \wedge D = E \wedge D = D\), whereas \( (D \wedge B) \vee C = C \vee C = C\). Therefore, if \(C \neq D\), then the lattice is not modular. You can see that if this lattice were modular, that \(D = C\), so we would not have this pentagon appear without lines inside it. It would instead be a diamond.</p>
 <p>It turns out that modular lattices behave fairly nicely.</p>
 <h2 id="theorem-distribution-i">Theorem (distribution I)</h2>
+<div class="emphasized">
 <p>Let \(\mathcal{L}\) be a lattice, let \(X\), \(Y\), and \(Z\) be elements of \(\mathcal{L}\), then \(X \vee (Y \wedge Z) \leq (X \vee Y) \wedge (X \vee Z) \). Equality will always hold if \(\mathcal{L}\) is a modular lattice.</p>
+</div>
 <h3 id="proof-7">Proof</h3>
 <p>Notice that \(X \leq (X \vee Y) \), and \( X \leq (X \vee Z)\). We also have, \( (Y \wedge Z) \leq Y \leq (X \vee Y)\), so \( (Y \wedge Z) \leq (X \vee Y) \). Similarly, \( (Y \wedge Z) \leq Z \leq (X \vee Z)\), so combining these gives us \(X \vee (Y \wedge Z) \leq (X \vee Y) \wedge (X \vee Z) \). So, now we&rsquo;re left with a sublattice that looks like this</p>
 <p><img src="/images/lattice_distribution_i.png" alt="Lattice Distribution I" title="Lattice Distribution I"></p>
@@ -230,7 +260,9 @@
 <p><strong>QED</strong></p>
 <p>The final theorem for this entry will be the dual to the distributive result above.</p>
 <h2 id="theorem-distribution-ii">Theorem (distribution II)</h2>
+<div class="emphasized">
 <p>Let \( \mathcal{L} \) be a lattice, let \(X\), \(Y\), and \(Z\) be elements of the lattice, then \(X \wedge (Y \vee Z) \geq (X \wedge Y) \vee (X \wedge Z) \). Equality is guaranteed if \( \mathcal{L} \) is modular.</p>
+</div>
 <h3 id="proof-8">Proof</h3>
 <p>We have \( (X \wedge Y) \leq X \), and \( (X \wedge Y) \leq Y \leq (Y \vee Z) \), so \( (X \wedge Y) \leq X \wedge (Y \vee Z) \). Similarly, \( (X \wedge Z ) \leq X \wedge (Y \vee Z) \). Therefore, combining the two inequalities, we get \( (X \wedge Y) \vee (X \wedge Z) \leq X \wedge (Y \vee Z) \).
 If the inequality is strict, we end up with the following sublattice</p>

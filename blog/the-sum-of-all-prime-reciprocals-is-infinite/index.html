@@ -135,7 +135,9 @@ In this article I&rsquo;m not going to prove that \( \int_{1}^{n}{ \frac{1}{x} }
 <p><strong>QED</strong></p>
 <p>To prove that the sum of the reciprocals of the primes is infinite we&rsquo;ll use a result similar to what we just got, but this time with the function \( \frac{1}{x\ln(x)}\). While it&rsquo;s fresh in our minds, let&rsquo;s get that lemma out of the way.</p>
 <h2 id="lemma-a">Lemma (a)</h2>
+<div class="emphasized">
 <p>\( \sum\limits_{k=m}^{\infty} {\frac{1}{k \ln(k)}} = \infty \), for any \( m \ge 2 \).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>Similarly to what we did before, notice that</p>
 <p><img src="/images/one_over_x_log_x.png" alt="One of xlog(x)" title="one over x log (x)"></p>
@@ -144,7 +146,9 @@ and, like before, \[ \left \lceil x - 1 \right \rceil \le x \Rightarrow ( \left 
 Combining the last two lines gets us \( \sum\limits_{k=m}^{n-1} { \frac{1}{k\ln(k)} } \ge \int_{m}^{n} { (x \ln(x))^{-1} dx } \). We can evaluate that integral by performing a u substitution with \( u = \ln(x) \). When we do that we get that the integral is equal to \( \ln ( \ln (n) ) - \ln (\ln (m) ) \). For any fixed m, when we evaluate the limit as n goes to infinity, we see that although it may get there slowly, \( \ln ( \ln (n) ) \) grows to infinity, and that was the last step in proving the lemma.</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-b">Lemma (b)</h2>
+<div class="emphasized">
 <p>\( x &gt; e^{2} \Rightarrow \frac{ x }{ \ln(x) } \ge \sqrt{x} \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Notice that at \( x = e^2\), we get \( \frac{ e^{2}} { \ln(e^{2}) } = \frac{e^{2}} {2} \ge \sqrt{ e^{2} } = e \). Now we&rsquo;ll show that \( \frac{x} {\ln(x)} \) grows faster than \( \sqrt{x} \) by showing that the derivative of \( \frac{ (\frac{x} { \ln(x) }) }{ \sqrt{x} } \ge 1 \). Taking the derivative is just tedious calculus. The result (feel free to check it yourself) is
 \[ \frac{ (\frac{1}{2} \ln(x) - 1)x^{- \frac{1}{2}}} { \ln(x)^{2} } \]
@@ -152,7 +156,9 @@ Notice that the denominator is squared, and non-zero when \( x &gt; e^{2}\), whi
 <p><strong>QED</strong></p>
 <p>Now let&rsquo;s do some actual number theory.</p>
 <h2 id="lemma-c">Lemma (c)</h2>
+<div class="emphasized">
 <p>Let \( \mathbb{P} := \{ n \in \mathbb{N} | \text{n is a prime} \}\). If every time \( p \in \mathbb{P} \), \( p^k | d \Rightarrow p^k | n \), then \( d | n \).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>We&rsquo;re going to assume that the natural numbers can be factored uniquely into powers of prime divisors. It&rsquo;s true, and maybe I&rsquo;ll write about it in another article. That result is known as the Fundamental Theorem of Arithmetic. A consequence of the Fundamental Theorem of Arithmetic is that for any natural number n, n can be factored into prime powers. That means that for any \( n \), there is a finite set \( \mathbb{P}_n := \{ p_1, p_2, p_3, &hellip;, p_k \} \) of primes that divide \( n \). If \( \mathbb{P}_n \) has only one number in it (i.e. \( | \mathbb{P}_n | = 1 \) ), then we say that \( n \) is a prime power. Because \( n = p^k \) for some \( p \) and some \( k \).
 Now let&rsquo;s define \( \epsilon(p,n) := \max\limits_{k} \{p^k | n\} \). I.e. the maximum \(k \) such that \( p^k \) divides \( n\). We can then rewrite \(d \) and \( n\) as:
@@ -161,22 +167,26 @@ Now let&rsquo;s define \( \epsilon(p,n) := \max\limits_{k} \{p^k | n\} \). I.e. 
 By our assumption, we have \( \mathbb{P}_d \subseteq \mathbb{P}_n \) and for all \( p \in \mathbb{P}_d \), \( \epsilon(p, d) \leq \epsilon(p, n) \). Combining those two observations gives us
 \[ n = \prod\limits_{ p \in \mathbb{P}_n } p^{ \epsilon(p, n) } = \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) } \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \]
 \[= ( \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, d) } \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} ) \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \]
-\[= d \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \]
-QED.</p>
+\[= d \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \]</p>
+<p><strong>QED</strong></p>
 <h2 id="lemma-d">Lemma (d)</h2>
+<div class="emphasized">
 <p>Let \[ \Lambda(x) := \sum\limits_{ p^k \le x \textbf{ and } p \in \mathbb{P} } { \ln(p) } \] then for any integer \( 1 \le d \le n \), \( d | e^{ \Lambda(n) } \).</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>First notice that \( \Lambda(x) \) is \( e \) to the power of a sum of natural logarithms, so we can change that to the product
 \[ e^{\Lambda(x)} = \prod\limits_{ p^k \le n \textbf{ and } p \in \mathbb{P} } {p} \tag{1}\label{1} \]
 Next, let&rsquo;s pick an arbitrary \( d \leq n \) and apply lemma (c) by considering one of its prime divisors, \( p \). Recall from the <a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/#lemma-c">proof of lemma (c)</a> that \( \epsilon(p, d) := \max\limits_{k} {p^k | n} \), and further notice that by definition \( p^{ \epsilon(p, d)} | d \), so \( p^{ \epsilon(p, d)} \leq d \leq n \). Since \( \epsilon(p,d) \) is the maximum \( k \), we can also see that for every \( k = 1, 2, 3, &hellip;, \epsilon(p, d) \), we have \( p^k | d \), and so \( p^k \leq d \leq n) \). Therefore by equation (1), \(p^{ k } | e^{ \Lambda(n) } \) whenever \( k \leq \epsilon(p,d) \), so with lemma (c) we are done with the proof of this lemma.</p>
 <p><strong>QED</strong></p>
 <h2 id="three-facts-about-an-integral">Three Facts About an Integral</h2>
+<div class="emphasized">
 <p>Now we shift focus for a bit and consider another integral, \( I_n := \int_{0}^{1} { x^n(1-x)^n dx } \). We want to establish three facts about this integral.</p>
 <ol>
 <li>\( I_n \gneq 0 \), for all \( n\)</li>
 <li>\( I_n \leq \frac{ 1 }{ 4^{n} } \)</li>
 <li>\( I_{n} \cdot e^{ \Lambda(2n+1) } \) is an integer.</li>
 </ol>
+</div>
 <h3 id="proof-of-1-and-2">Proof of 1 and 2</h3>
 <p>Let \( f_{n}(x) := x^n(1-x)^n \), notice that for \( x \in (0, 1) \), \( f_{n}(x) \gneq 0 \), but \(f_{n}(x) = 0 \) at \( x = 0 \) and \( x = 1\). Also,
 \[ \frac{d}{dx} f_n(x) = n[ x^{n-1}(1-x)^{n-1}(x-1) - x^{n-1}(1-x)^{n-1}x ] \]
@@ -191,7 +201,9 @@ Taking the logarithm of both sides (which are both positive), we get
 \[ \Lambda(2n+1) \geq 2\ln(2)n \tag{2}\label{2} \]
 Now let&rsquo;s define \( \pi(x) := | { p \in \mathbb{P} | p \leq x } |\).</p>
 <h2 id="lemma-e">Lemma (e)</h2>
+<div class="emphasized">
 <p>\( \frac{ \Lambda(n) }{ \ln(n) } \leq \pi(n) \) for \( n \geq 2 \).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>By definition, \( \Lambda(n) = \sum\limits_{p^k \leq n} {\ln(p)} \). That&rsquo;s equal to
 \[ \sum\limits_{ p \leq n } {( \sum\limits_{ k = 1 }^{ \max\limits_{ k } { p^k \leq n } } \ln(p) )} \]

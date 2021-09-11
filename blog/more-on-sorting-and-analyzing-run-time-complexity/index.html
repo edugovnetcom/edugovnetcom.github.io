@@ -123,12 +123,18 @@
 <p>In what follows, we&rsquo;re going to reference the C++ version of <code>quick_sort</code> given in (<a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>). It might be useful to keep that page open in a side tab. We&rsquo;re going to focus on the <code>quick_sort</code> function that takes two indices and a vector as its input. The two indices are <code>start</code> and <code>end</code>, respectively. Notice that the <code>while</code> loop has two indices, <code>i</code> and <code>j</code> and that the loop executes as long as <code>i &lt; j</code>. Initially, <code>i = start</code> and <code>j = end - 1</code>. We also showed that the while loop executes exactly \(\text{end} - \text{start} - 1 \) times.</p>
 <p>This allowed us to prove that the <code>while</code> loop never runs more than \(n^2\) times, where \(n\) equals <code>input.size()</code>. Since the total number of operations involved in completing a run of quick_sort is proportional to the number of times the while loop executes, the amount of time it takes to finish on a given input vector of length \(n\) is no more than \( c \cdot n^2\), for some \(c \in \mathbb{R} \). This is often written as \( O(n^2)\). More precisely,</p>
 <h2 id="definition-big-o-notation">Definition (big O notation)</h2>
+<div class="emphasized">
 <p>Let \(g : X \rightarrow Y \) be a function where both sets \(X\) and \(Y\) have a total ordering. Then we define \( O(g) := \{ f : X \rightarrow Y | \forall x \geq w_{f}, f(x) \leq c \cdot g(x) \} \), where \( w_{f} \in X\) and \( c \in Y\). A different \(w_f\) can be specified for each function, \(f\). Sometimes we say &ldquo;\(f \) is \(O(g) \)&rdquo;, instead of \( f \in O(g) \).</p>
+</div>
 <p>We&rsquo;re going to prove some results which will help us determine what \(O\) set a recursively defined function \(T\) belongs to. But first, we consider a useful function.</p>
 <h2 id="definition--i_log_bn-">Definition ( i_log_b(n) )</h2>
+<div class="emphasized">
 <p>Let \(n, b \in \mathbb{N} \) be positive natural numbers (\( b \geq 2\)). Let \( \left\lceil \frac{\cdot}{b} \right\rceil : \mathbb{N} \rightarrow \mathbb{N}\) be the function which maps \(n\) to the least integer greater than or equal to \(\frac{n}{b}\) (also written \( \left\lceil \frac{n}{b} \right\rceil \)), then we define \( \text{i_log}_b(n) := \) the least integer \(i\), such that \( {\left\lceil \frac{\cdot}{b} \right\rceil}^i (n) = 1 \). Where, for example, \( {\left\lceil \frac{\cdot}{b} \right\rceil}^2 (n) \) equals \( \left\lceil \frac{ \left\lceil \frac{n}{b} \right\rceil }{b} \right\rceil\).</p>
+</div>
 <h2 id="lemma-1">Lemma (1)</h2>
+<div class="emphasized">
 <p>\( \text{i_log}_b(n) = \left\lceil { \log_b(n) } \right\rceil\).</p>
+</div>
 <p>(This is the reason nobody uses \( \text{i_log}_b(n)\))</p>
 <h3 id="proof">Proof</h3>
 <p>We start by proving that \( \text{i_log}_b(n) \) is a non-decreasing function, i.e. \( \text{i_log}_b(n) \leq \text{i_log}_b(n+1) \). Suppose for a contradiction that sometimes it&rsquo;s decreasing, then let \(s\) be the smallest positive natural number such that \( \text{i_log}_b(s) &gt; \text{i_log}_b(s+1) \). Then, by definition, we have \( \text{i_log}_b( \left\lceil \frac{s}{b} \right\rceil) &gt; \text{i_log}_b( \left\lceil \frac{s+1}{b} \right\rceil ) \). We&rsquo;re almost to a contradiction, but there are a couple of minor things we need to show. First, notice that \( \left\lceil { \cdot } \right\rceil \) is non-decreasing. This means that \( \left\lceil \frac{s}{b} \right\rceil \leq \left\lceil \frac{s+1}{b} \right\rceil \). Second, we claim that since \(b \geq 2\), we have \( \left\lceil \frac{s}{b} \right\rceil &lt; s \) (and also for \(s + 1\)). Notice that if we can prove this, then we have a contradiction, because \(s\) was assumed to be the least such natural number.</p>
@@ -155,26 +161,32 @@ This holds as long as \( a \neq b^{\alpha} \). However, if those two are equal t
 because each term of the sum is equal to \(1\) in that case. With a bit more algebra, and using the fact that \(a^k = (b^{\log_b(a)})^k = (b^k)^{\log_b(a)} \), we see that equation (7) implies
 \[ T(b^k) = \frac{c}{a - b^{\alpha}} [ a (b^k)^{\log_b(a)} - \frac{b^{\alpha}}{c} f(b^k) ] \tag{9}\label{9} \]</p>
 <h2 id="lemma-2">Lemma (2)</h2>
+<div class="emphasized">
 <p>Let \(h\) and \(l\) be non-decreasing functions from \(\mathbb{N} \) to \(\mathbb{N}\), such that for some \(b\), and every \(k \geq 0 \), \(h(b^k) \leq l(b^k)\), then for all \(n \in \mathbb{N}\), we have \(h(n) \leq l(bn) \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Notice that \(h(n) \leq h(b^{ \left\lceil \log_b(n) \right\rceil }) \) , and this is less than or equal to \( l(b^{ \left\lceil \log_b(n) \right\rceil }) \leq l(bn)\)</p>
 <p><strong>QED</strong></p>
 <h3 id="lemma-3">Lemma (3)</h3>
+<div class="emphasized">
 <ol>
 <li>If \(a &lt; b^{\alpha} \), then \(T(b^k) \leq \frac{2c}{a-b^{\alpha}}\frac{b^{\alpha}}{c}f(b^k)\).</li>
 <li>If \(a &gt; b^{\alpha} \), then \(T(b^k) \leq \frac{2c}{a-b^{\alpha}}a(b^k)^{ \log_b(a) } \).</li>
 </ol>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Equation (7) above is equal to a geometric sum of non-negative terms, so we can assume that equation (9) is always non-negative. Then the result follows both for case 1 and 2 by considering equation (7) and observing that \( x \geq y \) implies that \(x^k \geq y^k\) for all \(k \geq 0 \).</p>
 <p><strong>QED</strong></p>
 <p>These results allow us to prove something which can be quite useful. It&rsquo;s almost as powerful as the &ldquo;Master Theorem&rdquo; from the Introduction to Algorithms text book.</p>
 <h2 id="corollary-almost-the-master-theorem">Corollary (Almost the Master Theorem)</h2>
+<div class="emphasized">
 <p>Let \(T(n) = f(n) + aT(\left\lceil {\frac{n}{b}} \right\rceil)\), where \(f(n) = cn^{\alpha}\), then</p>
 <ol>
 <li>If \(a &lt; b^{\alpha} \), then \(T(n) \in O(f(n)) \).</li>
 <li>If \(a &gt; b^{\alpha} \), then \(T(n) \in O(n^{\log_b(a)}) \).</li>
 <li>If \(a = b^{\alpha}\), then \(T(n) \in O(\log_b(n)f(n))\).</li>
 </ol>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p><strong>Case 1.</strong> Combining the previous two lemmas, we see that \(T(n) \leq \frac{2c}{a-b^{\alpha}}\frac{b^{\alpha}}{c}f(bn) \). Notice that since \(f(n) = cn^{\alpha}\), we have \(f(bn) = c(bn)^{\alpha} = c(b^{\alpha})n^{\alpha}\), and that is equal to \(b^{\alpha}f(n) \). This proves case 1.</p>
 <p><strong>Case 2.</strong> The proof is very similar to case 1.</p>
@@ -185,7 +197,9 @@ because each term of the sum is equal to \(1\) in that case. With a bit more alg
 <p>You&rsquo;ve probably encountered expected values before, but for clarity, if \(X\) is a discrete random variable, taking on values in a set \(\mathcal{X}\) with probability \(P(X = x)\), for each \(x \in \mathcal{X} \), then \(E[X] = \sum\limits_{x \in \mathcal{X}} (x P(x)) \).</p>
 <p>In order to get the result, we&rsquo;ll have to use a bit of calculus. We&rsquo;ll use a trick very similar to what we used in (<a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/">The Sum of all Prime Reciprocals is Infinite</a>). We won&rsquo;t go into it in as much detail this time.</p>
 <h2 id="lemma-3-1">Lemma (3)</h2>
+<div class="emphasized">
 <p>\( \sum\limits_{k=1}^n k \ln(k) \leq \frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] \).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>Since \( \frac{d}{dx} x \ln(x) = 1 + \ln(x) \), \(x \ln(x)\) is a non-decreasing function when \(x \geq 1\). That means that \( \sum\limits_{k = 1}^n k\ln(k) \leq \int_1^n x \ln(x) dx\). Using &ldquo;u substitution&rdquo;, we get that that integral is equal to \(\frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] \).</p>
 <p><strong>QED</strong></p>

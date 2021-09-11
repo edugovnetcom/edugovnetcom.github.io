@@ -142,33 +142,47 @@
 </div><div class="content post__content clearfix">
 			<p><span class="first-letter">I</span>n the previous entry More of an Introduction to Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&rsquo;t as thorough as what you&rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&rsquo;ll continue with that theme.</p>
 <h2 id="definition-conjugation">Definition (conjugation)</h2>
+<div class="emphasized">
 <p>Two elements of a group, \(G\), \(x \) and \(y\) are said to be conjugate to each other if there exists \(z \in G \), such that \(z^{-1} \cdot x \cdot z = y \). This is equivalent to \( x \cdot z = z \cdot y \).</p>
 <p>Similarly, two subsets \( S_1, S_2 \subseteq G \) are said to be conjugate to each other if there exists \(z \in G\), such that \( z^{-1} \cdot S_1 \cdot z = S_2 \).
 I&rsquo;ll sometimes write \( x \sim y\), or in the case of subsets, \( S_1 \sim S_2 \).</p>
+</div>
 <h2 id="mini-lemma-inverse-of-product-of-inverses">Mini-Lemma (inverse of product of inverses)</h2>
+<div class="emphasized">
 <p>Let \(x\) and \(y\) be elements of the group \(G\). Then \(x^{-1} \cdot y^{-1} = (y \cdot x)^{-1} \).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>\(x^{-1} \cdot y^{-1} = (y \cdot x)^{-1} \) means, by the definition of inverse, that \(x^{-1} \cdot x^{-1} \cdot (y \cdot x) = e \), the identity element of \(G\). We&rsquo;ve shown that we can remove, or rearrange the parentheses, so the expression on the left is equal to \( x^{-1} \cdot ( y^{-1} \cdot y ) \cdot x = e \).</p>
 <p><strong>QED</strong></p>
 <h2 id="mini-lemma-inverse-of-inverse">Mini-Lemma (inverse of inverse)</h2>
+<div class="emphasized">
 <p>Let \(x \) be an arbitrary element of a group, then \( (x^{-1})^{-1} = x \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Let \(x\) be an arbitrary element of a group, and let \( y = (x^{-1})^{-1} \). By the definition of inverse, we have \( x^{-1} \cdot y = e \), which implies that \( x \cdot x^{-1} \cdot y = x \), and that implies that \(y = x \).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-conjugation-is-transitive">Lemma (conjugation is transitive)</h2>
+<div class="emphasized">
 <p>Let \( x \sim y \) and \(y \sim z\), then \(x \sim z \).
 Similarly, for subsets, \(S_1 \sim S_2 \) and \(S_2 \sim S_3\) implies \(S_1 \sim S_3\).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Suppose \(S_1 \sim S_2 \) and \(S_2 \sim S_3 \), then there exists \(z_1\) and \(z_2 \in G\), such that \( z_1^{-1} S_1 z_1 = S_2 \), and \( z_2^{-1} S_2 z_2 = S_3 \), but then \( z_2^{-1} ( z_1^{-1} S_1 z_1 ) z_2 = S_3 \), so \( (z_2^{-1} z_1^{-1}) S_1 (z_1 z_2) = S_3 \), but since \( z_2^{-1} z_1^{-1} = (z_1z_2)^{-1} \), we have \((z_1z_2)^{-1} S_1 (z_1 z_2) = S_3\), which means that \( S_1 \sim S_3 \), as desired. This proves 2. To prove 1, just let \(S_1 = \{x\}\) and \(S_2 = \{y\}\).</p>
 <p><strong>QED</strong></p>
 <h2 id="definition-normal-subgroup">Definition (Normal Subgroup)</h2>
+<div class="emphasized">
 <p>Let \(N \), be a subgroup of \(G\), if \( z^{-1} \cdot N \cdot z = N \), for every \(z \in G \), then \(N\) is said to be a normal subgroup of \(G\). This is usually written \( N \triangleleft G \).</p>
+</div>
 <p>Now we change topics slightly, but we&rsquo;ll come back around to what we&rsquo;ve been talking about soon.</p>
 <h2 id="definition-kernel">Definition (Kernel)</h2>
+<div class="emphasized">
 <p>Let \(A \) and \(B\) be two groups. Let \( \phi : A \rightarrow B \) be a homomorphism. Then the subset of \(A\) of all of the elements that \( \phi \) sends to \( e_B \), the identity element of \(B\) is called the kernel of \( \phi \). This is sometimes written \( Ker(\phi) \).
 In set notation, \( Ker(\phi) := \{ a \in A | \phi(a) = e_B \} \).</p>
+</div>
 <h2 id="lemma-subgroup-test">Lemma (subgroup test)</h2>
+<div class="emphasized">
 <p>Let \( G\) be a group and \( \emptyset \neq S \subseteq G\) be a non-empty subset of \(G\). If \(x \cdot y^{-1} \in S\), for any \(x\) and \(y \in S\), then \(S \leq G\). I.e. \(S\) is a subgroup of \(G\).</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>First we verify that \(e\), the identity element of \(G\) must be in \(S\). Let \(x = y\), then \(x \cdot x^{-1} \in S\), so \( e \in S \).
 Now we verify that each element of \(S\) has an inverse in \(S\).
@@ -177,11 +191,13 @@ Finally we show that \(S\) is closed under \( \cdot \), i.e. for any \(s_1\), \(
 Let \(s_1 \) and \(s_2\) be two arbitrary elements of \(S\). Then, since every element of \(S\) has an inverse in \(S\), \(s_2^{-1} \in S\). But then \( s_1 \cdot (s_2^{-1})^{-1} \) must be in \(S\), and since \( (s_2^{-1})^{-1} = s_2 \), we have that \(s_1 \cdot s_2 \in S\), so it is closed under \( \cdot \) and is therefore a subgroup.</p>
 <p><strong>QED</strong></p>
 <h2 id="mini-lemma-image-of-identity-and-inverses">Mini-Lemma (image of identity and inverses)</h2>
+<div class="emphasized">
 <p>Let \(A\) and \(B\) be groups and \( \phi \) a homomorphism from \(A\) to \(B\), also let \(e_A\) and \(e_B\) be the identity elements of \(A\) and \(B\), respectively. Then</p>
 <ol>
 <li>\( \phi(e_A) = e_B \).</li>
 <li>For any \(x \in A\), \( \phi(x^{-1}) = (\phi(x))^{-1} \).</li>
 </ol>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>Let \( \circ_A \) and \( \circ_B \) be the binary operations of \(A \) and \(B \). Since \( \phi\) is a homomorphism, we have for an arbitrary \( x \in A\),
 \[ \phi(x) = \phi(x \circ_A e_A ) = \phi(x) \circ_B \phi(e_A) \]
@@ -196,7 +212,9 @@ That implies
 \[ \phi(x)^{-1} = \phi(x^{-1}) \]</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem-kernels-are-normal-subgroups">Theorem (Kernels are Normal Subgroups)</h2>
+<div class="emphasized">
 <p>Let \(A\) and \(B\) be two groups and let \( \phi \) be a homomorphism from \(A\) to \(B\), then \( Ker(\phi) \triangleleft G \).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>First we prove that \(Ker(\phi) \) is a subgroup. Let \(x \) and \(y\) be two arbitrary elements of \( Ker(\phi) \), so \( \phi(x) = \phi(y) = e_B \). Then \( \phi(x \circ_A y^{-1}) = \phi(x) \circ_B \phi(y)^{-1} = e_B \circ_B (e_B)^{-1} = e_B \). Therefore, \(x \circ_A y^{-1} \in Ker(\phi) \). Thus by the subgroup test lemma, \( Ker(\phi) \leq G \).
 Now let&rsquo;s prove it&rsquo;s a normal subgroup. Let \(z \) be an arbitrary element of \(A\), and \(x\) be an arbitrary element of \( Ker(\phi) \). Then \( \phi(z^{-1} \circ_A x \circ_A z) = \phi(z^{-1}) \circ_B \phi(x) \circ_B \phi(z) \). By the above lemmas, and since \(x \in Ker(\phi) \), we have
@@ -208,22 +226,30 @@ Recall that \( z \in A\) was arbitrary, so we have \( z^{-1} \cdot Ker(\phi) \cd
 <p><strong>QED</strong></p>
 <p>We showed previously that cosets of a subgroup are either disjoint or equal, which means that for subgroups that have more than one element (i.e. if the subgroup isn&rsquo;t just the identity element), then a coset could be represented by more than one element of the group. What this means is that there could be two elements, say, \(a_1\) and \(a_2\) in our group \(G\), such that for the subgroup \(H\), \(a_1H = a_2H \). It turns out that this forms an equivalence relation on the elements of \(G\). We actually dealt with an equivalence relation earlier in this entry, but we didn&rsquo;t prove that it was an equivalence relation (because we hadn&rsquo;t mentioned equivalence relations at all).</p>
 <h2 id="definition-equivalence-relation">Definition (equivalence relation)</h2>
+<div class="emphasized">
 <p>Let \( \equiv \) be a relation among two elements of a set, such that
 For all \(s \in S \), \( s \equiv s\).
 For all \(s_1\) and \( s_2 \in S\), \( s_1 \equiv s_2 \Rightarrow s_2 \equiv s_1 \). (Reflexive)
 For all \(s_1\), \(s_2\), and \(s_3 \in S\), \( s_1 \equiv s_2\) and \( s_2 \equiv s_3\), then \(s_1 \equiv s_3\). (Transitive)</p>
+</div>
 <h2 id="definition-mod-a-coset">Definition (mod a coset)</h2>
+<div class="emphasized">
 <p>Let \(a\) and \(b\) be two elements of a group, \(G\), and let \(H\) be a subgroup of \(G\). Then \(a\) is said to be equal to \(b\) mod \(H\), written
 \[ a \equiv b \mod H \]
-if and only if the two cosets of \(H\), \( aH \) and \(bH\) are equal.
-The syntax we&rsquo;ve used for the &ldquo;\( \equiv \mod H\)&rdquo; relation suggests that it is an equivalence relation among the elements of the group \(G\), but just because we&rsquo;ve used the symbol &ldquo;\( \equiv \mod H \)&rdquo; to represent it doesn&rsquo;t mean that it actually is an equivalence relation. We have to prove that by showing that \( a \equiv b \mod H\) satisfies all three of the criteria given above for an equivalence relation. Fortunately, though, it does satisfy those criteria, as we show with the following lemma.</p>
+if and only if the two cosets of \(H\), \( aH \) and \(bH\) are equal.</p>
+</div>
+<p>The syntax we&rsquo;ve used for the &ldquo;\( \equiv \mod H\)&rdquo; relation suggests that it is an equivalence relation among the elements of the group \(G\), but just because we&rsquo;ve used the symbol &ldquo;\( \equiv \mod H \)&rdquo; to represent it doesn&rsquo;t mean that it actually is an equivalence relation. We have to prove that by showing that \( a \equiv b \mod H\) satisfies all three of the criteria given above for an equivalence relation. Fortunately, though, it does satisfy those criteria, as we show with the following lemma.</p>
 <h2 id="lemma-mod-h-is-an-equivalence-relation">Lemma (mod H is an equivalence relation)</h2>
+<div class="emphasized">
 <p>\( \equiv \mod H \) is an equivalence relation.</p>
+</div>
 <h3 id="proof-6">Proof</h3>
 <p>Condition 1 and 2 are obvious. For 3, suppose \( a \equiv b \mod H \) and \( b \equiv c \mod H\) so \(aH = bH\) and \(bH = cH\), then by equality, \(aH = cH\), which means \( a \equiv c \mod H \).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-subset-conjugation-is-an-equivalence-relation">Lemma (subset conjugation is an equivalence relation)</h2>
+<div class="emphasized">
 <p>Subset conjugation \( \sim \) is an equivalence relation.</p>
+</div>
 <h3 id="proof-7">Proof</h3>
 <p>We already showed 3 (transitivity) of \( \sim \). 1 is clear by letting \(z = e\), the identity. Now we prove 2.
 Let \( S_1 \sim S_2 \), so there is some \(z \in G\), such that \( z^{-1} \cdot S_1 \cdot z = S_2 \), then, if we further conjugate by \(z^{-1}\), we obtain \( z \cdot (z^{-1} S_1 \cdot z) \cdot z^{-1} = z \cdot S_2 \cdot z^{-1} \). This means that \( S_1 = z \cdot S_2 \cdot z^{-1} \), but this is just the same as \( (z^{-1})^{-1} \cdot S_2 \cdot (z^{-1}) = S_1 \), and that means that \(S_2 \sim S_1\).</p>

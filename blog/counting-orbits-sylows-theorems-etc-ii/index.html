@@ -157,12 +157,16 @@
 <p>We also proved in <a href="/blog/applying-permutations-to-group-theory/#theorem-image-is-a-subgroup">Applying Permutations to Group Theory</a> that the image of a subgroup is a subgroup. I.e. \( \alpha(H) \leq G / N \).</p>
 <p>Now we&rsquo;re going to continue our investigation of images of subgroups.</p>
 <h2 id="lemma--alpha-inverse-of-alpha">Lemma ( alpha inverse of alpha):</h2>
+<div class="emphasized">
 <p>Let \(H \leq G\) be a subgroup of \(G\), and \(N \triangleleft G\) a normal subgroup of \(G\). Let \(\alpha : G \rightarrow G / N\) be the natural homomorphism taking \(g \in G\) to \( gN \in G/N\). Then \( \alpha^{-1} \circ \alpha(H) \geq H \), is a subgroup of \(G\).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>By definition it contains \(H\). It is a group by what we&rsquo;ve shown above.</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-alpha-of-alpha-inverse">Lemma (alpha of alpha inverse)</h2>
+<div class="emphasized">
 <p>Let \(G\), and \(N\) be as above. Let \(K \leq G/N\) be a subgroup of the factor group. Then \( \alpha \circ \alpha^{-1}(K) = K \).</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Let \(k \in \alpha \circ \alpha^{-1}(K) \), then \(k = k&rsquo;N\) is a coset of \(N\), belonging to \(K\). Then the preimage of \(k\) is the subset \(k&rsquo;N\) of elements of \(G\). Then applying \( \alpha\) to every member of that set gives us the same coset in \(G / N\), namely, \(k&rsquo;N\) (which is an element of \(G/N\) and not a subset of it). This coset is in \(K\). Therefore \( \alpha \circ \alpha^{-1}(K) \subseteq K \).</p>
 <p>Now let \(k \in K\), then, as we said before \(k = k&rsquo;N\), for some coset of \(N\). Applying \( \alpha \circ \alpha^{-1} \) to that coset brings us right back to that exact same coset. Therefore \( K \subseteq \alpha \circ \alpha^{-1}(K) \).</p>
@@ -170,35 +174,49 @@
 <p>What we&rsquo;ve seen from the previous two lemmas is something which shows up again and again all over math. The preimage of a mapping often behaves more nicely than the image when dealing with sets.</p>
 <p>We define \( \alpha^{-1} \circ \alpha (H) \) \( := H \cdot N \). That&rsquo;s the more usual way of defining it, but then the theorems we prove about it become slightly less intuitive.</p>
 <h2 id="definition-normalizer">Definition (normalizer)</h2>
+<div class="emphasized">
 <p>Let \(H\) be a subgroup of a group \(G\). Then \(N_{G}(H) := \{g \in G | g^{-1} H g = H \}\) is called the normalizer of \(H\) in \(G\). Notice that it is nothing other than \(Stab_G(H) \) under the action of conjugation. Therefore it is a subgroup of \(G\).</p>
+</div>
 <h2 id="definition-hn">Definition (H*N)</h2>
+<div class="emphasized">
 <p>Let \(N\) be a subgroup of a group \(G\), let \(H \leq N_{G}(N) \), be a subgroup of \(G\) contained within \(N\)&rsquo;s normalizer. Then if we let \(\alpha\) be the natural homomorphism mapping \(N_{G}(N) \rightarrow N_{G}(N) / N \), so that \( \alpha(x) = xN\), we get</p>
 <p>\[H \cdot N := \alpha^{-1} \circ \alpha(H)\]</p>
 <p>is a subgroup of \(N_{G}(N)\).</p>
+</div>
 <p>Notice that \(N\) by definition is a normal subgroup of its own normalizer.</p>
 <p>The definition might seem a bit odd at first, but the set is nothing more than \( \{ h \cdot n | h \in H, n \in N \} \). This is fairly immediate from the definition. It is also a subgroup by construction. It has just as many elements as \( |N| \) times the size of \( \alpha(H )\). What is the size of that? Let&rsquo;s do some more lemmas!</p>
 <h2 id="lemma-h-intersect-n-is-normal-in-h">Lemma (H intersect N is normal in H):</h2>
+<div class="emphasized">
 <p>Let \(H\) be a subgroup of \(G\), where \( H \leq N_{G}(N)\). Then \(H \cap N \triangleleft H \).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Let \(h \in H\) and \(n \in H \cap N \), then, since \( H \leq N_{G}(N)\), we have that \(h^{-1} N h = N \), so \( h^{-1} n h \in N \). Note also that \(n \in H\), so then since \(H\) is a subgroup, \(h^{-1} n h \in H\), therefore it is in \(H \cap N\).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-an-isomorphism-theorem">Lemma (an isomorphism theorem)</h2>
+<div class="emphasized">
 <p>Let \(H\) be a subgroup of \(N_{G}(N) \), then \( H / (H \cap N) \cong \alpha(H) \), the subgroup \( \alpha(H) \) of \(N_{G}(N) / N \). That is, they are isomorphic.</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>Let&rsquo;s show that the mapping is well-defined. This means that it is a homomorphism, because \(\alpha\) is a homomorphism. Let \(h(H \cap N) \) be a coset of \(H \cap N\). Then \(\alpha(h(H \cap N) = hN \), operating on the entire coset as a subset of \(H\) sends every element to \(hN\). This is because (as you can check), \( h(H \cap N) = hH \cap hN \), which equals \(H \cap hN\), i.e. the elements of the coset \(hN\) that belong to \(H\). The mapping is thus well-defined. Next we show that it&rsquo;s 1-1.</p>
 <p>Suppose \( \alpha( h_1 (H \cap N) ) = \alpha ( h_2 (H \cap N) ) \). Then \( h_1 N = h_2 N\), so they belong to the same coset. Multiplying (or operating, if you want to remain more generic) the cosets on both sides of the equation on the left by \(h_1^{-1}\) gives us \( h_1^{-1}h_2 N = N \), which tells us that \(h_1^{-1} h_2 \in N\). It is clearly in \(H\), since that is a subgroup, so it must also be in the coset \( H \cap N\) of \(H\). Then undoing that (operating on the left by h_1), gives us \(h_1 (H \cap N) = h_2 (H \cap N) \). So our mapping is 1-1.</p>
 <p>It is therefore an isomorphism.</p>
 <h2 id="corollary-size-of-hn">Corollary (size of H*N)</h2>
+<div class="emphasized">
 <p>Let \(H\), \(G\), \(N\), etc&hellip; be as above. Then, \( | H \cdot N | = | H / (H \cap N) | \cdot | N | \) \(= \frac{|H| \cdot |N|}{| H \cap N |}\).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>It&rsquo;s nothing more than multiplying through the sizes of the groups and factor groups.</p>
 <h2 id="lemma-conjugation-preserves-subgroups">Lemma (conjugation preserves subgroups)</h2>
+<div class="emphasized">
 <p>Let \(H\) be a subgroup of a group \(G\), then for any \(g \in G\), \(g^{-1}Hg\) is a subgroup of \(G\).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>This is a straight-forward calculation. Let \( g^{-1}ag\) and \(g^{-1}bg\) be arbitrary elements of \(g^{-1}Hg\), so then \(a\) and \(b\) are elements of \(H\). \( (g^{-1}bg)^{-1} = g^{-1}b^{-1}(g^{-1})^{-1}\) and that is equal to \(g^{-1}b^{-1}g\), which must also be in \(g^{-1}Hg\), since \(H\) is a subgroup. This means that \( (g^{-1}ag) \cdot (g^{-1}bg)^{-1}\) is equal to \( g^{-1}ag \cdot g^{-1}b^{-1}g = g^{-1}(ab^{-1})g\), which is in \(g^{-1}Hg\), again, because \(H\) is a subgroup. Therefore, by the subgroup test lemma, it is a subgroup.</p>
 <p><strong>QED</strong></p>
 <h2 id="theorem-sylows-second">Theorem (Sylow&rsquo;s second)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group of order \(p^km\), where \( p\) is a prime, \(k, m \geq 1\) and \(\gcd(p,m) = 1\). Then, \(s_G\), the number of subgroups of order \(p^k\) is congruent to \(1 \mod p\). That is, \(s_G = n \cdot p + 1\), for some natural number, \(n\).</p>
+</div>
 <h3 id="proof-6">Proof</h3>
 <p>Let \(\mathcal{Y} := \{ Y \leq G | | Y | = p^k \} \). That is, \(\mathcal{Y}\) is the set of all Sylow subgroups of \(G\). Let \(G\) act on \(\mathcal{Y} \) by conjugation, that is, \( g(Y) := g^{-1}Yg\), which must also be a subgroup of order \(p^k\), and therefore also be in \(\mathcal{Y}\). We see that this action induces a permutation on \(\mathcal{Y}\).</p>
 <p>Let \(Y \in \mathcal{Y}\) be an element of \(\mathcal{Y}\). We know that \(\mathcal{Y}\) has at least one element by Sylow&rsquo;s first theorem, which we proved near the end of the previous entry (Counting Orbits, Sylow&rsquo;s Theorems, etc&hellip;). Since \(Y\) is a subgroup of \(G\), we can consider its actions on \(\mathcal{Y}\). As we&rsquo;ve shown in previous entries, the action of the subgroup \(Y\) splits \(\mathcal{Y}\) into disjoint orbits, and for any \(X \in \mathcal{Y}\), \( |Orb_{Y}(X) | \cdot | Stab_{Y}(X) | = |Y| = p^k\). This means that the number of elements in each orbit must be a power of \(p\).</p>
@@ -210,7 +228,9 @@
 <p>To summarize what we&rsquo;ve shown about the orbits of \(\mathcal{Y}\), under the action of the subgroup \(Y\). \(Y\)&rsquo;s orbit is equal to just \( \{Y\}\), while every other \(Y \neq X \in \mathcal{Y}\) has an orbit that has multiple subgroups in it. We also showed (using the orbit stablizer theorem) that \(p^{i} = |Orb_{P}(X)| \), for all \(X \in \mathcal{Y}\), therefore if we let \( \mathcal{O}_{X_l} \) be the distinct orbits of \(\mathcal{Y}\), where the \(X_l\)&rsquo;s range over orbit representatives, we see that \( |\mathcal{Y}| \) is equal to \( \sum\limits_{X_l}{| \mathcal{O}_{X_l} |}\), which is equal to \( \sum\limits_{X_l} {p^{k_{X_l}}} \), where only one \(\mathcal{O}_{X_l}\) has size equal to \(1\), namely, \(\mathcal{O}_{Y}\). Therefore the sum is equal to \( 1 + np \), for some natural number \(n\).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-orbits-and-subgroup-actions">Lemma (orbits and subgroup actions)</h2>
+<div class="emphasized">
 <p>Let \(H\), and \(K\) be two subgroups of \(G\), such that \(H \leq K\). Let \(G\) act on a set \(S\). Let \(\mathcal{H}_{s}\) be an orbit under the action of the subgroup \(H\) containing \(s \in S\). Then there exists an orbit \(\mathcal{K}_{s}\) (where the \(s\)&rsquo;s are the same) under the action of the subgroup \(K\), such that \(\mathcal{H}_s \subseteq \mathcal{K}_{s} \).</p>
+</div>
 <p>What this means is that if \(G\) acts on a set \(S\), and \(H\) is a subgroup of \(G\) which is also a subgroup of the subgroup \(K\), then \(H\)&rsquo;s orbits are sub-orbits of \(K\)&rsquo;s orbits.</p>
 <h3 id="proof-7">Proof</h3>
 <p>Let \(s_1\) and \(s_2\) belong to the same orbit under the action of the subgroup \(H\). Then that means that there exists some \(h \in H\), such that \( h(s_1) = s_2\). Since \(H \leq K\), that same \(h \in K\), so that \( h(s_1) = s_2\) still holds under the action of the subgroup \(K\). Therefore they&rsquo;re still in the same orbit.</p>
@@ -228,14 +248,18 @@ All Sylow p-subgroups are conjugates. That is, for any two Sylow p-subgroups, \(
 <p>Therefore, the assumption that there were more than one \(G\) orbits of \(\mathcal{Y}\) is false, which proves the theorem.</p>
 <p><strong>QED</strong></p>
 <h2 id="corollary-another-restriction-on-the-number-of-sylow-p-subgroups">Corollary (another restriction on the number of Sylow p-subgroups):</h2>
+<div class="emphasized">
 <p>Let \(s_G\) denote the number of Sylow p-subgroups of a group \(G\). Then \(s_G | m\), where \( |G| = p^km\), and \( \gcd(p,m) = 1\).</p>
+</div>
 <p>There are situations where this can allow us to prove that a Sylow p-subgroup is normal, for example.</p>
 <h3 id="proof-9">Proof</h3>
 <p>\(s_G = |orb_G(X)| \), where \(X\) is any Sylow p-subgroup (by the above theorem). By the orbit-stabilizer theorem, we have \( s_G \cdot |Stab_G(X) = |G| = p^km\). But, by the second Sylow theorem, \(s_G = 1 + pn\), so \(s_G \nmid p\), which means that \(s_G | m\).</p>
 <p><strong>QED</strong></p>
 <p>Finally we prove a result that doesn&rsquo;t have anything to do with the Sylow theorems. It&rsquo;s just a nice little result.</p>
 <h2 id="theorem-counting-orbits-by-counting-fixes">Theorem (counting orbits by counting fixes)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group acting on a set \(X\). I.e. \(G\) is a subgroup of \(S_X\), the group of all permutations on \(X\). Then the number of orbits of \(X\) induced by the actions of \(G\) is equal to \( \frac{1}{|G|} \sum\limits_{g \in G}{ |fix(g)| } \).</p>
+</div>
 <h3 id="proof-10">Proof</h3>
 <p>The first and more important step is to determine the size of \( \mathcal{F} :=\{ (g, x) | g \in G, x \in X \text{, where } g(x) = x \} \). Notice that for a given \(x \in X\), \(x\) will be in a pair for every \(g \in G\), such that \(g(x) = x\). That is just the set \( Stab_G(x) \). This means that</p>
 <p>\[ | \mathcal{F} | = \sum\limits_{x \in X} { | Stab_G(x) | } \]</p>

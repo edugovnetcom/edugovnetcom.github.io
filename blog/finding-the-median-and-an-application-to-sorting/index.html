@@ -407,7 +407,9 @@ Finally, we introduce the function which combines the above two, and ultimately 
 <p>Now that we&rsquo;ve (basically) shown that equation (1) holds, notice that \(\left\lceil {0.2n}\right\rceil \leq 0.2n + 1 \), and similarly, \(\left\lceil{ 0.7n }\right\rceil \leq 0.7n + 1 \). This means that their sum is less than or equal to \( 0.9n + 2 \).
 We will ultimately show that \(T\) is linear, but we don&rsquo;t even need all of that for this next step. All we need to do is assume that \(T\) is convex (sometimes called &ldquo;concave up&rdquo; in calculus) and \(T(0) = 0\) to conclude that \(T(m_1) + T(m_2) \leq T(m_1 + m_2) \). We prove that with the following lemma.</p>
 <h2 id="lemma-linear-inequality">Lemma (linear inequality)</h2>
+<div class="emphasized">
 <p>Let \(S : \mathbb{R} \rightarrow \mathbb{R} \) be a convex function, such that \(S(0) = 0\), then \( 0 \leq x, y \) implies that \( S(x) + S(y) \leq S(x + y) \).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>The real power of the proof comes from the definition of convexity. \(S\) is convex if and only if \(S( (1 - \lambda)x_1 + \lambda x_2 ) \leq (1 - \lambda)S(x_1) + \lambda S(x_2)\). Here&rsquo;s a picture showing what this means:</p>
 <p><img src="/images/convex_function.png" alt="Example Convex Function" title="An Example Convex Function and A Linear Function"></p>

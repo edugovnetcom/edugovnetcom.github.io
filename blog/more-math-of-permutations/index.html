@@ -131,17 +131,21 @@
 <p>This entry is a continuation of <a href="/blog/some-of-the-math-of-permutations/">Some of the Math of Permutations</a>.</p>
 <p>Let&rsquo;s get started! The first thing we&rsquo;re going to do is prove a couple of nice lemmas.</p>
 <h2 id="lemma-a">Lemma a</h2>
+<div class="emphasized">
 <p>Let \( \rho \) be a permutation on the set of integers \( \{ 1, 2, &hellip; , n \} \), and let \( f_{\rho} \) be a function from the set of ordered pairs \( \mathbb{D} = \{ (i, j) | 1 \leq j &lt; i \leq n \} \) such that \( f_{\rho}( (i,j) ) := ( \rho(i), \rho(j) )\) then</p>
 <ol>
 <li>\( f_{\rho}\) is 1 -1</li>
 <li>If \( (u, v) \in Range(f_{\rho}) \), then \( (v, u) \not\in Range(f_{\rho}) \).</li>
 </ol>
+</div>
 <h3 id="proof">Proof</h3>
 <p>To prove 1, suppose \( f_{\rho}((i, j)) = f_{\rho}((k, l)) \), then by definition of \( f_{\rho}\), \( \rho(i) = \rho(k) \). Since \( \rho \) is a permutation, it is 1-1, so \( i = k \), similarly, \( j = l \), so \( (i,j) = (k, l) \).</p>
 <p>To prove 2, suppose \( f_{\rho}( (i,j) ) = (u, v)\) and \( f_{\rho}( (k, l) ) = (v, u) \), then \( \rho(i) = u = \rho(l) \), so \( i = l \), and similarly we can show that \( j = k \), so we have shown that \( (k, l) = (j, i) \), but then \( k &lt; l \), so it isn&rsquo;t in \(\mathbb{D} = Domain(f_{\rho}) \), a contradiction. QED.</p>
 <h2 id="lemma-b">Lemma b</h2>
+<div class="emphasized">
 <p>Let \( \sigma \) and \( \rho \) be permutations on the set of integers \( \{ 1, 2, &hellip; , n \} \). Then
 \[ \prod\limits_{i &gt; j} { \frac{\sigma(i) - \sigma(j)}{i - j} } = \prod\limits_{\rho(i) &gt; \rho(j)}{ \frac{\sigma(i) - \sigma(j)}{i - j} } \tag{1}\label{1}\]</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>We split the products into two cases.</p>
 <p><strong>Case 1</strong>: \( i &gt; j \) and \( \rho(i) &gt; \rho(j) \)</p>
@@ -152,12 +156,16 @@ Before we handle case 2, notice that in both products, if \(i \neq j \), then by
 <p><strong>QED</strong></p>
 <p>In an earlier post, we noted that any permutation of a set \( X \) can be associated with a permutation of the indices of the elements of the set with respect to its ordering. What we mean by this is that if we let \( X = \{ x_1, x_2, &hellip; \} \), then \( \sigma(x_i) = x_j \), and we can identify \( \sigma \) with \( \dot{\sigma} \), where \( \sigma(x_i) = x_j \Leftrightarrow \dot{\sigma}(i) = j \). I.e. \( \sigma(x_i) = x_{\dot{\sigma}(i)} \).</p>
 <h2 id="definition-sign">Definition (Sign)</h2>
+<div class="emphasized">
 <p>Now we can reintroduce the definition of \( Sign(\sigma) \), the sign of a finite permutation. Let
 \( \sigma \) be a permutation of a finite set. Then
 \[ Sign(\sigma) := \prod\limits_{i &gt; j}{ \frac{ \dot{\sigma}(i) - \dot{\sigma}(j) }{i - j} } \]
 For the rest of this article, we will blur the distinction and assume that all permutations are permutations of \( \{ 1, 2, &hellip;, n \} \), for some finite \( n \).</p>
+</div>
 <h2 id="theorem-product">Theorem (product)</h2>
+<div class="emphasized">
 <p>Let \( \sigma \) and \( \tau \) be permutations, then \( Sign(\sigma \circ \tau) = Sign(\sigma) \cdot Sign(\tau) \).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Note that
 \[ Sign(\sigma \circ \tau) = \prod\limits_{i &gt; j} { \frac{ \sigma \circ \tau(i) - \sigma \circ \tau(j) }{i - j} } \tag{2}\label{2}\]</p>
@@ -173,12 +181,16 @@ By <a href="/blog/more-math-of-permutations/#lemma-a">lemma (a)</a> above, the l
 Clearly, (6) is equal to \( Sign(\sigma) \), and our proof is finished.</p>
 <p><strong>QED</strong></p>
 <h2 id="corollary-inverse">Corollary (inverse)</h2>
+<div class="emphasized">
 <p>Let \( \sigma \) be a permutation. Then
 \[ Sign(\sigma^{-1}) = \frac{1}{Sign(\sigma)} \tag{7}\label{7} \]</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>Let \( \iota \) be the identity permutation. I.e. \( \iota(i) = i \). If you calculate \( Sign(\iota) \), you get \( 1 \), notice that \( \sigma \circ (\sigma^{-1}) = \iota \). QED.</p>
 <h2 id="theorem-units">Theorem (units)</h2>
+<div class="emphasized">
 <p>\(Sign(\sigma) = \pm 1 \).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>This proof only requires a slight extension of <a href="/blog/more-math-of-permutations/#lemma-a">lemma (a)</a>. Recall from that proof that we defined \( \mathbb{D} := \{ (i, j ) | 1 \leq j &lt; i \leq n \} \), and that we defined \( f_{\sigma}( (i,j) ) := (\sigma(i), \sigma(j)) \). Now we introduce the function</p>
 <p>\[ g(u, v) := \begin{cases} (u, v), u &gt; v \ (v, u), v &gt; u \end{cases}\]</p>
@@ -208,11 +220,15 @@ Clearly, (6) is equal to \( Sign(\sigma) \), and our proof is finished.</p>
 <p>Remember that when evaluating the composition of functions, you apply the right most function first. This means that in (8) above, the first permutation to be applied is the two-cycle \( (i, \sigma^{1}(i) ) \) and the last two-cycle to be applied is \( ( i, \sigma^{k-1}(i) ) \). Since all of the two cycles move \( i\), the order matters!</p>
 <p>By breaking down a cycle of length \(k\) (also called a <em>k-cycle</em>) into \(k-1\) two-cycles, we can see that it has \( Sign = (-1)^{k-1} \). And we&rsquo;ve proved the theorem</p>
 <h2 id="theorem-sign-of-k-cycle">Theorem (sign of k-cycle)</h2>
+<div class="emphasized">
 <p>Let \( \sigma \) be a k-cycle, then \( Sign(\sigma) = (-1)^{k-1} \).</p>
+</div>
 <p><strong>Already Proved</strong></p>
 <p>Next we prove that cycles are disjoint. But first, notice that if \( \sigma^n(i) \) is an element of a k-cycle, then \( \sigma^k(i) = i \), which means that \( \sigma^{n+k} (i) = \sigma^n \circ \sigma^k (i) = \sigma^n(\sigma^k(i)) = \sigma^n (i) \).</p>
 <h2 id="theorem-disjoint-cycles">Theorem (disjoint cycles)</h2>
+<div class="emphasized">
 <p>Let \( C_1 = \{ \sigma^1(i), \sigma^2(i), &hellip; , \sigma^{k_1}(i) \} \), and \( C_2 = \{ \sigma^1(j), \sigma^2(j), &hellip; , \sigma^{k_2}(j) \} \), where \( \sigma^{k_1}(i) = i \) and \( \sigma^{k_2}(j) = j \), then either \( C_1 = C_2 \), or \( C_1 \cap C_2 = \emptyset \).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>Suppose the two sets overlap, so for some \(m\) and \( n\) we have\( \sigma^n(i) = \sigma^m(j) \). This means that for all \( k \geq 0 \), \( \sigma^{m+k}(i) = \sigma^{n+k}(j) \). From what we showed just before this theorem, that means that the two sets have to have the same size, so \( k_1 = k_2 \), and that means that the two sets have the exact same \( k_1 = k_2 \) members.</p>
 <p><strong>QED</strong></p>

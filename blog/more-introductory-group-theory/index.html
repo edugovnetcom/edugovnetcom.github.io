@@ -138,43 +138,57 @@
 			<p><span class="first-letter">W</span>e&rsquo;ve already introduced some of the topics of Group Theory. In this entry we&rsquo;ll talk about <a href="/blog/more-introductory-group-theory/#corollary-lagranges-theorem">Lagrange&rsquo;s Theorem</a>, various <a href="/blog/more-introductory-group-theory/#definition-homomorphism">morphisms</a>, and try to tie it back to our ongoing discussion of permutations. We&rsquo;ll also discuss some examples of groups.</p>
 <p>We previously showed that the set of permutations of a set forms a group (in <a href="/blog/some-of-the-math-of-permutations/">Some of the Math of Permutations</a>). We also proved some basic properties of those permutations here <a href="/blog/more-math-of-permutations/">More Math of Permutations</a>.</p>
 <p>In math, a group is defined to be a set of elements with a binary operation. A binary operation is nothing more nor less than a function, which takes two elements of the set and returns one element of the set. This can occasionally be written as \(f(x,y) = z \), where \( x \), \( y\), and \( z\) are elements of the set. However, it is much (much) more common to write this as \( x \circ y = z \), \(x \cdot y = z \), \( x + y = z \), (when we are guaranteed that \( x + y = y + x \)) or sometimes just write \( xy = z \). The elements of the set and the operation have to satisfy a few conditions. When we discuss these conditions below, we will refer to the group as \(G\), and also refer to the set of elements of the group as \(G\). This shouldn&rsquo;t cause too much confusion, though. We&rsquo;ll write \( \circ \) for the operator. The conditions are</p>
+<div class="emphasized">
 <ol>
 <li>There is an <em>identity</em> element in \( G\), often written \(e\), with the property that for any \(x \) in \(G\), \( x \circ e = x = e \circ x \).</li>
 <li>For any three elements of \( x \), \( y\), and \( z\) in \( G\), the following always holds \( x \circ (y \circ z) = (x \circ y) \circ z \). So we may unambiguously refer to the result as \( x \circ y \circ z \).</li>
 <li>For any element \(x\) in \(G\), there is an element, \(y \) in \(G\), such that \( x \circ y = y \circ x = e \). This element is often, but not always, written as \( x^{-1}\), and is referred to as the <em>inverse</em> of \(x\). We prove below that this definition makes sense, because inverses are unique.</li>
 <li>For any two elements, \(x\), and \(y\) in \(G\), \(x \circ y \) is also an element of \(G\).</li>
 </ol>
+</div>
 <p>An example of a group is the set of rational numbers \( \mathbb{Q} \) where \( x \circ y = x + y \). In this group, the identity element is \( 0 \), and the inverse of a number is just its negative.</p>
 <p>You can verify by induction on the number of \( \circ \) signs in an expression that no matter what order we evaluate \( x_1 \circ x_2 \circ x_3 \circ &hellip; \circ x_n \) we get the same result. For 2 \(\circ \)&rsquo;s, we just use property 2. If we assume that the expression is unambiguous for \(k \) or fewer \(\circ\)&rsquo;s, then an expression with \(k+1\) \(\circ\)&rsquo;s can be broken down as \( (x_1 \circ x_2 \circ &hellip; \circ x_l) \circ ( x_{l+1} \circ x_{l+2} \circ &hellip; \circ x_{k} \circ x_{k+1} \circ x_{k+2}) \). Where \( 1 \leq l \leq k + 1 \). Notice that having \( k + 1 \) \( \circ\)&rsquo;s means we have to have \( k+2\) \(x_i\)&rsquo;s. What we&rsquo;ve done is broken the expression into two parts with a left pair of parentheses and a right pair of parentheses. If either the left or the right pair of parentheses encloses just one variable (so that no \(\circ\) is enclosed), we may omit that pair of parentheses. Both of the pairs of parentheses must enclose fewer than \( k \) \(\circ\)&rsquo;s, because there is a \(\circ\) between them. By induction both the left and the right side are unambiguous. That is, they evaluate to a unique element of the group. Therefore the entire expression with \(k+1\) \(\circ\)&rsquo;s does.</p>
 <p><strong>QED</strong></p>
 <p>We&rsquo;ll now prove a few more basic results about groups.</p>
 <h2 id="lemma-identities-are-unique">Lemma (Identities are unique)</h2>
+<div class="emphasized">
 <p>Let \(e \in G \) be an identity. No other element of \(G\) is an identity.</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>Suppose \(e \) and \(f\) are two identities in \(G\). Then by definition, \(e \circ f = f \), since \(e \) is an identity (see property 1 above). Likewise, since \(f \) is an identity \( e \circ f = e \), then \(e = f\).</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-inverses-are-unique">Lemma (Inverses are unique)</h2>
+<div class="emphasized">
 <p>Property 3 above just guarantees the existence of inverses, but doesn&rsquo;t necessarily guarantee their uniqueness. However, they are unique.</p>
+</div>
 <h3 id="proof-1">Proof</h3>
 <p>Let \(x \) be any element of \(G\). Suppose \(y \) and \( z\) are two inverses of \(x\). Then by 2 above \( z \circ (x \circ y) = (z \circ x ) \circ y \). Notice that the left side of the equation is equal to \( z \circ e = z\) while the right side of the equation is equal to \( e \circ y = y \), so \(z = y\).</p>
 <p><strong>QED</strong></p>
 <h2 id="definition-subgroup">Definition (subgroup)</h2>
+<div class="emphasized">
 <p>A subset, \(H\) of \(G\) which is closed under inverses and also closed under \( \circ\) is called a subgroup of \(G\). Specifically,
 For any \( x \in H \), \(x^{-1} \in H \).
 For any two \(x\), and \(y \in H \), \(x \circ y \in H\).</p>
+</div>
 <h2 id="definition-coset">Definition (coset)</h2>
+<div class="emphasized">
 <p>Let \(H\) be a subgroup of \(G\), then for any \(a \in G\), the set \( aH := \{ a \circ h | h \in H \} \), a subset (but not necessarily a subgroup!) of \(G\) is said to be a (left) coset of \(H\). Similarly, you can define a right coset for \(a\) as \( Ha := \{ h \circ a | h \in H \} \).</p>
+</div>
 <h2 id="mini-lemma-cancellations">Mini Lemma (cancellations)</h2>
+<div class="emphasized">
 <p>If \(a \circ b = c \circ d \), then \(a = c \circ d \circ b^{-1}\).
 If \( a \circ b = c \circ b \), then \( a = c \).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>Since we&rsquo;ve shown that inverses are unique, there is a unique \(b^{-1} \) in our group (or subgroup), so we can apply our operation to the right side of both sides of the equations. Doing this to \( a \circ b \) gives us \( a \circ b \circ b^{-1} = a \circ (b \circ b^{-1} \), this is equal to \(a \circ e = a \). Similarly applying it to \( c \circ b \) results in \( c \). Thus we have proven the second equality above.</p>
 <p>Applying \(b^{-1}\) to the right and side of \( c \circ d \) results in \( (c \circ d) \circ b^{-1} = c \circ d \circ b^{-1}\). This proves the first equality above.</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-cosets-are-equal-or-disjoint">Lemma (cosets are equal or disjoint)</h2>
+<div class="emphasized">
 <p>Let \(a \) and \(b\) be two elements of \(G\), then either
 \(aH = bH\), similarly \( Ha = Hb\), or
 \(aH \cap bH = \emptyset \), similarly \( Ha \cap bH = \emptyset\).</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>We&rsquo;re only going to prove the lemma for left cosets. The proof for right cosets is very similar. In the following proof, we&rsquo;re going to omit the \( \circ \) between elements of \(G\), so in what follows, \( ab = a \circ b \).</p>
 <p>If \(aH \cap bH = \emptyset \), we&rsquo;re covered by case 1, so assume that their intersection isn&rsquo;t empty. Let \(c \in aH \cap bH \). Then \(c = a h_1 \), and \(c = b h_2 \), for some \(h_1 \) and \(h_2\) in \(H\). Since \(H\) is a subgroup of \(G\), if \(h_1 \in H\), then \(h_1^{-1} \in H\). We can then cancel the \(h_1\) in the equation for \(a\) using case 2 of the mini lemma above. We&rsquo;ll apply case 1 to the equation for \(c\) with \(b\), this gives us</p>
@@ -187,7 +201,9 @@ If \( a \circ b = c \circ b \), then \( a = c \).</p>
 <p>Thus, if we&rsquo;re not in case 1, then we&rsquo;re in case 2 of the lemma.</p>
 <p><strong>QED</strong></p>
 <h2 id="lemma-cosets-have-same-size-as-h">Lemma (cosets have same size as H)</h2>
+<div class="emphasized">
 <p>Any two cosets of a given subset \(H\) have the same size. In fact, they have the same size as \(H\).</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>Let \(aH\) and \(bH\) be two (not necessarily distinct) cosets of \(H\), a subgroup of \(G\). Define
 \[ f_{a, b} (x) := ba^{-1}x \]</p>
@@ -196,14 +212,20 @@ If \( a \circ b = c \circ b \), then \( a = c \).</p>
 <p>By considering the function \(f_{b,a}\), we can show that \( |aH| \geq |bH| \), and so \(|aH| = |bH|\). Notice that \(eH = H\) is a coset, so every coset has the same size as \(H\). QED.</p>
 <p>The last two lemmas were originally proved by Lagrange, and are sometimes referred to as (one of) Lagrange&rsquo;s Theorems. They allow us to define the index of a subgroup.</p>
 <h2 id="definition-index">Definition (index)</h2>
+<div class="emphasized">
 <p>The index of a subgroup, \(H\) of a group \(G\), written \( [G:H] \) is defined to be the number of distinct cosets of \(H\).
 The two lemmas above allow us to prove a nice corollary (this was also proved by Lagrange, and I think this is what&rsquo;s usually referred to as (one of) his theorems).</p>
+</div>
 <h2 id="corollary-lagranges-theorem">Corollary (Lagrange&rsquo;s Theorem)</h2>
+<div class="emphasized">
 <p>If \(G\) is a finite group, then \( |H| | |G| \), i.e. the size of \(H\) divides the size of \(G\).</p>
+</div>
 <p>Next we prove that the index of a subgroup of a subgroup behaves nicely.</p>
 <h2 id="theorem-tower-law">Theorem (Tower Law)</h2>
+<div class="emphasized">
 <p>Let \(A\) be a group, \(B\) a subgroup of \(A\) of finite index and \(C\) a subgroup of \(B\) of finite index. Then
 \[ [A : C ] = [A : B ] \cdot [ B : C ] \]</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>Let \( [A : B ] = m \) and \( [B : C ] = n \), then there are \(m\) distinct \( a_i \in A \), such that \( \{ a_1B, a_2B, &hellip; , a_mB \} \) is the set of \(m\) distinct cosets of \(B \) which are subsets of \(A\). Likewise there are \(n\) distinct \(b_j \in B\), such that \( \{ b_1C, b_2C, &hellip; , b_nC \} \) is the set of \(n\) distinct cosets of \(C\) which are subsets of \(B\). We want to show that the \(a_i \cdot b_j \) are all distinct and moreover that the cosets \(a_ib_jC \) are all distinct cosets of \(C \) as subsets of \(A\). This would prove that there are \(m \cdot n \) distinct cosets \( a_ib_jC \subseteq A \).</p>
 <p>Notice that \(b_jC \) and \(b_lC \) are both subsets of \(B \), by definition. By the lemma above that says that cosets are either equal or completely disjoint, in order for \(a_ib_jC \) to be equal to \(a_kb_lC\), they must both be subsets of the same coset of \(B\). This means that \(a_i = a_k\). Thus we have</p>
@@ -215,17 +237,29 @@ The two lemmas above allow us to prove a nice corollary (this was also proved by
 <p>Finally (for this entry), we&rsquo;re going to introduce the idea of different kinds of <em>morphisms</em> between groups. Let \(A\) and \(B\) be groups. Let \(\phi\) be a function from the set of elements of \(A\) to the set of elements of \(B\). \(A\) and \(B\) don&rsquo;t have to necessarily be distinct groups. In the definitions below, we&rsquo;ll use \( \circ \) again to represent the operation. In fact, we&rsquo;ll use \( \circ_{A} \) to represent \(A\)&rsquo;s binary operation and \( \circ_{B} \) to represent \(B\)&rsquo;s binary operation.</p>
 <p>You should also be able to convince yourself that the tower law works even when one or both indices is infinite. In that case the product is also infinite. The proof given above will still work with slight modification.</p>
 <h2 id="definition-homomorphism">Definition (homomorphism)</h2>
+<div class="emphasized">
 <p>If \( \phi: A \rightarrow B \), and for every \(x\), and \(y\) in \(A\), \( \phi(x \circ_{A} y ) = \phi(x) \circ_{B} \phi(y)\), then \( \phi \) is said to be a <em>homomorphism</em> from \(A\) into \(B\).</p>
+</div>
 <h2 id="definition-epimorphism">Definition (epimorphism)</h2>
+<div class="emphasized">
 <p>If \(\phi\) is a homomorphism from \(A\) to \(B\), and \(\phi\) is onto (i.e. \(Range(\phi) = B\)), then it is said to be an <em>epimorphism</em>.</p>
+</div>
 <h2 id="definition-monomorphism">Definition (monomorphism)</h2>
+<div class="emphasized">
 <p>If \(\phi\) is a homomorphism from \(A\) to \(B\) and \(\phi\) is 1-1, then it is said to be a <em>monomorphism</em>.</p>
+</div>
 <h2 id="definition-isomorphism">Definition (isomorphism)</h2>
+<div class="emphasized">
 <p>If \( \phi \) is a homomorphism from \(A\) into \(B = Range(\phi)\) and \( \phi : A \xrightarrow{\text{1-1}} B \), then \( \phi \) is said to be an <em>isomorphism</em> from \(A\) into \(B\).</p>
+</div>
 <h2 id="definition-automorphism">Definition (automorphism)</h2>
+<div class="emphasized">
 <p>If \(\phi\) is an isomorphism and \(A = B\), then \(\phi\) is said to be an <em>automorphism</em>.</p>
+</div>
 <h2 id="definition-endomorphism">Definition (endomorphism)</h2>
+<div class="emphasized">
 <p>If \( \phi \) is a homomorphism, from \(A\) to \(A\) and \(Range(\phi)\) is not necessarily all of \(A\), then \( \phi\) is said to be an <em>endomorphism</em>.</p>
+</div>
 <p>You can check for yourself that if \(A\) is defined to be the real numbers with \( x \circ_{A} y = x + y\), and \(B\) is defined to be the set of positive real numbers with \( x \circ_{B} y = x \cdot y \), then \( \phi : A \rightarrow B \), where \( \phi(x) = \exp(x) \) is an isomorphism from \(A \) into \(B\).</p>
 <p>That&rsquo;s all for now, folks. We&rsquo;ll continue the discussion of groups soon, though.</p>
 

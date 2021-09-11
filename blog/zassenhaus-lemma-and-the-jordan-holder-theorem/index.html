@@ -133,16 +133,20 @@
 </div><div class="content post__content clearfix">
 			<p><span class="first-letter">W</span>e&rsquo;re going to prove some results that will help us further get a feeling for the possible structure of groups. We&rsquo;re going to start out by proving Zassenhaus' Lemma. At least that will be our first significant result for this entry. Before we can do that, though, we&rsquo;ll have to establish several smaller lemmas to support the proof. The first of these is mostly a useful observation. Finally, we&rsquo;ll end the entry with a proof of the Jordan Holder Theorem.</p>
 <h2 id="mini-lemma-products-of-intersections">Mini-lemma (products of intersections)</h2>
+<div class="emphasized">
 <p>Let \(W\), \(X\), \(Y\), and \(Z\) be subsets of a group, then \( (W \cap X) (Y \cap Z) = WY \cap WZ \cap XY \cap XZ\).</p>
+</div>
 <h3 id="proof">Proof</h3>
 <p>Notice that \(WY \cap WZ = W(Y \cap Z) \). To see that, consider \(g_1g_2 \in W(Y \cap Z) \), then \( g_1 \in W\), while \( g_2\) is in both \(Y\) and \(Z\). Similarly, \(XY \cap XZ = X(Y \cap Z) \). Combining those two results and then applying the same logic to the \(W\) and \(X\) before the \( (Y \cap Z)\) gives our result.</p>
 <p><strong>QED</strong></p>
 <p>We&rsquo;re going to state Zassenhaus' Lemma, and then prove it later on in the entry. By doing this, we&rsquo;ll give better motivation for the next few lemmas.</p>
 <h2 id="theorem-zassenhaus-lemma">Theorem (Zassenhaus' Lemma)</h2>
+<div class="emphasized">
 <p>Let \(A\), and \(B\) be two subgroups of a group. Let \( a \triangleleft A\) and \(b \triangleleft B\) be normal subgroups of the two groups. Then
 \[ a(A \cap b) \triangleleft a(A \cap B) \tag{1}\label{1}\]
 \[ b(a \cap B) \triangleleft b(A \cap B) \tag{2}\label{2}\]
 \[ \frac{a(A \cap B)}{a(A \cap b)} \cong \frac{b(A \cap B)}{b(a \cap B)} \tag{3}\label{3}\]</p>
+</div>
 <p>It can be visualized nicely with this lattice</p>
 <p><img src="/images/lattice_zassenhaus.png" alt="Zassenhaus Lattice" title="Zassenhaus' Lattice"></p>
 <p>The very first thing you will want to notice is that since \( a \triangleleft A\), we have \(a \triangleleft (A \cap B) \), and \(a \triangleleft (A \cap b) \), so the set products along the left side are subgroups. Similarly, the set products along the right side of the lattice are also subgroups (we proved this in Partial Orders, Lattices, and some Subgroups).</p>
@@ -163,19 +167,26 @@
 <p>\[ a(A \cap b ) \vee (A \cap B) = a(A \cap B) \tag{10}\label{10}\]</p>
 <p>Before we start proving (1) and (2), let&rsquo;s prove another quick lemma.</p>
 <h2 id="lemma-normal-through-alpha-inverse-of-alpha">Lemma (normal through alpha inverse of alpha)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, \(N \triangleleft G\), \(H \leq G\), \( M \triangleleft H\), then if \( \alpha : G \rightarrow G / N \) is the natural homomorphism sending \(g \in G\) to \( gN \in G/N \), then</p>
 <p>\[ \alpha^{-1} \circ \alpha (M) \triangleleft \alpha^{-1} \circ \alpha (H) \tag{11} \label{11} \]</p>
+</div>
 <h3 id="proof-1">Proof</h3>
-<p>Let \(h N\) be an arbitrary coset of \(G\) in \( \alpha^{-1} \circ \alpha(H) \) (to be clear, since it belongs to \( \alpha^{-1} \circ \alpha (H)\), we are viewing it as a subset of G, instead of as an element of \(G/N\). We can switch between the two ways of viewing it, though). Let \( m_1N \subseteq \alpha^{-1} \circ \alpha(M) \) (this might be even less clear. It is a subset of \(MN\), corresponding to the coset of a single element of \(M\).). Now consider the set products, \( (hN)^{-1} (m_1N)(hN) \). Since \( N \triangleleft G\), this is equal to \( (h^{-1}N ) (m_1N) (hN) \), which is equal to the coset \( (h^{-1}m_1h) N \) of \(N\) in \(G / N\). Since \(M \triangleleft H\), this is equal to \( m_2 N\), for some \( m_2 \in M\). Therefore, for any \( h \in HN = \alpha^{-1} \circ \alpha (H) \), we must have \( h^{-1} MN h \subseteq MN \), and so they must be equal, as cosets. QED.</p>
+<p>Let \(h N\) be an arbitrary coset of \(G\) in \( \alpha^{-1} \circ \alpha(H) \) (to be clear, since it belongs to \( \alpha^{-1} \circ \alpha (H)\), we are viewing it as a subset of G, instead of as an element of \(G/N\). We can switch between the two ways of viewing it, though). Let \( m_1N \subseteq \alpha^{-1} \circ \alpha(M) \) (this might be even less clear. It is a subset of \(MN\), corresponding to the coset of a single element of \(M\).). Now consider the set products, \( (hN)^{-1} (m_1N)(hN) \). Since \( N \triangleleft G\), this is equal to \( (h^{-1}N ) (m_1N) (hN) \), which is equal to the coset \( (h^{-1}m_1h) N \) of \(N\) in \(G / N\). Since \(M \triangleleft H\), this is equal to \( m_2 N\), for some \( m_2 \in M\). Therefore, for any \( h \in HN = \alpha^{-1} \circ \alpha (H) \), we must have \( h^{-1} MN h \subseteq MN \), and so they must be equal, as cosets.</p>
+<p><strong>QED</strong></p>
 <h2 id="mini-lemma-2">Mini-lemma (2)</h2>
+<div class="emphasized">
 <p>\(B \leq G\), \(A \leq G\), and \(b \triangleleft B\) implies that \( (b \cap A) \triangleleft (B \cap A)\).</p>
+</div>
 <h3 id="proof-2">Proof</h3>
 <p>The notation is starting to get a little bit cumbersome, but bear with it, please. Let \(b_1\) be an element of \(B \cap A\). Then, since \(b \triangleleft B\), we have \( b_1^{-1}(b \cap A) b_1 \subseteq b \). What this is saying is that the element \(b_1\) conjugating the subgroup \((b \cap A)\) is equal to a subset of \(b\). This happens because \(b_1 \in B\), and \( (b \cap A) \subseteq b\). And when \(b_1\) conjugates any element of \(b\), the result must lie in \(b\).</p>
 <p>Notice also that since \(b_1 \in (b \cap A) \) that \( b^{-1} (b \cap A )b_1 \subseteq A \). This is because all of the operations involved in that conjugation are among elements of \(A\). Combining these two facts gives us \( b_1^{-1}(b \cap A) b_1 \leq (b \cap A \). Therefore, since it is a coset of \(b \cap A\), the two sets must be equal. QED.</p>
 <p>Now we&rsquo;re all set up to combine the previous two lemmas to show that equation (1) above in Zassenhaus' lemma is true. This follows immediately from recognizing that \( \alpha^{-1} \circ \alpha(A \cap b) = a(A \cap b) \), and that \( \alpha^{-1} \circ \alpha (A \cap B) = a(A \cap B )\).</p>
 <p>In (Part 2) Counting Orbits, Sylow&rsquo;s Theorems, etc&hellip; we established the basic isomorphism result that \( H \leq N_{G}(N) \) implies that \( HN / N \cong H / (H \cap N) \). We&rsquo;re going to apply that by setting \( (A \cap B) = H \) and \( a(A \cap b) = A \cap ab = N \). First we need to show that \( (A \cap B \leq N_{G}( A \cap ab) \).</p>
 <h2 id="lemma-3">Lemma (3)</h2>
+<div class="emphasized">
 <p>\(G\) is a group, \(A\), \(B\), are subgroups. Let \(a \triangleleft A \), and \(b \triangleleft B\), then \( (A \cap B) \leq N_{G}(A \cap ab) \).</p>
+</div>
 <h3 id="proof-3">Proof</h3>
 <p>Let \(a_1 \in (A \cap B)\) be equal to \(b_1 \in (A \cap B) \). We write it this way to emphasize that it is both an element of \(A\) and of \(B\). Let \(a_2b_2 \in ab\). That is, \(a_2 \in a\) and \(b_2 \in b\). This means that \(a_2\) is an element of the subgroup \(a\), and \(b_2\) is an element of the subgroup \(b\). Notice that \( a_1^{-1}(a_2b_2)a_1 = a_1^{-1}a_2(a_1 a_1^{-1}) b_2 a_1 \). We simply inserted an additional \(a_1 a_1^{-1} \) into the expression, which is nothing more than adding the identity into the product. Further notice that since \(a_1 = b_1\) we can rewrite this as</p>
 <p>\[ (a_1^{-1} a_2 a_1) (b_1^{-1} b_2 b_1 ) \]</p>
@@ -213,20 +224,26 @@ Where \( A_{i} \triangleright A_{i+1}\) and \(B_j \triangleright B_{j+1} \). The
 <p>\( \mathcal{C}^{A} := \{ A_1(A_0 \cap B_0), A_1(A_0 \cap B_1),\)\( &hellip; , A_1(A_0 \cap B_n) = A_1, &hellip; , A_m(A_{m-1} \cap B_n) = \{e\}\} \) and \( \mathcal{C}^{B} := \{ B_1(A_0 \cap B_0), B_1(A_1 \cap B_0),\)\( &hellip; , B_1(A_m \cap B_0) = B_1, &hellip; , B_n(A_{m} \cap B_{n-1}) = \{e\}\} \). They both have \(m \cdot n\) subgroups in them. Furthermore, \( \mathcal{C}^{A}_{/} \) and \( \mathcal{C}^{B}_{/} \) both have \(m \cdot n - 1\) factor groups, and every factor group in one set is isomorphic to a factor group in the other set. This result was originally proved by a mathematician named Shreier.</p>
 <p>We have just a few more things to get through, and then we&rsquo;re finished with this entry (Yay!).</p>
 <h2 id="lemma-another-isomorphism-theorem">Lemma (another isomorphism theorem)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group, \(M \triangleleft G\), \(N \triangleleft G\), and \( N \triangleleft M\), then
 \[ G /M \cong \frac{G / N}{N / M} \tag{14}\label{14}\]</p>
+</div>
 <h3 id="proof-4">Proof</h3>
 <p>Let \( \alpha : G /N \rightarrow G/M \) be such that \( \alpha(gN) = gM \). Then \( \alpha(gN) = eM \), if and only if \(gN \subseteq M \). Therefore, \( Ker(\alpha) = \{ mN | m \in M \} \). I.e. \( M / N \).</p>
 <p><strong>QED</strong></p>
 <h2 id="corollary-1">Corollary 1</h2>
+<div class="emphasized">
 <p>If \(G/N \) is a simple group (i.e. it has no normal subgroups), then \( G \triangleright M \triangleright N \) implies either \( M = G\), or \(M = N\).</p>
+</div>
 <h3 id="proof-5">Proof</h3>
 <p>By equation (14), we see that if \(M\) isn&rsquo;t either \(G\), or \(N\), then \(G/N\) has a non-trivial normal subgroup, which cannot happen.</p>
 <p><strong>QED</strong></p>
 <h2 id="corollary-jordan---holder-theorem">Corollary (Jordan - Holder Theorem)</h2>
+<div class="emphasized">
 <p>Let \(G\) be a group. Let \( \mathcal{A} = \{ A_i\}^{n}_{i = 1}\) be a set of subgroups, such that \(A_1 = G\), \(A_n = \{e\}\), and \(A_i \triangleright A_{i+1}\). Furthere, suppose that \(A_i / A_{i+1} \) is simple and that \(A_i \neq A_{i+1} \) for any \(i\). Let \( \mathcal{B} \) be another such set of subgroups. Then,</p>
 <p>\( \mathcal{A} \) and \(\mathcal{B} \) have exactly the same size.</p>
 <p>\( \mathcal{A}_{/} \) and \( \mathcal{B}_{/} \), the set of factor groups have the same size, and each element of one is isomorphic to a factor group of the other. Furthermore, there is at least one permutation of mapping a factor group in one set with an isomorphic factor group in the other set.</p>
+</div>
 <h3 id="proof-6">Proof</h3>
 <p>Combine the previous corollary with Shreier&rsquo;s theorem above.</p>
 <p><strong>QED</strong></p>
