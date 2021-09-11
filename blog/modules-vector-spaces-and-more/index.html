@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Modules, Vector Spaces, and More! - EduGovNet.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Modules, Vector Spaces, and More!" />
+<meta property="og:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/modules-vector-spaces-and-more/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-09-05T09:30:30+00:00" />
+<meta property="article:modified_time" content="2021-09-05T09:30:30+00:00" />
+
+
+		<meta itemprop="name" content="Modules, Vector Spaces, and More!">
+<meta itemprop="description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."><meta itemprop="datePublished" content="2021-09-05T09:30:30+00:00" />
+<meta itemprop="dateModified" content="2021-09-05T09:30:30+00:00" />
+<meta itemprop="wordCount" content="3196">
+<meta itemprop="keywords" content="Vector Spaces,Modules,Algebras,Matrices," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modules, Vector Spaces, and More!"/>
+<meta name="twitter:description" content="In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later."/>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/images/favicon.png">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="EduGovNet.com" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/aleph_heiroglyph.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">EduGovNet.com</div>
+					<div class="logo__tagline">Let&#39;s strive to have our mistakes be honest mistakes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact_us/">
+				
+				<span class="menu__text">Contact Us</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Modules, Vector Spaces, and More!</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Mike</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-09-05T09:30:30Z">2021-09-05</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/math/" rel="category">Math</a>, <a class="meta__link" href="/categories/rings/" rel="category">Rings</a>, <a class="meta__link" href="/categories/fields/" rel="category">Fields</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/field-with-small-sheds.jpg" alt="Modules, Vector Spaces, and More!">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition-r-module">Definition: R-Module</a></li>
+    <li><a href="#definition-f-vector-space">Definition: F-Vector Space</a></li>
+    <li><a href="#definition-r-algebra">Definition: R-Algebra</a></li>
+    <li><a href="#definition-matrix">Definition: Matrix</a></li>
+    <li><a href="#lemma-matrix-multiplication-is-associative">Lemma: Matrix multiplication is associative</a>
+      <ul>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#lemma-matrix-multiplication-distributes">Lemma: Matrix multiplication distributes</a>
+      <ul>
+        <li><a href="#proof-1">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#mini-lemma-the-identity-matrix">Mini-lemma: the identity matrix</a>
+      <ul>
+        <li><a href="#proof-2">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-lattice-of-submodules-is-modular">Theorem: Lattice of submodules is modular</a>
+      <ul>
+        <li><a href="#proof-3">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#definition-integral-domain">Definition: Integral Domain</a></li>
+    <li><a href="#definition-mod-an-ideal">Definition: mod an Ideal</a></li>
+    <li><a href="#lemma-r-mod-i-is-a-ring">Lemma: R mod I is a ring</a>
+      <ul>
+        <li><a href="#proof-4">Proof</a></li>
+      </ul>
+    </li>
+    <li><a href="#theorem-when-a-sub-ring-is-an-ideal">Theorem: When a sub-ring is an Ideal</a>
+      <ul>
+        <li><a href="#proof-5">Proof</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><span class="first-letter">W</span>e&rsquo;ve already used vectors and matrices without defining them. It&rsquo;s about time we treated them with a bit more rigor.</p>
+<p>Feel free to skip over whatever you&rsquo;re already familiar with.</p>
+<h2 id="definition-r-module">Definition: R-Module</h2>
+<p>Let \(R\) be a ring and let \(\mathcal{M}\) be a set with the following properties.</p>
+<ol>
+<li>For any \( r \in R\), and \( m_1, m_2 \in \mathcal{M}\) we have
+<ol>
+<li>\( r(m_1 + m_2) = rm_1 + rm_2 \in \mathcal{M} \)</li>
+<li>\( (m_1 + m_2)r = m_1r + m_2r \in \mathcal{M} \)</li>
+<li>\( m_1 + m_2 \in \mathcal{M} \)</li>
+</ol>
+</li>
+<li>For any \( r_1, r_2 \in R\) and \(m \in \mathcal{M}\), we have
+<ol>
+<li>\( (r_1 + r_2)m = r_1m + r_2m \in \mathcal{M} \)</li>
+<li>\( m(r_1 + r_2) = mr_1 + mr_2 \in \mathcal{M} \)</li>
+</ol>
+</li>
+</ol>
+<p>\(\mathcal{M}\) is said to be a <em>module over \(R\)</em>.</p>
+<p>If only 1.1 and 2.1 hold, then \(\mathcal{M}\) is said to be a <em>right module over \(R\)</em>. Similarly, if only 1.2 and 2.2 hold, then \(\mathcal{M}\) is said to be a <em>left module over \(R\)</em>.</p>
+<h2 id="definition-f-vector-space">Definition: F-Vector Space</h2>
+<p>A <em>module</em> over a <em>field</em> is called a <em>vector space</em>.</p>
+<h2 id="definition-r-algebra">Definition: R-Algebra</h2>
+<p>Let \(\mathcal{A}\) be a Vector Space over a ring with unity \(R\). If \(\mathcal{A}\) is also a ring with unity, such that for all \(r \in R\) and \(a_1, a_2 \in \mathcal{A}\) we have</p>
+<p>\( (ra_1)a_2 = r(a_1a_2) = a_1(ra_2) \), then \(\mathcal{A}\) is said to be an <em>algebra over \(R\)</em>, or an <em>\(R\)-algebra</em>.</p>
+<p>Notice that a ring is a trivial module over itself. Similarly a field is a trivial vector space and algebra over itself.</p>
+<h2 id="definition-matrix">Definition: Matrix</h2>
+<p>Let \(R\) be a ring. A <em>Matrix</em>, \(M\) is a <em>2-dimensional</em> array of elements of \(m_{i,j}\) of \(R\), where for each \(i\), the 1-dimensional array \(m_{i,j}\) where \(j = 1, 2, &hellip;\) has the same length. The length is not necessarily finite. Likewise, for each \(j\), the one dimensional array \(m_{i,j}\), where \(i = 1, 2, &hellip;\) has the same length.</p>
+<p>It is common to write the \(i^{th}\) row of \(M\) as \((m_{i *})\), and the \(j^{th}\) column of \(M\) as \((m_{* j})\).</p>
+<p>They are usually written so that the \(i\)&rsquo;s index rows and the \(j\)&rsquo;s index columns. For example</p>
+<p>$$
+M = \begin{pmatrix}
+m_{1,1} &amp; m_{1,2} &amp; &hellip; &amp;  \\<br>
+m_{2,1} &amp; m_{2,2} &amp; &hellip; &amp;  \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \\<br>
+\end{pmatrix}
+$$</p>
+<p>We might also write</p>
+<p>\[ M = (m_{i,j}) \]</p>
+<p>If the length of both the rows and columns are finite, then \(M\) is a finite-dimensional matrix.</p>
+<p>If the length of each column of \(M\) is \(s\) (so there are \(s\) rows) and the length of each row of \(M\) is \(t\) (so there are \( t \) columns), then \(M\) is said to be an \(s \times t\) (read &ldquo;\(s\) by \(t\)&quot;) matrix. This is often written</p>
+<p>\[ M_{s,t} \]</p>
+<p>The set of all \(s \times t\) matrices with entries in ring \(R\) is an \(R\)-module. It is often written \( R^{s \times t} \). The rule for adding two matrices is</p>
+<p>$$
+\begin{align}
+&amp;\begin{pmatrix}
+a_{1,1} &amp; a_{1,2} &amp; &hellip; &amp; a_{1, t} \\<br>
+a_{2,1} &amp; a_{2,2} &amp; &hellip; &amp; a_{2, t} \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>
+a_{s,1} &amp; a_{s, 2} &amp; &hellip; &amp; a_{s, t} \\<br>
+\end{pmatrix} +
+\begin{pmatrix}
+b_{1,1} &amp; b_{1,2} &amp; &hellip; &amp; b_{1, t} \\<br>
+b_{2,1} &amp; b_{2,2} &amp; &hellip; &amp; b_{2, t} \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>
+b_{s,1} &amp; b_{s, 2} &amp; &hellip; &amp; b_{s, t} \\<br>
+\end{pmatrix} \\<br>
+\\<br>
+&amp;=
+\begin{pmatrix}
+a_{1,1} + b_{1,1} &amp; a_{1,2} + b_{1,2} &amp; &hellip; &amp; a_{1,m} + b_{1,t} \\<br>
+a_{2,1} + b_{2,1} &amp; a_{2,2} + b_{2,2} &amp; &hellip; &amp; a_{2,m} + b_{2,t} \\<br>
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \tag{1}\label{1} \\<br>
+a_{s, 1} + b_{s, 1} &amp; a_{s,2} + b_{s,2} &amp; &hellip; &amp; a_{s,t} + b_{s, t} \\<br>
+\end{pmatrix}
+\end{align}
+$$</p>
+<p>This can be written more succinctly as</p>
+<p>\[ (a_{i,j}) + (b_{i,j}) = (a_{i,j} + b_{i,j}) \tag{2}\label{2} \]</p>
+<p>The rule for multiplying by an element of \(R\) is</p>
+<p>\[ r(a_{i,j}) = (ra_{i,j}) \tag{3}\label{3} \]</p>
+<p>What&rsquo;s much more interesting is that if \(s = t\) and \(R\) is a ring with unity, then \(R^{s \times s}\) is an \(R\)-algebra. In fact, even if \(R\) isn&rsquo;t a ring with unity we can still define multiplication between two elements of \(R^{s \times s}\). This is the usual <em>matrix multiplication</em> it is defined so that</p>
+<p>\[ (a_{i,j}) \cdot (b_{i,j}) = \left ( \sum\limits_{k=1}^{s}{ a_{i,k}b_{k,j} } \right ) \tag{4}\label{4}  \]</p>
+<p>However, just because we&rsquo;ve said that this is how it should work doesn&rsquo;t mean that it will all work out. We have to prove that this gives \(R^{s \times s}\) a ring structure. In order to do that, we have to verify that all of the ring axioms hold.</p>
+<p>It&rsquo;s easy to see that all of the ones involving \(+\) hold, since \(+\) works component-wise. For example, \(+\) in \(R^{s \times s}\) is associative because \( ((a_{i,j}) + (b_{i,j})) + (c_{i,j}) \) is equal to \( (a_{i,j}) + ((b_{i,j}) + (c_{i,j})) \).</p>
+<p>Matrix &ldquo;multiplication&rdquo; (the \( \cdot \) operator for \(R^{s \times s}\)) isn&rsquo;t obviously associative, and it&rsquo;s also not obvious that it distributes with matrix \(+\). We&rsquo;ll prove both of those next.</p>
+<h2 id="lemma-matrix-multiplication-is-associative">Lemma: Matrix multiplication is associative</h2>
+<p>Let \( (a_{i,j}) \), \((b_{i,j})\), and \( (c_{i,j}) \) be elements of \(R^{s,s}\), where \(R\) is a ring. Then</p>
+<p>\[ ((a_{i,j}) \cdot (b_{i,j})) \cdot (c_{i,j}) = (a_{i,j}) \cdot ((b_{i,j}) \cdot (c_{i,j})) \tag{5}\label{5}\]</p>
+<h3 id="proof">Proof</h3>
+<p>By definition, the left-hand side of the equation is equal to</p>
+<p>\[ \left ( \sum\limits_{k=1}^{s} {a_{i,k}b_{k,j}} \right) \cdot (c_{i,j}) \tag{6}\label{6} \]</p>
+<p>which is equal to</p>
+<p>\[ \left ( { \sum\limits_{l=1}^{s} \left \{ \sum\limits_{k=1}^{s} { a_{i,k}b_{k,l} } \right \} c_{l, j} } \right ) \tag{7}\label{7} \]</p>
+<p>and that is equal to</p>
+<p>\[ \left ( { \sum\limits_{k, l = 1 }^{s} a_{i,k}b_{k,l}c_{l,j} } \right ) \tag{8}\label{8} \]</p>
+<p>On the other hand, the right-hand side of equation (5) is equal to</p>
+<p>\[ (a_{i,j}) \cdot \left ( { \sum\limits_{l=1}^{s} { b_{i,l}c_{l,j} } } \right ) \tag{9}\label{9}\]</p>
+<p>where we&rsquo;ve kept the <em>bound</em> variable \( l \) for the sum between \( (b_{i,j})\) and \( (c_{i,j}) \), which is perfectly fine, since it&rsquo;s the variable we&rsquo;re summing over.</p>
+<p>equation (9) is equal to</p>
+<p>\[ \left ( \sum\limits_{k=1}^{s} a_{i,k} \left \{  \sum\limits_{l=1}^{s} { b_{k,l}c_{l,j} } \right \} \right ) \tag{10}\label{10}  \]</p>
+<p>Now, when we evaluate equation (10), we once again end up with equation (8). Therefore, the two sides of equation (5) are equal.</p>
+<p><strong>QED</strong></p>
+<p>Now let&rsquo;s verify that the distributive laws hold</p>
+<h2 id="lemma-matrix-multiplication-distributes">Lemma: Matrix multiplication distributes</h2>
+<p>Let \( A \), \(B\), and \(C\) be elements of \(R^{s \times s}\), then</p>
+<ol>
+<li>\(A (B + C) = AB + AC \)</li>
+<li>\( (B + C)A = BA + CA \)</li>
+</ol>
+<h3 id="proof-1">Proof</h3>
+<p>The proofs are nothing more than applying definitions and pushing symbols. We&rsquo;ll provide the proof for case 1. The other case is nearly identical.</p>
+<p>\[ A(B + C) = (a_{i,j}) \left ( (b_{i,j}) + (c_{i,j}) \right ) \tag{11}\label{11} \]</p>
+<p>\[ = (a_{i,j})( b_{i,j} + c_{i,j} ) \tag{12}\label{12} \]</p>
+<p>by the definition of addition in \(R^{s \times s}\). Applying the definition of multiplication to (11), we obtain</p>
+<p>\[ \left ( \sum\limits_{k=1}^{s} a_{i,k}(b_{k,j} + c_{k,j}) \right ) \tag{13}\label{13} \]</p>
+<p>which is equal to</p>
+<p>\[ \left ( \sum\limits_{k=1}^s a_{i,k}b_{k,j} + \sum\limits_{k=1}^s a_{i,k}c_{k,j} \right ) \tag{14}\label{14} \]</p>
+<p>which can be separated as</p>
+<p>$$
+\begin{align}
+&amp; \left ( \sum\limits_{k=1}^s a_{i,k}b_{k,j} \right ) + \\<br>
+&amp; \left ( \sum\limits_{k=1}^s a_{i,k}c_{k,j} \right )\tag{15}\label{15}
+\end{align}
+$$</p>
+<p>by the definition of addition in \(R^{s \times x}\) in the opposite direction as we applied it in (12). Then, applying the definition of multiplication in the opposite direction to what we did to go from (12) to (13), we get</p>
+<p>\[ (a_{i,j})(b_{i,j}) + (a_{i,j})(c_{i,j}) \tag{16}\label{16} \]</p>
+<p>which is just different notation for</p>
+<p>\[ AB + AC \]</p>
+<p><strong>QED</strong></p>
+<p>This finishes the proof that \(R^{s \times s}\) is a ring. If \(1 \in R\) (where \(1\) is the unique element such that \(1 \cdot x = x \cdot 1 = x\), for all \(x \in R \)), then \( I = (\delta_{i,j}) \) is the identity element of \(R^{s \times s}\), where
+$$\delta_{i,j} = \begin{cases} 1, i = j \\ 0, i \neq j \end{cases}  $$</p>
+<p>This will be familiar to anyone who has encountered Matrices before. Now we&rsquo;ll prove that it is actually the identity.</p>
+<h2 id="mini-lemma-the-identity-matrix">Mini-lemma: the identity matrix</h2>
+<p>Let \(R\) be a ring with identity, then \(I = \delta_{i,j}\) is the identity element of \(R^{s \times s}\).</p>
+<h3 id="proof-2">Proof</h3>
+<p>We&rsquo;ll prove \(IM = M\), the other way is nearly the same.</p>
+<p>$$
+\begin{align}
+&amp; (\delta_{i,j})(m_{i,j}) \\<br>
+&amp;= \left ( \sum\limits_{k = 1}^{s} { \delta_{i,k}m_{k,j} } \right ) \\<br>
+&amp;= (m_{i,j})
+\end{align}
+$$</p>
+<p><strong>QED</strong></p>
+<p>Now we&rsquo;re going to switch focus slightly and prove a result about the structure of the lattice of a module and its submodules.</p>
+<p>In an earlier entry, we gave the definition of a <a href="/blog/partial-orders-lattices-and-some-subgroups/#definition-modular-lattice"><em>modular lattice</em></a>, and then we proved some theorems about how well-behaved they are. Here we&rsquo;re going to prove that the lattice of submodules of a given module is modular (we think this is where the name comes from).</p>
+<h2 id="theorem-lattice-of-submodules-is-modular">Theorem: Lattice of submodules is modular</h2>
+<p>Let \(\mathcal{L}_{\mathcal{V}}\) be the lattice of submodules of a module, \(\mathcal{V}\). Then \(\mathcal{L}_{\mathcal{V}}\) is <em>modular</em>. That is, there is no sub-lattice like this</p>
+<p><img src="/images/lattice_non_modular_modules.png" alt="A non modular sub-lattice" title="non-modular sub-lattice of modules"></p>
+<p>Where</p>
+<p>$$
+\begin{align}
+\mathcal{M} \vee \mathcal{N} &amp;= \mathcal{M} \vee \mathcal{P} \\<br>
+\mathcal{M} \wedge \mathcal{N} &amp;= \mathcal{M} \wedge \mathcal{P} \tag{17}\label{17} \\<br>
+\mathcal{N} \subsetneq \mathcal{P} &amp;
+\end{align}
+$$</p>
+<h3 id="proof-3">Proof</h3>
+<p>The proof is fairly easy. It relies mostly on proving the following claim.
+Let \( \mathcal{M} \) and \( \mathcal{N} \) be modules over a ring, \(R\). Then</p>
+<p>$$ \mathcal{M} \vee \mathcal{N} = \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} \tag{18}\label{18} $$</p>
+<p>To see why (18) holds, notice first, that</p>
+<p>$$ \mathcal{M} \vee \mathcal{N} \supseteq \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} $$</p>
+<p>because \( \mathcal{M} \vee \mathcal{N} \) is an Abelian group under the addition operator (\( + \)), and since both  \( \mathcal{M} \) and \( \mathcal{N} \) are subsets of \( \mathcal{M} \vee \mathcal{N} \), we have to have all of \(\{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \}\).</p>
+<p>That was the easier direction. Now we have to show that that is all we need.</p>
+<p>We showed in <a href="/blog/partial-orders-lattices-and-some-subgroups/#theorem-when-v--">an earlier entry</a> that for two <em>subgroups</em> \(M\) and \(N\) (of a group \( G \)) we have \( M \vee N = MN \) whenever \( M \leq N_{G}(M) \).  I.e. that when \(M\) is a subgroup of the <i>normalizer</i> of \(N\). This is guaranteed to happen whenever \(G\) is Abelian, because every subgroup is normal. Thus</p>
+<p>$$ \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} $$</p>
+<p>is the <em>join</em> of the additive group of \( \mathcal{M} \) and \( \mathcal{N} \) (because \( MN \) means the same things as &ldquo;\( M + N \)&rdquo; when the binary operation is written additively, which is the case for the \(+\) operation of a module).</p>
+<p>Finally, we have to show that multiplication by elements in \(R\) doesn&rsquo;t add anything more.</p>
+<p>Let \( w \) be an arbitrary element of \( \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} \), and \(r \) be an arbitrary element of \(R\). Then we have</p>
+<p>\[\ rw = r(x + y) \]</p>
+<p>where \(x \in \mathcal{M}\) and \( y \in \mathcal{N}\). This is an element of \( \mathcal{M} \vee \mathcal{N} \), a module (by definition), so we have to have</p>
+<p>\[ r(x+y) = rx + ry \]</p>
+<p>and, since \( \mathcal{M} \) is a module over \(R\), we must have \( rx \in \mathcal{M}\). Similarly, \(ry\) have to belong to \(\mathcal{N}\). So that means that \( rw \in \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \}\).</p>
+<p>A nearly identical argument shows that \( wr \in \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} \). Therefore,</p>
+<p>$$ \mathcal{M} \vee \mathcal{N} \subseteq \{ x + y | x \in \mathcal{M}, y \in \mathcal{N} \} $$</p>
+<p>Therefore, (18) holds.</p>
+<p><strong>QED</strong></p>
+<p>When we add more structure to a module, we might lose modularity. We&rsquo;ll show that later, but first we&rsquo;ll discuss a very basic example of a ring.</p>
+<p>We&rsquo;re all familiar with \(\mathbb{Z}\), the set of all integers, where \( m + n\) is the usual addition operator and \(mn\) multiplication. Since \( mn = nm\) for all \(m, n \in \mathbb{Z}\), it is a <em>commutative ring</em>, which we defined in the previous entry. However, it has another useful property which we have not discussed so far, but will do so now.</p>
+<p>In order for \(mn = 0\) to hold in \( \mathbb{Z} \), either \(m = 0\), \(n=0\), or they both have to equal \(0\). This isn&rsquo;t alway the case with rings, though. For rings, like \(\mathbb{Z}\), where it does hold, we call that ring an <em>integral domain</em>.</p>
+<h2 id="definition-integral-domain">Definition: Integral Domain</h2>
+<p>Let \(R\) be a ring where for any two \(r_1\) and \(r_2 \in R\), we have</p>
+<p>$$
+\begin{align}
+&amp; r_1r_2 = 0 \implies \\
+&amp; r_1 = 0 \text{ or } r_2 = 0
+\end{align}
+$$</p>
+<p>then \(R\) is said to be an <em>integral domain</em>.</p>
+<p>Now we&rsquo;re going to fill in a gap we left in the previous entry. In that entry we showed that <em>Ideals</em>, i.e. Kernels of ring homomorphisms, are sub-rings. Now we&rsquo;re going to see when a given sub-ring is an ideal, but first we need a definition</p>
+<h2 id="definition-mod-an-ideal">Definition: mod an Ideal</h2>
+<p>Let \( \phi : R \rightarrow S\) be a ring homomorphism from \(R\) to \(S\), and let \( I \) be the kernel of \(\phi\). Then, for any elements, \(r, s \in R\), we define</p>
+<p>\[ r \equiv s \text{ (mod } I \text{)} \tag{19}\label{19} \]</p>
+<p>if and only if (iff)</p>
+<p>\[ \phi(r - s) = 0 \tag{20}\label{20} \]</p>
+<p>What this means is that the addition operator of \(R\) determines the cosets of \(I\). Because of this, we know from our work with normal subgroups that these cosets will be well-behaved with respect to the addition operator. Next we&rsquo;ll show that they are also well-behaved with respect to the multiplication operator.</p>
+<h2 id="lemma-r-mod-i-is-a-ring">Lemma: R mod I is a ring</h2>
+<p>Let \( \phi: R \rightarrow S \) be a ring homomorphism from a ring \(R\) to a ring \(S\). Let \(I\) be the kernel of \(\phi\). Then</p>
+<p>\[ R / I := \{ [r] | r \in R \} \tag{21}\label{21} \]</p>
+<p>is a ring, where</p>
+<p>\[ [r] := \{ r' \in R | r' \equiv r \text{ (mod} I \text{)} \tag{22}\label{22} \} \]</p>
+<h3 id="proof-4">Proof</h3>
+<p>We know that \(I\) is a subgroup of the group with the elements of \(R\) under the operator \(+\). We also know that it is a normal subgroup, since \(R\) with the addition operator is Abelian. Therefore \(R/I\) satisfies conditions 1.1, 1.2, 1.3, and 1.4 of the <a href="/blog/intro-to-rings-and-fields/#definition-of-ring">ring axioms</a> from <a href="/blog/applying-permutations-to-group-theory/#theorem-mod-normal-subgroup-is-a-group">this theorem from group theory</a>).</p>
+<p>We also know from the proof of that theorem that for all \(x, y \in R\), \([x] + [y] = [x+y]\).</p>
+<p>Next we&rsquo;ll show that for all \(x, y \in R\), we also have</p>
+<p>\[ [x][y] = [xy] \tag{23}\label{23} \]</p>
+<p>To show this, suppose that \(x_1, x_2 \in [x]\), and \(y_1, y_2 \in [y]\). We want to show that \( [x_1y_1] = [x_2y_2] \). (This is similar to, but slightly different from what we did <a href="/blog/applying-permutations-to-group-theory/#theorem-mod-normal-subgroup-is-a-group">here</a>)</p>
+<p>\( \phi(x_1 - x_2) = 0 \) implies \(\phi(x_1) = \phi(x_2)\). Similarly, we have \( \phi(y_1) = \phi(y_2) \). Combining those two equalities, we get</p>
+<p>\[ \phi(x_1)\phi(y_1) = \phi(x_2)\phi(y_2) \tag{24}\label{24} \]</p>
+<p>and since \(\phi\) is a homomorphism, equation (24) means that</p>
+<p>\[ \phi(x_1y_1) = \phi(x_2y_2) \]</p>
+<p>and that means that</p>
+<p>\[ \phi(x_1y_1 - x_2y_2) = 0 \]</p>
+<p>thus \( [x_1y_1] = [x_2y_2] \), as we wanted, and equation (23) holds.</p>
+<p>Equation (23) implies that</p>
+<p>$$\begin{align}
+&amp; ([ x ][ y ])[ z ] \\<br>
+&amp;= ([ xy ])[ z ] \\<br>
+&amp;= [ (xy)z ] \\<br>
+&amp;= [ (x(yz)) ] \\<br>
+&amp;= [ x ]([ yz ]) \\<br>
+&amp;= [ x ]([ y ][ z ]) \\<br>
+\end{align}$$</p>
+<p>which means that \(R/I\) satisfies condition 2 of the ring axioms.</p>
+<p>We&rsquo;ll show how to get condition 3.1, and the proof of 3.2 is very similar.</p>
+<p>$$\begin{align}
+&amp; [ x ]( [ y ] + [ z ] )  \\<br>
+&amp;= [ x ]( [ y + z] ) \\<br>
+&amp;= [ x (y + z) ] \\<br>
+&amp;= [ xy + xz ] \\<br>
+&amp;= [ xy ] + [ xz ] \\<br>
+\end{align}$$</p>
+<p>Next, if condition 4 holds in \(R\), so we have \(1 \in R\), then
+$$\begin{align}
+&amp; [ 1 ][ x ] \\<br>
+&amp;= [ 1x ] \\<br>
+&amp;= [x] \\<br>
+\end{align}$$</p>
+<p>so condition 4 holds in \(R / I\). Finally,  if condition 5 holds in \(R\), then</p>
+<p>$$\begin{align}
+&amp;[ x ] [ y ] \\<br>
+&amp;= [ xy ] \\<br>
+&amp;= [ yx ] \\<br>
+&amp;= [ y ] [ x ] \\<br>
+\end{align}$$</p>
+<p>so condition 5 holds in \(R/I\).</p>
+<p><strong>QED</strong></p>
+<h2 id="theorem-when-a-sub-ring-is-an-ideal">Theorem: When a sub-ring is an Ideal</h2>
+<p>Let \(I\) be a sub-ring of a ring \(R\), such that for all \(r \in R\) we have</p>
+<ol>
+<li>\( rI \subseteq I \)</li>
+<li>\( Ir \subseteq I \)</li>
+</ol>
+<p>Then \(I\) is an <em>ideal</em> of \(R\).</p>
+<h3 id="proof-5">Proof</h3>
+<p>It makes sense that both of the conditions would have to hold for \(I\) to be the kernel of a ring homomorphism, because \(\phi(I) = 0\). The interesting fact is that these conditions are sufficient for \(I\) to be the kernel of a homomorphism.</p>
+<p>We&rsquo;ll do this by showing that \( \phi(r) = r + I \) is a homomorphism.</p>
+<p>We should be very careful when using notation like this. We&rsquo;re considering \(I\) to be a <strong>subgroup</strong> of the group of \(R\) with the binary operator \(+\). \(r + I\) is the coset of \(I\) containing \(r\).</p>
+<p>So, by construction we know that \( \phi(x + y) = \phi(x) + \phi(y) \). The real work involves showing that \( \phi(xy) = \phi(x)\phi(y) \).</p>
+<p>Let \(x, y \in R\), then</p>
+<p>$$\begin{align}
+\phi(x) &amp;= x + I \\<br>
+\phi(y) &amp;= y + I \\<br>
+\end{align}$$</p>
+<p>Let&rsquo;s see what happens when we multiply the two cosets.When we do that we get</p>
+<p>\( (x + I)(y + I) =\)\(  xy\)\(+ xI \)\(+  Iy\)\(+ II \). By conditions 1 and 2 of the theorem, we know that \(xI\), and \(Iy \subseteq I\). Applying 1 repeatedly to every element of \(I\), we get that \(II \subseteq I\). That means that the product is a subset of \(xy + I\). It <em>might not</em> be all of \(xy + I\), but that doesn&rsquo;t matter. We have just shown that \( \phi(x)\phi(y) \) will always lie within the coset \( xy + I \). So when we assign \( \phi(x)\phi(y) \) to a coset of \(I\), it must be assigned to \( xy + I \), which means that</p>
+<p>\[ \phi(x)\phi(y) = \phi(xy) \]</p>
+<p>Thus \( \phi \) is a ring homomorphism.</p>
+<p><strong>QED</strong></p>
+<p>That&rsquo;s all we have for this entry. There&rsquo;s quite a lot of material to go over yet. We&rsquo;re just getting started with rings and fields. There will be more to come!</p>
+<p>Thanks for reading!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/vector-spaces/" rel="tag">Vector Spaces</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/modules/" rel="tag">Modules</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/algebras/" rel="tag">Algebras</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/matrices/" rel="tag">Matrices</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/blog/intro-to-rings-and-fields/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Intro to Rings and Fields</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 EduGovNet.com.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i &lt; all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fmodules-vector-spaces-and-more%2f" />
+</body>
+</html>

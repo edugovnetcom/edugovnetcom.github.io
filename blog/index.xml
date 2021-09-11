@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Aug 2021 08:42:22 -0400</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modules, Vector Spaces, and More!</title>
+      <link>/blog/modules-vector-spaces-and-more/</link>
+      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      
+      <guid>/blog/modules-vector-spaces-and-more/</guid>
+      <description>In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will cover examples of rings, fields, and investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later.</description>
+    </item>
+    
     <item>
       <title>Intro to Rings and Fields</title>
       <link>/blog/intro-to-rings-and-fields/</link>
@@ -22,7 +31,7 @@
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
       <guid>/blog/spheres-distances-maps-and-more/</guid>
-      <description>In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map.</description>
+      <description>In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map. We&amp;rsquo;ve also implemented a tool that uses those calculations to fit a great circle to two or more points on the globe. Check it out!</description>
     </item>
     
     <item>
@@ -107,11 +116,11 @@
     </item>
     
     <item>
-      <title>Parial Orders Lattices and Some Subgroups</title>
-      <link>/blog/parial-orders-lattices-and-some-subgroups/</link>
+      <title>Partial Orders Lattices and Some Subgroups</title>
+      <link>/blog/partial-orders-lattices-and-some-subgroups/</link>
       <pubDate>Thu, 17 Jun 2021 10:26:21 -0400</pubDate>
       
-      <guid>/blog/parial-orders-lattices-and-some-subgroups/</guid>
+      <guid>/blog/partial-orders-lattices-and-some-subgroups/</guid>
       <description>In this article we mostly talk about partial orders, and lattices, which are a special type of partial order. We tie it in with our discussions of subgroups before proving two distribution laws for lattices.</description>
     </item>
     

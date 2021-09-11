@@ -6,7 +6,43 @@
     <description>Recent content in Tags on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Aug 2021 08:42:22 -0400</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algebras</title>
+      <link>/tags/algebras/</link>
+      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      
+      <guid>/tags/algebras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matrices</title>
+      <link>/tags/matrices/</link>
+      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      
+      <guid>/tags/matrices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modules</title>
+      <link>/tags/modules/</link>
+      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      
+      <guid>/tags/modules/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vector Spaces</title>
+      <link>/tags/vector-spaces/</link>
+      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      
+      <guid>/tags/vector-spaces/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Binomial expansion</title>
       <link>/tags/binomial-expansion/</link>
@@ -49,6 +85,24 @@
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
       <guid>/tags/geometry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Great Circle</title>
+      <link>/tags/great-circle/</link>
+      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      
+      <guid>/tags/great-circle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Map of Earth</title>
+      <link>/tags/map-of-earth/</link>
+      <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
+      
+      <guid>/tags/map-of-earth/</guid>
       <description></description>
     </item>
     
