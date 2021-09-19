@@ -16,7 +16,7 @@
 		<meta itemprop="name" content="More on Sorting and Analyzing Run Time Complexity">
 <meta itemprop="description" content="In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced quick_sort, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms."><meta itemprop="datePublished" content="2021-07-08T13:46:52-04:00">
 <meta itemprop="dateModified" content="2021-07-08T13:46:52-04:00">
-<meta itemprop="wordCount" content="2058">
+<meta itemprop="wordCount" content="2094">
 <meta itemprop="keywords" content="Probability,Permutations,Complexity,">
 		<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="More on Sorting and Analyzing Run Time Complexity">
@@ -274,9 +274,18 @@
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-59" x="0" y="0"></use>
 </g>
-</svg></span> have a total ordering. Then we define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="46.011ex" height="3.009ex" style="vertical-align: -1.005ex;" viewBox="0 -863.1 19810.2 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-11-Title">
-<title id="MathJax-SVG-11-Title"> O(g) := \{ f : X \rightarrow Y | \forall x \geq w_{f}, f(x) \leq c \cdot g(x) \} </title>
+</svg></span> have a total ordering. Then we define</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="25.926ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 11162.5 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-11-Title">
+<title id="MathJax-SVG-11-Title">
+\begin{align}
+&amp;O(g) := \{ f : X \rightarrow Y | \\ 
+&amp;\forall x \geq w_{f}, f(x) \leq c \cdot g(x) \} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,675)">
  <use xlink:href="#MJMATHI-4F" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="763" y="0"></use>
  <use xlink:href="#MJMATHI-67" x="1153" y="0"></use>
@@ -292,28 +301,34 @@
  <use xlink:href="#MJMAIN-2192" x="6650" y="0"></use>
  <use xlink:href="#MJMATHI-59" x="7929" y="0"></use>
  <use xlink:href="#MJMAIN-7C" x="8692" y="0"></use>
- <use xlink:href="#MJMAIN-2200" x="8971" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="9527" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="10377" y="0"></use>
-<g transform="translate(11434,0)">
+</g>
+<g transform="translate(0,-676)">
+ <use xlink:href="#MJMAIN-2200" x="0" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="556" y="0"></use>
+ <use xlink:href="#MJMAIN-2265" x="1406" y="0"></use>
+<g transform="translate(2463,0)">
  <use xlink:href="#MJMATHI-77" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-66" x="1013" y="-219"></use>
 </g>
- <use xlink:href="#MJMAIN-2C" x="12639" y="0"></use>
- <use xlink:href="#MJMATHI-66" x="13085" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="13635" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="14025" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="14597" y="0"></use>
- <use xlink:href="#MJMAIN-2264" x="15264" y="0"></use>
- <use xlink:href="#MJMATHI-63" x="16321" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="16976" y="0"></use>
- <use xlink:href="#MJMATHI-67" x="17477" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="17958" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="18347" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="18920" y="0"></use>
- <use xlink:href="#MJMAIN-7D" x="19309" y="0"></use>
+ <use xlink:href="#MJMAIN-2C" x="3668" y="0"></use>
+ <use xlink:href="#MJMATHI-66" x="4113" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4664" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="5053" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="5626" y="0"></use>
+ <use xlink:href="#MJMAIN-2264" x="6293" y="0"></use>
+ <use xlink:href="#MJMATHI-63" x="7350" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="8005" y="0"></use>
+ <use xlink:href="#MJMATHI-67" x="8506" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="8986" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="9376" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="9948" y="0"></use>
+ <use xlink:href="#MJMAIN-7D" x="10338" y="0"></use>
 </g>
-</svg></span>, where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.621ex" height="2.843ex" style="vertical-align: -1.005ex;" viewBox="0 -791.3 3281.3 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-12-Title">
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.621ex" height="2.843ex" style="vertical-align: -1.005ex;" viewBox="0 -791.3 3281.3 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-12-Title">
 <title id="MathJax-SVG-12-Title"> w_{f} \in X</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-77" x="0" y="0"></use>
@@ -1215,8 +1230,8 @@
 </g>
 </g>
 </g>
-</svg></span>
-Also notice that this holds even if we replace equality in the definition of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.636ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 704.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-77-Title">
+</svg></span></p>
+<p>Also notice that this holds even if we replace equality in the definition of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.636ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 704.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-77-Title">
 <title id="MathJax-SVG-77-Title">T</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-54" x="0" y="0"></use>
@@ -1268,19 +1283,24 @@ Also notice that this holds even if we replace equality in the definition of <sp
  <use xlink:href="#MJMATHI-62" x="1934" y="0"></use>
 </g>
 </svg></span>, then</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="3.176ex" style="vertical-align: -1.005ex; max-width: 36000px;" viewBox="0 -934.9 25833.2 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-83-Title">
-<title id="MathJax-SVG-83-Title"> T(b^{ \left\lceil { \log_b(n) } \right\rceil - 1 }) \leq T(n) \leq T( b^{ \left\lceil { \log_b(n) } \right\rceil } ) \tag{2}\label{2} </title>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.843ex" style="vertical-align: -2.838ex; max-width: 36000px;" viewBox="0 -1724.2 25833.2 2946.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-83-Title">
+<title id="MathJax-SVG-83-Title">
+\begin{align}
+&amp;T(b^{ \left\lceil { \log_b(n) } \right\rceil - 1 }) \leq \\ 
+&amp;T(n) \leq T( b^{ \left\lceil { \log_b(n) } \right\rceil } ) \tag{2}\label{2} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-2" transform="translate(0,-97)">
+<g id="mjx-eqn-2" transform="translate(0,-844)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-32" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(5421,0)">
+<g transform="translate(8960,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,-97)">
+<g transform="translate(0,651)">
  <use xlink:href="#MJMATHI-54" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="704" y="0"></use>
 <g transform="translate(1094,0)">
@@ -1303,14 +1323,16 @@ Also notice that this holds even if we replace equality in the definition of <sp
 </g>
  <use xlink:href="#MJMAIN-29" x="5353" y="0"></use>
  <use xlink:href="#MJMAIN-2264" x="6021" y="0"></use>
- <use xlink:href="#MJMATHI-54" x="7077" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="7782" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="8171" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="8772" y="0"></use>
- <use xlink:href="#MJMAIN-2264" x="9439" y="0"></use>
- <use xlink:href="#MJMATHI-54" x="10495" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="11200" y="0"></use>
-<g transform="translate(11589,0)">
+</g>
+<g transform="translate(0,-844)">
+ <use xlink:href="#MJMATHI-54" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="704" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="1094" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1694" y="0"></use>
+ <use xlink:href="#MJMAIN-2264" x="2361" y="0"></use>
+ <use xlink:href="#MJMATHI-54" x="3418" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4122" y="0"></use>
+<g transform="translate(4512,0)">
  <use xlink:href="#MJMATHI-62" x="0" y="0"></use>
 <g transform="translate(429,412)">
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2308"></use>
@@ -1326,7 +1348,7 @@ Also notice that this holds even if we replace equality in the definition of <sp
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2309" x="3552" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-29" x="14945" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="7867" y="0"></use>
 </g>
 </g>
 </g>
@@ -2557,60 +2579,73 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use xlink:href="#MJMAIN-29" x="2207" y="0"></use>
 </g>
 </svg></span>. It turns out that with our implementation, this isn’t possible. We can, however, show a weaker result about the expected number of steps it will take to finish on a given input vector.</p>
-<p>On a given call to <code>quick_sort(input, start, end)</code>, the <code>while</code> loop exits with <code>j == i</code>, if we treat the final value of those variables as a random variable with possible values in <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="48.658ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 20949.9 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-139-Title">
-<title id="MathJax-SVG-139-Title"> \{\text{start}, \text{start} + 1, …, \text{start} + ((\text{end} - 1) - \text{start}) \} </title>
+<p>On a given call to <code>quick_sort(input, start, end)</code>, the <code>while</code> loop exits with <code>j == i</code>, if we treat the final value of those variables as a random variable with possible values in</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="29.595ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 12742.4 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-139-Title">
+<title id="MathJax-SVG-139-Title">
+\begin{align}
+\{&amp;\text{start}, \text{start} + 1, …, \\ 
+&amp;\text{start} + ((\text{end} - 1) - \text{start}) \}
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-7B" x="0" y="0"></use>
-<g transform="translate(500,0)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMAIN-7B" x="0" y="651"></use>
+</g>
+<g transform="translate(490,0)">
+<g transform="translate(0,651)">
+ <use xlink:href="#MJMAIN-73"></use>
+ <use xlink:href="#MJMAIN-74" x="394" y="0"></use>
+ <use xlink:href="#MJMAIN-61" x="784" y="0"></use>
+ <use xlink:href="#MJMAIN-72" x="1284" y="0"></use>
+ <use xlink:href="#MJMAIN-74" x="1677" y="0"></use>
+ <use xlink:href="#MJMAIN-2C" x="2066" y="0"></use>
+<g transform="translate(2511,0)">
  <use xlink:href="#MJMAIN-73"></use>
  <use xlink:href="#MJMAIN-74" x="394" y="0"></use>
  <use xlink:href="#MJMAIN-61" x="784" y="0"></use>
  <use xlink:href="#MJMAIN-72" x="1284" y="0"></use>
  <use xlink:href="#MJMAIN-74" x="1677" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-2C" x="2567" y="0"></use>
-<g transform="translate(3012,0)">
+ <use xlink:href="#MJMAIN-2B" x="4800" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="5801" y="0"></use>
+ <use xlink:href="#MJMAIN-2C" x="6301" y="0"></use>
+ <use xlink:href="#MJMAIN-2026" x="6746" y="0"></use>
+ <use xlink:href="#MJMAIN-2C" x="8085" y="0"></use>
+</g>
+<g transform="translate(0,-700)">
  <use xlink:href="#MJMAIN-73"></use>
  <use xlink:href="#MJMAIN-74" x="394" y="0"></use>
  <use xlink:href="#MJMAIN-61" x="784" y="0"></use>
  <use xlink:href="#MJMAIN-72" x="1284" y="0"></use>
  <use xlink:href="#MJMAIN-74" x="1677" y="0"></use>
-</g>
- <use xlink:href="#MJMAIN-2B" x="5300" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="6301" y="0"></use>
- <use xlink:href="#MJMAIN-2C" x="6802" y="0"></use>
- <use xlink:href="#MJMAIN-2026" x="7247" y="0"></use>
- <use xlink:href="#MJMAIN-2C" x="8586" y="0"></use>
-<g transform="translate(9031,0)">
- <use xlink:href="#MJMAIN-73"></use>
- <use xlink:href="#MJMAIN-74" x="394" y="0"></use>
- <use xlink:href="#MJMAIN-61" x="784" y="0"></use>
- <use xlink:href="#MJMAIN-72" x="1284" y="0"></use>
- <use xlink:href="#MJMAIN-74" x="1677" y="0"></use>
-</g>
- <use xlink:href="#MJMAIN-2B" x="11320" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="12321" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="12710" y="0"></use>
-<g transform="translate(13100,0)">
+ <use xlink:href="#MJMAIN-2B" x="2288" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="3289" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="3678" y="0"></use>
+<g transform="translate(4068,0)">
  <use xlink:href="#MJMAIN-65"></use>
  <use xlink:href="#MJMAIN-6E" x="444" y="0"></use>
  <use xlink:href="#MJMAIN-64" x="1001" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-2212" x="14879" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="15880" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="16381" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="16992" y="0"></use>
-<g transform="translate(17993,0)">
+ <use xlink:href="#MJMAIN-2212" x="5848" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="6848" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="7349" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="7961" y="0"></use>
+<g transform="translate(8961,0)">
  <use xlink:href="#MJMAIN-73"></use>
  <use xlink:href="#MJMAIN-74" x="394" y="0"></use>
  <use xlink:href="#MJMAIN-61" x="784" y="0"></use>
  <use xlink:href="#MJMAIN-72" x="1284" y="0"></use>
  <use xlink:href="#MJMAIN-74" x="1677" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="20059" y="0"></use>
- <use xlink:href="#MJMAIN-7D" x="20449" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="11028" y="0"></use>
+ <use xlink:href="#MJMAIN-7D" x="11417" y="0"></use>
 </g>
-</svg></span>, then if this random variable is <em>uniformly distributed</em> (see <a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>) among those values, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.841ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9834.3 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-140-Title">
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>then if this random variable is <em>uniformly distributed</em> (see <a href="/blog/sorting-random-permutations-and-a-little-bit-of-probability/">Sorting, Random Permutations, and little bit of Probability</a>) among those values, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.841ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9834.3 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-140-Title">
 <title id="MathJax-SVG-140-Title">E[T(n)] \in O(\log_b(n)n) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
@@ -2710,65 +2745,80 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
 <p>In order to get the result, we’ll have to use a bit of calculus. We’ll use a trick very similar to what we used in (<a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/">The Sum of all Prime Reciprocals is Infinite</a>). We won’t go into it in as much detail this time.</p>
 <h2 id="lemma-3-1">Lemma (3)</h2>
 <div class="emphasized">
-<p><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="34.351ex" height="6.176ex" style="vertical-align: -2.671ex;" viewBox="0 -1508.9 14790.1 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-148-Title">
-<title id="MathJax-SVG-148-Title"> \sum\limits_{k=1}^n k \ln(k) \leq \frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] </title>
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="23.123ex" height="18.509ex" style="vertical-align: -8.671ex;" viewBox="0 -4235.8 9955.8 7969.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-148-Title">
+<title id="MathJax-SVG-148-Title">
+\begin{align}
+&amp; \sum\limits_{k=1}^{n} {k \ln(k)} \leq \\\\
+&amp; \frac{1}{2}[n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2}] \\\\
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJSZ1-2211" x="108" y="0"></use>
-<g transform="translate(0,-910)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,2541)">
+<g transform="translate(166,0)">
+ <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
+<g transform="translate(85,-1110)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="521" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1300" y="0"></use>
 </g>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="600" y="1344"></use>
- <use xlink:href="#MJMATHI-6B" x="1439" y="0"></use>
-<g transform="translate(2127,0)">
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="721" y="1627"></use>
+</g>
+<g transform="translate(1777,0)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
+<g transform="translate(688,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="2962" y="0"></use>
- <use xlink:href="#MJMATHI-6B" x="3352" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="3873" y="0"></use>
- <use xlink:href="#MJMAIN-2264" x="4541" y="0"></use>
-<g transform="translate(5319,0)">
-<g transform="translate(397,0)">
-<rect stroke="none" width="473" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="84" y="629"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="84" y="-589"></use>
+ <use xlink:href="#MJMAIN-28" x="1523" y="0"></use>
+ <use xlink:href="#MJMATHI-6B" x="1912" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="2434" y="0"></use>
 </g>
+ <use xlink:href="#MJMAIN-2264" x="4879" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-5B" x="6311" y="0"></use>
-<g transform="translate(6589,0)">
+<g transform="translate(0,-1620)">
+<g transform="translate(120,0)">
+<rect stroke="none" width="620" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
+ <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
+</g>
+ <use xlink:href="#MJMAIN-5B" x="860" y="0"></use>
+<g transform="translate(1139,0)">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="849" y="513"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="849" y="583"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="7644" y="0"></use>
-<g transform="translate(8033,0)">
+ <use xlink:href="#MJMAIN-28" x="2193" y="0"></use>
+<g transform="translate(2582,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="8868" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="9258" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="9858" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="10470" y="0"></use>
-<g transform="translate(11249,0)">
+ <use xlink:href="#MJMAIN-28" x="3417" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="3807" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="4407" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="5019" y="0"></use>
+<g transform="translate(5798,0)">
 <g transform="translate(342,0)">
-<rect stroke="none" width="473" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="84" y="629"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="84" y="-589"></use>
+<rect stroke="none" width="620" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
+ <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-29" x="12185" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="12796" y="0"></use>
-<g transform="translate(13575,0)">
+ <use xlink:href="#MJMAIN-29" x="6880" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="7492" y="0"></use>
+<g transform="translate(8271,0)">
 <g transform="translate(342,0)">
-<rect stroke="none" width="473" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="84" y="629"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="84" y="-589"></use>
+<rect stroke="none" width="620" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
+ <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-5D" x="14511" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="9353" y="0"></use>
 </g>
-</svg></span>.</p>
+</g>
+</g>
+</g>
+</svg></span>
 </div>
 <h3 id="proof-4">Proof</h3>
 <p>Since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.611ex" height="3.843ex" style="vertical-align: -1.338ex;" viewBox="0 -1078.4 9304.7 1654.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-149-Title">
@@ -2897,21 +2947,27 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
 </g>
 </svg></span>.</p>
 <p><strong>QED</strong></p>
-<p>Now we calculate
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60.853ex" height="7.176ex" style="vertical-align: -3.005ex;" viewBox="0 -1796 26200.6 3089.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-154-Title">
-<title id="MathJax-SVG-154-Title"> E[T(n)] = E[ n + \sum\limits_{s = 0}^{n-1}P(s = i)\{T(s) + T((n-1) - s)\} ] \tag{10}\label{10} </title>
+<p>Now we calculate</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="13.509ex" style="vertical-align: -5.958ex; margin-bottom: -0.214ex; max-width: 36000px;" viewBox="0 -3159.4 25833.2 5816.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-154-Title">
+<title id="MathJax-SVG-154-Title">
+\begin{align}
+&amp;E[T(n)] = \\
+&amp;E[ n + \tag{10}\label{10} \\ 
+&amp;\sum\limits_{s = 0}^{n-1}P(s = i)\{T(s) + T((n-1) - s)\} ] \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
-<g transform="translate(24420,0)">
-<g id="mjx-eqn-10" transform="translate(0,-9)">
+<g transform="translate(24053,0)">
+<g id="mjx-eqn-10" transform="translate(0,914)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="890" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="1390" y="0"></use>
 </g>
 </g>
-<g transform="translate(167,0)">
+<g transform="translate(4992,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,-9)">
+<g transform="translate(0,2265)">
  <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
  <use xlink:href="#MJMATHI-54" x="1043" y="0"></use>
@@ -2920,11 +2976,15 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use xlink:href="#MJMAIN-29" x="2737" y="0"></use>
  <use xlink:href="#MJMAIN-5D" x="3127" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="3683" y="0"></use>
- <use xlink:href="#MJMATHI-45" x="4739" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="5504" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="5782" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="6605" y="0"></use>
-<g transform="translate(7606,0)">
+</g>
+<g transform="translate(0,914)">
+ <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="1043" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="1643" y="0"></use>
+</g>
+<g transform="translate(0,-1360)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(104,-1090)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
@@ -2937,30 +2997,30 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMATHI-50" x="9217" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="9968" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="10358" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="11105" y="0"></use>
- <use xlink:href="#MJMATHI-69" x="12161" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="12507" y="0"></use>
- <use xlink:href="#MJMAIN-7B" x="12896" y="0"></use>
- <use xlink:href="#MJMATHI-54" x="13397" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="14101" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="14491" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="14960" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="15572" y="0"></use>
- <use xlink:href="#MJMATHI-54" x="16573" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="17277" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="17667" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="18056" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="18879" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="19880" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="20380" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="20992" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="21993" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="22462" y="0"></use>
- <use xlink:href="#MJMAIN-7D" x="22852" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="23352" y="0"></use>
+ <use xlink:href="#MJMATHI-50" x="1777" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="2529" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="2918" y="0"></use>
+ <use xlink:href="#MJMAIN-3D" x="3666" y="0"></use>
+ <use xlink:href="#MJMATHI-69" x="4722" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="5067" y="0"></use>
+ <use xlink:href="#MJMAIN-7B" x="5457" y="0"></use>
+ <use xlink:href="#MJMATHI-54" x="5957" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="6662" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="7051" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="7521" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="8133" y="0"></use>
+ <use xlink:href="#MJMATHI-54" x="9133" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="9838" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="10227" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="10617" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="11440" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="12440" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="12941" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="13553" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="14553" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="15023" y="0"></use>
+ <use xlink:href="#MJMAIN-7D" x="15412" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="15913" y="0"></use>
 </g>
 </g>
 </g>
@@ -2994,95 +3054,22 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-73" x="0" y="0"></use>
 </g>
-</svg></span>. We also observe that since the probabilities are all equal, we can write the right hand side of the summand in reverse order, which means that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="36.686ex" height="6.509ex" style="vertical-align: -2.671ex;" viewBox="0 -1652.5 15795.2 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-158-Title">
-<title id="MathJax-SVG-158-Title"> \sum\limits_{s=0}^{n-1}\{\frac{1}{n} T((n-1) -s)\} = \sum\limits_{s=0}^{n-1} \{ \frac{1}{n}T(s) \}</title>
+</svg></span>. We also observe that since the probabilities are all equal, we can write the right hand side of the summand in reverse order, which means that</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="25.441ex" height="14.843ex" style="vertical-align: -6.838ex;" viewBox="0 -3446.4 10953.6 6390.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-158-Title">
+<title id="MathJax-SVG-158-Title">
+\begin{align}
+&amp;\sum\limits_{s=0}^{n-1}\{\frac{1}{n} T((n-1) -s)\} \\ 
+= &amp;\sum\limits_{s=0}^{n-1} \{ \frac{1}{n}T(s) \} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJSZ1-2211" x="136" y="0"></use>
-<g transform="translate(46,-890)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="469" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-30" x="1248" y="0"></use>
-</g>
-<g transform="translate(0,951)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
-</g>
- <use xlink:href="#MJMAIN-7B" x="1329" y="0"></use>
-<g transform="translate(1829,0)">
-<g transform="translate(120,0)">
-<rect stroke="none" width="544" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="134" y="629"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="84" y="-488"></use>
-</g>
-</g>
- <use xlink:href="#MJMATHI-54" x="2614" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="3318" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="3708" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="4097" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="4920" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="5921" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="6421" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="7033" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="8034" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="8503" y="0"></use>
- <use xlink:href="#MJMAIN-7D" x="8893" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="9671" y="0"></use>
-<g transform="translate(10727,0)">
- <use xlink:href="#MJSZ1-2211" x="136" y="0"></use>
-<g transform="translate(46,-890)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="469" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-30" x="1248" y="0"></use>
-</g>
-<g transform="translate(0,951)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
-</g>
-</g>
- <use xlink:href="#MJMAIN-7B" x="12056" y="0"></use>
-<g transform="translate(12557,0)">
-<g transform="translate(120,0)">
-<rect stroke="none" width="544" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="134" y="629"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="84" y="-488"></use>
-</g>
-</g>
- <use xlink:href="#MJMATHI-54" x="13341" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="14046" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="14435" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="14905" y="0"></use>
- <use xlink:href="#MJMAIN-7D" x="15294" y="0"></use>
-</g>
-</svg></span>. This lets us rewrite equation (10) as</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="7.176ex" style="vertical-align: -3.005ex; max-width: 36000px;" viewBox="0 -1796 25833.2 3089.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-159-Title">
-<title id="MathJax-SVG-159-Title"> E[T(n)] = E[ n + \sum\limits_{s = 0}^{n-1}\frac{2}{n}T(s) ] \tag{11}\label{11} </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
-<g transform="translate(24053,0)">
-<g id="mjx-eqn-11" transform="translate(0,-9)">
- <use xlink:href="#MJMAIN-28"></use>
- <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="890" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="1390" y="0"></use>
-</g>
-</g>
-<g transform="translate(6884,0)">
+<g transform="translate(167,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,-9)">
- <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
- <use xlink:href="#MJMATHI-54" x="1043" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="1747" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="2137" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="2737" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="3127" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="3683" y="0"></use>
- <use xlink:href="#MJMATHI-45" x="4739" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="5504" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="5782" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="6605" y="0"></use>
-<g transform="translate(7606,0)">
+ <use xlink:href="#MJMAIN-3D" x="0" y="-1623"></use>
+</g>
+<g transform="translate(768,0)">
+<g transform="translate(0,1605)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(104,-1090)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
@@ -3095,18 +3082,117 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
-<g transform="translate(9050,0)">
+ <use xlink:href="#MJMAIN-7B" x="1611" y="0"></use>
+<g transform="translate(2111,0)">
+<g transform="translate(120,0)">
+<rect stroke="none" width="720" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="110" y="676"></use>
+ <use xlink:href="#MJMATHI-6E" x="60" y="-686"></use>
+</g>
+</g>
+ <use xlink:href="#MJMATHI-54" x="3072" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="3776" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4166" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="4555" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="5378" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="6379" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="6879" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="7491" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="8492" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="8961" y="0"></use>
+ <use xlink:href="#MJMAIN-7D" x="9351" y="0"></use>
+</g>
+<g transform="translate(0,-1623)">
+<g transform="translate(166,0)">
+ <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
+<g transform="translate(104,-1090)">
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="469" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-30" x="1248" y="0"></use>
+</g>
+<g transform="translate(57,1151)">
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
+</g>
+</g>
+ <use xlink:href="#MJMAIN-7B" x="1611" y="0"></use>
+<g transform="translate(2111,0)">
+<g transform="translate(120,0)">
+<rect stroke="none" width="720" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="110" y="676"></use>
+ <use xlink:href="#MJMATHI-6E" x="60" y="-686"></use>
+</g>
+</g>
+ <use xlink:href="#MJMATHI-54" x="3072" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="3776" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="4166" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="4635" y="0"></use>
+ <use xlink:href="#MJMAIN-7D" x="5025" y="0"></use>
+</g>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>This lets us rewrite equation (10) as</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="10.509ex" style="vertical-align: -4.671ex; max-width: 36000px;" viewBox="0 -2513.6 25833.2 4524.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-159-Title">
+<title id="MathJax-SVG-159-Title">
+\begin{align}
+&amp;E[T(n)] = \\ 
+&amp;E[ n + \sum\limits_{s = 0}^{n-1}\frac{2}{n}T(s) ] \tag{11}\label{11} \\ 
+\end{align}
+</title>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(24053,0)">
+<g id="mjx-eqn-11" transform="translate(0,-685)">
+ <use xlink:href="#MJMAIN-28"></use>
+ <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="890" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1390" y="0"></use>
+</g>
+</g>
+<g transform="translate(9254,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,1589)">
+ <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
+ <use xlink:href="#MJMATHI-54" x="1043" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="1747" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="2137" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="2737" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="3127" y="0"></use>
+ <use xlink:href="#MJMAIN-3D" x="3683" y="0"></use>
+</g>
+<g transform="translate(0,-685)">
+ <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="1043" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="1865" y="0"></use>
+<g transform="translate(2866,0)">
+ <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
+<g transform="translate(104,-1090)">
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-73" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="469" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-30" x="1248" y="0"></use>
+</g>
+<g transform="translate(57,1151)">
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
+</g>
+</g>
+<g transform="translate(4310,0)">
 <g transform="translate(286,0)">
 <rect stroke="none" width="720" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-32" x="110" y="676"></use>
  <use xlink:href="#MJMATHI-6E" x="60" y="-686"></use>
 </g>
 </g>
- <use xlink:href="#MJMATHI-54" x="10177" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="10882" y="0"></use>
- <use xlink:href="#MJMATHI-73" x="11271" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="11741" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="12130" y="0"></use>
+ <use xlink:href="#MJMATHI-54" x="5438" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="6142" y="0"></use>
+ <use xlink:href="#MJMATHI-73" x="6532" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="7001" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="7391" y="0"></use>
 </g>
 </g>
 </g>
@@ -3189,20 +3275,25 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use xlink:href="#MJMATHI-6E" x="1803" y="0"></use>
 </g>
 </svg></span>, then (11) and lemma (3) get us</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.176ex" style="vertical-align: -1.79ex; margin-bottom: -0.215ex; max-width: 36000px;" viewBox="0 -1365.4 25833.2 2228.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-165-Title">
-<title id="MathJax-SVG-165-Title"> E[T(n)] \leq n + \frac{2}{n}\frac{1}{2}c[ n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2} ] \tag{12}\label{12}</title>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="8.509ex" style="vertical-align: -3.359ex; margin-bottom: -0.312ex; max-width: 36000px;" viewBox="0 -2083 25833.2 3663.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-165-Title">
+<title id="MathJax-SVG-165-Title">
+\begin{align}
+&amp;E[T(n)] \leq n + \\ 
+&amp;\frac{2}{n}\frac{1}{2}c[ n^2(\ln(n) - \frac{1}{2}) + \frac{1}{2} ] \tag{12}\label{12} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24053,0)">
-<g id="mjx-eqn-12" transform="translate(0,-73)">
+<g id="mjx-eqn-12" transform="translate(0,-749)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="890" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="1390" y="0"></use>
 </g>
 </g>
-<g transform="translate(4294,0)">
+<g transform="translate(7575,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,-73)">
+<g transform="translate(0,1146)">
  <use xlink:href="#MJMATHI-45" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-5B" x="764" y="0"></use>
  <use xlink:href="#MJMATHI-54" x="1043" y="0"></use>
@@ -3212,53 +3303,53 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
  <use xlink:href="#MJMAIN-5D" x="3127" y="0"></use>
  <use xlink:href="#MJMAIN-2264" x="3683" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="4739" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="5562" y="0"></use>
-<g transform="translate(6340,0)">
-<g transform="translate(342,0)">
+ <use xlink:href="#MJMAIN-2B" x="5340" y="0"></use>
+</g>
+<g transform="translate(0,-749)">
+<g transform="translate(120,0)">
 <rect stroke="none" width="720" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-32" x="110" y="676"></use>
  <use xlink:href="#MJMATHI-6E" x="60" y="-686"></use>
 </g>
-</g>
-<g transform="translate(7523,0)">
+<g transform="translate(960,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="620" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
  <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMATHI-63" x="8384" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="8817" y="0"></use>
-<g transform="translate(9096,0)">
+ <use xlink:href="#MJMATHI-63" x="1821" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="2254" y="0"></use>
+<g transform="translate(2533,0)">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="849" y="583"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="10150" y="0"></use>
-<g transform="translate(10539,0)">
+ <use xlink:href="#MJMAIN-28" x="3587" y="0"></use>
+<g transform="translate(3976,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="11374" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="11764" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="12364" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="12976" y="0"></use>
-<g transform="translate(13755,0)">
+ <use xlink:href="#MJMAIN-28" x="4811" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="5201" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="5801" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="6413" y="0"></use>
+<g transform="translate(7192,0)">
 <g transform="translate(342,0)">
 <rect stroke="none" width="620" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
  <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-29" x="14837" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="15449" y="0"></use>
-<g transform="translate(16228,0)">
+ <use xlink:href="#MJMAIN-29" x="8274" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="8886" y="0"></use>
+<g transform="translate(9665,0)">
 <g transform="translate(342,0)">
 <rect stroke="none" width="620" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-31" x="60" y="676"></use>
  <use xlink:href="#MJMAIN-32" x="60" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-5D" x="17310" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="10747" y="0"></use>
 </g>
 </g>
 </g>
@@ -3470,6 +3561,29 @@ because each term of the sum is equal to <span class="mjpage"><svg xmlns:xlink="
 	</div>
 <script async="" defer="" src="/js/menu.js"></script>
 <script src="/js/custom.js"></script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    loader: {
+      load: ['ui/lazy']
+    },
+    "CommonHTML": { linebreaks: { automatic: true } }
+  });
+</script>
 
 <img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fmore-on-sorting-and-analyzing-run-time-complexity%2f">
 

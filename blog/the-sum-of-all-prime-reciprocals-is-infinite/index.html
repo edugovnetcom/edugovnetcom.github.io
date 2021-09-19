@@ -16,7 +16,7 @@
 		<meta itemprop="name" content="The Sum of All Prime Reciprocals Is Infinite">
 <meta itemprop="description" content="Here we show the classic result that the sum of 1/p, where p ranges over all prime numbers, is infinite."><meta itemprop="datePublished" content="2021-05-14T17:11:23-04:00">
 <meta itemprop="dateModified" content="2021-05-14T17:11:23-04:00">
-<meta itemprop="wordCount" content="2337">
+<meta itemprop="wordCount" content="2380">
 <meta itemprop="keywords" content="Prime Numbers,Infinite Sums,">
 		<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Sum of All Prime Reciprocals Is Infinite">
@@ -638,9 +638,18 @@ In this article I’m not going to prove that <span class="mjpage"><svg xmlns:xl
 <h3 id="proof">Proof</h3>
 <p>Similarly to what we did before, notice that</p>
 <p><img src="/images/one_over_x_log_x.png" alt="One of xlog(x)" title="one over x log (x)"></p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="44.145ex" height="7.343ex" style="vertical-align: -3.005ex;" viewBox="0 -1867.7 19007 3161.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-28-Title">
-<title id="MathJax-SVG-28-Title"> \sum\limits_{k=m}^{n-1} { \frac{1}{k\ln(k)} } = \int_{m}^{n} { ( \left \lceil x - 1 \right \rceil \ln ( \left \lceil x - 1 \right \rceil ) )^{-1} dx} </title>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="30.826ex" height="13.509ex" style="vertical-align: -6.171ex;" viewBox="0 -3159.4 13272.4 5816.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-28-Title">
+<title id="MathJax-SVG-28-Title">
+\begin{align}
+&amp;\sum\limits_{k=m}^{n-1} { \frac{1}{k\ln(k)} } = \\ 
+&amp;\int_{m}^{n} { ( \left \lceil x - 1 \right \rceil \ln ( \left \lceil x - 1 \right \rceil ) )^{-1} dx} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,1302)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="47" y="0"></use>
 <g transform="translate(0,-1110)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="0" y="0"></use>
@@ -652,7 +661,8 @@ In this article I’m not going to prove that <span class="mjpage"><svg xmlns:xl
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
-<g transform="translate(1707,0)">
+</g>
+<g transform="translate(1873,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="2943" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-31" x="1221" y="676"></use>
@@ -668,13 +678,15 @@ In this article I’m not going to prove that <span class="mjpage"><svg xmlns:xl
 </g>
 </g>
 </g>
- <use xlink:href="#MJMAIN-3D" x="5168" y="0"></use>
-<g transform="translate(6224,0)">
+ <use xlink:href="#MJMAIN-3D" x="5335" y="0"></use>
+</g>
+<g transform="translate(0,-1619)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-222B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1500" y="1540"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6D" x="787" y="-1270"></use>
 </g>
-<g transform="translate(7977,0)">
+<g transform="translate(1918,0)">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
 <g transform="translate(389,0)">
  <use xlink:href="#MJMAIN-2308" x="0" y="0"></use>
@@ -707,10 +719,22 @@ In this article I’m not going to prove that <span class="mjpage"><svg xmlns:xl
  <use xlink:href="#MJMATHI-78" x="10457" y="0"></use>
 </g>
 </g>
-</svg></span>
-and, like before, <span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="52.548ex" height="3.176ex" style="vertical-align: -0.838ex;" viewBox="0 -1006.6 22624.6 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-29-Title">
-<title id="MathJax-SVG-29-Title"> \left \lceil x - 1 \right \rceil \le x \Rightarrow ( \left \lceil x - 1 \right \rceil \ln ( \left \lceil x - 1 \right \rceil ) )^{-1} \ge (x \ln(x))^{-1} </title>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>and, like before,</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="37.86ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 16300.6 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-29-Title">
+<title id="MathJax-SVG-29-Title">
+\begin{align}
+&amp;\left \lceil x - 1 \right \rceil \le x \Rightarrow \\ 
+&amp;( \left \lceil x - 1 \right \rceil \ln ( \left \lceil x - 1 \right \rceil ) )^{-1} \ge (x \ln(x))^{-1} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,693)">
  <use xlink:href="#MJMAIN-2308" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="444" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="1239" y="0"></use>
@@ -719,45 +743,47 @@ and, like before, <span class="mjpage mjpage__block"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-2264" x="3462" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="4519" y="0"></use>
  <use xlink:href="#MJMAIN-21D2" x="5369" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="6647" y="0"></use>
-<g transform="translate(7037,0)">
+</g>
+<g transform="translate(0,-743)">
+ <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
+<g transform="translate(389,0)">
  <use xlink:href="#MJMAIN-2308" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="444" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="1239" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="2239" y="0"></use>
  <use xlink:href="#MJMAIN-2309" x="2740" y="0"></use>
 </g>
-<g transform="translate(10388,0)">
+<g transform="translate(3741,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="11223" y="0"></use>
-<g transform="translate(11613,0)">
+ <use xlink:href="#MJMAIN-28" x="4576" y="0"></use>
+<g transform="translate(4965,0)">
  <use xlink:href="#MJMAIN-2308" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="444" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="1239" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="2239" y="0"></use>
  <use xlink:href="#MJMAIN-2309" x="2740" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="14798" y="0"></use>
-<g transform="translate(15187,0)">
+ <use xlink:href="#MJMAIN-29" x="8150" y="0"></use>
+<g transform="translate(8540,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
 <g transform="translate(389,412)">
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="778" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-2265" x="16859" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="17915" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="18305" y="0"></use>
-<g transform="translate(19044,0)">
+ <use xlink:href="#MJMAIN-2265" x="10211" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="11268" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="11657" y="0"></use>
+<g transform="translate(12396,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="19879" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="20268" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="20841" y="0"></use>
-<g transform="translate(21230,0)">
+ <use xlink:href="#MJMAIN-28" x="13231" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="13621" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="14193" y="0"></use>
+<g transform="translate(14583,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
 <g transform="translate(389,412)">
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="0" y="0"></use>
@@ -765,44 +791,60 @@ and, like before, <span class="mjpage mjpage__block"><svg xmlns:xlink="http://ww
 </g>
 </g>
 </g>
-</svg></span>
-Combining the last two lines gets us <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="29.293ex" height="6.509ex" style="vertical-align: -2.671ex;" viewBox="0 -1652.5 12612 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-30-Title">
-<title id="MathJax-SVG-30-Title"> \sum\limits_{k=m}^{n-1} { \frac{1}{k\ln(k)} } \ge \int_{m}^{n} { (x \ln(x))^{-1} dx } </title>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>Combining the last two lines gets us</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.402ex" height="13.509ex" style="vertical-align: -6.171ex;" viewBox="0 -3159.4 9214.9 5816.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-30-Title">
+<title id="MathJax-SVG-30-Title">
+\begin{align}
+&amp;\sum\limits_{k=m}^{n-1} { \frac{1}{k\ln(k)} } \\ 
+&amp;\ge \int_{m}^{n} { (x \ln(x))^{-1} dx } \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJSZ1-2211" x="241" y="0"></use>
-<g transform="translate(0,-910)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,1302)">
+<g transform="translate(166,0)">
+ <use xlink:href="#MJSZ2-2211" x="47" y="0"></use>
+<g transform="translate(0,-1110)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-3D" x="521" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6D" x="1300" y="0"></use>
 </g>
-<g transform="translate(105,951)">
+<g transform="translate(105,1151)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="600" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
-<g transform="translate(1707,0)">
+</g>
+<g transform="translate(1873,0)">
 <g transform="translate(120,0)">
-<rect stroke="none" width="2165" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1280" y="629"></use>
-<g transform="translate(60,-476)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="0" y="0"></use>
-<g transform="translate(535,0)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+<rect stroke="none" width="2943" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="1221" y="676"></use>
+<g transform="translate(60,-771)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
+<g transform="translate(688,0)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="1592" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="1981" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2503" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="1523" y="0"></use>
+ <use xlink:href="#MJMATHI-6B" x="1912" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="2434" y="0"></use>
 </g>
 </g>
 </g>
- <use xlink:href="#MJMAIN-2265" x="4390" y="0"></use>
-<g transform="translate(5446,0)">
- <use xlink:href="#MJSZ1-222B" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="921" y="754"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6D" x="668" y="-484"></use>
 </g>
-<g transform="translate(6806,0)">
+<g transform="translate(0,-1619)">
+ <use xlink:href="#MJMAIN-2265" x="277" y="0"></use>
+<g transform="translate(1334,0)">
+ <use xlink:href="#MJSZ2-222B" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1500" y="1540"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6D" x="787" y="-1270"></use>
+</g>
+<g transform="translate(3086,0)">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="389" y="0"></use>
 <g transform="translate(1128,0)">
@@ -814,7 +856,7 @@ Combining the last two lines gets us <span class="mjpage"><svg xmlns:xlink="http
  <use xlink:href="#MJMAIN-29" x="2925" y="0"></use>
 <g transform="translate(3315,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
-<g transform="translate(389,362)">
+<g transform="translate(389,412)">
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2212" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="778" y="0"></use>
 </g>
@@ -823,7 +865,11 @@ Combining the last two lines gets us <span class="mjpage"><svg xmlns:xlink="http
  <use xlink:href="#MJMATHI-78" x="5232" y="0"></use>
 </g>
 </g>
-</svg></span>. We can evaluate that integral by performing a u substitution with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.506ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4093.1 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-31-Title">
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>We can evaluate that integral by performing a u substitution with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.506ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4093.1 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-31-Title">
 <title id="MathJax-SVG-31-Title"> u = \ln(x) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-75" x="0" y="0"></use>
@@ -1294,13 +1340,24 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
 </g>
-</svg></span> as:
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.984ex" height="5.843ex" style="vertical-align: -3.338ex;" viewBox="0 -1078.4 6020.8 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-62-Title">
-<title id="MathJax-SVG-62-Title"> d = \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, d) } </title>
+</svg></span> as:</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.143ex" height="11.843ex" style="vertical-align: -5.338ex;" viewBox="0 -2800.6 6520 5098.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-62-Title">
+<title id="MathJax-SVG-62-Title">
+\begin{align}
+d &amp;= \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, d) } \\ 
+n &amp;= \prod\limits_{ p \in \mathbb{P}_n } p^{ \epsilon(p, n) } \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMATHI-64" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="801" y="0"></use>
-<g transform="translate(1857,0)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMATHI-64" x="77" y="1751"></use>
+ <use xlink:href="#MJMATHI-6E" x="0" y="-863"></use>
+</g>
+<g transform="translate(590,0)">
+<g transform="translate(0,1751)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+<g transform="translate(1334,0)">
  <use xlink:href="#MJSZ2-220F" x="176" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1311,7 +1368,7 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </g>
-<g transform="translate(3655,0)">
+<g transform="translate(3132,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1323,13 +1380,9 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.392ex" height="5.843ex" style="vertical-align: -3.338ex;" viewBox="0 -1078.4 6196.4 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-63-Title">
-<title id="MathJax-SVG-63-Title"> n = \prod\limits_{ p \in \mathbb{P}_n } p^{ \epsilon(p, n) } </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="878" y="0"></use>
-<g transform="translate(1934,0)">
+<g transform="translate(0,-863)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+<g transform="translate(1334,0)">
  <use xlink:href="#MJSZ2-220F" x="198" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1340,7 +1393,7 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </g>
-<g transform="translate(3777,0)">
+<g transform="translate(3176,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1352,9 +1405,12 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </g>
-</svg></span>
-By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.249ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3551.8 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-64-Title">
-<title id="MathJax-SVG-64-Title"> \mathbb{P}_d \subseteq \mathbb{P}_n </title>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.249ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3551.8 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-63-Title">
+<title id="MathJax-SVG-63-Title"> \mathbb{P}_d \subseteq \mathbb{P}_n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJAMS-50" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-64" x="864" y="-213"></use>
@@ -1364,8 +1420,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="864" y="-213"></use>
 </g>
 </g>
-</svg></span> and for all <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.612ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2846.7 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-65-Title">
-<title id="MathJax-SVG-65-Title"> p \in \mathbb{P}_d </title>
+</svg></span> and for all <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.612ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2846.7 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-64-Title">
+<title id="MathJax-SVG-64-Title"> p \in \mathbb{P}_d </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2208" x="781" y="0"></use>
@@ -1374,8 +1430,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMATHI-64" x="864" y="-213"></use>
 </g>
 </g>
-</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.623ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 6726.4 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-66-Title">
-<title id="MathJax-SVG-66-Title"> \epsilon(p, d) \leq \epsilon(p, n) </title>
+</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.623ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 6726.4 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-65-Title">
+<title id="MathJax-SVG-65-Title"> \epsilon(p, d) \leq \epsilon(p, n) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="406" y="0"></use>
@@ -1391,13 +1447,25 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use xlink:href="#MJMATHI-6E" x="5736" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="6336" y="0"></use>
 </g>
-</svg></span>. Combining those two observations gives us
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="41.552ex" height="6.009ex" style="vertical-align: -3.505ex;" viewBox="0 -1078.4 17890.5 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-67-Title">
-<title id="MathJax-SVG-67-Title"> n = \prod\limits_{ p \in \mathbb{P}_n } p^{ \epsilon(p, n) } = \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) } \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } </title>
+</svg></span>. Combining those two observations gives us</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="47.834ex" height="24.509ex" style="vertical-align: -11.406ex; margin-bottom: -0.265ex;" viewBox="0 -5527.4 20595.2 10552.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-66-Title">
+<title id="MathJax-SVG-66-Title">
+\begin{align}
+n &amp;= \prod\limits_{ p \in \mathbb{P}_n } p^{ \epsilon(p, n) } \\ 
+&amp;= \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) } \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \\ 
+&amp;= ( \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, d) } \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} ) \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \\ 
+&amp;= d \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="878" y="0"></use>
-<g transform="translate(1934,0)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMATHI-6E" x="0" y="4459"></use>
+</g>
+<g transform="translate(590,0)">
+<g transform="translate(0,4459)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+<g transform="translate(1334,0)">
  <use xlink:href="#MJSZ2-220F" x="198" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1408,7 +1476,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(3777,0)">
+<g transform="translate(3176,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1419,8 +1487,10 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2178" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-3D" x="6474" y="0"></use>
-<g transform="translate(7530,0)">
+</g>
+<g transform="translate(0,1869)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+<g transform="translate(1334,0)">
  <use xlink:href="#MJSZ2-220F" x="176" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1431,7 +1501,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(9328,0)">
+<g transform="translate(3132,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1442,8 +1512,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2178" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="11970" y="0"></use>
-<g transform="translate(12471,0)">
+ <use xlink:href="#MJMAIN-22C5" x="5773" y="0"></use>
+<g transform="translate(6274,0)">
  <use xlink:href="#MJSZ2-220F" x="777" y="0"></use>
 <g transform="translate(0,-1149)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1459,7 +1529,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(15471,0)">
+<g transform="translate(9274,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1471,13 +1541,10 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="45.043ex" height="6.009ex" style="vertical-align: -3.505ex;" viewBox="0 -1078.4 19393.4 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-68-Title">
-<title id="MathJax-SVG-68-Title">= ( \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, d) } \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} ) \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-3D" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="1056" y="0"></use>
-<g transform="translate(1445,0)">
+<g transform="translate(0,-808)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="1334" y="0"></use>
+<g transform="translate(1723,0)">
  <use xlink:href="#MJSZ2-220F" x="176" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1488,7 +1555,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(3244,0)">
+<g transform="translate(3521,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1499,8 +1566,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2101" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="5831" y="0"></use>
-<g transform="translate(6331,0)">
+ <use xlink:href="#MJMAIN-22C5" x="6109" y="0"></use>
+<g transform="translate(6609,0)">
  <use xlink:href="#MJSZ2-220F" x="176" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1511,7 +1578,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(8130,0)">
+<g transform="translate(8408,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1529,9 +1596,9 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="5448" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-29" x="12861" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="13473" y="0"></use>
-<g transform="translate(13973,0)">
+ <use xlink:href="#MJMAIN-29" x="13139" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="13751" y="0"></use>
+<g transform="translate(14251,0)">
  <use xlink:href="#MJSZ2-220F" x="777" y="0"></use>
 <g transform="translate(0,-1149)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1547,7 +1614,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(16974,0)">
+<g transform="translate(17251,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1559,14 +1626,11 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="34.78ex" height="6.009ex" style="vertical-align: -3.505ex;" viewBox="0 -1078.4 14974.6 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-69-Title">
-<title id="MathJax-SVG-69-Title">= d \cdot \prod\limits_{ p \in \mathbb{P}_d } p^{ \epsilon(p, n) - \epsilon(p, d)} \cdot \prod\limits_{ p \in \mathbb{P}_n \setminus \mathbb{P}_d } p^{ \epsilon(p, n) } </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-3D" x="0" y="0"></use>
- <use xlink:href="#MJMATHI-64" x="1056" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="1802" y="0"></use>
-<g transform="translate(2302,0)">
+<g transform="translate(0,-3485)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#MJMATHI-64" x="1334" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="2079" y="0"></use>
+<g transform="translate(2580,0)">
  <use xlink:href="#MJSZ2-220F" x="176" y="0"></use>
 <g transform="translate(0,-1102)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1577,7 +1641,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(4101,0)">
+<g transform="translate(4378,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1595,8 +1659,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="5448" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="9054" y="0"></use>
-<g transform="translate(9555,0)">
+ <use xlink:href="#MJMAIN-22C5" x="9332" y="0"></use>
+<g transform="translate(9833,0)">
  <use xlink:href="#MJSZ2-220F" x="777" y="0"></use>
 <g transform="translate(0,-1149)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -1612,7 +1676,7 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </g>
-<g transform="translate(12555,0)">
+<g transform="translate(12833,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
@@ -1621,6 +1685,9 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2C" x="1299" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1578" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2178" y="0"></use>
+</g>
+</g>
+</g>
 </g>
 </g>
 </g>
@@ -1628,8 +1695,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 <p><strong>QED</strong></p>
 <h2 id="lemma-d">Lemma (d)</h2>
 <div class="emphasized">
-<p>Let <span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.816ex" height="6.343ex" style="vertical-align: -3.838ex;" viewBox="0 -1078.4 10684.6 2730.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-70-Title">
-<title id="MathJax-SVG-70-Title"> \Lambda(x) := \sum\limits_{ p^k \le x \textbf{ and } p \in \mathbb{P} } { \ln(p) } </title>
+<p>Let <span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.816ex" height="6.343ex" style="vertical-align: -3.838ex;" viewBox="0 -1078.4 10684.6 2730.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-67-Title">
+<title id="MathJax-SVG-67-Title"> \Lambda(x) := \sum\limits_{ p^k \le x \textbf{ and } p \in \mathbb{P} } { \ln(p) } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-39B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="694" y="0"></use>
@@ -1664,8 +1731,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use xlink:href="#MJMAIN-29" x="1728" y="0"></use>
 </g>
 </g>
-</svg></span> then for any integer <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.97ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 4292.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-71-Title">
-<title id="MathJax-SVG-71-Title"> 1 \le d \le n </title>
+</svg></span> then for any integer <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.97ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 4292.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-68-Title">
+<title id="MathJax-SVG-68-Title"> 1 \le d \le n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2264" x="778" y="0"></use>
@@ -1673,8 +1740,8 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
  <use xlink:href="#MJMAIN-2264" x="2635" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="3692" y="0"></use>
 </g>
-</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.585ex" height="3.176ex" style="vertical-align: -0.838ex;" viewBox="0 -1006.6 2835 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-72-Title">
-<title id="MathJax-SVG-72-Title"> d | e^{ \Lambda(n) } </title>
+</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.585ex" height="3.176ex" style="vertical-align: -0.838ex;" viewBox="0 -1006.6 2835 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-69-Title">
+<title id="MathJax-SVG-69-Title"> d | e^{ \Lambda(n) } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-64" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-7C" x="523" y="0"></use>
@@ -1691,22 +1758,22 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </svg></span>.</p>
 </div>
 <h3 id="proof-3">Proof</h3>
-<p>First notice that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.752ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2046 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-73-Title">
-<title id="MathJax-SVG-73-Title"> \Lambda(x) </title>
+<p>First notice that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.752ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2046 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-70-Title">
+<title id="MathJax-SVG-70-Title"> \Lambda(x) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-39B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="694" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="1084" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="1656" y="0"></use>
 </g>
-</svg></span> is <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.083ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 466.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-74-Title">
-<title id="MathJax-SVG-74-Title"> e </title>
+</svg></span> is <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.083ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 466.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-71-Title">
+<title id="MathJax-SVG-71-Title"> e </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-65" x="0" y="0"></use>
 </g>
 </svg></span> to the power of a sum of natural logarithms, so we can change that to the product
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.505ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-75-Title">
-<title id="MathJax-SVG-75-Title"> e^{\Lambda(x)} = \prod\limits_{ p^k \le n \textbf{ and } p \in \mathbb{P} } {p} \tag{1}\label{1} </title>
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.505ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-72-Title">
+<title id="MathJax-SVG-72-Title"> e^{\Lambda(x)} = \prod\limits_{ p^k \le n \textbf{ and } p \in \mathbb{P} } {p} \tag{1}\label{1} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
 <g id="mjx-eqn-1" transform="translate(0,530)">
@@ -1749,20 +1816,20 @@ By our assumption, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.
 </g>
 </g>
 </svg></span>
-Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.709ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2458.1 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-76-Title">
-<title id="MathJax-SVG-76-Title"> d \leq n </title>
+Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.709ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2458.1 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-73-Title">
+<title id="MathJax-SVG-73-Title"> d \leq n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-64" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2264" x="801" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="1857" y="0"></use>
 </g>
-</svg></span> and apply lemma (c) by considering one of its prime divisors, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.259ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 542 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-77-Title">
-<title id="MathJax-SVG-77-Title"> p </title>
+</svg></span> and apply lemma (c) by considering one of its prime divisors, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.259ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 542 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-74-Title">
+<title id="MathJax-SVG-74-Title"> p </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 </g>
-</svg></span>. Recall from the <a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/#lemma-c">proof of lemma (c)</a> that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.931ex" height="4.176ex" style="vertical-align: -2.005ex;" viewBox="0 -934.9 8150.6 1798" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-78-Title">
-<title id="MathJax-SVG-78-Title"> \epsilon(p, d) := \max\limits_{k} {p^k | n} </title>
+</svg></span>. Recall from the <a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/#lemma-c">proof of lemma (c)</a> that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.931ex" height="4.176ex" style="vertical-align: -2.005ex;" viewBox="0 -934.9 8150.6 1798" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-75-Title">
+<title id="MathJax-SVG-75-Title"> \epsilon(p, d) := \max\limits_{k} {p^k | n} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="406" y="0"></use>
@@ -1787,8 +1854,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMATHI-6E" x="1250" y="0"></use>
 </g>
 </g>
-</svg></span>, and further notice that by definition <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.445ex" height="3.176ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 3205.4 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-79-Title">
-<title id="MathJax-SVG-79-Title"> p^{ \epsilon(p, d)} | d </title>
+</svg></span>, and further notice that by definition <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.445ex" height="3.176ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 3205.4 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-76-Title">
+<title id="MathJax-SVG-76-Title"> p^{ \epsilon(p, d)} | d </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,362)">
@@ -1802,8 +1869,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-7C" x="2364" y="0"></use>
  <use xlink:href="#MJMATHI-64" x="2643" y="0"></use>
 </g>
-</svg></span>, so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.39ex" height="3.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 6195.5 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-80-Title">
-<title id="MathJax-SVG-80-Title"> p^{ \epsilon(p, d)} \leq d \leq n </title>
+</svg></span>, so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.39ex" height="3.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 6195.5 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-77-Title">
+<title id="MathJax-SVG-77-Title"> p^{ \epsilon(p, d)} \leq d \leq n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 <g transform="translate(503,362)">
@@ -1819,8 +1886,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-2264" x="4500" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="5556" y="0"></use>
 </g>
-</svg></span>. Since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.173ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2657.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-81-Title">
-<title id="MathJax-SVG-81-Title"> \epsilon(p,d) </title>
+</svg></span>. Since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.173ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2657.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-78-Title">
+<title id="MathJax-SVG-78-Title"> \epsilon(p,d) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3F5" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="406" y="0"></use>
@@ -1829,13 +1896,13 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMATHI-64" x="1744" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="2268" y="0"></use>
 </g>
-</svg></span> is the maximum <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-82-Title">
-<title id="MathJax-SVG-82-Title"> k </title>
+</svg></span> is the maximum <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-79-Title">
+<title id="MathJax-SVG-79-Title"> k </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
 </g>
-</svg></span>, we can also see that for every <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.216ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9134.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-83-Title">
-<title id="MathJax-SVG-83-Title"> k = 1, 2, 3, …, \epsilon(p, d) </title>
+</svg></span>, we can also see that for every <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.216ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9134.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-80-Title">
+<title id="MathJax-SVG-80-Title"> k = 1, 2, 3, …, \epsilon(p, d) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="799" y="0"></use>
@@ -1854,16 +1921,16 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMATHI-64" x="8221" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="8745" y="0"></use>
 </g>
-</svg></span>, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.21ex" height="3.009ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -934.9 1812.8 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-84-Title">
-<title id="MathJax-SVG-84-Title"> p^k | d </title>
+</svg></span>, we have <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.21ex" height="3.009ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -934.9 1812.8 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-81-Title">
+<title id="MathJax-SVG-81-Title"> p^k | d </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="513"></use>
  <use xlink:href="#MJMAIN-7C" x="972" y="0"></use>
  <use xlink:href="#MJMATHI-64" x="1250" y="0"></use>
 </g>
-</svg></span>, and so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.06ex" height="3.009ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -934.9 5192.4 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-85-Title">
-<title id="MathJax-SVG-85-Title"> p^k \leq d \leq n) </title>
+</svg></span>, and so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.06ex" height="3.009ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -934.9 5192.4 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-82-Title">
+<title id="MathJax-SVG-82-Title"> p^k \leq d \leq n) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="513"></use>
@@ -1873,8 +1940,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMATHI-6E" x="4163" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="4764" y="0"></use>
 </g>
-</svg></span>. Therefore by equation (1), <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.716ex" height="3.176ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 3322.3 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-86-Title">
-<title id="MathJax-SVG-86-Title">p^{ k } | e^{ \Lambda(n) } </title>
+</svg></span>. Therefore by equation (1), <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.716ex" height="3.176ex" style="vertical-align: -0.838ex; margin-left: -0.089ex;" viewBox="-38.5 -1006.6 3322.3 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-83-Title">
+<title id="MathJax-SVG-83-Title">p^{ k } | e^{ \Lambda(n) } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="513"></use>
@@ -1889,8 +1956,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
 </g>
 </g>
 </g>
-</svg></span> whenever <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.482ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4513.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-87-Title">
-<title id="MathJax-SVG-87-Title"> k \leq \epsilon(p,d) </title>
+</svg></span> whenever <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.482ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4513.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-84-Title">
+<title id="MathJax-SVG-84-Title"> k \leq \epsilon(p,d) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2264" x="799" y="0"></use>
@@ -1905,8 +1972,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
 <p><strong>QED</strong></p>
 <h2 id="three-facts-about-an-integral">Three Facts About an Integral</h2>
 <div class="emphasized">
-<p>Now we shift focus for a bit and consider another integral, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.396ex" height="3.676ex" style="vertical-align: -1.005ex;" viewBox="0 -1150.1 9642.9 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-88-Title">
-<title id="MathJax-SVG-88-Title"> I_n := \int_{0}^{1} { x^n(1-x)^n dx } </title>
+<p>Now we shift focus for a bit and consider another integral, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.396ex" height="3.676ex" style="vertical-align: -1.005ex;" viewBox="0 -1150.1 9642.9 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-85-Title">
+<title id="MathJax-SVG-85-Title"> I_n := \int_{0}^{1} { x^n(1-x)^n dx } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
@@ -1936,22 +2003,22 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
 </g>
 </svg></span>. We want to establish three facts about this integral.</p>
 <ol>
-<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.502ex" height="2.676ex" style="vertical-align: -0.838ex;" viewBox="0 -791.3 2799.7 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-89-Title">
-<title id="MathJax-SVG-89-Title"> I_n \gneq 0 </title>
+<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.502ex" height="2.676ex" style="vertical-align: -0.838ex;" viewBox="0 -791.3 2799.7 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-86-Title">
+<title id="MathJax-SVG-86-Title"> I_n \gneq 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
  <use xlink:href="#MJAMS-2A88" x="1242" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="2299" y="0"></use>
 </g>
-</svg></span>, for all <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-90-Title">
-<title id="MathJax-SVG-90-Title"> n</title>
+</svg></span>, for all <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-87-Title">
+<title id="MathJax-SVG-87-Title"> n</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
 </g>
 </svg></span></li>
-<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.963ex" height="3.676ex" style="vertical-align: -1.338ex;" viewBox="0 -1006.6 3428.5 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-91-Title">
-<title id="MathJax-SVG-91-Title"> I_n \leq \frac{ 1 }{ 4^{n} } </title>
+<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.963ex" height="3.676ex" style="vertical-align: -1.338ex;" viewBox="0 -1006.6 3428.5 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-88-Title">
+<title id="MathJax-SVG-88-Title"> I_n \leq \frac{ 1 }{ 4^{n} } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
@@ -1968,8 +2035,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
 </g>
 </g>
 </svg></span></li>
-<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.565ex" height="3.009ex" style="vertical-align: -0.671ex;" viewBox="0 -1006.6 4979.4 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-92-Title">
-<title id="MathJax-SVG-92-Title"> I_{n} \cdot e^{ \Lambda(2n+1) } </title>
+<li><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.565ex" height="3.009ex" style="vertical-align: -0.671ex;" viewBox="0 -1006.6 4979.4 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-89-Title">
+<title id="MathJax-SVG-89-Title"> I_{n} \cdot e^{ \Lambda(2n+1) } </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
@@ -1991,8 +2058,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
 </ol>
 </div>
 <h3 id="proof-of-1-and-2">Proof of 1 and 2</h3>
-<p>Let <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.15ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 8675.9 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-93-Title">
-<title id="MathJax-SVG-93-Title"> f_{n}(x) := x^n(1-x)^n </title>
+<p>Let <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.15ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 8675.9 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-90-Title">
+<title id="MathJax-SVG-90-Title"> f_{n}(x) := x^n(1-x)^n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2016,8 +2083,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="550" y="513"></use>
 </g>
 </g>
-</svg></span>, notice that for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.338ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4020.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-94-Title">
-<title id="MathJax-SVG-94-Title"> x \in (0, 1) </title>
+</svg></span>, notice that for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.338ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4020.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-91-Title">
+<title id="MathJax-SVG-91-Title"> x \in (0, 1) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2208" x="850" y="0"></use>
@@ -2027,8 +2094,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-31" x="3130" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="3631" y="0"></use>
 </g>
-</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.758ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4201.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-95-Title">
-<title id="MathJax-SVG-95-Title"> f_{n}(x) \gneq 0 </title>
+</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.758ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4201.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-92-Title">
+<title id="MathJax-SVG-92-Title"> f_{n}(x) \gneq 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2038,8 +2105,8 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJAMS-2A88" x="2644" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="3700" y="0"></use>
 </g>
-</svg></span>, but <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.758ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4201.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-96-Title">
-<title id="MathJax-SVG-96-Title">f_{n}(x) = 0 </title>
+</svg></span>, but <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.758ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4201.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-93-Title">
+<title id="MathJax-SVG-93-Title">f_{n}(x) = 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2049,24 +2116,39 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-3D" x="2644" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="3700" y="0"></use>
 </g>
-</svg></span> at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-97-Title">
-<title id="MathJax-SVG-97-Title"> x = 0 </title>
+</svg></span> at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-94-Title">
+<title id="MathJax-SVG-94-Title"> x = 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1906" y="0"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-98-Title">
-<title id="MathJax-SVG-98-Title"> x = 1</title>
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-95-Title">
+<title id="MathJax-SVG-95-Title"> x = 1</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="1906" y="0"></use>
 </g>
-</svg></span>. Also,
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="56.196ex" height="5.509ex" style="vertical-align: -2.005ex;" viewBox="0 -1508.9 24195.5 2372" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-99-Title">
-<title id="MathJax-SVG-99-Title"> \frac{d}{dx} f_n(x) = n[ x^{n-1}(1-x)^{n-1}(x-1) - x^{n-1}(1-x)^{n-1}x ] </title>
+</svg></span>. Also,</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="46.779ex" height="14.843ex" style="vertical-align: -6.838ex;" viewBox="0 -3446.4 20140.9 6390.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-96-Title">
+<title id="MathJax-SVG-96-Title">
+\begin{align}
+&amp;\frac{d}{dx} f_n(x) \\ 
+= &amp;n[ x^{n-1}(1-x)^{n-1}(x-1) - x^{n-1}(1-x)^{n-1}x ] \\ 
+= &amp;n[ f_{n-1}(x)(1-x) - f_{n-1}(x)x ] \\ 
+= &amp;nf_{n-1}(x)(1 - 2x) ] \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMAIN-3D" x="0" y="85"></use>
+ <use xlink:href="#MJMAIN-3D" x="0" y="-1266"></use>
+ <use xlink:href="#MJMAIN-3D" x="0" y="-2617"></use>
+</g>
+<g transform="translate(768,0)">
+<g transform="translate(0,1996)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1216" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMATHI-64" x="346" y="676"></use>
@@ -2082,10 +2164,11 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use xlink:href="#MJMAIN-28" x="2471" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="2860" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="3433" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="4100" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="5156" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="5757" y="0"></use>
-<g transform="translate(6035,0)">
+</g>
+<g transform="translate(0,85)">
+ <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="600" y="0"></use>
+<g transform="translate(879,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
 <g transform="translate(572,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2093,11 +2176,11 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="8037" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="8426" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="9149" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="10150" y="0"></use>
-<g transform="translate(10722,0)">
+ <use xlink:href="#MJMAIN-28" x="2880" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="3270" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="3992" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="4993" y="0"></use>
+<g transform="translate(5565,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
 <g transform="translate(389,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2105,13 +2188,13 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="12541" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="12930" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="13725" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="14726" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="15226" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="15838" y="0"></use>
-<g transform="translate(16839,0)">
+ <use xlink:href="#MJMAIN-28" x="7384" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="7773" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="8568" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="9569" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="10069" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="10681" y="0"></use>
+<g transform="translate(11682,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
 <g transform="translate(572,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2119,11 +2202,11 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="18840" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="19230" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="19952" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="20953" y="0"></use>
-<g transform="translate(21525,0)">
+ <use xlink:href="#MJMAIN-28" x="13683" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="14073" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="14796" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="15796" y="0"></use>
+<g transform="translate(16369,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
 <g transform="translate(389,412)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2131,17 +2214,13 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMATHI-78" x="23344" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="23916" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="18187" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="18760" y="0"></use>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="52.69ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 22685.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-100-Title">
-<title id="MathJax-SVG-100-Title"> = n[ f_{n-1}(x)(1-x) - f_{n-1}(x)x ] = nf_{n-1}(x)(1 - 2x) ] </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-3D" x="0" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="1056" y="0"></use>
- <use xlink:href="#MJMAIN-5B" x="1656" y="0"></use>
-<g transform="translate(1935,0)">
+<g transform="translate(0,-1266)">
+ <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-5B" x="600" y="0"></use>
+<g transform="translate(879,0)">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
 <g transform="translate(490,-150)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2149,16 +2228,16 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="3854" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="4244" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="4816" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="5206" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="5595" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="6318" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="7319" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="7891" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="8503" y="0"></use>
-<g transform="translate(9504,0)">
+ <use xlink:href="#MJMAIN-28" x="2798" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="3188" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="3760" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4150" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="4539" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="5262" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="6262" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="6835" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="7447" y="0"></use>
+<g transform="translate(8447,0)">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
 <g transform="translate(490,-150)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2166,14 +2245,15 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="11423" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="11813" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="12385" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="12775" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="13347" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="13903" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="14960" y="0"></use>
-<g transform="translate(15560,0)">
+ <use xlink:href="#MJMAIN-28" x="10367" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="10756" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="11329" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="11718" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="12291" y="0"></use>
+</g>
+<g transform="translate(0,-2617)">
+ <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
+<g transform="translate(600,0)">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
 <g transform="translate(490,-150)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -2181,20 +2261,23 @@ Next, let’s pick an arbitrary <span class="mjpage"><svg xmlns:xlink="http://ww
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1379" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-28" x="17480" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="17869" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="18442" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="18831" y="0"></use>
- <use xlink:href="#MJMAIN-31" x="19221" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="19943" y="0"></use>
- <use xlink:href="#MJMAIN-32" x="20944" y="0"></use>
- <use xlink:href="#MJMATHI-78" x="21445" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="22017" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="22407" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="2520" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="2909" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="3482" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="3871" y="0"></use>
+ <use xlink:href="#MJMAIN-31" x="4261" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="4983" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="5984" y="0"></use>
+ <use xlink:href="#MJMATHI-78" x="6484" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="7057" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="7446" y="0"></use>
 </g>
-</svg></span>
-So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.338ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4020.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-101-Title">
-<title id="MathJax-SVG-101-Title"> x \in (0, 1) </title>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.338ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 4020.7 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-97-Title">
+<title id="MathJax-SVG-97-Title"> x \in (0, 1) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2208" x="850" y="0"></use>
@@ -2204,8 +2287,8 @@ So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" wid
  <use xlink:href="#MJMAIN-31" x="3130" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="3631" y="0"></use>
 </g>
-</svg></span>, the derivative is equal to 0 only at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.086ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 2620.5 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-102-Title">
-<title id="MathJax-SVG-102-Title"> x = \frac{1}{2} </title>
+</svg></span>, the derivative is equal to 0 only at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.086ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 2620.5 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-98-Title">
+<title id="MathJax-SVG-98-Title"> x = \frac{1}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
@@ -2217,8 +2300,8 @@ So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" wid
 </g>
 </g>
 </g>
-</svg></span>. Since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.043ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 6046.3 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-103-Title">
-<title id="MathJax-SVG-103-Title">f_{n}(1/2) = \frac{1}{2^{2n}} </title>
+</svg></span>. Since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.043ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 6046.3 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-99-Title">
+<title id="MathJax-SVG-99-Title">f_{n}(1/2) = \frac{1}{2^{2n}} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2242,27 +2325,27 @@ So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" wid
 </g>
 </g>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-104-Title">
-<title id="MathJax-SVG-104-Title"> 0 </title>
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-100-Title">
+<title id="MathJax-SVG-100-Title"> 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
 </g>
-</svg></span> at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-105-Title">
-<title id="MathJax-SVG-105-Title"> x = 0</title>
+</svg></span> at <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-101-Title">
+<title id="MathJax-SVG-101-Title"> x = 0</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1906" y="0"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-106-Title">
-<title id="MathJax-SVG-106-Title"> x = 1</title>
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2407.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-102-Title">
+<title id="MathJax-SVG-102-Title"> x = 1</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="1906" y="0"></use>
 </g>
-</svg></span>, we conclude that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.086ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 2620.5 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-107-Title">
-<title id="MathJax-SVG-107-Title"> x = \frac{1}{2} </title>
+</svg></span>, we conclude that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.086ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 2620.5 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-103-Title">
+<title id="MathJax-SVG-103-Title"> x = \frac{1}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="850" y="0"></use>
@@ -2274,16 +2357,16 @@ So, for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" wid
 </g>
 </g>
 </g>
-</svg></span> is a maximum of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.262ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 1404.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-108-Title">
-<title id="MathJax-SVG-108-Title">f_n) </title>
+</svg></span> is a maximum of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.262ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 1404.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-104-Title">
+<title id="MathJax-SVG-104-Title">f_n) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
  <use xlink:href="#MJMAIN-29" x="1015" y="0"></use>
 </g>
 </svg></span>. We just proved 2.
-By considering our derivative formula, we can also determine that since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.497ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2366.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-109-Title">
-<title id="MathJax-SVG-109-Title"> f_{n}(x) </title>
+By considering our derivative formula, we can also determine that since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.497ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2366.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-105-Title">
+<title id="MathJax-SVG-105-Title"> f_{n}(x) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2291,13 +2374,13 @@ By considering our derivative formula, we can also determine that since <span cl
  <use xlink:href="#MJMATHI-78" x="1404" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="1977" y="0"></use>
 </g>
-</svg></span> is increasing from <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-110-Title">
-<title id="MathJax-SVG-110-Title">0</title>
+</svg></span> is increasing from <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-106-Title">
+<title id="MathJax-SVG-106-Title">0</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
 </g>
-</svg></span> to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.658ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 713.9 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-111-Title">
-<title id="MathJax-SVG-111-Title"> \frac{1}{2} </title>
+</svg></span> to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.658ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 713.9 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-107-Title">
+<title id="MathJax-SVG-107-Title"> \frac{1}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="473" height="60" x="0" y="220"></rect>
@@ -2305,8 +2388,8 @@ By considering our derivative formula, we can also determine that since <span cl
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="84" y="-589"></use>
 </g>
 </g>
-</svg></span> and decreasing from <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.658ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 713.9 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-112-Title">
-<title id="MathJax-SVG-112-Title"> \frac{1}{2} </title>
+</svg></span> and decreasing from <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.658ex" height="3.509ex" style="vertical-align: -1.171ex;" viewBox="0 -1006.6 713.9 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-108-Title">
+<title id="MathJax-SVG-108-Title"> \frac{1}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="473" height="60" x="0" y="220"></rect>
@@ -2314,13 +2397,13 @@ By considering our derivative formula, we can also determine that since <span cl
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="84" y="-589"></use>
 </g>
 </g>
-</svg></span> to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-113-Title">
-<title id="MathJax-SVG-113-Title">1</title>
+</svg></span> to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-109-Title">
+<title id="MathJax-SVG-109-Title">1</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31" x="0" y="0"></use>
 </g>
-</svg></span>, and because <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.796ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 10676 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-114-Title">
-<title id="MathJax-SVG-114-Title"> f_{n}(1/4) = f_n(3/4) = \frac{1}{4^{2n}}</title>
+</svg></span>, and because <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.796ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 10676 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-110-Title">
+<title id="MathJax-SVG-110-Title"> f_{n}(1/4) = f_n(3/4) = \frac{1}{4^{2n}}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-66" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="693" y="-213"></use>
@@ -2354,8 +2437,8 @@ By considering our derivative formula, we can also determine that since <span cl
 </g>
 </g>
 </g>
-</svg></span> that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.857ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 8980.2 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-115-Title">
-<title id="MathJax-SVG-115-Title"> I_n \geq (\frac{3}{4} - \frac{1}{4}) \frac{1}{4^{2n}} \gneq 0 </title>
+</svg></span> that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.857ex" height="4.009ex" style="vertical-align: -1.671ex;" viewBox="0 -1006.6 8980.2 1726.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-111-Title">
+<title id="MathJax-SVG-111-Title"> I_n \geq (\frac{3}{4} - \frac{1}{4}) \frac{1}{4^{2n}} \gneq 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
@@ -2395,8 +2478,8 @@ By considering our derivative formula, we can also determine that since <span cl
 </g>
 </svg></span>. We just proved 1.</p>
 <h3 id="proof-of-3">Proof of 3</h3>
-<p>Proving 3 is easy with the help of <a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/#lemma-d">lemma (d)</a>. We can evaluate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.41ex" height="3.676ex" style="vertical-align: -1.005ex;" viewBox="0 -1150.1 7065.2 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-116-Title">
-<title id="MathJax-SVG-116-Title"> \int_0^1 x^n(1-x)^n dx </title>
+<p>Proving 3 is easy with the help of <a href="/blog/the-sum-of-all-prime-reciprocals-is-infinite/#lemma-d">lemma (d)</a>. We can evaluate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.41ex" height="3.676ex" style="vertical-align: -1.005ex;" viewBox="0 -1150.1 7065.2 1582.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-112-Title">
+<title id="MathJax-SVG-112-Title"> \int_0^1 x^n(1-x)^n dx </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJSZ1-222B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="921" y="754"></use>
@@ -2416,8 +2499,8 @@ By considering our derivative formula, we can also determine that since <span cl
  <use xlink:href="#MJMATHI-64" x="5969" y="0"></use>
  <use xlink:href="#MJMATHI-78" x="6492" y="0"></use>
 </g>
-</svg></span> by first expanding <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.36ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 3599.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-117-Title">
-<title id="MathJax-SVG-117-Title"> (1 - x)^n </title>
+</svg></span> by first expanding <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.36ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 3599.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-113-Title">
+<title id="MathJax-SVG-113-Title"> (1 - x)^n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
@@ -2428,33 +2511,33 @@ By considering our derivative formula, we can also determine that since <span cl
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="550" y="513"></use>
 </g>
 </g>
-</svg></span> into a polynomial. The degree of that polynomial will be <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-118-Title">
-<title id="MathJax-SVG-118-Title"> n </title>
+</svg></span> into a polynomial. The degree of that polynomial will be <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-114-Title">
+<title id="MathJax-SVG-114-Title"> n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
 </g>
-</svg></span>, so when you multiply it by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.548ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1097.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-119-Title">
-<title id="MathJax-SVG-119-Title"> x^n </title>
+</svg></span>, so when you multiply it by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.548ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1097.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-115-Title">
+<title id="MathJax-SVG-115-Title"> x^n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="809" y="513"></use>
 </g>
-</svg></span>, you end up with a polynomial of degree <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.557ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1101 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-120-Title">
-<title id="MathJax-SVG-120-Title"> 2n </title>
+</svg></span>, you end up with a polynomial of degree <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.557ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1101 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-116-Title">
+<title id="MathJax-SVG-116-Title"> 2n </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-32" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="500" y="0"></use>
 </g>
-</svg></span>. Then, when you take the indefinite integral you end up with a polynomial with degree <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.56ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2824.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-121-Title">
-<title id="MathJax-SVG-121-Title"> 2n + 1 </title>
+</svg></span>. Then, when you take the indefinite integral you end up with a polynomial with degree <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.56ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2824.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-117-Title">
+<title id="MathJax-SVG-117-Title"> 2n + 1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-32" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="500" y="0"></use>
  <use xlink:href="#MJMAIN-2B" x="1323" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="2323" y="0"></use>
 </g>
-</svg></span> where all the terms have denominators that are integers <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.013ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 3880.7 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-122-Title">
-<title id="MathJax-SVG-122-Title"> \leq 2n + 1 </title>
+</svg></span> where all the terms have denominators that are integers <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.013ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 3880.7 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-118-Title">
+<title id="MathJax-SVG-118-Title"> \leq 2n + 1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-2264" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="1056" y="0"></use>
@@ -2462,8 +2545,8 @@ By considering our derivative formula, we can also determine that since <span cl
  <use xlink:href="#MJMAIN-2B" x="2379" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="3380" y="0"></use>
 </g>
-</svg></span>. By lemma (d), when you multiply that polynomial by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.644ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 3291.3 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-123-Title">
-<title id="MathJax-SVG-123-Title"> e^{\Lambda(2n+1)} </title>
+</svg></span>. By lemma (d), when you multiply that polynomial by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.644ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 3291.3 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-119-Title">
+<title id="MathJax-SVG-119-Title"> e^{\Lambda(2n+1)} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-65" x="0" y="0"></use>
 <g transform="translate(466,362)">
@@ -2478,8 +2561,8 @@ By considering our derivative formula, we can also determine that since <span cl
 </g>
 </svg></span>, you end up with a polynomial with integer coefficients. Therefore evaluating the definite integral will result in an integer value. This finishes the proof of 3.</p>
 <p><strong>QED</strong></p>
-<p>Now we’re getting somewhere. When we combine 1 and 3, we get that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.826ex" height="3.009ex" style="vertical-align: -0.671ex;" viewBox="0 -1006.6 6814 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-124-Title">
-<title id="MathJax-SVG-124-Title"> I_n \cdot e^{\Lambda(2n+1)} \geq 1 </title>
+<p>Now we’re getting somewhere. When we combine 1 and 3, we get that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.826ex" height="3.009ex" style="vertical-align: -0.671ex;" viewBox="0 -1006.6 6814 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-120-Title">
+<title id="MathJax-SVG-120-Title"> I_n \cdot e^{\Lambda(2n+1)} \geq 1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-49" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="622" y="-213"></use>
@@ -2499,8 +2582,8 @@ By considering our derivative formula, we can also determine that since <span cl
  <use xlink:href="#MJMAIN-2265" x="5257" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="6313" y="0"></use>
 </g>
-</svg></span>. That gets us <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.267ex" height="3.843ex" style="vertical-align: -1.505ex;" viewBox="0 -1006.6 5712.3 1654.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-125-Title">
-<title id="MathJax-SVG-125-Title"> e^{\Lambda(2n+1)} \geq \frac{1}{I_n} </title>
+</svg></span>. That gets us <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.267ex" height="3.843ex" style="vertical-align: -1.505ex;" viewBox="0 -1006.6 5712.3 1654.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-121-Title">
+<title id="MathJax-SVG-121-Title"> e^{\Lambda(2n+1)} \geq \frac{1}{I_n} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-65" x="0" y="0"></use>
 <g transform="translate(466,362)">
@@ -2524,8 +2607,8 @@ By considering our derivative formula, we can also determine that since <span cl
 </g>
 </g>
 </g>
-</svg></span>. Using 2 from above, we get <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.124ex" height="2.843ex" style="vertical-align: -0.505ex;" viewBox="0 -1006.6 5650.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-126-Title">
-<title id="MathJax-SVG-126-Title"> e^{ \Lambda(2n+1) } \geq 4^{n} </title>
+</svg></span>. Using 2 from above, we get <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.124ex" height="2.843ex" style="vertical-align: -0.505ex;" viewBox="0 -1006.6 5650.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-122-Title">
+<title id="MathJax-SVG-122-Title"> e^{ \Lambda(2n+1) } \geq 4^{n} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-65" x="0" y="0"></use>
 <g transform="translate(466,362)">
@@ -2545,8 +2628,8 @@ By considering our derivative formula, we can also determine that since <span cl
 </g>
 </svg></span>.
 Taking the logarithm of both sides (which are both positive), we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-127-Title">
-<title id="MathJax-SVG-127-Title"> \Lambda(2n+1) \geq 2\ln(2)n \tag{2}\label{2} </title>
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-123-Title">
+<title id="MathJax-SVG-123-Title"> \Lambda(2n+1) \geq 2\ln(2)n \tag{2}\label{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
 <g id="mjx-eqn-2" transform="translate(0,-25)">
@@ -2580,8 +2663,8 @@ Taking the logarithm of both sides (which are both positive), we get
 </g>
 </g>
 </svg></span>
-Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.185ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9121.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-128-Title">
-<title id="MathJax-SVG-128-Title"> \pi(x) := | { p \in \mathbb{P} | p \leq x } |</title>
+Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="21.185ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 9121.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-124-Title">
+<title id="MathJax-SVG-124-Title"> \pi(x) := | { p \in \mathbb{P} | p \leq x } |</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3C0" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="573" y="0"></use>
@@ -2606,8 +2689,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </svg></span>.</p>
 <h2 id="lemma-e">Lemma (e)</h2>
 <div class="emphasized">
-<p><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.108ex" height="4.843ex" style="vertical-align: -1.838ex;" viewBox="0 -1293.7 5212.9 2085" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-129-Title">
-<title id="MathJax-SVG-129-Title"> \frac{ \Lambda(n) }{ \ln(n) } \leq \pi(n) </title>
+<p><span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.108ex" height="4.843ex" style="vertical-align: -1.838ex;" viewBox="0 -1293.7 5212.9 2085" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-125-Title">
+<title id="MathJax-SVG-125-Title"> \frac{ \Lambda(n) }{ \ln(n) } \leq \pi(n) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1685" height="60" x="0" y="220"></rect>
@@ -2631,8 +2714,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMATHI-6E" x="4222" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="4823" y="0"></use>
 </g>
-</svg></span> for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.656ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2435.1 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-130-Title">
-<title id="MathJax-SVG-130-Title"> n \geq 2 </title>
+</svg></span> for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.656ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2435.1 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-126-Title">
+<title id="MathJax-SVG-126-Title"> n \geq 2 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2265" x="878" y="0"></use>
@@ -2641,8 +2724,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </svg></span>.</p>
 </div>
 <h3 id="proof-4">Proof</h3>
-<p>By definition, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.172ex" height="5.343ex" style="vertical-align: -3.338ex;" viewBox="0 -863.1 7393.4 2300.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-131-Title">
-<title id="MathJax-SVG-131-Title"> \Lambda(n) = \sum\limits_{p^k \leq n} {\ln(p)} </title>
+<p>By definition, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.172ex" height="5.343ex" style="vertical-align: -3.338ex;" viewBox="0 -863.1 7393.4 2300.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-127-Title">
+<title id="MathJax-SVG-127-Title"> \Lambda(n) = \sum\limits_{p^k \leq n} {\ln(p)} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-39B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="694" y="0"></use>
@@ -2666,17 +2749,36 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="1728" y="0"></use>
 </g>
 </g>
-</svg></span>. That’s equal to
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.254ex" height="9.176ex" style="vertical-align: -3.338ex;" viewBox="0 -2513.6 7859.2 3950.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-132-Title">
-<title id="MathJax-SVG-132-Title"> \sum\limits_{ p \leq n } {( \sum\limits_{ k = 1 }^{ \max\limits_{ k } { p^k \leq n } } \ln(p) )} </title>
+</svg></span>. That’s equal to</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="26.805ex" height="34.509ex" style="vertical-align: -16.439ex; margin-bottom: -0.233ex;" viewBox="0 -7680.2 11540.9 14858.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-128-Title">
+<title id="MathJax-SVG-128-Title">
+\begin{align}
+&amp;\sum\limits_{ p \leq n } {( \sum\limits_{ k = 1 }^{ \max\limits_{ k } { p^k \leq n } } \ln(p) )} \\ 
+= &amp;\sum\limits_{ p \leq n } { \max\limits_{ k } { p^k \leq n } \cdot \ln(p) } \\ 
+= &amp;\sum\limits_{ p \leq n } { \ln(p ^{ \max\limits_{ k } { p^k \leq n } }) } \\ 
+\leq &amp;\sum\limits_{ p \leq n } { \ln(n) } = \pi(n) \cdot \ln(n) \\ 
+\Rightarrow &amp;\frac{ \Lambda(n) }{ \ln(n) } \leq \pi(n)\\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMAIN-3D" x="222" y="2600"></use>
+ <use xlink:href="#MJMAIN-3D" x="222" y="-372"></use>
+ <use xlink:href="#MJMAIN-2264" x="222" y="-2929"></use>
+ <use xlink:href="#MJMAIN-21D2" x="0" y="-6057"></use>
+</g>
+<g transform="translate(990,0)">
+<g transform="translate(0,5157)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(56,-1069)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2264" x="503" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1282" y="0"></use>
 </g>
-<g transform="translate(1611,0)">
+</g>
+<g transform="translate(1777,0)">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
 <g transform="translate(389,0)">
  <use xlink:href="#MJSZ2-2211" x="870" y="0"></use>
@@ -2708,12 +2810,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="5858" y="0"></use>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.257ex" height="5.843ex" style="vertical-align: -3.338ex;" viewBox="0 -1078.4 10443.9 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-133-Title">
-<title id="MathJax-SVG-133-Title"> = \sum\limits_{ p \leq n } { \max\limits_{ k } { p^k \leq n } \cdot \ln(p) } </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-3D" x="0" y="0"></use>
-<g transform="translate(1056,0)">
+<g transform="translate(0,2600)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(56,-1069)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -2721,7 +2819,7 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1282" y="0"></use>
 </g>
 </g>
-<g transform="translate(2667,0)">
+<g transform="translate(1777,0)">
  <use xlink:href="#MJMAIN-6D"></use>
  <use xlink:href="#MJMAIN-61" x="833" y="0"></use>
  <use xlink:href="#MJMAIN-78" x="1334" y="0"></use>
@@ -2742,12 +2840,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="7386" y="0"></use>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.743ex" height="6.843ex" style="vertical-align: -3.338ex;" viewBox="0 -1508.9 8069.8 2946.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-134-Title">
-<title id="MathJax-SVG-134-Title"> = \sum\limits_{ p \leq n } { \ln(p ^{ \max\limits_{ k } { p^k \leq n } }) } </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-3D" x="0" y="0"></use>
-<g transform="translate(1056,0)">
+<g transform="translate(0,-372)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(56,-1069)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -2755,7 +2849,7 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1282" y="0"></use>
 </g>
 </g>
-<g transform="translate(2667,0)">
+<g transform="translate(1777,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
@@ -2777,12 +2871,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="5012" y="0"></use>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="25.796ex" height="5.843ex" style="vertical-align: -3.338ex;" viewBox="0 -1078.4 11106.4 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-135-Title">
-<title id="MathJax-SVG-135-Title"> \leq \sum\limits_{ p \leq n } { \ln(n) } = \pi(n) \cdot \ln(n) </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-2264" x="0" y="0"></use>
-<g transform="translate(1056,0)">
+<g transform="translate(0,-2929)">
+<g transform="translate(166,0)">
  <use xlink:href="#MJSZ2-2211" x="0" y="0"></use>
 <g transform="translate(56,-1069)">
  <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
@@ -2790,34 +2880,29 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1282" y="0"></use>
 </g>
 </g>
-<g transform="translate(2667,0)">
+<g transform="translate(1777,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="1224" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="1825" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-3D" x="5159" y="0"></use>
- <use xlink:href="#MJMATHI-3C0" x="6215" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="6789" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="7178" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="7779" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="8391" y="0"></use>
-<g transform="translate(8891,0)">
+ <use xlink:href="#MJMAIN-3D" x="4270" y="0"></use>
+ <use xlink:href="#MJMATHI-3C0" x="5326" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="5899" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="6289" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="6889" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="7501" y="0"></use>
+<g transform="translate(8002,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="9726" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="10116" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="10716" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="8837" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="9226" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="9827" y="0"></use>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.583ex" height="6.509ex" style="vertical-align: -2.671ex;" viewBox="0 -1652.5 7139.8 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-136-Title">
-<title id="MathJax-SVG-136-Title"> \Rightarrow \frac{ \Lambda(n) }{ \ln(n) } \leq \pi(n)</title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-21D2" x="0" y="0"></use>
-<g transform="translate(1000,0)">
-<g transform="translate(397,0)">
+<g transform="translate(0,-6057)">
+<g transform="translate(120,0)">
 <rect stroke="none" width="2334" height="60" x="0" y="220"></rect>
 <g transform="translate(130,770)">
  <use xlink:href="#MJMAIN-39B" x="0" y="0"></use>
@@ -2833,28 +2918,36 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="1825" y="0"></use>
 </g>
 </g>
+ <use xlink:href="#MJMAIN-2264" x="2852" y="0"></use>
+ <use xlink:href="#MJMATHI-3C0" x="3908" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4482" y="0"></use>
+ <use xlink:href="#MJMATHI-6E" x="4871" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="5472" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-2264" x="4130" y="0"></use>
- <use xlink:href="#MJMATHI-3C0" x="5186" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="5760" y="0"></use>
- <use xlink:href="#MJMATHI-6E" x="6149" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="6750" y="0"></use>
+</g>
+</g>
 </g>
 </svg></span></p>
 <p><strong>QED</strong></p>
-<p>If we combine that with equation (2) above, we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.509ex" style="vertical-align: -2.671ex; max-width: 36000px;" viewBox="0 -1652.5 25833.2 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-137-Title">
-<title id="MathJax-SVG-137-Title"> \pi(2n+1) \geq \frac{2\ln(2)n}{ \ln(2n+1) } = \frac{\ln(2)(2n+1)}{\ln(2n+1)} - \frac{\ln(2)}{\ln(2n+1)}\tag{3}\label{3} </title>
+<p>If we combine that with equation (2) above, we get</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="13.176ex" style="vertical-align: -6.005ex; max-width: 36000px;" viewBox="0 -3087.6 25833.2 5673" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-129-Title">
+<title id="MathJax-SVG-129-Title">
+\begin{align}
+&amp;\pi(2n+1) \geq \frac{2\ln(2)n}{ \ln(2n+1) } = \\ 
+&amp;\frac{\ln(2)(2n+1)}{\ln(2n+1)} - \frac{\ln(2)}{\ln(2n+1)}\tag{3}\label{3} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-3">
+<g id="mjx-eqn-3" transform="translate(0,-1422)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-33" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(188,0)">
+<g transform="translate(7039,0)">
 <g transform="translate(-11,0)">
+<g transform="translate(0,1421)">
  <use xlink:href="#MJMATHI-3C0" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="573" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="963" y="0"></use>
@@ -2890,8 +2983,9 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
  <use xlink:href="#MJMAIN-3D" x="10587" y="0"></use>
-<g transform="translate(11365,0)">
-<g transform="translate(397,0)">
+</g>
+<g transform="translate(0,-1422)">
+<g transform="translate(120,0)">
 <rect stroke="none" width="5837" height="60" x="0" y="220"></rect>
 <g transform="translate(60,770)">
  <use xlink:href="#MJMAIN-6C"></use>
@@ -2917,9 +3011,8 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="4048" y="0"></use>
 </g>
 </g>
-</g>
- <use xlink:href="#MJMAIN-2212" x="17943" y="0"></use>
-<g transform="translate(18722,0)">
+ <use xlink:href="#MJMAIN-2212" x="6300" y="0"></use>
+<g transform="translate(7078,0)">
 <g transform="translate(342,0)">
 <rect stroke="none" width="4558" height="60" x="0" y="220"></rect>
 <g transform="translate(1221,770)">
@@ -2944,65 +3037,76 @@ Now let’s define <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </g>
-</svg></span>
-If <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.52ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2376.6 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-138-Title">
-<title id="MathJax-SVG-138-Title"> p \geq 3 </title>
+</g>
+</svg></span></p>
+<p>If <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.52ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2376.6 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-130-Title">
+<title id="MathJax-SVG-130-Title"> p \geq 3 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2265" x="781" y="0"></use>
  <use xlink:href="#MJMAIN-33" x="1837" y="0"></use>
 </g>
-</svg></span>, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.259ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 542 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-139-Title">
-<title id="MathJax-SVG-139-Title"> p </title>
+</svg></span>, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.259ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 542 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-131-Title">
+<title id="MathJax-SVG-131-Title"> p </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
 </g>
-</svg></span> is odd, so we can replace <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.56ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2824.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-140-Title">
-<title id="MathJax-SVG-140-Title"> 2n + 1 </title>
+</svg></span> is odd, so we can replace <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.56ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2824.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-132-Title">
+<title id="MathJax-SVG-132-Title"> 2n + 1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-32" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-6E" x="500" y="0"></use>
  <use xlink:href="#MJMAIN-2B" x="1323" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="2323" y="0"></use>
 </g>
-</svg></span> with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.348ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 1010.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-141-Title">
-<title id="MathJax-SVG-141-Title"> p_k </title>
+</svg></span> with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.348ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 1010.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-133-Title">
+<title id="MathJax-SVG-133-Title"> p_k </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
-</svg></span> for some prime <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.608ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2845.3 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-142-Title">
-<title id="MathJax-SVG-142-Title"> p_k \geq 3 </title>
+</svg></span> for some prime <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.608ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2845.3 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-134-Title">
+<title id="MathJax-SVG-134-Title"> p_k \geq 3 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
  <use xlink:href="#MJMAIN-2265" x="1250" y="0"></use>
  <use xlink:href="#MJMAIN-33" x="2306" y="0"></use>
 </g>
-</svg></span>. This gives us
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.509ex" style="vertical-align: -2.671ex; max-width: 36000px;" viewBox="0 -1652.5 25833.2 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-143-Title">
-<title id="MathJax-SVG-143-Title"> k = \pi(p_k) \geq \frac{\ln(2)p_k}{\ln(p_k)} - \frac{\ln(2)}{\ln(p_k)} \tag{4}\label{4} </title>
+</svg></span>. This gives us</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="9.509ex" style="vertical-align: -4.171ex; max-width: 36000px;" viewBox="0 -2298.3 25833.2 4094.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-135-Title">
+<title id="MathJax-SVG-135-Title">
+\begin{align}
+k &amp;= \pi(p_k) \\ 
+&amp;\geq \frac{\ln(2)p_k}{\ln(p_k)} - \frac{\ln(2)}{\ln(p_k)} \tag{4}\label{4} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-4">
+<g id="mjx-eqn-4" transform="translate(0,-676)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-34" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(6523,0)">
+<g transform="translate(8353,0)">
 <g transform="translate(-11,0)">
- <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-3D" x="799" y="0"></use>
- <use xlink:href="#MJMATHI-3C0" x="1855" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="2429" y="0"></use>
-<g transform="translate(2818,0)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="1396"></use>
+</g>
+<g transform="translate(511,0)">
+<g transform="translate(0,1396)">
+ <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#MJMATHI-3C0" x="1334" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="1907" y="0"></use>
+<g transform="translate(2297,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="3790" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="4458" y="0"></use>
-<g transform="translate(5236,0)">
+ <use xlink:href="#MJMAIN-29" x="3269" y="0"></use>
+</g>
+<g transform="translate(0,-676)">
+ <use xlink:href="#MJMAIN-2265" x="277" y="0"></use>
+<g transform="translate(1056,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="3206" height="60" x="0" y="220"></rect>
 <g transform="translate(60,770)">
@@ -3028,8 +3132,8 @@ If <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5
 </g>
 </g>
 </g>
- <use xlink:href="#MJMAIN-2212" x="9183" y="0"></use>
-<g transform="translate(9961,0)">
+ <use xlink:href="#MJMAIN-2212" x="5003" y="0"></use>
+<g transform="translate(5781,0)">
 <g transform="translate(342,0)">
 <rect stroke="none" width="2706" height="60" x="0" y="220"></rect>
 <g transform="translate(295,770)">
@@ -3054,31 +3158,45 @@ If <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5
 </g>
 </g>
 </g>
-</svg></span>
-Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.608ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2845.3 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-144-Title">
-<title id="MathJax-SVG-144-Title"> p_k \geq 3 </title>
+</g>
+</svg></span></p>
+<p>Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.608ex" height="2.509ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -791.3 2845.3 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-136-Title">
+<title id="MathJax-SVG-136-Title"> p_k \geq 3 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
  <use xlink:href="#MJMAIN-2265" x="1250" y="0"></use>
  <use xlink:href="#MJMAIN-33" x="2306" y="0"></use>
 </g>
-</svg></span>, we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.509ex" style="vertical-align: -2.671ex; max-width: 36000px;" viewBox="0 -1652.5 25833.2 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-145-Title">
-<title id="MathJax-SVG-145-Title"> k \geq \frac{ \ln(2) }{ 2 } \cdot \frac{ p_k } { \ln(p_k) } \tag{5}\label{5} </title>
+</svg></span>, we get</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="12.176ex" style="vertical-align: -5.505ex; max-width: 36000px;" viewBox="0 -2872.4 25833.2 5242.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-137-Title">
+<title id="MathJax-SVG-137-Title">
+\begin{align}
+k &amp;\geq \frac{ \ln(2) }{ 2 } \cdot \frac{ p_k } { \ln(p_k) } \tag{5}\label{5} \\ 
+&amp;\Rightarrow k \cdot \ln(p_k) \geq \frac{ \ln(2) }{ 2 } \cdot p_k \tag{6}\label{6} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-5">
+<g id="mjx-eqn-5" transform="translate(0,1254)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-35" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
+<g id="mjx-eqn-6" transform="translate(0,-1589)">
+ <use xlink:href="#MJMAIN-28"></use>
+ <use xlink:href="#MJMAIN-36" x="389" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
-<g transform="translate(9089,0)">
+</g>
+<g transform="translate(7382,0)">
 <g transform="translate(-11,0)">
- <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="799" y="0"></use>
-<g transform="translate(1577,0)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="1254"></use>
+</g>
+<g transform="translate(511,0)">
+<g transform="translate(0,1254)">
+ <use xlink:href="#MJMAIN-2265" x="277" y="0"></use>
+<g transform="translate(1056,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
 <g transform="translate(60,770)">
@@ -3091,8 +3209,8 @@ Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
  <use xlink:href="#MJMAIN-32" x="867" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="4552" y="0"></use>
-<g transform="translate(4830,0)">
+ <use xlink:href="#MJMAIN-22C5" x="4030" y="0"></use>
+<g transform="translate(4309,0)">
 <g transform="translate(342,0)">
 <rect stroke="none" width="2706" height="60" x="0" y="220"></rect>
 <g transform="translate(867,714)">
@@ -3112,37 +3230,22 @@ Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
 </g>
 </g>
 </g>
-</g>
-</g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.509ex" style="vertical-align: -2.171ex; max-width: 36000px;" viewBox="0 -1437.2 25833.2 2372" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-146-Title">
-<title id="MathJax-SVG-146-Title"> \Rightarrow k \cdot \ln(p_k) \geq \frac{ \ln(2) }{ 2 } \cdot p_k \tag{6}\label{6} </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
-<g transform="translate(24553,0)">
-<g id="mjx-eqn-6" transform="translate(0,-167)">
- <use xlink:href="#MJMAIN-28"></use>
- <use xlink:href="#MJMAIN-36" x="389" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
-</g>
-</g>
-<g transform="translate(7782,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,-167)">
- <use xlink:href="#MJMAIN-21D2" x="0" y="0"></use>
- <use xlink:href="#MJMATHI-6B" x="1278" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="2022" y="0"></use>
-<g transform="translate(2522,0)">
+<g transform="translate(0,-1589)">
+ <use xlink:href="#MJMAIN-21D2" x="277" y="0"></use>
+ <use xlink:href="#MJMATHI-6B" x="1556" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="2299" y="0"></use>
+<g transform="translate(2800,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="3357" y="0"></use>
-<g transform="translate(3747,0)">
+ <use xlink:href="#MJMAIN-28" x="3635" y="0"></use>
+<g transform="translate(4025,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="4719" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="5386" y="0"></use>
-<g transform="translate(6165,0)">
+ <use xlink:href="#MJMAIN-29" x="4997" y="0"></use>
+ <use xlink:href="#MJMAIN-2265" x="5664" y="0"></use>
+<g transform="translate(6443,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
 <g transform="translate(60,770)">
@@ -3155,8 +3258,8 @@ Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
  <use xlink:href="#MJMAIN-32" x="867" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="9139" y="0"></use>
-<g transform="translate(9640,0)">
+ <use xlink:href="#MJMAIN-22C5" x="9417" y="0"></use>
+<g transform="translate(9918,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
@@ -3164,69 +3267,106 @@ Then, since <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
 </g>
 </g>
 </g>
-</svg></span>
-By lemma (b), we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.442ex" height="4.843ex" style="vertical-align: -1.838ex;" viewBox="0 -1293.7 10523.4 2085" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-147-Title">
-<title id="MathJax-SVG-147-Title"> \frac{ \ln(2) }{ 2 } \cdot \frac{ p_k }{ \ln(p_k) } \geq \frac{ \ln(2) }{ 2 } \cdot \sqrt{p_k} </title>
+</svg></span></p>
+<p>By lemma (b), we see that</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.829ex" height="12.176ex" style="vertical-align: -5.505ex;" viewBox="0 -2872.4 7245.7 5242.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-138-Title">
+<title id="MathJax-SVG-138-Title">
+\begin{align}
+&amp;\frac{ \ln(2) }{ 2 } \cdot \frac{ p_k }{ \ln(p_k) } \\ 
+\geq &amp;\frac{ \ln(2) }{ 2 } \cdot \sqrt{p_k} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMAIN-2265" x="0" y="-1589"></use>
+</g>
+<g transform="translate(768,0)">
+<g transform="translate(0,1254)">
 <g transform="translate(120,0)">
-<rect stroke="none" width="1615" height="60" x="0" y="220"></rect>
-<g transform="translate(60,622)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="835" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="1224" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="1725" y="0"></use>
+<rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
+<g transform="translate(60,770)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="1224" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1725" y="0"></use>
 </g>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="891" y="-589"></use>
+ <use xlink:href="#MJMAIN-32" x="867" y="-687"></use>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="2077" y="0"></use>
-<g transform="translate(2355,0)">
+ <use xlink:href="#MJMAIN-22C5" x="2696" y="0"></use>
+<g transform="translate(2975,0)">
 <g transform="translate(342,0)">
-<rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(630,618)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
- <use transform="scale(0.574)" xlink:href="#MJMATHI-6B" x="620" y="-291"></use>
+<rect stroke="none" width="2706" height="60" x="0" y="220"></rect>
+<g transform="translate(867,714)">
+ <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
-<g transform="translate(60,-476)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="835" y="0"></use>
-<g transform="translate(865,0)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
- <use transform="scale(0.574)" xlink:href="#MJMATHI-6B" x="620" y="-291"></use>
+<g transform="translate(60,-771)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
+<g transform="translate(1224,0)">
+ <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2251" y="0"></use>
-</g>
-</g>
-</g>
- <use xlink:href="#MJMAIN-2265" x="5083" y="0"></use>
-<g transform="translate(5861,0)">
-<g transform="translate(397,0)">
-<rect stroke="none" width="1615" height="60" x="0" y="220"></rect>
-<g transform="translate(60,622)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="835" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="1224" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="1725" y="0"></use>
-</g>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="891" y="-589"></use>
+ <use xlink:href="#MJMAIN-29" x="2196" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="8216" y="0"></use>
-<g transform="translate(8717,0)">
- <use xlink:href="#MJMAIN-221A" x="0" y="-170"></use>
-<rect stroke="none" width="972" height="60" x="833" y="571"></rect>
+</g>
+</g>
+<g transform="translate(0,-1589)">
+<g transform="translate(120,0)">
+<rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
+<g transform="translate(60,770)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="1224" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1725" y="0"></use>
+</g>
+ <use xlink:href="#MJMAIN-32" x="867" y="-687"></use>
+</g>
+ <use xlink:href="#MJMAIN-22C5" x="2696" y="0"></use>
+<g transform="translate(3197,0)">
+ <use xlink:href="#MJMAIN-221A" x="0" y="-200"></use>
+<rect stroke="none" width="972" height="60" x="833" y="541"></rect>
 <g transform="translate(833,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
 </g>
 </g>
-</svg></span>, so if we combine that result with equation (5) and (6) above, we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.93ex" height="5.676ex" style="vertical-align: -1.838ex;" viewBox="0 -1652.5 6858.8 2443.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-148-Title">
-<title id="MathJax-SVG-148-Title"> k \geq \frac{ \ln(2) }{ 2 } \cdot \sqrt{p_k} </title>
+</g>
+</g>
+</g>
+</svg></span></p>
+<p>so if we combine that result with equation (5) and (6) above, we get</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="23.843ex" style="vertical-align: -11.338ex; max-width: 36000px;" viewBox="0 -5383.9 25833.2 10265.5" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-139-Title">
+<title id="MathJax-SVG-139-Title">
+\begin{align}
+&amp;k \geq \frac{ \ln(2) }{ 2 } \cdot \sqrt{p_k} \\ 
+\Rightarrow &amp;k^2 \cdot ( \frac{ 2 }{ \ln(2) } )^2 \geq p_k \\ 
+\Rightarrow &amp;k \cdot \ln(k^2 \cdot ( \frac{ 2 }{ \ln(2) } )^2 ) \\ 
+\geq &amp;k \cdot \ln(p_k) \geq \frac{ \ln(2) }{ 2 } \cdot p_k \tag{7}\label{7} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(24553,0)">
+<g id="mjx-eqn-7" transform="translate(0,-4087)">
+ <use xlink:href="#MJMAIN-28"></use>
+ <use xlink:href="#MJMAIN-37" x="389" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
+</g>
+</g>
+<g transform="translate(7921,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#MJMAIN-21D2" x="0" y="1421"></use>
+ <use xlink:href="#MJMAIN-21D2" x="0" y="-1244"></use>
+ <use xlink:href="#MJMAIN-2265" x="222" y="-4087"></use>
+</g>
+<g transform="translate(990,0)">
+<g transform="translate(0,3752)">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2265" x="799" y="0"></use>
 <g transform="translate(1577,0)">
@@ -3252,18 +3392,12 @@ By lemma (b), we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.o
 </g>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.881ex" height="6.009ex" style="vertical-align: -2.671ex;" viewBox="0 -1437.2 8990.3 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-149-Title">
-<title id="MathJax-SVG-149-Title"> \Rightarrow k^2 \cdot ( \frac{ 2 }{ \ln(2) } )^2 \geq p_k </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#MJMAIN-21D2" x="0" y="0"></use>
-<g transform="translate(1278,0)">
+<g transform="translate(0,1421)">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="737" y="583"></use>
-</g>
- <use xlink:href="#MJMAIN-22C5" x="2475" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="2976" y="0"></use>
-<g transform="translate(3366,0)">
+ <use xlink:href="#MJMAIN-22C5" x="1197" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="1698" y="0"></use>
+<g transform="translate(2087,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-32" x="867" y="676"></use>
@@ -3276,44 +3410,31 @@ By lemma (b), we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.o
 </g>
 </g>
 </g>
-<g transform="translate(5840,0)">
+<g transform="translate(4562,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="550" y="583"></use>
 </g>
- <use xlink:href="#MJMAIN-2265" x="6961" y="0"></use>
-<g transform="translate(8018,0)">
+ <use xlink:href="#MJMAIN-2265" x="5683" y="0"></use>
+<g transform="translate(6739,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.509ex" style="vertical-align: -2.671ex; max-width: 36000px;" viewBox="0 -1652.5 25833.2 2802.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-150-Title">
-<title id="MathJax-SVG-150-Title"> \Rightarrow k \cdot \ln(k^2 \cdot ( \frac{ 2 }{ \ln(2) } )^2 ) \geq k \cdot \ln(p_k) \geq \frac{ \ln(2) }{ 2 } \cdot p_k \tag{7}\label{7} </title>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
-<g transform="translate(24553,0)">
-<g id="mjx-eqn-7">
- <use xlink:href="#MJMAIN-28"></use>
- <use xlink:href="#MJMAIN-37" x="389" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
-</g>
-</g>
-<g transform="translate(2983,0)">
-<g transform="translate(-11,0)">
- <use xlink:href="#MJMAIN-21D2" x="0" y="0"></use>
- <use xlink:href="#MJMATHI-6B" x="1278" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="2022" y="0"></use>
-<g transform="translate(2522,0)">
+<g transform="translate(0,-1244)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="743" y="0"></use>
+<g transform="translate(1244,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="3357" y="0"></use>
-<g transform="translate(3747,0)">
+ <use xlink:href="#MJMAIN-28" x="2079" y="0"></use>
+<g transform="translate(2468,0)">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="737" y="583"></use>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="4944" y="0"></use>
- <use xlink:href="#MJMAIN-28" x="5445" y="0"></use>
-<g transform="translate(5835,0)">
+ <use xlink:href="#MJMAIN-22C5" x="3666" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="4167" y="0"></use>
+<g transform="translate(4556,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-32" x="867" y="676"></use>
@@ -3326,26 +3447,27 @@ By lemma (b), we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.o
 </g>
 </g>
 </g>
-<g transform="translate(8309,0)">
+<g transform="translate(7031,0)">
  <use xlink:href="#MJMAIN-29" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="550" y="583"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="9152" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="9820" y="0"></use>
- <use xlink:href="#MJMATHI-6B" x="10876" y="0"></use>
- <use xlink:href="#MJMAIN-22C5" x="11620" y="0"></use>
-<g transform="translate(12120,0)">
+ <use xlink:href="#MJMAIN-29" x="7874" y="0"></use>
+</g>
+<g transform="translate(0,-4087)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="743" y="0"></use>
+<g transform="translate(1244,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="12955" y="0"></use>
-<g transform="translate(13345,0)">
+ <use xlink:href="#MJMAIN-28" x="2079" y="0"></use>
+<g transform="translate(2468,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="14317" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="14985" y="0"></use>
-<g transform="translate(15763,0)">
+ <use xlink:href="#MJMAIN-29" x="3441" y="0"></use>
+ <use xlink:href="#MJMAIN-2265" x="4108" y="0"></use>
+<g transform="translate(4886,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
 <g transform="translate(60,770)">
@@ -3358,35 +3480,41 @@ By lemma (b), we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.o
  <use xlink:href="#MJMAIN-32" x="867" y="-687"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="18738" y="0"></use>
-<g transform="translate(19238,0)">
+ <use xlink:href="#MJMAIN-22C5" x="7861" y="0"></use>
+<g transform="translate(8362,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
 </g>
 </g>
 </g>
-</svg></span>
-Then, if we bring out the exponent in the logarithm, expand out the multiplication and division, and then isolate the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.348ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 1010.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-151-Title">
-<title id="MathJax-SVG-151-Title"> p_k </title>
+</g>
+</svg></span></p>
+<p>Then, if we bring out the exponent in the logarithm, expand out the multiplication and division, and then isolate the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.348ex" height="2.009ex" style="vertical-align: -0.671ex; margin-left: -0.089ex;" viewBox="-38.5 -576.1 1010.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-140-Title">
+<title id="MathJax-SVG-140-Title"> p_k </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
-</svg></span> on the right, we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.178ex; margin-bottom: -0.326ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-152-Title">
-<title id="MathJax-SVG-152-Title"> \frac{4}{\ln(2)} \cdot [ k \cdot ( \ln(k) + \ln(2) - \ln( \ln(2) ) ) ] \geq p_k \tag{8}\label{8} </title>
+</svg></span> on the right, we get</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="9.176ex" style="vertical-align: -4.005ex; max-width: 36000px;" viewBox="0 -2226.5 25833.2 3950.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-141-Title">
+<title id="MathJax-SVG-141-Title">
+\begin{align}
+&amp;\frac{4}{\ln(2)} \cdot [ k \cdot ( \ln(k) + \ln(2) - \ln( \ln(2) ) ) ] \\ 
+&amp;\geq p_k \tag{8}\label{8} \\ 
+\end{align}
+</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-8" transform="translate(0,83)">
+<g id="mjx-eqn-8" transform="translate(0,-1363)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-38" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(3834,0)">
+<g transform="translate(4987,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,83)">
+<g transform="translate(0,758)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
  <use xlink:href="#MJMAIN-34" x="867" y="676"></use>
@@ -3434,8 +3562,10 @@ Then, if we bring out the exponent in the logarithm, expand out the multiplicati
  <use xlink:href="#MJMAIN-29" x="15144" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="15534" y="0"></use>
  <use xlink:href="#MJMAIN-5D" x="15923" y="0"></use>
- <use xlink:href="#MJMAIN-2265" x="16480" y="0"></use>
-<g transform="translate(17536,0)">
+</g>
+<g transform="translate(0,-1363)">
+ <use xlink:href="#MJMAIN-2265" x="277" y="0"></use>
+<g transform="translate(1334,0)">
  <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
@@ -3443,53 +3573,55 @@ Then, if we bring out the exponent in the logarithm, expand out the multiplicati
 </g>
 </g>
 </g>
-</svg></span>
-Now let’s work on the left side of equation (8). When you multiply <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="22.014ex" height="4.176ex" style="vertical-align: -1.838ex;" viewBox="0 -1006.6 9478.1 1798" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-153-Title">
-<title id="MathJax-SVG-153-Title"> \frac{4}{\ln(2)} [ \ln(2) - \ln( \ln(2) ) ] </title>
+</svg></span></p>
+<p>Now let’s work on the left side of equation (8). When you multiply out</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="23.452ex" height="6.009ex" style="vertical-align: -2.671ex;" viewBox="0 -1437.2 10097.4 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-142-Title">
+<title id="MathJax-SVG-142-Title"> \frac{4}{\ln(2)} [ \ln(2) - \ln( \ln(2) ) ] </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
-<rect stroke="none" width="1615" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-34" x="891" y="629"></use>
-<g transform="translate(60,-476)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="835" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="1224" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="1725" y="0"></use>
+<rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-34" x="867" y="676"></use>
+<g transform="translate(60,-771)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="1224" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1725" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-5B" x="1855" y="0"></use>
-<g transform="translate(2133,0)">
+ <use xlink:href="#MJMAIN-5B" x="2474" y="0"></use>
+<g transform="translate(2753,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="2968" y="0"></use>
- <use xlink:href="#MJMAIN-32" x="3358" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="3858" y="0"></use>
- <use xlink:href="#MJMAIN-2212" x="4470" y="0"></use>
-<g transform="translate(5471,0)">
+ <use xlink:href="#MJMAIN-28" x="3588" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="3977" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="4478" y="0"></use>
+ <use xlink:href="#MJMAIN-2212" x="5089" y="0"></use>
+<g transform="translate(6090,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="6306" y="0"></use>
-<g transform="translate(6695,0)">
+ <use xlink:href="#MJMAIN-28" x="6925" y="0"></use>
+<g transform="translate(7314,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="7530" y="0"></use>
- <use xlink:href="#MJMAIN-32" x="7920" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="8420" y="0"></use>
- <use xlink:href="#MJMAIN-29" x="8810" y="0"></use>
- <use xlink:href="#MJMAIN-5D" x="9199" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="8149" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="8539" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="9039" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="9429" y="0"></use>
+ <use xlink:href="#MJMAIN-5D" x="9818" y="0"></use>
 </g>
-</svg></span> you get something that is slightly less than <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-154-Title">
-<title id="MathJax-SVG-154-Title">3 </title>
+</svg></span></p>
+<p>you get something that is slightly less than <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-143-Title">
+<title id="MathJax-SVG-143-Title">3 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-33" x="0" y="0"></use>
 </g>
-</svg></span>. Therefore we can replace equation (8) with
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.178ex; margin-bottom: -0.326ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-155-Title">
-<title id="MathJax-SVG-155-Title"> \frac{4}{\ln(2)} k \ln(k) + 3 \geq p_k \tag{9}\label{9} </title>
+</svg></span>. Therefore we can replace equation (8) with</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.178ex; margin-bottom: -0.326ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-144-Title">
+<title id="MathJax-SVG-144-Title"> \frac{4}{\ln(2)} k \ln(k) + 3 \geq p_k \tag{9}\label{9} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
 <g id="mjx-eqn-9" transform="translate(0,83)">
@@ -3531,27 +3663,29 @@ Now let’s work on the left side of equation (8). When you multiply <span class
 </g>
 </g>
 </g>
-</svg></span>
-<span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.57ex" height="4.176ex" style="vertical-align: -1.838ex;" viewBox="0 -1006.6 3689.7 1798" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-156-Title">
-<title id="MathJax-SVG-156-Title"> \frac{4}{\ln(2) } &lt; 6 </title>
+</svg></span></p>
+<p>and since</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.008ex" height="6.009ex" style="vertical-align: -2.671ex;" viewBox="0 -1437.2 4309.1 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-145-Title">
+<title id="MathJax-SVG-145-Title"> \frac{4}{\ln(2) } &lt; 6 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
-<rect stroke="none" width="1615" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-34" x="891" y="629"></use>
-<g transform="translate(60,-476)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="835" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="1224" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="1725" y="0"></use>
+<rect stroke="none" width="2234" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-34" x="867" y="676"></use>
+<g transform="translate(60,-771)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="835" y="0"></use>
+ <use xlink:href="#MJMAIN-32" x="1224" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="1725" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-3C" x="2132" y="0"></use>
- <use xlink:href="#MJMAIN-36" x="3189" y="0"></use>
+ <use xlink:href="#MJMAIN-3C" x="2752" y="0"></use>
+ <use xlink:href="#MJMAIN-36" x="3808" y="0"></use>
 </g>
-</svg></span>, so we can conclude
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-157-Title">
-<title id="MathJax-SVG-157-Title"> 6 \cdot k \ln(k) + 3 \geq p_k \tag{10}\label{10}</title>
+</svg></span></p>
+<p>we can conclude</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-146-Title">
+<title id="MathJax-SVG-146-Title"> 6 \cdot k \ln(k) + 3 \geq p_k \tag{10}\label{10}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24053,0)">
 <g id="mjx-eqn-10" transform="translate(0,-25)">
@@ -3585,16 +3719,16 @@ Now let’s work on the left side of equation (8). When you multiply <span class
 </g>
 </g>
 </g>
-</svg></span>
-When <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.393ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2322.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-158-Title">
-<title id="MathJax-SVG-158-Title"> k &gt; e </title>
+</svg></span></p>
+<p>When <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.393ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2322.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-147-Title">
+<title id="MathJax-SVG-147-Title"> k &gt; e </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3E" x="799" y="0"></use>
  <use xlink:href="#MJMATHI-65" x="1855" y="0"></use>
 </g>
-</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.221ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 3970.1 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-159-Title">
-<title id="MathJax-SVG-159-Title"> \ln(k) &gt; 1</title>
+</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.221ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 3970.1 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-148-Title">
+<title id="MathJax-SVG-148-Title"> \ln(k) &gt; 1</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
@@ -3604,45 +3738,45 @@ When <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width=
  <use xlink:href="#MJMAIN-3E" x="2413" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="3469" y="0"></use>
 </g>
-</svg></span>, so whenever <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-160-Title">
-<title id="MathJax-SVG-160-Title"> k </title>
+</svg></span>, so whenever <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-149-Title">
+<title id="MathJax-SVG-149-Title"> k </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
 </g>
-</svg></span> is sufficiently large, making the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-161-Title">
-<title id="MathJax-SVG-161-Title">6</title>
+</svg></span> is sufficiently large, making the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-150-Title">
+<title id="MathJax-SVG-150-Title">6</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-36" x="0" y="0"></use>
 </g>
-</svg></span> larger does more to increase the value of the left side of the inequality than adding the 3. If we increase the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-162-Title">
-<title id="MathJax-SVG-162-Title">6</title>
+</svg></span> larger does more to increase the value of the left side of the inequality than adding the 3. If we increase the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 500.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-151-Title">
+<title id="MathJax-SVG-151-Title">6</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-36" x="0" y="0"></use>
 </g>
-</svg></span> to a <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-163-Title">
-<title id="MathJax-SVG-163-Title">10</title>
+</svg></span> to a <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-152-Title">
+<title id="MathJax-SVG-152-Title">10</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31"></use>
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
-</svg></span>, and then make sure that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-164-Title">
-<title id="MathJax-SVG-164-Title">k</title>
+</svg></span>, and then make sure that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.211ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 521.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-153-Title">
+<title id="MathJax-SVG-153-Title">k</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
 </g>
-</svg></span> is large enough, say <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-165-Title">
-<title id="MathJax-SVG-165-Title">10</title>
+</svg></span> is large enough, say <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-154-Title">
+<title id="MathJax-SVG-154-Title">10</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31"></use>
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
-</svg></span> also, we have done more to increase the left hand side than adding the 3. Here’s what happens when we do that:
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="66.711ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 28722.8 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-166-Title">
-<title id="MathJax-SVG-166-Title">\begin{align} 6 \cdot 10 \cdot \ln(10) + 3 \approx 141.1551 … \ 10 \cdot 10 \cdot \ln(10) + 0 \approx 230.2585… \end{align}</title>
+</svg></span> also, we have done more to increase the left hand side than adding the 3. Here’s what happens when we do that:</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="33.829ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 14565.1 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-155-Title">
+<title id="MathJax-SVG-155-Title">\begin{align} 6 \cdot 10 \cdot \ln(10) + 3 \approx 141.1551 … \\ 10 \cdot 10 \cdot \ln(10) + 0 \approx 230.2585… \end{align}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
 <g transform="translate(-11,0)">
-<g transform="translate(0,-25)">
+<g transform="translate(500,651)">
  <use xlink:href="#MJMAIN-36" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-22C5" x="722" y="0"></use>
 <g transform="translate(1223,0)">
@@ -3674,30 +3808,30 @@ When <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width=
  <use xlink:href="#MJMAIN-31" x="3281" y="0"></use>
 </g>
  <use xlink:href="#MJMAIN-2026" x="12568" y="0"></use>
-<g transform="translate(14157,0)">
+</g>
+<g transform="translate(0,-700)">
+ <use xlink:href="#MJMAIN-31"></use>
+ <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="1223" y="0"></use>
+<g transform="translate(1723,0)">
  <use xlink:href="#MJMAIN-31"></use>
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="15380" y="0"></use>
-<g transform="translate(15881,0)">
- <use xlink:href="#MJMAIN-31"></use>
- <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
-</g>
- <use xlink:href="#MJMAIN-22C5" x="17104" y="0"></use>
-<g transform="translate(17605,0)">
+ <use xlink:href="#MJMAIN-22C5" x="2947" y="0"></use>
+<g transform="translate(3447,0)">
  <use xlink:href="#MJMAIN-6C"></use>
  <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-28" x="18440" y="0"></use>
-<g transform="translate(18830,0)">
+ <use xlink:href="#MJMAIN-28" x="4282" y="0"></use>
+<g transform="translate(4672,0)">
  <use xlink:href="#MJMAIN-31"></use>
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-29" x="19831" y="0"></use>
- <use xlink:href="#MJMAIN-2B" x="20442" y="0"></use>
- <use xlink:href="#MJMAIN-30" x="21443" y="0"></use>
- <use xlink:href="#MJMAIN-2248" x="22221" y="0"></use>
-<g transform="translate(23278,0)">
+ <use xlink:href="#MJMAIN-29" x="5673" y="0"></use>
+ <use xlink:href="#MJMAIN-2B" x="6285" y="0"></use>
+ <use xlink:href="#MJMAIN-30" x="7285" y="0"></use>
+ <use xlink:href="#MJMAIN-2248" x="8064" y="0"></use>
+<g transform="translate(9120,0)">
  <use xlink:href="#MJMAIN-32"></use>
  <use xlink:href="#MJMAIN-33" x="500" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1001" y="0"></use>
@@ -3707,14 +3841,14 @@ When <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width=
  <use xlink:href="#MJMAIN-38" x="2781" y="0"></use>
  <use xlink:href="#MJMAIN-35" x="3281" y="0"></use>
 </g>
- <use xlink:href="#MJMAIN-2026" x="27226" y="0"></use>
+ <use xlink:href="#MJMAIN-2026" x="13069" y="0"></use>
 </g>
 </g>
 </g>
 </g>
-</svg></span>
-Using this, we see that when <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.635ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2856.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-167-Title">
-<title id="MathJax-SVG-167-Title">k \geq 10 </title>
+</svg></span></p>
+<p>Using this, we see that when <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.635ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2856.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-156-Title">
+<title id="MathJax-SVG-156-Title">k \geq 10 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-2265" x="799" y="0"></use>
@@ -3723,9 +3857,9 @@ Using this, we see that when <span class="mjpage"><svg xmlns:xlink="http://www.w
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
 </g>
-</svg></span>
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.919ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 6853.9 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-168-Title">
-<title id="MathJax-SVG-168-Title"> 10 \cdot k \ln(k) \geq p_k </title>
+</svg></span></p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.919ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 6853.9 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-157-Title">
+<title id="MathJax-SVG-157-Title"> 10 \cdot k \ln(k) \geq p_k </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31"></use>
  <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
@@ -3744,51 +3878,53 @@ Using this, we see that when <span class="mjpage"><svg xmlns:xlink="http://www.w
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
 </g>
-</svg></span>
-Now we’re almost done! Because that gives us <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.437ex" height="4.176ex" style="vertical-align: -1.838ex;" viewBox="0 -1006.6 6646.6 1798" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-169-Title">
-<title id="MathJax-SVG-169-Title"> \frac{1}{10} \cdot \frac{1}{k \cdot \ln(k) } \leq \frac{1}{p_k} </title>
+</svg></span></p>
+<p>Now we’re almost done! Because that gives us</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.719ex" height="6.009ex" style="vertical-align: -2.671ex;" viewBox="0 -1437.2 8490.2 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-158-Title">
+<title id="MathJax-SVG-158-Title"> \frac{1}{10} \cdot \frac{1}{k \cdot \ln(k) } \leq \frac{1}{p_k} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
-<rect stroke="none" width="827" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="335" y="629"></use>
-<g transform="translate(60,-417)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-30" x="500" y="0"></use>
+<rect stroke="none" width="1121" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="310" y="676"></use>
+<g transform="translate(60,-687)">
+ <use xlink:href="#MJMAIN-31"></use>
+ <use xlink:href="#MJMAIN-30" x="500" y="0"></use>
 </g>
 </g>
- <use xlink:href="#MJMAIN-22C5" x="1290" y="0"></use>
-<g transform="translate(1568,0)">
+ <use xlink:href="#MJMAIN-22C5" x="1583" y="0"></use>
+<g transform="translate(1861,0)">
 <g transform="translate(342,0)">
-<rect stroke="none" width="2195" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="1302" y="629"></use>
-<g transform="translate(60,-476)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="0" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-22C5" x="521" y="0"></use>
-<g transform="translate(565,0)">
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6C"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-6E" x="278" y="0"></use>
+<rect stroke="none" width="3499" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="1499" y="676"></use>
+<g transform="translate(60,-771)">
+ <use xlink:href="#MJMATHI-6B" x="0" y="0"></use>
+ <use xlink:href="#MJMAIN-22C5" x="743" y="0"></use>
+<g transform="translate(1244,0)">
+ <use xlink:href="#MJMAIN-6C"></use>
+ <use xlink:href="#MJMAIN-6E" x="278" y="0"></use>
 </g>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-28" x="1635" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="2024" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-29" x="2546" y="0"></use>
+ <use xlink:href="#MJMAIN-28" x="2079" y="0"></use>
+ <use xlink:href="#MJMATHI-6B" x="2468" y="0"></use>
+ <use xlink:href="#MJMAIN-29" x="2990" y="0"></use>
 </g>
 </g>
 </g>
- <use xlink:href="#MJMAIN-2264" x="4504" y="0"></use>
-<g transform="translate(5282,0)">
+ <use xlink:href="#MJMAIN-2264" x="6101" y="0"></use>
+<g transform="translate(6880,0)">
 <g transform="translate(397,0)">
-<rect stroke="none" width="846" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="348" y="629"></use>
-<g transform="translate(60,-345)">
- <use transform="scale(0.707)" xlink:href="#MJMATHI-70" x="0" y="0"></use>
- <use transform="scale(0.574)" xlink:href="#MJMATHI-6B" x="620" y="-291"></use>
+<rect stroke="none" width="1092" height="60" x="0" y="220"></rect>
+ <use xlink:href="#MJMAIN-31" x="295" y="676"></use>
+<g transform="translate(60,-686)">
+ <use xlink:href="#MJMATHI-70" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-6B" x="712" y="-213"></use>
 </g>
 </g>
 </g>
 </g>
-</svg></span>, which gives us:
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.051ex" height="7.509ex" style="vertical-align: -3.171ex;" viewBox="0 -1867.7 12077.6 3233.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-170-Title">
-<title id="MathJax-SVG-170-Title"> \frac{1}{10} \cdot \sum\limits_{k = 10}^N \frac{1}{k \cdot \ln(k) } \leq \sum\limits_{k = 10}^N \frac{1}{p_k} </title>
+</svg></span></p>
+<p>which gives us:</p>
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.051ex" height="7.509ex" style="vertical-align: -3.171ex;" viewBox="0 -1867.7 12077.6 3233.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-159-Title">
+<title id="MathJax-SVG-159-Title"> \frac{1}{10} \cdot \sum\limits_{k = 10}^N \frac{1}{k \cdot \ln(k) } \leq \sum\limits_{k = 10}^N \frac{1}{p_k} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1121" height="60" x="0" y="220"></rect>
@@ -3852,8 +3988,13 @@ Now we’re almost done! Because that gives us <span class="mjpage"><svg xmlns:x
 </g>
 </g>
 </g>
-</svg></span>
-and we showed by lemma (a) that the left side goes to infinity as N goes to infinity.</p>
+</svg></span></p>
+<p>and we showed by <a href="#lemma-a">lemma (a)</a> that the left side goes to infinity as <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.064ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 888.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-160-Title">
+<title id="MathJax-SVG-160-Title">N</title>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#MJMATHI-4E" x="0" y="0"></use>
+</g>
+</svg></span> goes to infinity.</p>
 <p><strong>QED</strong></p>
 
 		</div>
@@ -3906,6 +4047,29 @@ and we showed by lemma (a) that the left side goes to infinity as N goes to infi
 	</div>
 <script async="" defer="" src="/js/menu.js"></script>
 <script src="/js/custom.js"></script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    },
+    loader: {
+      load: ['ui/lazy']
+    },
+    "CommonHTML": { linebreaks: { automatic: true } }
+  });
+</script>
 
 <img style="display:none;" src="https://api.edugovnet.com/?page=%2fblog%2fthe-sum-of-all-prime-reciprocals-is-infinite%2f">
 
