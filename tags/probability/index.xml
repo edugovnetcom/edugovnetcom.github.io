@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Probability on EduGovNet.com</title>
-    <link>/tags/probability/</link>
+    <link>https://www.edugovnet.com/tags/probability/</link>
     <description>Recent content in Probability on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 13:46:52 -0400</lastBuildDate><atom:link href="/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 13:46:52 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>More on Sorting and Analyzing Run Time Complexity</title>
-      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <link>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
       <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
       
-      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <guid>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
       <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
     </item>
     
     <item>
       <title>Sorting Random Permutations and a Little Bit of Probability</title>
-      <link>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
+      <link>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
       <pubDate>Thu, 24 Jun 2021 13:04:07 -0400</pubDate>
       
-      <guid>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
+      <guid>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
       <description>In this article, we&amp;rsquo;re going to discuss a shuffling algorithm, and then &lt;code&gt;quick_sort&lt;/code&gt; &amp;ndash; a sorting algorithm.</description>
     </item>
     

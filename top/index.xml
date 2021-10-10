@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tops on EduGovNet.com</title>
-    <link>/top/</link>
+    <link>https://www.edugovnet.com/top/</link>
     <description>Recent content in Tops on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/top/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.edugovnet.com/top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact Us</title>
-      <link>/contact_us/</link>
+      <link>https://www.edugovnet.com/contact_us/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/contact_us/</guid>
+      <guid>https://www.edugovnet.com/contact_us/</guid>
       <description>We&amp;rsquo;d love to hear what you have to say. Please feel free to let us know anything you like or dislike about the site.
 We especially appreciate it when readers report mistakes that we&amp;rsquo;ve made. Please provide a thorough description of the mistake and where to find it (for example, by giving the title of the entry, or the url of the page).
 Thank you,

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sylow&#39;s Theorems on EduGovNet.com</title>
-    <link>/tags/sylows-theorems/</link>
+    <link>https://www.edugovnet.com/tags/sylows-theorems/</link>
     <description>Recent content in Sylow&#39;s Theorems on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jun 2021 09:36:33 -0400</lastBuildDate><atom:link href="/tags/sylows-theorems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 09:36:33 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/sylows-theorems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Counting Orbits Sylows Theorems etc... (II)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-ii/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
       <description>We&amp;rsquo;re continuing our proofs of Sylow&amp;rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&amp;hellip;</description>
     </item>
     
     <item>
       <title>Counting Orbits Sylows Theorems etc... (I)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-i/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</link>
       <pubDate>Sun, 13 Jun 2021 09:36:30 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-i/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</guid>
       <description>In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&amp;rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</description>
     </item>
     

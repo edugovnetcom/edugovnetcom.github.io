@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matrices on EduGovNet.com</title>
-    <link>/tags/matrices/</link>
+    <link>https://www.edugovnet.com/tags/matrices/</link>
     <description>Recent content in Matrices on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="/tags/matrices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/matrices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modules, Vector Spaces, and More!</title>
-      <link>/blog/modules-vector-spaces-and-more/</link>
+      <link>https://www.edugovnet.com/blog/modules-vector-spaces-and-more/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/blog/modules-vector-spaces-and-more/</guid>
+      <guid>https://www.edugovnet.com/blog/modules-vector-spaces-and-more/</guid>
       <description>In the previous entry, we introduced Rings and Fields. In this entry we continue our investigation. We will investigate structures that can be built on top of them. This entry will mostly involve grinding through fundamental proofs that are necessary for more interesting results which will come later.</description>
     </item>
     

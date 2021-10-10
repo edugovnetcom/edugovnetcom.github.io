@@ -2,248 +2,263 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/an-intro-to-sets-3/</loc>
+    <loc>https://www.edugovnet.com/blog/an-intro-to-sets-3/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
+    <loc>https://www.edugovnet.com/tags/bernstein/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://www.edugovnet.com/blog/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://www.edugovnet.com/tags/cantor/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/categories/math/</loc>
+    <loc>https://www.edugovnet.com/tags/cantor-bernstein/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/categories/sets/</loc>
+    <loc>https://www.edugovnet.com/tags/cardinal-arithmetic/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>/blog/an-intro-to-sets-2/</loc>
+    <loc>https://www.edugovnet.com/categories/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/math/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/ordinal-arithmetic/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/sets/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/blog/an-intro-to-sets-2/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/cardinality-of-set/</loc>
+    <loc>https://www.edugovnet.com/tags/cardinality-of-set/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/cardinals/</loc>
+    <loc>https://www.edugovnet.com/tags/cardinals/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/limit-ordinal/</loc>
+    <loc>https://www.edugovnet.com/tags/limit-ordinal/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/ordinals/</loc>
+    <loc>https://www.edugovnet.com/tags/ordinals/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/successor-ordinal/</loc>
+    <loc>https://www.edugovnet.com/tags/successor-ordinal/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://www.edugovnet.com/tags/transfinite-induction/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/transfinite-induction/</loc>
-    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
-  </url><url>
-    <loc>/blog/an-intro-to-sets/</loc>
+    <loc>https://www.edugovnet.com/blog/an-intro-to-sets/</loc>
     <lastmod>2021-09-15T20:26:40-04:00</lastmod>
   </url><url>
-    <loc>/tags/axiomatic-set-theory/</loc>
+    <loc>https://www.edugovnet.com/tags/axiomatic-set-theory/</loc>
     <lastmod>2021-09-15T20:26:40-04:00</lastmod>
   </url><url>
-    <loc>/tags/order-types/</loc>
+    <loc>https://www.edugovnet.com/tags/order-types/</loc>
     <lastmod>2021-09-15T20:26:40-04:00</lastmod>
   </url><url>
-    <loc>/tags/zfc/</loc>
+    <loc>https://www.edugovnet.com/tags/zfc/</loc>
     <lastmod>2021-09-15T20:26:40-04:00</lastmod>
   </url><url>
-    <loc>/tags/algebras/</loc>
+    <loc>https://www.edugovnet.com/tags/algebras/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/categories/fields/</loc>
+    <loc>https://www.edugovnet.com/categories/fields/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/tags/matrices/</loc>
+    <loc>https://www.edugovnet.com/tags/matrices/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/tags/modules/</loc>
+    <loc>https://www.edugovnet.com/tags/modules/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/blog/modules-vector-spaces-and-more/</loc>
+    <loc>https://www.edugovnet.com/blog/modules-vector-spaces-and-more/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/categories/rings/</loc>
+    <loc>https://www.edugovnet.com/categories/rings/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/tags/vector-spaces/</loc>
+    <loc>https://www.edugovnet.com/tags/vector-spaces/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/tags/binomial-expansion/</loc>
+    <loc>https://www.edugovnet.com/tags/binomial-expansion/</loc>
     <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
-    <loc>/tags/factorial/</loc>
+    <loc>https://www.edugovnet.com/tags/factorial/</loc>
     <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
-    <loc>/tags/ideals/</loc>
+    <loc>https://www.edugovnet.com/tags/ideals/</loc>
     <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
-    <loc>/blog/intro-to-rings-and-fields/</loc>
+    <loc>https://www.edugovnet.com/blog/intro-to-rings-and-fields/</loc>
     <lastmod>2021-08-27T08:42:22-04:00</lastmod>
   </url><url>
-    <loc>/tags/dot-product/</loc>
+    <loc>https://www.edugovnet.com/tags/dot-product/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/geometry/</loc>
+    <loc>https://www.edugovnet.com/tags/geometry/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/great-circle/</loc>
+    <loc>https://www.edugovnet.com/tags/great-circle/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/categories/linear-algebra/</loc>
+    <loc>https://www.edugovnet.com/categories/linear-algebra/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/map-of-earth/</loc>
+    <loc>https://www.edugovnet.com/tags/map-of-earth/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/blog/spheres-distances-maps-and-more/</loc>
+    <loc>https://www.edugovnet.com/blog/spheres-distances-maps-and-more/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/trigonometry/</loc>
+    <loc>https://www.edugovnet.com/tags/trigonometry/</loc>
     <lastmod>2021-08-16T11:21:15-04:00</lastmod>
   </url><url>
-    <loc>/blog/even-permutations-some-simple-non-abelian-groups/</loc>
+    <loc>https://www.edugovnet.com/blog/even-permutations-some-simple-non-abelian-groups/</loc>
     <lastmod>2021-08-13T14:38:14-04:00</lastmod>
   </url><url>
-    <loc>/categories/group-theory/</loc>
+    <loc>https://www.edugovnet.com/categories/group-theory/</loc>
     <lastmod>2021-08-13T14:38:14-04:00</lastmod>
   </url><url>
-    <loc>/tags/jordan-holder/</loc>
+    <loc>https://www.edugovnet.com/tags/jordan-holder/</loc>
     <lastmod>2021-08-13T14:38:14-04:00</lastmod>
   </url><url>
-    <loc>/tags/permutations/</loc>
+    <loc>https://www.edugovnet.com/tags/permutations/</loc>
     <lastmod>2021-08-13T14:38:14-04:00</lastmod>
   </url><url>
-    <loc>/tags/subgroups/</loc>
+    <loc>https://www.edugovnet.com/tags/subgroups/</loc>
     <lastmod>2021-08-13T14:38:14-04:00</lastmod>
   </url><url>
-    <loc>/categories/algorithms/</loc>
+    <loc>https://www.edugovnet.com/categories/algorithms/</loc>
     <lastmod>2021-07-28T14:26:47-04:00</lastmod>
   </url><url>
-    <loc>/tags/omp/</loc>
+    <loc>https://www.edugovnet.com/tags/omp/</loc>
     <lastmod>2021-07-28T14:26:47-04:00</lastmod>
   </url><url>
-    <loc>/tags/parallel-computing/</loc>
+    <loc>https://www.edugovnet.com/tags/parallel-computing/</loc>
     <lastmod>2021-07-28T14:26:47-04:00</lastmod>
   </url><url>
-    <loc>/tags/parallel-sorting/</loc>
+    <loc>https://www.edugovnet.com/tags/parallel-sorting/</loc>
     <lastmod>2021-07-28T14:26:47-04:00</lastmod>
   </url><url>
-    <loc>/blog/parallel-sorting-in-theory-and-in-practice-iii/</loc>
+    <loc>https://www.edugovnet.com/blog/parallel-sorting-in-theory-and-in-practice-iii/</loc>
     <lastmod>2021-07-28T14:26:47-04:00</lastmod>
   </url><url>
-    <loc>/blog/parallel-sorting-in-theory-and-in-practice-ii/</loc>
+    <loc>https://www.edugovnet.com/blog/parallel-sorting-in-theory-and-in-practice-ii/</loc>
     <lastmod>2021-07-27T14:26:44-04:00</lastmod>
   </url><url>
-    <loc>/blog/parallel-sorting-in-theory-and-in-practice-i/</loc>
+    <loc>https://www.edugovnet.com/blog/parallel-sorting-in-theory-and-in-practice-i/</loc>
     <lastmod>2021-07-23T14:26:40-04:00</lastmod>
   </url><url>
-    <loc>/blog/computing-with-permutations-inverses-cycles-and-more/</loc>
+    <loc>https://www.edugovnet.com/blog/computing-with-permutations-inverses-cycles-and-more/</loc>
     <lastmod>2021-07-19T14:26:15-04:00</lastmod>
   </url><url>
-    <loc>/tags/complexity/</loc>
+    <loc>https://www.edugovnet.com/tags/complexity/</loc>
     <lastmod>2021-07-14T14:25:44-04:00</lastmod>
   </url><url>
-    <loc>/blog/finding-the-median-and-an-application-to-sorting/</loc>
+    <loc>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</loc>
     <lastmod>2021-07-14T14:25:44-04:00</lastmod>
   </url><url>
-    <loc>/tags/median-finding/</loc>
+    <loc>https://www.edugovnet.com/tags/median-finding/</loc>
     <lastmod>2021-07-14T14:25:44-04:00</lastmod>
   </url><url>
-    <loc>/tags/median-of-medians/</loc>
+    <loc>https://www.edugovnet.com/tags/median-of-medians/</loc>
     <lastmod>2021-07-14T14:25:44-04:00</lastmod>
   </url><url>
-    <loc>/categories/sorting/</loc>
+    <loc>https://www.edugovnet.com/categories/sorting/</loc>
     <lastmod>2021-07-14T14:25:44-04:00</lastmod>
   </url><url>
-    <loc>/blog/more-on-sorting-and-analyzing-run-time-complexity/</loc>
+    <loc>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</loc>
     <lastmod>2021-07-08T13:46:52-04:00</lastmod>
   </url><url>
-    <loc>/tags/probability/</loc>
+    <loc>https://www.edugovnet.com/tags/probability/</loc>
     <lastmod>2021-07-08T13:46:52-04:00</lastmod>
   </url><url>
-    <loc>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</loc>
+    <loc>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</loc>
     <lastmod>2021-06-24T13:04:07-04:00</lastmod>
   </url><url>
-    <loc>/tags/lattices/</loc>
+    <loc>https://www.edugovnet.com/tags/lattices/</loc>
     <lastmod>2021-06-22T11:02:53-04:00</lastmod>
   </url><url>
-    <loc>/tags/zassenhaus/</loc>
+    <loc>https://www.edugovnet.com/tags/zassenhaus/</loc>
     <lastmod>2021-06-22T11:02:53-04:00</lastmod>
   </url><url>
-    <loc>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</loc>
+    <loc>https://www.edugovnet.com/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</loc>
     <lastmod>2021-06-22T11:02:53-04:00</lastmod>
   </url><url>
-    <loc>/blog/partial-orders-lattices-and-some-subgroups/</loc>
+    <loc>https://www.edugovnet.com/blog/partial-orders-lattices-and-some-subgroups/</loc>
     <lastmod>2021-06-17T10:26:21-04:00</lastmod>
   </url><url>
-    <loc>/blog/counting-orbits-sylows-theorems-etc-ii/</loc>
+    <loc>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</loc>
     <lastmod>2021-06-15T09:36:33-04:00</lastmod>
   </url><url>
-    <loc>/tags/orbits/</loc>
+    <loc>https://www.edugovnet.com/tags/orbits/</loc>
     <lastmod>2021-06-15T09:36:33-04:00</lastmod>
   </url><url>
-    <loc>/tags/sets/</loc>
+    <loc>https://www.edugovnet.com/tags/sets/</loc>
     <lastmod>2021-06-15T09:36:33-04:00</lastmod>
   </url><url>
-    <loc>/tags/sylows-theorems/</loc>
+    <loc>https://www.edugovnet.com/tags/sylows-theorems/</loc>
     <lastmod>2021-06-15T09:36:33-04:00</lastmod>
   </url><url>
-    <loc>/blog/counting-orbits-sylows-theorems-etc-i/</loc>
+    <loc>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</loc>
     <lastmod>2021-06-13T09:36:30-04:00</lastmod>
   </url><url>
-    <loc>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</loc>
+    <loc>https://www.edugovnet.com/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</loc>
     <lastmod>2021-06-11T09:18:37-04:00</lastmod>
   </url><url>
-    <loc>/blog/applying-permutations-to-group-theory/</loc>
+    <loc>https://www.edugovnet.com/blog/applying-permutations-to-group-theory/</loc>
     <lastmod>2021-06-10T08:39:46-04:00</lastmod>
   </url><url>
-    <loc>/blog/more-on-groups-morphisms-normal-subgroups-etc/</loc>
+    <loc>https://www.edugovnet.com/blog/more-on-groups-morphisms-normal-subgroups-etc/</loc>
     <lastmod>2021-06-09T07:42:22-04:00</lastmod>
   </url><url>
-    <loc>/tags/morphisms/</loc>
+    <loc>https://www.edugovnet.com/tags/morphisms/</loc>
     <lastmod>2021-06-09T07:42:22-04:00</lastmod>
   </url><url>
-    <loc>/tags/homomorphisms/</loc>
+    <loc>https://www.edugovnet.com/tags/homomorphisms/</loc>
     <lastmod>2021-06-08T16:10:15-04:00</lastmod>
   </url><url>
-    <loc>/blog/more-introductory-group-theory/</loc>
+    <loc>https://www.edugovnet.com/blog/more-introductory-group-theory/</loc>
     <lastmod>2021-06-08T16:10:15-04:00</lastmod>
   </url><url>
-    <loc>/blog/more-math-of-permutations/</loc>
+    <loc>https://www.edugovnet.com/blog/more-math-of-permutations/</loc>
     <lastmod>2021-06-03T15:21:46-04:00</lastmod>
   </url><url>
-    <loc>/tags/infinite-sums/</loc>
+    <loc>https://www.edugovnet.com/tags/infinite-sums/</loc>
     <lastmod>2021-05-14T17:11:23-04:00</lastmod>
   </url><url>
-    <loc>/categories/number-theory/</loc>
+    <loc>https://www.edugovnet.com/categories/number-theory/</loc>
     <lastmod>2021-05-14T17:11:23-04:00</lastmod>
   </url><url>
-    <loc>/tags/prime-numbers/</loc>
+    <loc>https://www.edugovnet.com/tags/prime-numbers/</loc>
     <lastmod>2021-05-14T17:11:23-04:00</lastmod>
   </url><url>
-    <loc>/blog/the-sum-of-all-prime-reciprocals-is-infinite/</loc>
+    <loc>https://www.edugovnet.com/blog/the-sum-of-all-prime-reciprocals-is-infinite/</loc>
     <lastmod>2021-05-14T17:11:23-04:00</lastmod>
   </url><url>
-    <loc>/blog/an-intro-to-the-dot-product/</loc>
+    <loc>https://www.edugovnet.com/blog/an-intro-to-the-dot-product/</loc>
     <lastmod>2021-05-06T16:34:00-04:00</lastmod>
   </url><url>
-    <loc>/blog/some-of-the-math-of-permutations/</loc>
+    <loc>https://www.edugovnet.com/blog/some-of-the-math-of-permutations/</loc>
     <lastmod>2021-03-30T14:48:51-04:00</lastmod>
   </url><url>
-    <loc>/report-error/</loc>
+    <loc>https://www.edugovnet.com/report-error/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>/contact_us/</loc>
+    <loc>https://www.edugovnet.com/contact_us/</loc>
   </url><url>
-    <loc>/top/</loc>
+    <loc>https://www.edugovnet.com/top/</loc>
   </url>
 </urlset>

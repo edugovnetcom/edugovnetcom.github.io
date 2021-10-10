@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Number Theory on EduGovNet.com</title>
-    <link>/categories/number-theory/</link>
+    <link>https://www.edugovnet.com/categories/number-theory/</link>
     <description>Recent content in Number Theory on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 May 2021 17:11:23 -0400</lastBuildDate><atom:link href="/categories/number-theory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 17:11:23 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/categories/number-theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Sum of All Prime Reciprocals Is Infinite</title>
-      <link>/blog/the-sum-of-all-prime-reciprocals-is-infinite/</link>
+      <link>https://www.edugovnet.com/blog/the-sum-of-all-prime-reciprocals-is-infinite/</link>
       <pubDate>Fri, 14 May 2021 17:11:23 -0400</pubDate>
       
-      <guid>/blog/the-sum-of-all-prime-reciprocals-is-infinite/</guid>
+      <guid>https://www.edugovnet.com/blog/the-sum-of-all-prime-reciprocals-is-infinite/</guid>
       <description>Here we show the classic result that the sum of 1/p, where p ranges over all prime numbers, is infinite.</description>
     </item>
     

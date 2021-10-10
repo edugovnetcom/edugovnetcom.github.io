@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morphisms on EduGovNet.com</title>
-    <link>/tags/morphisms/</link>
+    <link>https://www.edugovnet.com/tags/morphisms/</link>
     <description>Recent content in Morphisms on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 07:42:22 -0400</lastBuildDate><atom:link href="/tags/morphisms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 07:42:22 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/morphisms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>More on Groups: Morphisms, Normal Subgroups, etc...</title>
-      <link>/blog/more-on-groups-morphisms-normal-subgroups-etc/</link>
+      <link>https://www.edugovnet.com/blog/more-on-groups-morphisms-normal-subgroups-etc/</link>
       <pubDate>Wed, 09 Jun 2021 07:42:22 -0400</pubDate>
       
-      <guid>/blog/more-on-groups-morphisms-normal-subgroups-etc/</guid>
+      <guid>https://www.edugovnet.com/blog/more-on-groups-morphisms-normal-subgroups-etc/</guid>
       <description>In the previous entry More Introductory Group Theory, we introduced the definition of a group and also provided some lemmas to help us understand their basic structure a little better. It wasn&amp;rsquo;t as thorough as what you&amp;rsquo;d find in most Abstract Algebra books, though. But we did manage to introduce various morphisms, or maps between groups that preserve parts of their structure. Here we&amp;rsquo;ll continue with that theme&amp;hellip;</description>
     </item>
     

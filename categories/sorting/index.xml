@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sorting on EduGovNet.com</title>
-    <link>/categories/sorting/</link>
+    <link>https://www.edugovnet.com/categories/sorting/</link>
     <description>Recent content in Sorting on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 14:25:44 -0400</lastBuildDate><atom:link href="/categories/sorting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 14:25:44 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/categories/sorting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finding the Median and an Application to Sorting</title>
-      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <link>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <guid>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</guid>
       <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
     </item>
     
     <item>
       <title>More on Sorting and Analyzing Run Time Complexity</title>
-      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <link>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
       <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
       
-      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <guid>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
       <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
     </item>
     
     <item>
       <title>Sorting Random Permutations and a Little Bit of Probability</title>
-      <link>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
+      <link>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
       <pubDate>Thu, 24 Jun 2021 13:04:07 -0400</pubDate>
       
-      <guid>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
+      <guid>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
       <description>In this article, we&amp;rsquo;re going to discuss a shuffling algorithm, and then &lt;code&gt;quick_sort&lt;/code&gt; &amp;ndash; a sorting algorithm.</description>
     </item>
     

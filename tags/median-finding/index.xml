@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Median Finding on EduGovNet.com</title>
-    <link>/tags/median-finding/</link>
+    <link>https://www.edugovnet.com/tags/median-finding/</link>
     <description>Recent content in Median Finding on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jul 2021 14:25:44 -0400</lastBuildDate><atom:link href="/tags/median-finding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 14:25:44 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/median-finding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finding the Median and an Application to Sorting</title>
-      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <link>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <guid>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</guid>
       <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
     </item>
     

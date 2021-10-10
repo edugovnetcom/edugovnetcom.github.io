@@ -2,368 +2,413 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on EduGovNet.com</title>
-    <link>/tags/</link>
+    <link>https://www.edugovnet.com/tags/</link>
     <description>Recent content in Tags on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Sep 2021 21:18:15 -0400</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bernstein</title>
+      <link>https://www.edugovnet.com/tags/bernstein/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/tags/bernstein/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cantor</title>
+      <link>https://www.edugovnet.com/tags/cantor/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/tags/cantor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cantor-Bernstein</title>
+      <link>https://www.edugovnet.com/tags/cantor-bernstein/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/tags/cantor-bernstein/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cardinal Arithmetic</title>
+      <link>https://www.edugovnet.com/tags/cardinal-arithmetic/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/tags/cardinal-arithmetic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ordinal Arithmetic</title>
+      <link>https://www.edugovnet.com/tags/ordinal-arithmetic/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/tags/ordinal-arithmetic/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cardinality of Set</title>
-      <link>/tags/cardinality-of-set/</link>
+      <link>https://www.edugovnet.com/tags/cardinality-of-set/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/cardinality-of-set/</guid>
+      <guid>https://www.edugovnet.com/tags/cardinality-of-set/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cardinals</title>
-      <link>/tags/cardinals/</link>
+      <link>https://www.edugovnet.com/tags/cardinals/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/cardinals/</guid>
+      <guid>https://www.edugovnet.com/tags/cardinals/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Limit Ordinal</title>
-      <link>/tags/limit-ordinal/</link>
+      <link>https://www.edugovnet.com/tags/limit-ordinal/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/limit-ordinal/</guid>
+      <guid>https://www.edugovnet.com/tags/limit-ordinal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ordinals</title>
-      <link>/tags/ordinals/</link>
+      <link>https://www.edugovnet.com/tags/ordinals/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/ordinals/</guid>
+      <guid>https://www.edugovnet.com/tags/ordinals/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Successor Ordinal</title>
-      <link>/tags/successor-ordinal/</link>
+      <link>https://www.edugovnet.com/tags/successor-ordinal/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/successor-ordinal/</guid>
+      <guid>https://www.edugovnet.com/tags/successor-ordinal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transfinite Induction</title>
-      <link>/tags/transfinite-induction/</link>
+      <link>https://www.edugovnet.com/tags/transfinite-induction/</link>
       <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
       
-      <guid>/tags/transfinite-induction/</guid>
+      <guid>https://www.edugovnet.com/tags/transfinite-induction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Axiomatic Set Theory</title>
-      <link>/tags/axiomatic-set-theory/</link>
+      <link>https://www.edugovnet.com/tags/axiomatic-set-theory/</link>
       <pubDate>Wed, 15 Sep 2021 20:26:40 -0400</pubDate>
       
-      <guid>/tags/axiomatic-set-theory/</guid>
+      <guid>https://www.edugovnet.com/tags/axiomatic-set-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Order Types</title>
-      <link>/tags/order-types/</link>
+      <link>https://www.edugovnet.com/tags/order-types/</link>
       <pubDate>Wed, 15 Sep 2021 20:26:40 -0400</pubDate>
       
-      <guid>/tags/order-types/</guid>
+      <guid>https://www.edugovnet.com/tags/order-types/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZFC</title>
-      <link>/tags/zfc/</link>
+      <link>https://www.edugovnet.com/tags/zfc/</link>
       <pubDate>Wed, 15 Sep 2021 20:26:40 -0400</pubDate>
       
-      <guid>/tags/zfc/</guid>
+      <guid>https://www.edugovnet.com/tags/zfc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Algebras</title>
-      <link>/tags/algebras/</link>
+      <link>https://www.edugovnet.com/tags/algebras/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/tags/algebras/</guid>
+      <guid>https://www.edugovnet.com/tags/algebras/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Matrices</title>
-      <link>/tags/matrices/</link>
+      <link>https://www.edugovnet.com/tags/matrices/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/tags/matrices/</guid>
+      <guid>https://www.edugovnet.com/tags/matrices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modules</title>
-      <link>/tags/modules/</link>
+      <link>https://www.edugovnet.com/tags/modules/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/tags/modules/</guid>
+      <guid>https://www.edugovnet.com/tags/modules/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vector Spaces</title>
-      <link>/tags/vector-spaces/</link>
+      <link>https://www.edugovnet.com/tags/vector-spaces/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/tags/vector-spaces/</guid>
+      <guid>https://www.edugovnet.com/tags/vector-spaces/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Binomial expansion</title>
-      <link>/tags/binomial-expansion/</link>
+      <link>https://www.edugovnet.com/tags/binomial-expansion/</link>
       <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
-      <guid>/tags/binomial-expansion/</guid>
+      <guid>https://www.edugovnet.com/tags/binomial-expansion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Factorial</title>
-      <link>/tags/factorial/</link>
+      <link>https://www.edugovnet.com/tags/factorial/</link>
       <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
-      <guid>/tags/factorial/</guid>
+      <guid>https://www.edugovnet.com/tags/factorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ideals</title>
-      <link>/tags/ideals/</link>
+      <link>https://www.edugovnet.com/tags/ideals/</link>
       <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
-      <guid>/tags/ideals/</guid>
+      <guid>https://www.edugovnet.com/tags/ideals/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dot Product</title>
-      <link>/tags/dot-product/</link>
+      <link>https://www.edugovnet.com/tags/dot-product/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/tags/dot-product/</guid>
+      <guid>https://www.edugovnet.com/tags/dot-product/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Geometry</title>
-      <link>/tags/geometry/</link>
+      <link>https://www.edugovnet.com/tags/geometry/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/tags/geometry/</guid>
+      <guid>https://www.edugovnet.com/tags/geometry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Great Circle</title>
-      <link>/tags/great-circle/</link>
+      <link>https://www.edugovnet.com/tags/great-circle/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/tags/great-circle/</guid>
+      <guid>https://www.edugovnet.com/tags/great-circle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Map of Earth</title>
-      <link>/tags/map-of-earth/</link>
+      <link>https://www.edugovnet.com/tags/map-of-earth/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/tags/map-of-earth/</guid>
+      <guid>https://www.edugovnet.com/tags/map-of-earth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trigonometry</title>
-      <link>/tags/trigonometry/</link>
+      <link>https://www.edugovnet.com/tags/trigonometry/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/tags/trigonometry/</guid>
+      <guid>https://www.edugovnet.com/tags/trigonometry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jordan-Holder</title>
-      <link>/tags/jordan-holder/</link>
+      <link>https://www.edugovnet.com/tags/jordan-holder/</link>
       <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
       
-      <guid>/tags/jordan-holder/</guid>
+      <guid>https://www.edugovnet.com/tags/jordan-holder/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Permutations</title>
-      <link>/tags/permutations/</link>
+      <link>https://www.edugovnet.com/tags/permutations/</link>
       <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
       
-      <guid>/tags/permutations/</guid>
+      <guid>https://www.edugovnet.com/tags/permutations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Subgroups</title>
-      <link>/tags/subgroups/</link>
+      <link>https://www.edugovnet.com/tags/subgroups/</link>
       <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
       
-      <guid>/tags/subgroups/</guid>
+      <guid>https://www.edugovnet.com/tags/subgroups/</guid>
       <description></description>
     </item>
     
     <item>
       <title>omp</title>
-      <link>/tags/omp/</link>
+      <link>https://www.edugovnet.com/tags/omp/</link>
       <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
       
-      <guid>/tags/omp/</guid>
+      <guid>https://www.edugovnet.com/tags/omp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Parallel Computing</title>
-      <link>/tags/parallel-computing/</link>
+      <link>https://www.edugovnet.com/tags/parallel-computing/</link>
       <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
       
-      <guid>/tags/parallel-computing/</guid>
+      <guid>https://www.edugovnet.com/tags/parallel-computing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Parallel Sorting</title>
-      <link>/tags/parallel-sorting/</link>
+      <link>https://www.edugovnet.com/tags/parallel-sorting/</link>
       <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
       
-      <guid>/tags/parallel-sorting/</guid>
+      <guid>https://www.edugovnet.com/tags/parallel-sorting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Complexity</title>
-      <link>/tags/complexity/</link>
+      <link>https://www.edugovnet.com/tags/complexity/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/tags/complexity/</guid>
+      <guid>https://www.edugovnet.com/tags/complexity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Median Finding</title>
-      <link>/tags/median-finding/</link>
+      <link>https://www.edugovnet.com/tags/median-finding/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/tags/median-finding/</guid>
+      <guid>https://www.edugovnet.com/tags/median-finding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Median of Medians</title>
-      <link>/tags/median-of-medians/</link>
+      <link>https://www.edugovnet.com/tags/median-of-medians/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/tags/median-of-medians/</guid>
+      <guid>https://www.edugovnet.com/tags/median-of-medians/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
-      <link>/tags/probability/</link>
+      <link>https://www.edugovnet.com/tags/probability/</link>
       <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
       
-      <guid>/tags/probability/</guid>
+      <guid>https://www.edugovnet.com/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lattices</title>
-      <link>/tags/lattices/</link>
+      <link>https://www.edugovnet.com/tags/lattices/</link>
       <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
       
-      <guid>/tags/lattices/</guid>
+      <guid>https://www.edugovnet.com/tags/lattices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zassenhaus</title>
-      <link>/tags/zassenhaus/</link>
+      <link>https://www.edugovnet.com/tags/zassenhaus/</link>
       <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
       
-      <guid>/tags/zassenhaus/</guid>
+      <guid>https://www.edugovnet.com/tags/zassenhaus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Orbits</title>
-      <link>/tags/orbits/</link>
+      <link>https://www.edugovnet.com/tags/orbits/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/tags/orbits/</guid>
+      <guid>https://www.edugovnet.com/tags/orbits/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sets</title>
-      <link>/tags/sets/</link>
+      <link>https://www.edugovnet.com/tags/sets/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/tags/sets/</guid>
+      <guid>https://www.edugovnet.com/tags/sets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sylow&#39;s Theorems</title>
-      <link>/tags/sylows-theorems/</link>
+      <link>https://www.edugovnet.com/tags/sylows-theorems/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/tags/sylows-theorems/</guid>
+      <guid>https://www.edugovnet.com/tags/sylows-theorems/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Morphisms</title>
-      <link>/tags/morphisms/</link>
+      <link>https://www.edugovnet.com/tags/morphisms/</link>
       <pubDate>Wed, 09 Jun 2021 07:42:22 -0400</pubDate>
       
-      <guid>/tags/morphisms/</guid>
+      <guid>https://www.edugovnet.com/tags/morphisms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Homomorphisms</title>
-      <link>/tags/homomorphisms/</link>
+      <link>https://www.edugovnet.com/tags/homomorphisms/</link>
       <pubDate>Tue, 08 Jun 2021 16:10:15 -0400</pubDate>
       
-      <guid>/tags/homomorphisms/</guid>
+      <guid>https://www.edugovnet.com/tags/homomorphisms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Infinite Sums</title>
-      <link>/tags/infinite-sums/</link>
+      <link>https://www.edugovnet.com/tags/infinite-sums/</link>
       <pubDate>Fri, 14 May 2021 17:11:23 -0400</pubDate>
       
-      <guid>/tags/infinite-sums/</guid>
+      <guid>https://www.edugovnet.com/tags/infinite-sums/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prime Numbers</title>
-      <link>/tags/prime-numbers/</link>
+      <link>https://www.edugovnet.com/tags/prime-numbers/</link>
       <pubDate>Fri, 14 May 2021 17:11:23 -0400</pubDate>
       
-      <guid>/tags/prime-numbers/</guid>
+      <guid>https://www.edugovnet.com/tags/prime-numbers/</guid>
       <description></description>
     </item>
     

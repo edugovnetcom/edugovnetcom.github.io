@@ -2,89 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on EduGovNet.com</title>
-    <link>/categories/</link>
+    <link>https://www.edugovnet.com/categories/</link>
     <description>Recent content in Categories on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Math</title>
-      <link>/categories/math/</link>
+      <link>https://www.edugovnet.com/categories/math/</link>
       <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
       
-      <guid>/categories/math/</guid>
+      <guid>https://www.edugovnet.com/categories/math/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sets</title>
-      <link>/categories/sets/</link>
+      <link>https://www.edugovnet.com/categories/sets/</link>
       <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
       
-      <guid>/categories/sets/</guid>
+      <guid>https://www.edugovnet.com/categories/sets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fields</title>
-      <link>/categories/fields/</link>
+      <link>https://www.edugovnet.com/categories/fields/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/categories/fields/</guid>
+      <guid>https://www.edugovnet.com/categories/fields/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rings</title>
-      <link>/categories/rings/</link>
+      <link>https://www.edugovnet.com/categories/rings/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
-      <guid>/categories/rings/</guid>
+      <guid>https://www.edugovnet.com/categories/rings/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linear Algebra</title>
-      <link>/categories/linear-algebra/</link>
+      <link>https://www.edugovnet.com/categories/linear-algebra/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/categories/linear-algebra/</guid>
+      <guid>https://www.edugovnet.com/categories/linear-algebra/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Group Theory</title>
-      <link>/categories/group-theory/</link>
+      <link>https://www.edugovnet.com/categories/group-theory/</link>
       <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
       
-      <guid>/categories/group-theory/</guid>
+      <guid>https://www.edugovnet.com/categories/group-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Algorithms</title>
-      <link>/categories/algorithms/</link>
+      <link>https://www.edugovnet.com/categories/algorithms/</link>
       <pubDate>Wed, 28 Jul 2021 14:26:47 -0400</pubDate>
       
-      <guid>/categories/algorithms/</guid>
+      <guid>https://www.edugovnet.com/categories/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sorting</title>
-      <link>/categories/sorting/</link>
+      <link>https://www.edugovnet.com/categories/sorting/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/categories/sorting/</guid>
+      <guid>https://www.edugovnet.com/categories/sorting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Number Theory</title>
-      <link>/categories/number-theory/</link>
+      <link>https://www.edugovnet.com/categories/number-theory/</link>
       <pubDate>Fri, 14 May 2021 17:11:23 -0400</pubDate>
       
-      <guid>/categories/number-theory/</guid>
+      <guid>https://www.edugovnet.com/categories/number-theory/</guid>
       <description></description>
     </item>
     

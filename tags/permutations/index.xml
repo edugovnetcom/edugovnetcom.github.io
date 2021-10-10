@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Permutations on EduGovNet.com</title>
-    <link>/tags/permutations/</link>
+    <link>https://www.edugovnet.com/tags/permutations/</link>
     <description>Recent content in Permutations on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Aug 2021 14:38:14 -0400</lastBuildDate><atom:link href="/tags/permutations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 14:38:14 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/permutations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Even Permutations and Some Simple Non-Abelian Groups</title>
-      <link>/blog/even-permutations-some-simple-non-abelian-groups/</link>
+      <link>https://www.edugovnet.com/blog/even-permutations-some-simple-non-abelian-groups/</link>
       <pubDate>Fri, 13 Aug 2021 14:38:14 -0400</pubDate>
       
-      <guid>/blog/even-permutations-some-simple-non-abelian-groups/</guid>
+      <guid>https://www.edugovnet.com/blog/even-permutations-some-simple-non-abelian-groups/</guid>
       <description>In this entry we prove that A_n is normal when n &amp;gt;= 5. We then use this result to prove that there is no generalization of &amp;ldquo;even&amp;rdquo; and &amp;ldquo;odd&amp;rdquo; permutation to three or more classes &amp;ndash; i.e. there is no class of homomorphisms into Z_n, where n &amp;gt; 2.</description>
     </item>
     
     <item>
       <title>Computing With Permutations, Inverses, Cycles, and More!</title>
-      <link>/blog/computing-with-permutations-inverses-cycles-and-more/</link>
+      <link>https://www.edugovnet.com/blog/computing-with-permutations-inverses-cycles-and-more/</link>
       <pubDate>Mon, 19 Jul 2021 14:26:15 -0400</pubDate>
       
-      <guid>/blog/computing-with-permutations-inverses-cycles-and-more/</guid>
+      <guid>https://www.edugovnet.com/blog/computing-with-permutations-inverses-cycles-and-more/</guid>
       <description>In this entry, we bring together ideas we&amp;rsquo;ve been developing about permutations, their sign, cycles, and sorting as well as the run time complexity of the algorithms which compute them.</description>
     </item>
     
     <item>
       <title>Finding the Median and an Application to Sorting</title>
-      <link>/blog/finding-the-median-and-an-application-to-sorting/</link>
+      <link>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</link>
       <pubDate>Wed, 14 Jul 2021 14:25:44 -0400</pubDate>
       
-      <guid>/blog/finding-the-median-and-an-application-to-sorting/</guid>
+      <guid>https://www.edugovnet.com/blog/finding-the-median-and-an-application-to-sorting/</guid>
       <description>In the previous few entries we&amp;rsquo;ve been discussing quick_sort and analyzing the run-time complexity of recursive algorithms. We&amp;rsquo;re going to apply what we&amp;rsquo;ve learned so far to finding the median of an array in O(n) time. Then we&amp;rsquo;re going to see how that can be added to quick_sort to guarantee that it finishes in O(nlog_2(n)) time.</description>
     </item>
     
     <item>
       <title>More on Sorting and Analyzing Run Time Complexity</title>
-      <link>/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
+      <link>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</link>
       <pubDate>Thu, 08 Jul 2021 13:46:52 -0400</pubDate>
       
-      <guid>/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
+      <guid>https://www.edugovnet.com/blog/more-on-sorting-and-analyzing-run-time-complexity/</guid>
       <description>In the previous entry (Sorting, Random Permutations, and little bit of Probability), we introduced &lt;code&gt;quick_sort&lt;/code&gt;, gave a version of it in C++ and started to analyze how many steps it takes to sort a vector of floating point numbers. In this entry, we continue that analysis and prove some results that will help us get a feel for other recursive algorithms.</description>
     </item>
     
     <item>
       <title>Sorting Random Permutations and a Little Bit of Probability</title>
-      <link>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
+      <link>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</link>
       <pubDate>Thu, 24 Jun 2021 13:04:07 -0400</pubDate>
       
-      <guid>/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
+      <guid>https://www.edugovnet.com/blog/sorting-random-permutations-and-a-little-bit-of-probability/</guid>
       <description>In this article, we&amp;rsquo;re going to discuss a shuffling algorithm, and then &lt;code&gt;quick_sort&lt;/code&gt; &amp;ndash; a sorting algorithm.</description>
     </item>
     
     <item>
       <title>Counting Orbits Sylows Theorems etc... (II)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-ii/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
       <description>We&amp;rsquo;re continuing our proofs of Sylow&amp;rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&amp;hellip;</description>
     </item>
     
     <item>
       <title>Counting Orbits Sylows Theorems etc... (I)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-i/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</link>
       <pubDate>Sun, 13 Jun 2021 09:36:30 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-i/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</guid>
       <description>In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&amp;rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</description>
     </item>
     
     <item>
       <title>Subgroups of Even Permutations Orbits Stabilizers etc...</title>
-      <link>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
+      <link>https://www.edugovnet.com/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
       <pubDate>Fri, 11 Jun 2021 09:18:37 -0400</pubDate>
       
-      <guid>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
+      <guid>https://www.edugovnet.com/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
       <description>We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k + 1), and discussing properties of the orbits, stabilizers, fixes, etc&amp;hellip;</description>
     </item>
     
     <item>
       <title>Applying Permutations to Group Theory</title>
-      <link>/blog/applying-permutations-to-group-theory/</link>
+      <link>https://www.edugovnet.com/blog/applying-permutations-to-group-theory/</link>
       <pubDate>Thu, 10 Jun 2021 08:39:46 -0400</pubDate>
       
-      <guid>/blog/applying-permutations-to-group-theory/</guid>
+      <guid>https://www.edugovnet.com/blog/applying-permutations-to-group-theory/</guid>
       <description>Here we further explore some of the interconnections between groups and permutations on sets. This quickly leads us to some interesting results.</description>
     </item>
     
     <item>
       <title>More Introductory Group Theory</title>
-      <link>/blog/more-introductory-group-theory/</link>
+      <link>https://www.edugovnet.com/blog/more-introductory-group-theory/</link>
       <pubDate>Tue, 08 Jun 2021 16:10:15 -0400</pubDate>
       
-      <guid>/blog/more-introductory-group-theory/</guid>
+      <guid>https://www.edugovnet.com/blog/more-introductory-group-theory/</guid>
       <description>We&amp;rsquo;ve already introduced some of the topics of Group Theory. In this entry we&amp;rsquo;ll talk about Lagrange&amp;rsquo;s Theorem, various morphisms, and try to tie it back to our ongoing discussion of permutations. We&amp;rsquo;ll also give some examples of groups&amp;hellip;</description>
     </item>
     
     <item>
       <title>More Math of Permutations</title>
-      <link>/blog/more-math-of-permutations/</link>
+      <link>https://www.edugovnet.com/blog/more-math-of-permutations/</link>
       <pubDate>Thu, 03 Jun 2021 15:21:46 -0400</pubDate>
       
-      <guid>/blog/more-math-of-permutations/</guid>
+      <guid>https://www.edugovnet.com/blog/more-math-of-permutations/</guid>
       <description>Here we prove that permutations can be divided into even permutations and odd permutations. We&amp;rsquo;ll also go over what happens when you compose two permutations. Surprisingly, it behaves like adding numbers. E.g. composing an even permutation with an odd permutation results in an odd permutation. Two odd permutations result in an even permutation, etc&amp;hellip;</description>
     </item>
     
     <item>
       <title>Some of the Math of Permutations</title>
-      <link>/blog/some-of-the-math-of-permutations/</link>
+      <link>https://www.edugovnet.com/blog/some-of-the-math-of-permutations/</link>
       <pubDate>Tue, 30 Mar 2021 14:48:51 -0400</pubDate>
       
-      <guid>/blog/some-of-the-math-of-permutations/</guid>
+      <guid>https://www.edugovnet.com/blog/some-of-the-math-of-permutations/</guid>
       <description>A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y.</description>
     </item>
     

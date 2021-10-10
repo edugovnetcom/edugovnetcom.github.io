@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ZFC on EduGovNet.com</title>
-    <link>/tags/zfc/</link>
+    <link>https://www.edugovnet.com/tags/zfc/</link>
     <description>Recent content in ZFC on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Sep 2021 20:26:40 -0400</lastBuildDate><atom:link href="/tags/zfc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Sep 2021 20:26:40 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/zfc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Intro to Sets I</title>
-      <link>/blog/an-intro-to-sets/</link>
+      <link>https://www.edugovnet.com/blog/an-intro-to-sets/</link>
       <pubDate>Wed, 15 Sep 2021 20:26:40 -0400</pubDate>
       
-      <guid>/blog/an-intro-to-sets/</guid>
+      <guid>https://www.edugovnet.com/blog/an-intro-to-sets/</guid>
       <description>In this article we introduce and discuss all of the axioms of ZFC. We introduce Cartesian products, linear and well-orders, and ordinals.</description>
     </item>
     

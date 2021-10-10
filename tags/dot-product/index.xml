@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dot Product on EduGovNet.com</title>
-    <link>/tags/dot-product/</link>
+    <link>https://www.edugovnet.com/tags/dot-product/</link>
     <description>Recent content in Dot Product on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 11:21:15 -0400</lastBuildDate><atom:link href="/tags/dot-product/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 11:21:15 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/dot-product/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spheres, Distances, Maps and More!</title>
-      <link>/blog/spheres-distances-maps-and-more/</link>
+      <link>https://www.edugovnet.com/blog/spheres-distances-maps-and-more/</link>
       <pubDate>Mon, 16 Aug 2021 11:21:15 -0400</pubDate>
       
-      <guid>/blog/spheres-distances-maps-and-more/</guid>
+      <guid>https://www.edugovnet.com/blog/spheres-distances-maps-and-more/</guid>
       <description>In this article we combine some Linear Algebra with a bit of geometry to make some real-world calculations about finding the nearest line to two or more points on a map. We&amp;rsquo;ve also implemented a tool that uses those calculations to fit a great circle to two or more points on the globe. Check it out!</description>
     </item>
     
     <item>
       <title>An Intro to the Dot Product</title>
-      <link>/blog/an-intro-to-the-dot-product/</link>
+      <link>https://www.edugovnet.com/blog/an-intro-to-the-dot-product/</link>
       <pubDate>Thu, 06 May 2021 16:34:00 -0400</pubDate>
       
-      <guid>/blog/an-intro-to-the-dot-product/</guid>
+      <guid>https://www.edugovnet.com/blog/an-intro-to-the-dot-product/</guid>
       <description>The dot product is so fundamental to linear algebra that it&amp;rsquo;s easy to take for granted that it works. Here we take a quick look at some of it&amp;rsquo;s potential by showing how it can be used to calculate the angle between two vectors.</description>
     </item>
     

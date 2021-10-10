@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zassenhaus on EduGovNet.com</title>
-    <link>/tags/zassenhaus/</link>
+    <link>https://www.edugovnet.com/tags/zassenhaus/</link>
     <description>Recent content in Zassenhaus on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 11:02:53 -0400</lastBuildDate><atom:link href="/tags/zassenhaus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 11:02:53 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/zassenhaus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zassenhaus Lemma and the Jordan Holder Theorem</title>
-      <link>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</link>
+      <link>https://www.edugovnet.com/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</link>
       <pubDate>Tue, 22 Jun 2021 11:02:53 -0400</pubDate>
       
-      <guid>/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</guid>
+      <guid>https://www.edugovnet.com/blog/zassenhaus-lemma-and-the-jordan-holder-theorem/</guid>
       <description>This entry starts out by building to Zassenhaus&#39; Lemma, and finishes by proving the Jordan-Holder theorem about subnormal sequences for finite groups. Enjoy!</description>
     </item>
     

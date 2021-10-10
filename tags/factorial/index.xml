@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Factorial on EduGovNet.com</title>
-    <link>/tags/factorial/</link>
+    <link>https://www.edugovnet.com/tags/factorial/</link>
     <description>Recent content in Factorial on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Aug 2021 08:42:22 -0400</lastBuildDate><atom:link href="/tags/factorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 08:42:22 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/factorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro to Rings and Fields</title>
-      <link>/blog/intro-to-rings-and-fields/</link>
+      <link>https://www.edugovnet.com/blog/intro-to-rings-and-fields/</link>
       <pubDate>Fri, 27 Aug 2021 08:42:22 -0400</pubDate>
       
-      <guid>/blog/intro-to-rings-and-fields/</guid>
+      <guid>https://www.edugovnet.com/blog/intro-to-rings-and-fields/</guid>
       <description>In this entry we introduce rings and fields. We establish some of their basic properties.</description>
     </item>
     

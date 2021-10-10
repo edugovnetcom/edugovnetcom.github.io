@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sets on EduGovNet.com</title>
-    <link>/tags/sets/</link>
+    <link>https://www.edugovnet.com/tags/sets/</link>
     <description>Recent content in Sets on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jun 2021 09:36:33 -0400</lastBuildDate><atom:link href="/tags/sets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 09:36:33 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/sets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Counting Orbits Sylows Theorems etc... (II)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-ii/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</link>
       <pubDate>Tue, 15 Jun 2021 09:36:33 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-ii/</guid>
       <description>We&amp;rsquo;re continuing our proofs of Sylow&amp;rsquo;s Theorems, and also continuing our efforts to count orbits, and determine the size of orbits created by the permutation groups&amp;hellip;</description>
     </item>
     
     <item>
       <title>Counting Orbits Sylows Theorems etc... (I)</title>
-      <link>/blog/counting-orbits-sylows-theorems-etc-i/</link>
+      <link>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</link>
       <pubDate>Sun, 13 Jun 2021 09:36:30 -0400</pubDate>
       
-      <guid>/blog/counting-orbits-sylows-theorems-etc-i/</guid>
+      <guid>https://www.edugovnet.com/blog/counting-orbits-sylows-theorems-etc-i/</guid>
       <description>In the previous entry, we gave a laborious proof that a group with an even number of elements has to have an element of order 2. We can do much better than that. We&amp;rsquo;ll show how by proving some famous theorems that were originally due to Sylow.</description>
     </item>
     
     <item>
       <title>Subgroups of Even Permutations Orbits Stabilizers etc...</title>
-      <link>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
+      <link>https://www.edugovnet.com/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</link>
       <pubDate>Fri, 11 Jun 2021 09:18:37 -0400</pubDate>
       
-      <guid>/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
+      <guid>https://www.edugovnet.com/blog/subgroups-of-even-permutations-orbits-stabilizers-etc/</guid>
       <description>We continue our discussion of groups and permutations, breaking down a permutation into disjoint cycles, finding a proper subgroup of even permutations in a group of order 2(2k + 1), and discussing properties of the orbits, stabilizers, fixes, etc&amp;hellip;</description>
     </item>
     
     <item>
       <title>Some of the Math of Permutations</title>
-      <link>/blog/some-of-the-math-of-permutations/</link>
+      <link>https://www.edugovnet.com/blog/some-of-the-math-of-permutations/</link>
       <pubDate>Tue, 30 Mar 2021 14:48:51 -0400</pubDate>
       
-      <guid>/blog/some-of-the-math-of-permutations/</guid>
+      <guid>https://www.edugovnet.com/blog/some-of-the-math-of-permutations/</guid>
       <description>A permutation is a function from a set into itself that is both 1 - 1 and onto. You probably know what those terms mean already, but just to refresh, a function is said to be one to one (1-1) if f(x) = f(y) implies x = y.</description>
     </item>
     
