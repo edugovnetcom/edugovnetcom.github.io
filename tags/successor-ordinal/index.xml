@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Successor Ordinal on EduGovNet.com</title>
+    <link>/tags/successor-ordinal/</link>
+    <description>Recent content in Successor Ordinal on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Sep 2021 21:18:15 -0400</lastBuildDate><atom:link href="/tags/successor-ordinal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Intro to Sets II</title>
+      <link>/blog/an-intro-to-sets-2/</link>
+      <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
+      
+      <guid>/blog/an-intro-to-sets-2/</guid>
+      <description>In this entry, we establish more results about ordinals, including proving that every well-ordered set has the order type of an ordinal. We introduce transfinite induction, Cardinality, and use the Axiom of Choice to prove that every set can be well-ordered, among other results.</description>
+    </item>
+    
+  </channel>
+</rss>

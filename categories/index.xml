@@ -6,22 +6,31 @@
     <description>Recent content in Categories on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math</title>
+      <link>/categories/math/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sets</title>
+      <link>/categories/sets/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>/categories/sets/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Fields</title>
       <link>/categories/fields/</link>
       <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
       
       <guid>/categories/fields/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>/categories/math/</link>
-      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
-      
-      <guid>/categories/math/</guid>
       <description></description>
     </item>
     

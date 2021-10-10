@@ -2,22 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/blog/an-intro-to-sets-3/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/categories/math/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/categories/sets/</loc>
+    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
+  </url><url>
+    <loc>/blog/an-intro-to-sets-2/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/cardinality-of-set/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/cardinals/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/limit-ordinal/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/ordinals/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/successor-ordinal/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/tags/transfinite-induction/</loc>
+    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
+  </url><url>
+    <loc>/blog/an-intro-to-sets/</loc>
+    <lastmod>2021-09-15T20:26:40-04:00</lastmod>
+  </url><url>
+    <loc>/tags/axiomatic-set-theory/</loc>
+    <lastmod>2021-09-15T20:26:40-04:00</lastmod>
+  </url><url>
+    <loc>/tags/order-types/</loc>
+    <lastmod>2021-09-15T20:26:40-04:00</lastmod>
+  </url><url>
+    <loc>/tags/zfc/</loc>
+    <lastmod>2021-09-15T20:26:40-04:00</lastmod>
+  </url><url>
     <loc>/tags/algebras/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
     <loc>/categories/fields/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>/categories/math/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
     <loc>/tags/matrices/</loc>
@@ -30,9 +72,6 @@
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
     <loc>/categories/rings/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
     <loc>/tags/vector-spaces/</loc>

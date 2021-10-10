@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sets on EduGovNet.com</title>
+    <link>/categories/sets/</link>
+    <description>Recent content in Sets on EduGovNet.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="/categories/sets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Intro to Sets III</title>
+      <link>/blog/an-intro-to-sets-3/</link>
+      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
+      
+      <guid>/blog/an-intro-to-sets-3/</guid>
+      <description>Here we dig into ordinal and cardinal arithmetic a little bit. We also establish the famous result (originally due to Cantor) that |S| &amp;lt; |P(S)|, i.e. that the power set of any set is larger than the set.</description>
+    </item>
+    
+    <item>
+      <title>An Intro to Sets II</title>
+      <link>/blog/an-intro-to-sets-2/</link>
+      <pubDate>Sat, 18 Sep 2021 21:18:15 -0400</pubDate>
+      
+      <guid>/blog/an-intro-to-sets-2/</guid>
+      <description>In this entry, we establish more results about ordinals, including proving that every well-ordered set has the order type of an ordinal. We introduce transfinite induction, Cardinality, and use the Axiom of Choice to prove that every set can be well-ordered, among other results.</description>
+    </item>
+    
+    <item>
+      <title>An Intro to Sets I</title>
+      <link>/blog/an-intro-to-sets/</link>
+      <pubDate>Wed, 15 Sep 2021 20:26:40 -0400</pubDate>
+      
+      <guid>/blog/an-intro-to-sets/</guid>
+      <description>In this article we introduce and discuss all of the axioms of ZFC. We introduce Cartesian products, linear and well-orders, and ordinals.</description>
+    </item>
+    
+  </channel>
+</rss>
