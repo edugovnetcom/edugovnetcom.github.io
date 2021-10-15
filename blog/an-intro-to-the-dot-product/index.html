@@ -157,15 +157,15 @@
 			<img src="/images/painted_dots.jpg" alt="An Intro to the Dot Product">
 		</figure><div class="content post__content clearfix">
 			<p><span class="first-letter">T</span>he dot product is so fundamental to linear algebra that it’s easy to take for granted that it works. Here we take a quick look at some of it’s potential by showing how it can be used to calculate the angle between two vectors.</p>
-<p>We’re going to show why <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.204ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 8268.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<p>We’re going to show why <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.204ex" height="2.609ex" style="vertical-align: -0.705ex;" viewBox="0 -820.1 8268.5 1123.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">\vec{x} \cdot \vec{y} = \cos{\theta}\lVert \vec{x} \rVert \lVert \vec{y} \rVert </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-3D" x="2117" y="0"></use>
 <g transform="translate(3173,0)">
@@ -177,30 +177,30 @@
  <use xlink:href="#MJMAIN-2225" x="5149" y="0"></use>
 <g transform="translate(5650,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="6222" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="6723" y="0"></use>
 <g transform="translate(7223,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="7768" y="0"></use>
 </g>
 </svg></span>. Our proof will be easier than the one that (as of the time of writing) is given on <a href="https://en.wikipedia.org/wiki/Dot_product">Wikipedia</a>. It will also be more direct. We’ll do this by considering a few separate cases.
-Before we get started we’ll mention that the vectors we’re dealing with live in <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.897ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 1247.1 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
+Before we get started we’ll mention that the vectors we’re dealing with live in <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.897ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 1247.1 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-2-Title">
 <title id="MathJax-SVG-2-Title">\mathbb{R}^n</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJAMS-52" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-6E" x="1021" y="581"></use>
 </g>
-</svg></span>, which means that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-3-Title">
+</svg></span>, which means that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-3-Title">
 <title id="MathJax-SVG-3-Title">\vec{x}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span> is an <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.351ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 4025.9 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-4-Title">
+</svg></span> is an <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.351ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 4025.9 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-4-Title">
 <title id="MathJax-SVG-4-Title">n-tuple</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-6E" x="0" y="0"></use>
@@ -211,7 +211,7 @@ Before we get started we’ll mention that the vectors we’re dealing with live
  <use xlink:href="#MJMATHI-6C" x="3260" y="0"></use>
  <use xlink:href="#MJMATHI-65" x="3559" y="0"></use>
 </g>
-</svg></span> (or array) of real numbers. We’ll denote the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.821ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 2506.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-5-Title">
+</svg></span> (or array) of real numbers. We’ll denote the <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.821ex" height="2.109ex" style="vertical-align: -0.305ex;" viewBox="0 -777 2506.4 908.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-5-Title">
 <title id="MathJax-SVG-5-Title">i-th</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-69" x="0" y="0"></use>
@@ -219,43 +219,43 @@ Before we get started we’ll mention that the vectors we’re dealing with live
  <use xlink:href="#MJMATHI-74" x="1568" y="0"></use>
  <use xlink:href="#MJMATHI-68" x="1929" y="0"></use>
 </g>
-</svg></span> component of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-6-Title">
+</svg></span> component of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-6-Title">
 <title id="MathJax-SVG-6-Title">\vec{x}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span> as <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.129ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 916.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-7-Title">
+</svg></span> as <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.129ex" height="1.709ex" style="vertical-align: -0.505ex;" viewBox="0 -518.7 916.8 735.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-7-Title">
 <title id="MathJax-SVG-7-Title">x_i</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMATHI-69" x="809" y="-213"></use>
 </g>
 </svg></span>.
-The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-8-Title">
+The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-8-Title">
 <title id="MathJax-SVG-8-Title">\vec{x}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 544.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-9-Title">
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 544.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-9-Title">
 <title id="MathJax-SVG-9-Title">\vec{y}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
-</svg></span> (written <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.273ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 1839.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-10-Title">
+</svg></span> (written <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.273ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 1839.9 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-10-Title">
 <title id="MathJax-SVG-10-Title">\vec{x} \cdot \vec{y}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-</svg></span> ) <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.223ex" height="6.009ex" style="vertical-align: -2.505ex;" viewBox="0 -1508.9 4401.8 2587.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-11-Title">
+</svg></span> ) <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.223ex" height="5.809ex" style="vertical-align: -2.505ex;" viewBox="0 -1422.8 4401.8 2501.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-11-Title">
 <title id="MathJax-SVG-11-Title">:= \sum\limits_{i=1}^{n} {x_i y_i}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-3A"></use>
@@ -279,7 +279,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </svg></span>. Recall (or prove, if you don’t remember) that</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="9.509ex" style="vertical-align: -4.171ex; max-width: 36000px;" viewBox="0 -2298.3 25833.2 4094.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-12-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="9.209ex" style="vertical-align: -4.005ex; max-width: 60000px;" viewBox="0 -2240.9 25833.2 3965.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-12-Title">
 <title id="MathJax-SVG-12-Title">
 \begin{align}
 &amp;\sqrt{ \vec{x} \cdot \vec{x} } &amp;&amp;= \lVert \vec{x} \rVert \geq 0 \tag{1}\label{1} \\ 
@@ -289,97 +289,97 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-1" transform="translate(0,1273)">
+<g id="mjx-eqn-1" transform="translate(0,1284)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-31" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
-<g id="mjx-eqn-2" transform="translate(0,-78)">
+<g id="mjx-eqn-2" transform="translate(0,-67)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-32" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
-<g id="mjx-eqn-3" transform="translate(0,-1429)">
+<g id="mjx-eqn-3" transform="translate(0,-1418)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-33" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(5116,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,1273)">
- <use xlink:href="#MJMAIN-221A" x="0" y="45"></use>
-<rect stroke="none" width="1867" height="60" x="833" y="786"></rect>
+<g transform="translate(5120,0)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,1284)">
+ <use xlink:href="#MJMAIN-221A" x="0" y="23"></use>
+<rect stroke="none" width="1867" height="60" x="833" y="764"></rect>
 <g transform="translate(833,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
-<g transform="translate(0,-78)">
+<g transform="translate(0,-67)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(0,-1429)">
+<g transform="translate(0,-1418)">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="389" y="0"></use>
 <g transform="translate(1030,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="1602" y="0"></use>
  <use xlink:href="#MJMAIN-22C5" x="2214" y="0"></use>
 <g transform="translate(2714,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </g>
-<g transform="translate(5248,0)">
-<g transform="translate(0,1273)">
+<g transform="translate(5241,0)">
+<g transform="translate(0,1284)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="1334" y="0"></use>
 <g transform="translate(1834,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2407" y="0"></use>
  <use xlink:href="#MJMAIN-2265" x="3185" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="4241" y="0"></use>
 </g>
-<g transform="translate(0,-78)">
+<g transform="translate(0,-67)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 <g transform="translate(1334,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="2100" y="0"></use>
 <g transform="translate(2601,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
-<g transform="translate(0,-1429)">
+<g transform="translate(0,-1418)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="1334" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1974" y="0"></use>
 <g transform="translate(2364,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="3158" y="0"></use>
 <g transform="translate(3659,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="4203" y="0"></use>
  <use xlink:href="#MJMAIN-2C" x="4593" y="0"></use>
@@ -399,7 +399,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </svg></span></p>
 <p>From (1) and (3) we get}</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-13-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.809ex" style="vertical-align: -0.805ex; max-width: 60000px;" viewBox="0 -863.1 25833.2 1209.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-13-Title">
 <title id="MathJax-SVG-13-Title">
 \lVert \alpha \vec{x} \rVert = | \alpha | \lVert \vec{x} \rVert \tag{4}\label{4}
 </title>
@@ -411,14 +411,14 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(9929,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(9932,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,-25)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="500" y="0"></use>
 <g transform="translate(1141,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1713" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="2491" y="0"></use>
@@ -428,7 +428,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2225" x="4745" y="0"></use>
 <g transform="translate(5246,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="5818" y="0"></use>
 </g>
@@ -437,7 +437,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </svg></span></p>
 <p>Finally, we notice that the dot product distributes
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.843ex" style="vertical-align: -0.838ex; max-width: 36000px;" viewBox="0 -863.1 25833.2 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-14-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="2.809ex" style="vertical-align: -0.805ex; max-width: 60000px;" viewBox="0 -863.1 25833.2 1209.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-14-Title">
 <title id="MathJax-SVG-14-Title"> \vec{x} \cdot ( \vec{y} + \vec{z} ) = (\vec{x} \cdot \vec{y}) + (\vec{x} \cdot \vec{z}) \tag{5}\label{5} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
@@ -447,45 +447,45 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(7014,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(7017,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,-25)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1295" y="0"></use>
 <g transform="translate(1684,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="2451" y="0"></use>
 <g transform="translate(3452,0)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="3980" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="4648" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="5704" y="0"></use>
 <g transform="translate(6093,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="6888" y="0"></use>
 <g transform="translate(7389,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="7933" y="0"></use>
  <use xlink:href="#MJMAIN-2B" x="8545" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="9546" y="0"></use>
 <g transform="translate(9935,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="10730" y="0"></use>
 <g transform="translate(11231,0)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="11759" y="0"></use>
 </g>
@@ -493,26 +493,26 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </svg></span></p>
-<p>Hopefully that was all review. Now let’s consider case (a), the simplest case, where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.18ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 3091.5 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-15-Title">
+<p>Hopefully that was all review. Now let’s consider case (a), the simplest case, where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.18ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 3091.5 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-15-Title">
 <title id="MathJax-SVG-15-Title"> \vec{y} = \alpha \vec{x} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-3D" x="822" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="1878" y="0"></use>
 <g transform="translate(2518,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
-</svg></span> for some <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.749ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2475.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-16-Title">
+</svg></span> for some <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.749ex" height="1.909ex" style="vertical-align: -0.205ex;" viewBox="0 -733.9 2475.1 822.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-16-Title">
 <title id="MathJax-SVG-16-Title"> \alpha &gt; 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3E" x="918" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1974" y="0"></use>
 </g>
-</svg></span>. In this case <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.815ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 7670.3 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-17-Title">
+</svg></span>. In this case <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.815ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 7670.3 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-17-Title">
 <title id="MathJax-SVG-17-Title"> \theta = 0 \Rightarrow \cos{\theta} = 1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B8" x="0" y="0"></use>
@@ -528,31 +528,31 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-3D" x="6113" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="7169" y="0"></use>
 </g>
-</svg></span>, so we get <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.651ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 6738.6 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-18-Title">
+</svg></span>, so we get <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15.651ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 6738.6 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-18-Title">
 <title id="MathJax-SVG-18-Title"> \vec{x} \cdot \vec{y} = \vec{x} \cdot \alpha \vec{x} = </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-3D" x="2117" y="0"></use>
 <g transform="translate(3173,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="3968" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="4469" y="0"></use>
 <g transform="translate(5109,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-3D" x="5960" y="0"></use>
 </g>
 </svg></span> by equations (3) and (1) above</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.329ex" height="9.509ex" style="vertical-align: -4.171ex;" viewBox="0 -2298.3 7891.8 4094.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-19-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.313ex" height="9.409ex" style="vertical-align: -4.105ex;" viewBox="0 -2283.9 7884.9 4051.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-19-Title">
 <title id="MathJax-SVG-19-Title">
 \begin{align}
 &amp;\alpha {\lVert \vec{x} \rVert}^2 &amp;&amp;= \\ 
@@ -562,14 +562,14 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,1251)">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
 <g transform="translate(640,0)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="2225" y="675"></use>
@@ -582,13 +582,13 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2225" x="1197" y="0"></use>
 <g transform="translate(1698,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2270" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="2771" y="0"></use>
 <g transform="translate(3271,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="3844" y="0"></use>
 </g>
@@ -596,7 +596,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1573" y="0"></use>
@@ -608,7 +608,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-29" x="4122" y="0"></use>
 </g>
 </g>
-<g transform="translate(6501,0)">
+<g transform="translate(6494,0)">
 <g transform="translate(0,1251)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 </g>
@@ -623,7 +623,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </svg></span></p>
 <p>by equation (4)</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.07ex" height="9.176ex" style="vertical-align: -4.005ex;" viewBox="0 -2226.5 8641.1 3950.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-20-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.054ex" height="9.009ex" style="vertical-align: -3.905ex;" viewBox="0 -2197.8 8634.1 3879" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-20-Title">
 <title id="MathJax-SVG-20-Title">
 \begin{align}
 &amp;\lVert \vec{x} \rVert \lVert \alpha \vec{x} \rVert &amp;&amp;= \\ 
@@ -633,19 +633,19 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,1326)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="1573" y="0"></use>
  <use xlink:href="#MJMATHI-3B1" x="2074" y="0"></use>
 <g transform="translate(2714,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="3287" y="0"></use>
 </g>
@@ -653,13 +653,13 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="1573" y="0"></use>
 <g transform="translate(2074,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2618" y="0"></use>
 </g>
@@ -667,13 +667,13 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="1573" y="0"></use>
 <g transform="translate(2074,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2618" y="0"></use>
 <g transform="translate(3285,0)">
@@ -684,7 +684,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMATHI-3B8" x="4791" y="0"></use>
 </g>
 </g>
-<g transform="translate(7250,0)">
+<g transform="translate(7243,0)">
 <g transform="translate(0,1326)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 </g>
@@ -695,21 +695,21 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 </g>
 </g>
 </svg></span></p>
-<p>So that case is taken care of. Case (b) is similar, but this time <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.749ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2475.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-21-Title">
+<p>So that case is taken care of. Case (b) is similar, but this time <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.749ex" height="1.909ex" style="vertical-align: -0.205ex;" viewBox="0 -733.9 2475.1 822.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-21-Title">
 <title id="MathJax-SVG-21-Title"> \alpha &lt; 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3C" x="918" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1974" y="0"></use>
 </g>
-</svg></span>. The proof is nearly exactly like it was last time, except that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.521ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 2377.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-22-Title">
+</svg></span>. The proof is nearly exactly like it was last time, except that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.521ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 2377.1 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-22-Title">
 <title id="MathJax-SVG-22-Title"> \theta = \pi </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B8" x="0" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="747" y="0"></use>
  <use xlink:href="#MJMATHI-3C0" x="1803" y="0"></use>
 </g>
-</svg></span> (i.e. <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.542ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1955.4 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-23-Title">
+</svg></span> (i.e. <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.542ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 1955.4 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-23-Title">
 <title id="MathJax-SVG-23-Title">180^{\circ} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-31"></use>
@@ -717,7 +717,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-30" x="1001" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-2218" x="2123" y="557"></use>
 </g>
-</svg></span> ), so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.586ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 8002.4 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-24-Title">
+</svg></span> ), so <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="18.586ex" height="2.109ex" style="vertical-align: -0.305ex;" viewBox="0 -777 8002.4 908.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-24-Title">
 <title id="MathJax-SVG-24-Title"> \cos{\theta} = \cos{\pi} = -1 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-63"></use>
@@ -735,7 +735,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-2212" x="6723" y="0"></use>
  <use xlink:href="#MJMAIN-31" x="7501" y="0"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.176ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 3950.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-25-Title">
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.176ex" height="2.609ex" style="vertical-align: -0.705ex;" viewBox="0 -820.1 3950.6 1123.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-25-Title">
 <title id="MathJax-SVG-25-Title"> \alpha = -| \alpha| </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
@@ -746,7 +746,7 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJMAIN-7C" x="3672" y="0"></use>
 </g>
 </svg></span>. So that case also works out.</p>
-<p>Now we can assume that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.782ex" height="2.676ex" style="vertical-align: -0.838ex;" viewBox="0 -791.3 4211.6 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-26-Title">
+<p>Now we can assume that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.782ex" height="2.509ex" style="vertical-align: -0.705ex;" viewBox="0 -777 4211.6 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-26-Title">
 <title id="MathJax-SVG-26-Title"> 0 \lneq \theta \lneq \pi </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
@@ -755,19 +755,19 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
  <use xlink:href="#MJAMS-2A87" x="2581" y="0"></use>
  <use xlink:href="#MJMATHI-3C0" x="3638" y="0"></use>
 </g>
-</svg></span>, which means that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-27-Title">
+</svg></span>, which means that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-27-Title">
 <title id="MathJax-SVG-27-Title">\vec{x} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 544.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-28-Title">
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 544.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-28-Title">
 <title id="MathJax-SVG-28-Title"> \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
-</svg></span> lie in a two-dimensional plane. We’ll first consider case (c), where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.967ex" height="3.176ex" style="vertical-align: -1.171ex;" viewBox="0 -863.1 2569.1 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-29-Title">
+</svg></span> lie in a two-dimensional plane. We’ll first consider case (c), where <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.967ex" height="2.809ex" style="vertical-align: -1.005ex;" viewBox="0 -777 2569.1 1209.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-29-Title">
 <title id="MathJax-SVG-29-Title"> \theta = \frac{\pi}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B8" x="0" y="0"></use>
@@ -775,95 +775,95 @@ The dot product of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999
 <g transform="translate(1525,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="525" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="640"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-589"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="564"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-513"></use>
 </g>
 </g>
 </g>
 </svg></span>. Consider the right triangle</p>
 <p><img src="/images/dot_prod_right_angle.png" alt="Right Angle Dot Product" title="Dot Product of a Right Angle"></p>
-<p>generated by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-30-Title">
+<p>generated by <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-30-Title">
 <title id="MathJax-SVG-30-Title"> \vec{x} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 544.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-31-Title">
+</svg></span>, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 544.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-31-Title">
 <title id="MathJax-SVG-31-Title">\vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
-</svg></span>, and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.435ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 2339.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-32-Title">
+</svg></span>, and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.435ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 2339.9 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-32-Title">
 <title id="MathJax-SVG-32-Title"> \vec{x} - \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-2212" x="794" y="0"></use>
 <g transform="translate(1795,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-</svg></span>. Let’s calculate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.814ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 3794.8 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-33-Title">
+</svg></span>. Let’s calculate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.814ex" height="3.109ex" style="vertical-align: -0.705ex;" viewBox="0 -1035.3 3794.8 1338.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-33-Title">
 <title id="MathJax-SVG-33-Title"> {\lVert \vec{x} - \vec{y} \rVert}^2 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="1295" y="0"></use>
 <g transform="translate(2295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2840" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="676"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="675"></use>
 </g>
 </svg></span> two different ways. The first is from equation (1) above
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.079ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 12089.5 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-34-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.079ex" height="3.109ex" style="vertical-align: -0.705ex;" viewBox="0 -1035.3 12089.5 1338.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-34-Title">
 <title id="MathJax-SVG-34-Title"> {\lVert \vec{x} - \vec{y} \rVert}^2 = (\vec{x} - \vec{y}) \cdot (\vec{x} - \vec{y}) </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="1295" y="0"></use>
 <g transform="translate(2295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2840" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="676"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="675"></use>
  <use xlink:href="#MJMAIN-3D" x="4072" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="5128" y="0"></use>
 <g transform="translate(5518,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="6313" y="0"></use>
 <g transform="translate(7313,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="7858" y="0"></use>
  <use xlink:href="#MJMAIN-22C5" x="8469" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="8970" y="0"></use>
 <g transform="translate(9360,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="10154" y="0"></use>
 <g transform="translate(11155,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="11700" y="0"></use>
 </g>
 </svg></span>
-by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.557ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 3253.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-35-Title">
+by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.557ex" height="2.009ex" style="vertical-align: -0.305ex;" viewBox="0 -733.9 3253.6 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-35-Title">
 <title id="MathJax-SVG-35-Title">\alpha = -1</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
@@ -872,7 +872,7 @@ by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/19
  <use xlink:href="#MJMAIN-31" x="2753" y="0"></use>
 </g>
 </svg></span>) we get</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.032ex" height="6.176ex" style="vertical-align: -2.505ex;" viewBox="0 -1580.7 10347 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-36-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24.016ex" height="5.909ex" style="vertical-align: -2.405ex;" viewBox="0 -1508.9 10340.1 2544.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-36-Title">
 <title id="MathJax-SVG-36-Title">
 \begin{align}
 &amp;(\vec{x} - \vec{y}) \cdot ( \vec{x} - \vec{y} ) = \\ 
@@ -881,63 +881,63 @@ by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/19
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,651)">
  <use xlink:href="#MJMAIN-28" x="0" y="0"></use>
 <g transform="translate(389,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="1184" y="0"></use>
 <g transform="translate(2184,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="2729" y="0"></use>
  <use xlink:href="#MJMAIN-22C5" x="3341" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="3841" y="0"></use>
 <g transform="translate(4231,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="5026" y="0"></use>
 <g transform="translate(6026,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="6571" y="0"></use>
  <use xlink:href="#MJMAIN-3D" x="7238" y="0"></use>
 </g>
 <g transform="translate(0,-700)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1295" y="0"></use>
 <g transform="translate(1684,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="2479" y="0"></use>
 <g transform="translate(3480,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="4024" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="4636" y="0"></use>
 <g transform="translate(5637,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="6403" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="6904" y="0"></use>
 <g transform="translate(7294,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="8088" y="0"></use>
 <g transform="translate(9089,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="9633" y="0"></use>
 </g>
@@ -946,62 +946,62 @@ by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/19
 </g>
 </svg></span></p>
 <p>By applying (2) and (5) both a couple of times, we get that it’s equal to</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.663ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 8466 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-37-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.663ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 8466 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-37-Title">
 <title id="MathJax-SVG-37-Title"> \vec{x} \cdot \vec{x} - 2\vec{x} \cdot \vec{y} + \vec{y} \cdot \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="2090" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="3090" y="0"></use>
 <g transform="translate(3591,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="4386" y="0"></use>
 <g transform="translate(4886,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="5653" y="0"></use>
 <g transform="translate(6654,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="7420" y="0"></use>
 <g transform="translate(7921,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </svg></span></p>
-<p>Now let’s calculate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.814ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 3794.8 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-38-Title">
+<p>Now let’s calculate <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.814ex" height="3.109ex" style="vertical-align: -0.705ex;" viewBox="0 -1035.3 3794.8 1338.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-38-Title">
 <title id="MathJax-SVG-38-Title"> {\lVert \vec{x} - \vec{y} \rVert}^2 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="1295" y="0"></use>
 <g transform="translate(2295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2840" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="676"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="4724" y="675"></use>
 </g>
-</svg></span> using the Pythagorean Theorem. Using that we get that it’s equal to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.193ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 5249.7 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-39-Title">
+</svg></span> using the Pythagorean Theorem. Using that we get that it’s equal to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.193ex" height="3.109ex" style="vertical-align: -0.705ex;" viewBox="0 -1035.3 5249.7 1338.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-39-Title">
 <title id="MathJax-SVG-39-Title"> { \lVert \vec{x} \rVert }^2 + { \lVert \vec{y} \rVert }^2 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="2225" y="675"></use>
@@ -1010,36 +1010,36 @@ by (5) and (3) (with <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/19
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1044" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="2185" y="676"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="2185" y="675"></use>
 </g>
 </g>
-</svg></span>, which from (1) is equal to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.387ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 4902.7 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-40-Title">
+</svg></span>, which from (1) is equal to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.387ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 4902.7 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-40-Title">
 <title id="MathJax-SVG-40-Title"> \vec{x} \cdot \vec{x} + \vec{y} \cdot \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="2090" y="0"></use>
 <g transform="translate(3090,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="3857" y="0"></use>
 <g transform="translate(4358,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </svg></span>.
 Setting
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="27.513ex" height="5.843ex" style="vertical-align: -2.338ex;" viewBox="0 -1508.9 11845.8 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-41-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="27.497ex" height="5.709ex" style="vertical-align: -2.305ex;" viewBox="0 -1465.9 11838.9 2458.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-41-Title">
 <title id="MathJax-SVG-41-Title">
 \begin{align}
 &amp;\vec{x} \cdot \vec{x} - 2\vec{x} \cdot \vec{y} + \vec{y} \cdot \vec{y} &amp;&amp;= \\ 
@@ -1048,58 +1048,58 @@ Setting
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,606)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2212" x="2090" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="3090" y="0"></use>
 <g transform="translate(3591,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="4386" y="0"></use>
 <g transform="translate(4886,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="5653" y="0"></use>
 <g transform="translate(6654,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="7420" y="0"></use>
 <g transform="translate(7921,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 <g transform="translate(0,-700)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="2090" y="0"></use>
 <g transform="translate(3090,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="3857" y="0"></use>
 <g transform="translate(4358,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </g>
-<g transform="translate(10455,0)">
+<g transform="translate(10448,0)">
 <g transform="translate(0,606)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 </g>
@@ -1108,7 +1108,7 @@ Setting
 </g>
 </svg></span></p>
 <p>we get that</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.934ex" height="5.843ex" style="vertical-align: -2.338ex;" viewBox="0 -1508.9 7721.4 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-42-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.917ex" height="5.709ex" style="vertical-align: -2.305ex;" viewBox="0 -1465.9 7714.5 2458.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-42-Title">
 <title id="MathJax-SVG-42-Title">
 \begin{align}
 &amp;-2\vec{x} \cdot \vec{y} &amp;&amp;= 0 \\ 
@@ -1117,34 +1117,34 @@ Setting
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
+<g transform="translate(-18,0)">
 <g transform="translate(0,606)">
  <use xlink:href="#MJMAIN-2212" x="222" y="0"></use>
  <use xlink:href="#MJMAIN-32" x="1222" y="0"></use>
 <g transform="translate(1723,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="2518" y="0"></use>
 <g transform="translate(3018,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 <g transform="translate(0,-700)">
  <use xlink:href="#MJMAIN-21D2" x="277" y="0"></use>
 <g transform="translate(1556,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="2350" y="0"></use>
 <g transform="translate(2851,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </g>
-<g transform="translate(5552,0)">
+<g transform="translate(5545,0)">
 <g transform="translate(0,606)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1334" y="0"></use>
@@ -1157,7 +1157,7 @@ Setting
 </g>
 </g>
 </svg></span></p>
-<p>So case (c) has shown us that if <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.967ex" height="3.176ex" style="vertical-align: -1.171ex;" viewBox="0 -863.1 2569.1 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-43-Title">
+<p>So case (c) has shown us that if <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.967ex" height="2.809ex" style="vertical-align: -1.005ex;" viewBox="0 -777 2569.1 1209.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-43-Title">
 <title id="MathJax-SVG-43-Title"> \theta = \frac{\pi}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B8" x="0" y="0"></use>
@@ -1165,76 +1165,76 @@ Setting
 <g transform="translate(1525,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="525" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="640"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-589"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="564"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-513"></use>
 </g>
 </g>
 </g>
-</svg></span>, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.534ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 3674.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-44-Title">
+</svg></span>, then <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.534ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 3674.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-44-Title">
 <title id="MathJax-SVG-44-Title"> \vec{x} \cdot \vec{y} = 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-3D" x="2117" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="3173" y="0"></use>
 </g>
-</svg></span>. In fact, because the Pythagorean Theorem works both ways (i.e. it is really an “if and only if” statement), and because the algebra works both ways, we can actually show that the dot product equals 0 if and only if the angle equals <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.778ex" height="3.176ex" style="vertical-align: -1.171ex;" viewBox="0 -863.1 765.5 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-45-Title">
+</svg></span>. In fact, because the Pythagorean Theorem works both ways (i.e. it is really an “if and only if” statement), and because the algebra works both ways, we can actually show that the dot product equals 0 if and only if the angle equals <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.778ex" height="2.809ex" style="vertical-align: -1.005ex;" viewBox="0 -777 765.5 1209.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-45-Title">
 <title id="MathJax-SVG-45-Title">\frac{\pi}{2} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="525" height="60" x="0" y="220"></rect>
- <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="640"></use>
- <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-589"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMATHI-3C0" x="84" y="564"></use>
+ <use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="121" y="-513"></use>
 </g>
 </g>
 </svg></span>.
 Now we consider case (d), the final case.</p>
 <p><img src="/images/dot_prod_alpha_beta.png" alt="Dot Product of alpha and beta" title="Dot product of alpha and beta"></p>
-<p>In the above image, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.228ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 528.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-46-Title">
+<p>In the above image, <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.228ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 528.6 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-46-Title">
 <title id="MathJax-SVG-46-Title"> \vec{z} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
-</svg></span> is at a right angle to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-47-Title">
+</svg></span> is at a right angle to <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-47-Title">
 <title id="MathJax-SVG-47-Title"> \vec{x} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span>, and is in the two-dimensional plane containing <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-48-Title">
+</svg></span>, and is in the two-dimensional plane containing <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-48-Title">
 <title id="MathJax-SVG-48-Title"> \vec{x}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 544.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-49-Title">
+</svg></span> and <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 544.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-49-Title">
 <title id="MathJax-SVG-49-Title"> \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </svg></span>. We notice that we can set
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.843ex" style="vertical-align: -2.338ex; max-width: 36000px;" viewBox="0 -1508.9 25833.2 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-50-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.109ex" style="vertical-align: -2.005ex; max-width: 60000px;" viewBox="0 -1336.7 25833.2 2199.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-50-Title">
 <title id="MathJax-SVG-50-Title"> \vec{z} := -(\frac{\vec{x} \cdot \vec{y}}{\vec{x} \cdot \vec{x}}) \vec{x} + \vec{y} \tag{6}\label{6} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-6" transform="translate(0,-98)">
+<g id="mjx-eqn-6" transform="translate(0,-94)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-36" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(8955,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,-98)">
+<g transform="translate(8959,0)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,-94)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 <g transform="translate(806,0)">
  <use xlink:href="#MJMAIN-3A"></use>
  <use xlink:href="#MJMAIN-3D" x="278" y="0"></use>
@@ -1244,22 +1244,22 @@ Now we consider case (d), the final case.</p>
 <g transform="translate(3309,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1267,12 +1267,12 @@ Now we consider case (d), the final case.</p>
  <use xlink:href="#MJMAIN-29" x="5537" y="0"></use>
 <g transform="translate(5926,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="6721" y="0"></use>
 <g transform="translate(7722,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </g>
@@ -1280,7 +1280,7 @@ Now we consider case (d), the final case.</p>
 </g>
 </svg></span>
 and from that we get
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.331ex" height="14.843ex" style="vertical-align: -6.838ex;" viewBox="0 -3446.4 12197.8 6390.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-51-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.314ex" height="13.709ex" style="vertical-align: -6.305ex;" viewBox="0 -3188.1 12190.9 5902.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-51-Title">
 <title id="MathJax-SVG-51-Title">
 \begin{align}
 \vec{z} \cdot \vec{x} &amp;= (-(\frac{\vec{x} \cdot \vec{y}}{\vec{x} \cdot \vec{x}}) \vec{x} + \vec{y}) \cdot \vec{x} \\ 
@@ -1290,19 +1290,19 @@ and from that we get
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,1832)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,1747)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="750" y="0"></use>
 <g transform="translate(1251,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
-<g transform="translate(1813,0)">
-<g transform="translate(0,1832)">
+<g transform="translate(1806,0)">
+<g transform="translate(0,1747)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1334" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="1723" y="0"></use>
@@ -1310,22 +1310,22 @@ and from that we get
 <g transform="translate(2891,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1333,43 +1333,43 @@ and from that we get
  <use xlink:href="#MJMAIN-29" x="5119" y="0"></use>
 <g transform="translate(5509,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="6303" y="0"></use>
 <g transform="translate(7304,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-29" x="7848" y="0"></use>
  <use xlink:href="#MJMAIN-22C5" x="8460" y="0"></use>
 <g transform="translate(8961,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
-<g transform="translate(0,-728)">
+<g transform="translate(0,-636)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="1334" y="0"></use>
  <use xlink:href="#MJMAIN-2212" x="1723" y="0"></use>
 <g transform="translate(2502,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1377,25 +1377,25 @@ and from that we get
  <use xlink:href="#MJMAIN-29" x="4730" y="0"></use>
 <g transform="translate(5119,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="5914" y="0"></use>
 <g transform="translate(6414,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="7209" y="0"></use>
 <g transform="translate(8210,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-22C5" x="9005" y="0"></use>
 <g transform="translate(9505,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(0,-2610)">
+<g transform="translate(0,-2434)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
  <use xlink:href="#MJMAIN-30" x="1334" y="0"></use>
 </g>
@@ -1404,47 +1404,47 @@ and from that we get
 </g>
 </svg></span></p>
 <p>and
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.843ex" style="vertical-align: -2.338ex; max-width: 36000px;" viewBox="0 -1508.9 25833.2 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-52-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.109ex" style="vertical-align: -2.005ex; max-width: 60000px;" viewBox="0 -1336.7 25833.2 2199.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-52-Title">
 <title id="MathJax-SVG-52-Title"> \vec{y} = \vec{z} + ( \frac{ \vec{x} \cdot \vec{y} }{ \vec{x} \cdot \vec{x} } ) \vec{x} \tag{7}\label{7} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-7" transform="translate(0,-98)">
+<g id="mjx-eqn-7" transform="translate(0,-94)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-37" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(9484,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,-98)">
+<g transform="translate(9487,0)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,-94)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-3D" x="822" y="0"></use>
 <g transform="translate(1878,0)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2B" x="2629" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="3630" y="0"></use>
 <g transform="translate(4019,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1452,7 +1452,7 @@ and from that we get
  <use xlink:href="#MJMAIN-29" x="6247" y="0"></use>
 <g transform="translate(6636,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1460,59 +1460,59 @@ and from that we get
 </g>
 </svg></span>
 so we’ve shown that we can make this work.
-Now we’re going to re-write this slightly. We’re assuming that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 2407.1 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-53-Title">
+Now we’re going to re-write this slightly. We’re assuming that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.591ex" height="3.009ex" style="vertical-align: -0.705ex;" viewBox="0 -992.3 2407.1 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-53-Title">
 <title id="MathJax-SVG-53-Title"> \vec{x} \neq \vec{0} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-2260" x="850" y="0"></use>
 <g transform="translate(1906,0)">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="485" y="259"></use>
+ <use xlink:href="#MJMAIN-20D7" x="485" y="216"></use>
 </g>
 </g>
-</svg></span>, but we can’t say that for sure about <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.228ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 528.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-54-Title">
+</svg></span>, but we can’t say that for sure about <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.228ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 528.6 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-54-Title">
 <title id="MathJax-SVG-54-Title"> \vec{z} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
 </svg></span>, but we can still rewrite (7) as
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.505ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-55-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.709ex" style="vertical-align: -2.305ex; max-width: 60000px;" viewBox="0 -1465.9 25833.2 2458.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-55-Title">
 <title id="MathJax-SVG-55-Title"> \vec{y} = \frac{ \vec{x} \cdot \vec{y} }{ \vec{x} \cdot \vec{x} } \lVert \vec{x} \rVert (\frac{ \vec{x} }{ \lVert \vec{x} \rVert }) + \vec{z} \tag{8}\label{8}</title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-8" transform="translate(0,22)">
+<g id="mjx-eqn-8" transform="translate(0,32)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-38" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(8016,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,22)">
+<g transform="translate(8020,0)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,32)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-3D" x="822" y="0"></use>
 <g transform="translate(1600,0)">
 <g transform="translate(397,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
@@ -1520,7 +1520,7 @@ Now we’re going to re-write this slightly. We’re assuming that <span class="
  <use xlink:href="#MJMAIN-2225" x="4106" y="0"></use>
 <g transform="translate(4606,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="5179" y="0"></use>
  <use xlink:href="#MJMAIN-28" x="5679" y="0"></use>
@@ -1529,13 +1529,13 @@ Now we’re going to re-write this slightly. We’re assuming that <span class="
 <rect stroke="none" width="1693" height="60" x="0" y="220"></rect>
 <g transform="translate(560,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-699)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
 </g>
@@ -1545,135 +1545,135 @@ Now we’re going to re-write this slightly. We’re assuming that <span class="
  <use xlink:href="#MJMAIN-2B" x="8614" y="0"></use>
 <g transform="translate(9615,0)">
  <use xlink:href="#MJMATHI-7A" x="1" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="528" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="528" y="-8"></use>
 </g>
 </g>
 </g>
 </g>
 </g>
 </svg></span>
-Using equation (8) with the above picture we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.488ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 640.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-56-Title">
+Using equation (8) with the above picture we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.488ex" height="1.409ex" style="vertical-align: -0.205ex;" viewBox="0 -518.7 640.5 606.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-56-Title">
 <title id="MathJax-SVG-56-Title"> \alpha </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
 </g>
-</svg></span>, the length of the component of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 544.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-57-Title">
+</svg></span>, the length of the component of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264ex" height="2.409ex" style="vertical-align: -0.605ex;" viewBox="0 -777 544.4 1037.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-57-Title">
 <title id="MathJax-SVG-57-Title"> \vec{y} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
-</svg></span> in the direction of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 572.5 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-58-Title">
+</svg></span> in the direction of <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="2.009ex" style="vertical-align: -0.205ex;" viewBox="0 -777 572.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-58-Title">
 <title id="MathJax-SVG-58-Title"> \vec{x} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </svg></span>, is equal to</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.829ex" height="5.676ex" style="vertical-align: -2.005ex;" viewBox="0 -1580.7 3801.4 2443.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-59-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.829ex" height="5.209ex" style="vertical-align: -1.805ex;" viewBox="0 -1465.9 3801.4 2242.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-59-Title">
 <title id="MathJax-SVG-59-Title"> \frac{ \vec{x} \cdot \vec{y} }{ \vec{x} \cdot \vec{x} } \lVert \vec{x} \rVert </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1987" height="60" x="0" y="220"></rect>
-<g transform="translate(74,725)">
+<g transform="translate(74,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(60,-771)">
+<g transform="translate(60,-686)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
 </g>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2227" y="0"></use>
 <g transform="translate(2728,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="3300" y="0"></use>
 </g>
 </svg></span></p>
 <p>which, when combined with equation (1) from above, we see is equal to</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.109ex" height="6.343ex" style="vertical-align: -2.671ex;" viewBox="0 -1580.7 2199.9 2730.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-60-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.109ex" height="5.809ex" style="vertical-align: -2.405ex;" viewBox="0 -1465.9 2199.9 2501.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-60-Title">
 <title id="MathJax-SVG-60-Title"> \frac{ \vec{x} \cdot \vec{y}} {\lVert \vec{x} \rVert} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1959" height="60" x="0" y="220"></rect>
-<g transform="translate(60,725)">
+<g transform="translate(60,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(193,-771)">
+<g transform="translate(193,-699)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
 </g>
 </g>
 </g>
 </svg></span></p>
-<p>We’re also assuming that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.525ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 2379 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-61-Title">
+<p>We’re also assuming that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.525ex" height="3.009ex" style="vertical-align: -0.705ex;" viewBox="0 -992.3 2379 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-61-Title">
 <title id="MathJax-SVG-61-Title"> \vec{y} \neq \vec{0} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-2260" x="822" y="0"></use>
 <g transform="translate(1878,0)">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="485" y="259"></use>
+ <use xlink:href="#MJMAIN-20D7" x="485" y="216"></use>
 </g>
 </g>
 </svg></span>, so we can write
-<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="6.176ex" style="vertical-align: -2.505ex; max-width: 36000px;" viewBox="0 -1580.7 25833.2 2659.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-62-Title">
+<span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60ex" height="5.709ex" style="vertical-align: -2.305ex; max-width: 60000px;" viewBox="0 -1465.9 25833.2 2458.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-62-Title">
 <title id="MathJax-SVG-62-Title"> \vec{y} = \lVert \vec{y} \rVert \frac{ \vec{y} }{ \lVert \vec{y} \rVert } \tag{9}\label{9} </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(24553,0)">
-<g id="mjx-eqn-9" transform="translate(0,22)">
+<g id="mjx-eqn-9" transform="translate(0,32)">
  <use xlink:href="#MJMAIN-28"></use>
  <use xlink:href="#MJMAIN-39" x="389" y="0"></use>
  <use xlink:href="#MJMAIN-29" x="890" y="0"></use>
 </g>
 </g>
-<g transform="translate(10424,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,22)">
+<g transform="translate(10427,0)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,32)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-3D" x="822" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="1878" y="0"></use>
 <g transform="translate(2378,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="2923" y="0"></use>
 <g transform="translate(3423,0)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1665" height="60" x="0" y="220"></rect>
-<g transform="translate(560,725)">
+<g transform="translate(560,676)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
-<g transform="translate(60,-772)">
+<g transform="translate(60,-699)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1044" y="0"></use>
 </g>
@@ -1684,7 +1684,7 @@ Using equation (8) with the above picture we see that <span class="mjpage"><svg 
 </g>
 </g>
 </svg></span>
-Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.764ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 5495.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-63-Title">
+Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.764ex" height="2.609ex" style="vertical-align: -0.705ex;" viewBox="0 -820.1 5495.6 1123.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-63-Title">
 <title id="MathJax-SVG-63-Title"> \alpha = \cos{ \theta } \lVert \vec{y} \rVert </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
@@ -1698,17 +1698,17 @@ Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www
  <use xlink:href="#MJMAIN-2225" x="3950" y="0"></use>
 <g transform="translate(4450,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="4995" y="0"></use>
 </g>
-</svg></span>. Setting both of those equations for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.488ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 640.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-64-Title">
+</svg></span>. Setting both of those equations for <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.488ex" height="1.409ex" style="vertical-align: -0.205ex;" viewBox="0 -518.7 640.5 606.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-64-Title">
 <title id="MathJax-SVG-64-Title"> \alpha </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-3B1" x="0" y="0"></use>
 </g>
 </svg></span> together we get</p>
-<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="25.437ex" height="9.509ex" style="vertical-align: -4.171ex;" viewBox="0 -2298.3 10952.1 4094.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-65-Title">
+<p><span class="mjpage mjpage__block"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="25.421ex" height="8.809ex" style="vertical-align: -3.805ex;" viewBox="0 -2154.8 10945.1 3792.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-65-Title">
 <title id="MathJax-SVG-65-Title">
 \begin{align}
 &amp;\frac{ \vec{x} \cdot \vec{y}} {\lVert \vec{x} \rVert} &amp;&amp;= \cos{ \theta } \lVert \vec{y} \rVert \Rightarrow \\ 
@@ -1717,41 +1717,41 @@ Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www
 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
-<g transform="translate(-11,0)">
-<g transform="translate(0,697)">
+<g transform="translate(-18,0)">
+<g transform="translate(0,707)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="1959" height="60" x="0" y="220"></rect>
-<g transform="translate(60,725)">
+<g transform="translate(60,676)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
-<g transform="translate(193,-771)">
+<g transform="translate(193,-699)">
  <use xlink:href="#MJMAIN-2225" x="0" y="0"></use>
 <g transform="translate(500,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="1073" y="0"></use>
 </g>
 </g>
 </g>
-<g transform="translate(0,-1424)">
+<g transform="translate(0,-1342)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
  <use xlink:href="#MJMAIN-22C5" x="794" y="0"></use>
 <g transform="translate(1295,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
 </g>
 </g>
-<g transform="translate(4189,0)">
-<g transform="translate(0,697)">
+<g transform="translate(4182,0)">
+<g transform="translate(0,707)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 <g transform="translate(1334,0)">
  <use xlink:href="#MJMAIN-63"></use>
@@ -1762,12 +1762,12 @@ Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www
  <use xlink:href="#MJMAIN-2225" x="3309" y="0"></use>
 <g transform="translate(3810,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="4354" y="0"></use>
  <use xlink:href="#MJMAIN-21D2" x="5132" y="0"></use>
 </g>
-<g transform="translate(0,-1424)">
+<g transform="translate(0,-1342)">
  <use xlink:href="#MJMAIN-3D" x="277" y="0"></use>
 <g transform="translate(1334,0)">
  <use xlink:href="#MJMAIN-63"></use>
@@ -1778,13 +1778,13 @@ Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www
  <use xlink:href="#MJMAIN-2225" x="3309" y="0"></use>
 <g transform="translate(3810,0)">
  <use xlink:href="#MJMATHI-78" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="549" y="35"></use>
+ <use xlink:href="#MJMAIN-20D7" x="549" y="-8"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="4382" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="4883" y="0"></use>
 <g transform="translate(5383,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="5928" y="0"></use>
 </g>
@@ -1793,21 +1793,21 @@ Using equation (9) we see that <span class="mjpage"><svg xmlns:xlink="http://www
 </g>
 </svg></span>
 <strong>QED</strong></p>
-<p>You may want to check for yourself that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.99ex" height="3.343ex" style="vertical-align: -0.838ex;" viewBox="0 -1078.4 7315 1439.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-66-Title">
+<p>You may want to check for yourself that <span class="mjpage"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16.99ex" height="3.009ex" style="vertical-align: -0.705ex;" viewBox="0 -992.3 7315 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-66-Title">
 <title id="MathJax-SVG-66-Title"> \vec{y} \neq \vec{0} \Rightarrow \lVert \vec{y} \rVert \gneq 0 </title>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
  <use xlink:href="#MJMAIN-2260" x="822" y="0"></use>
 <g transform="translate(1878,0)">
  <use xlink:href="#MJMAIN-30" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="485" y="259"></use>
+ <use xlink:href="#MJMAIN-20D7" x="485" y="216"></use>
 </g>
  <use xlink:href="#MJMAIN-21D2" x="2656" y="0"></use>
  <use xlink:href="#MJMAIN-2225" x="3935" y="0"></use>
 <g transform="translate(4435,0)">
  <use xlink:href="#MJMATHI-79" x="0" y="0"></use>
- <use xlink:href="#MJMAIN-20D7" x="543" y="36"></use>
+ <use xlink:href="#MJMAIN-20D7" x="543" y="-7"></use>
 </g>
  <use xlink:href="#MJMAIN-2225" x="4979" y="0"></use>
  <use xlink:href="#MJAMS-2A88" x="5758" y="0"></use>
