@@ -6,7 +6,16 @@
     <description>Recent content in Cardinal Arithmetic on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/cardinal-arithmetic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Oct 2021 15:24:07 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/cardinal-arithmetic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic Ordinal and Cardinal Arithmetic</title>
+      <link>https://www.edugovnet.com/blog/basic-ordinal-and-cardinal-arithmetic/</link>
+      <pubDate>Mon, 04 Oct 2021 15:24:07 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/blog/basic-ordinal-and-cardinal-arithmetic/</guid>
+      <description>In this entry we cover more basic results about ordinal arithmetic. We also prove the so-called &amp;ldquo;Fundamental Theorem of Cardinal Arithmetic&amp;rdquo;, and then we finish with a short discussion about cofinality of cardinals.</description>
+    </item>
+    
     <item>
       <title>An Intro to Sets III</title>
       <link>https://www.edugovnet.com/blog/an-intro-to-sets-3/</link>

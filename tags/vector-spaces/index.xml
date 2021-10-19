@@ -6,7 +6,16 @@
     <description>Recent content in Vector Spaces on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 09:30:30 +0000</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/vector-spaces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Oct 2021 07:19:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/tags/vector-spaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rings Fields and Polynomials</title>
+      <link>https://www.edugovnet.com/blog/rings-fields-and-polynomials/</link>
+      <pubDate>Sat, 16 Oct 2021 07:19:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/blog/rings-fields-and-polynomials/</guid>
+      <description>We give definitions for span, basis and dimension, and then prove that all vector spaces have bases, and that their dimension is well-defined. Then we use that to define the degree of a field extension and prove the tower law for field extensions. After that, we define basic properties of polynomials.</description>
+    </item>
+    
     <item>
       <title>Modules, Vector Spaces, and More!</title>
       <link>https://www.edugovnet.com/blog/modules-vector-spaces-and-more/</link>

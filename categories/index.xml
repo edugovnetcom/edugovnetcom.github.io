@@ -6,40 +6,40 @@
     <description>Recent content in Categories on EduGovNet.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Sep 2021 16:56:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Math</title>
-      <link>https://www.edugovnet.com/categories/math/</link>
-      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
-      
-      <guid>https://www.edugovnet.com/categories/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sets</title>
-      <link>https://www.edugovnet.com/categories/sets/</link>
-      <pubDate>Mon, 27 Sep 2021 16:56:05 -0400</pubDate>
-      
-      <guid>https://www.edugovnet.com/categories/sets/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 16 Oct 2021 07:19:05 -0400</lastBuildDate><atom:link href="https://www.edugovnet.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fields</title>
       <link>https://www.edugovnet.com/categories/fields/</link>
-      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      <pubDate>Sat, 16 Oct 2021 07:19:05 -0400</pubDate>
       
       <guid>https://www.edugovnet.com/categories/fields/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Math</title>
+      <link>https://www.edugovnet.com/categories/math/</link>
+      <pubDate>Sat, 16 Oct 2021 07:19:05 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rings</title>
       <link>https://www.edugovnet.com/categories/rings/</link>
-      <pubDate>Sun, 05 Sep 2021 09:30:30 +0000</pubDate>
+      <pubDate>Sat, 16 Oct 2021 07:19:05 -0400</pubDate>
       
       <guid>https://www.edugovnet.com/categories/rings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sets</title>
+      <link>https://www.edugovnet.com/categories/sets/</link>
+      <pubDate>Mon, 04 Oct 2021 15:24:07 -0400</pubDate>
+      
+      <guid>https://www.edugovnet.com/categories/sets/</guid>
       <description></description>
     </item>
     

@@ -2,13 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.edugovnet.com/blog/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/fields/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/math/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/matrices/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/rings/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/blog/rings-fields-and-polynomials/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/vector-spaces/</loc>
+    <lastmod>2021-10-16T07:19:05-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/blog/basic-ordinal-and-cardinal-arithmetic/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/cardinal-arithmetic/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/cardinals/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/infinite-sums/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/ordinal-arithmetic/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/tags/ordinals/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
+    <loc>https://www.edugovnet.com/categories/sets/</loc>
+    <lastmod>2021-10-04T15:24:07-04:00</lastmod>
+  </url><url>
     <loc>https://www.edugovnet.com/blog/an-intro-to-sets-3/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/tags/bernstein/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/blog/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/tags/cantor/</loc>
@@ -17,40 +65,13 @@
     <loc>https://www.edugovnet.com/tags/cantor-bernstein/</loc>
     <lastmod>2021-09-27T16:56:05-04:00</lastmod>
   </url><url>
-    <loc>https://www.edugovnet.com/tags/cardinal-arithmetic/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/categories/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/categories/math/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/ordinal-arithmetic/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/categories/sets/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/</loc>
-    <lastmod>2021-09-27T16:56:05-04:00</lastmod>
-  </url><url>
     <loc>https://www.edugovnet.com/blog/an-intro-to-sets-2/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/tags/cardinality-of-set/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
-    <loc>https://www.edugovnet.com/tags/cardinals/</loc>
-    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
-  </url><url>
     <loc>https://www.edugovnet.com/tags/limit-ordinal/</loc>
-    <lastmod>2021-09-18T21:18:15-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/ordinals/</loc>
     <lastmod>2021-09-18T21:18:15-04:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/tags/successor-ordinal/</loc>
@@ -74,22 +95,10 @@
     <loc>https://www.edugovnet.com/tags/algebras/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.edugovnet.com/categories/fields/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/matrices/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
     <loc>https://www.edugovnet.com/tags/modules/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/blog/modules-vector-spaces-and-more/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/categories/rings/</loc>
-    <lastmod>2021-09-05T09:30:30+00:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/vector-spaces/</loc>
     <lastmod>2021-09-05T09:30:30+00:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/tags/binomial-expansion/</loc>
@@ -235,9 +244,6 @@
   </url><url>
     <loc>https://www.edugovnet.com/blog/more-math-of-permutations/</loc>
     <lastmod>2021-06-03T15:21:46-04:00</lastmod>
-  </url><url>
-    <loc>https://www.edugovnet.com/tags/infinite-sums/</loc>
-    <lastmod>2021-05-14T17:11:23-04:00</lastmod>
   </url><url>
     <loc>https://www.edugovnet.com/categories/number-theory/</loc>
     <lastmod>2021-05-14T17:11:23-04:00</lastmod>
